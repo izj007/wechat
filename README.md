@@ -9,6 +9,7 @@
 - [[M01N Team]-2021-8-4-COM对象挖掘及攻击利用.md](https://github.com/izj007/wechat/blob/main/articles/[M01N%20Team]-2021-8-4-COM%E5%AF%B9%E8%B1%A1%E6%8C%96%E6%8E%98%E5%8F%8A%E6%94%BB%E5%87%BB%E5%88%A9%E7%94%A8.md)
 - [[Ms08067安全实验室]-2021-8-5-深入理解JAVA中的JNDI注入.md](https://github.com/izj007/wechat/blob/main/articles/[Ms08067%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-5-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JAVA%E4%B8%AD%E7%9A%84JNDI%E6%B3%A8%E5%85%A5.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
+- [[SecWiki]-2021-8-9-SecWiki周刊（第388期）.md](https://github.com/izj007/wechat/blob/main/articles/[SecWiki]-2021-8-9-SecWiki%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC388%E6%9C%9F%EF%BC%89.md)
 - [[Timeline Sec]-2021-8-5-CVE-2021-167534527：Windows Print Spooler权限提升复现.md](https://github.com/izj007/wechat/blob/main/articles/[Timeline%20Sec]-2021-8-5-CVE-2021-167534527%EF%BC%9AWindows%20Print%20Spooler%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E5%A4%8D%E7%8E%B0.md)
 - [[T大4的小圈圈]-2021-6-30-滑块验证码的对抗&amp;somd5批量查询.md](https://github.com/izj007/wechat/blob/main/articles/[T%E5%A4%A74%E7%9A%84%E5%B0%8F%E5%9C%88%E5%9C%88]-2021-6-30-%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E5%AF%B9%E6%8A%97&amp;somd5%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2.md)
 - [[freebuf]-2021-08-09-使用RomBuster获取网络路由器密码.md](https://github.com/izj007/wechat/blob/main/articles/[freebuf]-2021-08-09-%E4%BD%BF%E7%94%A8RomBuster%E8%8E%B7%E5%8F%96%E7%BD%91%E7%BB%9C%E8%B7%AF%E7%94%B1%E5%99%A8%E5%AF%86%E7%A0%81.md)
