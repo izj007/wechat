@@ -1,6 +1,5 @@
 ### 微信收藏文章列表
 - [WMI攻与防.md](https://github.com/izj007/wechat/blob/main/articles/WMI%E6%94%BB%E4%B8%8E%E9%98%B2.md)
-- [[.md](https://github.com/izj007/wechat/blob/main/articles/[.md)
 - [[F12sec]-2021-8-9-[好文转载] 通用的针对源码泄露利用程序的反制(常见工具集体沦陷).md](https://github.com/izj007/wechat/blob/main/articles/[F12sec]-2021-8-9-[%E5%A5%BD%E6%96%87%E8%BD%AC%E8%BD%BD]%20%E9%80%9A%E7%94%A8%E7%9A%84%E9%92%88%E5%AF%B9%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2%E5%88%A9%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8F%8D%E5%88%B6(%E5%B8%B8%E8%A7%81%E5%B7%A5%E5%85%B7%E9%9B%86%E4%BD%93%E6%B2%A6%E9%99%B7).md)
 - [[HACK学习呀]-2021-6-24-内网渗透  Kerberos 协议与 Kerberos 认证原理.md](https://github.com/izj007/wechat/blob/main/articles/[HACK%E5%AD%A6%E4%B9%A0%E5%91%80]-2021-6-24-%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%20%20Kerberos%20%E5%8D%8F%E8%AE%AE%E4%B8%8E%20Kerberos%20%E8%AE%A4%E8%AF%81%E5%8E%9F%E7%90%86.md)
 - [[HACK学习呀]-2021-8-4-内网渗透｜域内委派详解.md](https://github.com/izj007/wechat/blob/main/articles/[HACK%E5%AD%A6%E4%B9%A0%E5%91%80]-2021-8-4-%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%EF%BD%9C%E5%9F%9F%E5%86%85%E5%A7%94%E6%B4%BE%E8%AF%A6%E8%A7%A3.md)
