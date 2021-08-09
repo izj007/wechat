@@ -8,6 +8,7 @@
 - [[M01N Team]-2021-7-7-关于 Kerberos 每个人都应该知道这些.md](https://github.com/izj007/wechat/blob/main/articles/[M01N%20Team]-2021-7-7-%E5%85%B3%E4%BA%8E%20Kerberos%20%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E8%BF%99%E4%BA%9B.md)
 - [[M01N Team]-2021-8-4-COM对象挖掘及攻击利用.md](https://github.com/izj007/wechat/blob/main/articles/[M01N%20Team]-2021-8-4-COM%E5%AF%B9%E8%B1%A1%E6%8C%96%E6%8E%98%E5%8F%8A%E6%94%BB%E5%87%BB%E5%88%A9%E7%94%A8.md)
 - [[Ms08067安全实验室]-2021-8-5-深入理解JAVA中的JNDI注入.md](https://github.com/izj007/wechat/blob/main/articles/[Ms08067%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-5-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JAVA%E4%B8%AD%E7%9A%84JNDI%E6%B3%A8%E5%85%A5.md)
+- [[NOVASEC]-2021-8-9-whatweb增强版公开发布.md](https://github.com/izj007/wechat/blob/main/articles/[NOVASEC]-2021-8-9-whatweb%E5%A2%9E%E5%BC%BA%E7%89%88%E5%85%AC%E5%BC%80%E5%8F%91%E5%B8%83.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
 - [[SecWiki]-2021-8-9-SecWiki周刊（第388期）.md](https://github.com/izj007/wechat/blob/main/articles/[SecWiki]-2021-8-9-SecWiki%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC388%E6%9C%9F%EF%BC%89.md)
 - [[Timeline Sec]-2021-8-5-CVE-2021-167534527：Windows Print Spooler权限提升复现.md](https://github.com/izj007/wechat/blob/main/articles/[Timeline%20Sec]-2021-8-5-CVE-2021-167534527%EF%BC%9AWindows%20Print%20Spooler%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E5%A4%8D%E7%8E%B0.md)
