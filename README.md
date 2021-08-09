@@ -24,6 +24,7 @@
 - [[未分类]--0x01 前言.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--0x01%20%E5%89%8D%E8%A8%80.md)
 - [[未分类]--ValueExtractor.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--ValueExtractor.md)
 - [[未分类]--讲在前面：.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--%E8%AE%B2%E5%9C%A8%E5%89%8D%E9%9D%A2%EF%BC%9A.md)
+- [[未分类]-2021-8-9-使用PetitPotam代替Printerbug.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]-2021-8-9-%E4%BD%BF%E7%94%A8PetitPotam%E4%BB%A3%E6%9B%BFPrinterbug.md)
 - [[水滴安全实验室]-2021-8-6-从证书服务到域管.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B0%B4%E6%BB%B4%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-6-%E4%BB%8E%E8%AF%81%E4%B9%A6%E6%9C%8D%E5%8A%A1%E5%88%B0%E5%9F%9F%E7%AE%A1.md)
 - [[渗透Xiao白帽]-2021-8-4-【干货】CS免杀之信手拈来.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B8%97%E9%80%8FXiao%E7%99%BD%E5%B8%BD]-2021-8-4-%E3%80%90%E5%B9%B2%E8%B4%A7%E3%80%91CS%E5%85%8D%E6%9D%80%E4%B9%8B%E4%BF%A1%E6%89%8B%E6%8B%88%E6%9D%A5.md)
 - [[渗透Xiao白帽]-2021-8-6-资产收集工具——HGather.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B8%97%E9%80%8FXiao%E7%99%BD%E5%B8%BD]-2021-8-6-%E8%B5%84%E4%BA%A7%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94HGather.md)
