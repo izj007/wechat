@@ -22,6 +22,7 @@
 - [[Ms08067安全实验室]-2021-8-19-微软通杀漏洞-CVE-2021-1675复现.md](https://github.com/izj007/wechat/blob/main/articles/[Ms08067%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-19-%E5%BE%AE%E8%BD%AF%E9%80%9A%E6%9D%80%E6%BC%8F%E6%B4%9E-CVE-2021-1675%E5%A4%8D%E7%8E%B0.md)
 - [[Ms08067安全实验室]-2021-8-5-深入理解JAVA中的JNDI注入.md](https://github.com/izj007/wechat/blob/main/articles/[Ms08067%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-5-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JAVA%E4%B8%AD%E7%9A%84JNDI%E6%B3%A8%E5%85%A5.md)
 - [[NOVASEC]-2021-8-9-whatweb增强版公开发布.md](https://github.com/izj007/wechat/blob/main/articles/[NOVASEC]-2021-8-9-whatweb%E5%A2%9E%E5%BC%BA%E7%89%88%E5%85%AC%E5%BC%80%E5%8F%91%E5%B8%83.md)
+- [[NearSec]-2021-8-22-Invoke-Obfuscation-Bypass + PS2EXE 绕过主流杀软.md](https://github.com/izj007/wechat/blob/main/articles/[NearSec]-2021-8-22-Invoke-Obfuscation-Bypass%20%2B%20PS2EXE%20%E7%BB%95%E8%BF%87%E4%B8%BB%E6%B5%81%E6%9D%80%E8%BD%AF.md)
 - [[PeiQi文库]-2021-8-16-某设备快速代码审计 (Bash审计).md](https://github.com/izj007/wechat/blob/main/articles/[PeiQi%E6%96%87%E5%BA%93]-2021-8-16-%E6%9F%90%E8%AE%BE%E5%A4%87%E5%BF%AB%E9%80%9F%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20(Bash%E5%AE%A1%E8%AE%A1).md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
 - [[SecWiki]-2021-8-9-SecWiki周刊（第388期）.md](https://github.com/izj007/wechat/blob/main/articles/[SecWiki]-2021-8-9-SecWiki%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC388%E6%9C%9F%EF%BC%89.md)
