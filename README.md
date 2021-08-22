@@ -143,6 +143,7 @@
 - [[乌雲安全]-2021-8-15-常见6种WAF绕过和防护原理.md](https://github.com/izj007/wechat/blob/main/articles/[%E4%B9%8C%E9%9B%B2%E5%AE%89%E5%85%A8]-2021-8-15-%E5%B8%B8%E8%A7%816%E7%A7%8DWAF%E7%BB%95%E8%BF%87%E5%92%8C%E9%98%B2%E6%8A%A4%E5%8E%9F%E7%90%86.md)
 - [[乌雲安全]-2021-8-18-干货WAF绕过思路整理.md](https://github.com/izj007/wechat/blob/main/articles/[%E4%B9%8C%E9%9B%B2%E5%AE%89%E5%85%A8]-2021-8-18-%E5%B9%B2%E8%B4%A7WAF%E7%BB%95%E8%BF%87%E6%80%9D%E8%B7%AF%E6%95%B4%E7%90%86.md)
 - [[乌雲安全]-2021-8-20-干货从零学习bypass disable_function.md](https://github.com/izj007/wechat/blob/main/articles/[%E4%B9%8C%E9%9B%B2%E5%AE%89%E5%85%A8]-2021-8-20-%E5%B9%B2%E8%B4%A7%E4%BB%8E%E9%9B%B6%E5%AD%A6%E4%B9%A0bypass%20disable_function.md)
+- [[乌雲安全]-2021-8-22-干货WAF分类及绕过思路.md](https://github.com/izj007/wechat/blob/main/articles/[%E4%B9%8C%E9%9B%B2%E5%AE%89%E5%85%A8]-2021-8-22-%E5%B9%B2%E8%B4%A7WAF%E5%88%86%E7%B1%BB%E5%8F%8A%E7%BB%95%E8%BF%87%E6%80%9D%E8%B7%AF.md)
 - [[乌雲安全]-2021-8-5-bypass 杀软笔记.md](https://github.com/izj007/wechat/blob/main/articles/[%E4%B9%8C%E9%9B%B2%E5%AE%89%E5%85%A8]-2021-8-5-bypass%20%E6%9D%80%E8%BD%AF%E7%AC%94%E8%AE%B0.md)
 - [[乌雲安全]-2021-8-8-使用nssm注册windows服务进行持久化.md](https://github.com/izj007/wechat/blob/main/articles/[%E4%B9%8C%E9%9B%B2%E5%AE%89%E5%85%A8]-2021-8-8-%E4%BD%BF%E7%94%A8nssm%E6%B3%A8%E5%86%8Cwindows%E6%9C%8D%E5%8A%A1%E8%BF%9B%E8%A1%8C%E6%8C%81%E4%B9%85%E5%8C%96.md)
 - [[亿人安全]-2021-8-7-Redis 攻击方法总结.md](https://github.com/izj007/wechat/blob/main/articles/[%E4%BA%BF%E4%BA%BA%E5%AE%89%E5%85%A8]-2021-8-7-Redis%20%E6%94%BB%E5%87%BB%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93.md)
