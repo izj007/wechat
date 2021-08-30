@@ -237,3 +237,4 @@
 - [[黑白之道]-2021-8-22-0day Fortinet FortiWeb OS 命令注入.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%BB%91%E7%99%BD%E4%B9%8B%E9%81%93]-2021-8-22-0day%20Fortinet%20FortiWeb%20OS%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5.md)
 - [[黑白之道]-2021-8-6-源代码安全审计工具-Cobra.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%BB%91%E7%99%BD%E4%B9%8B%E9%81%93]-2021-8-6-%E6%BA%90%E4%BB%A3%E7%A0%81%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7-Cobra.md)
 - [[黑白天实验室]-2021-8-5-AD CS 域持久性.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%BB%91%E7%99%BD%E5%A4%A9%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-5-AD%20CS%20%E5%9F%9F%E6%8C%81%E4%B9%85%E6%80%A7.md)
+- [花指令安全实验室-2021-8-30-域管与域控定位思路合集.md](https://github.com/izj007/wechat/blob/main/articles/%E8%8A%B1%E6%8C%87%E4%BB%A4%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4-2021-8-30-%E5%9F%9F%E7%AE%A1%E4%B8%8E%E5%9F%9F%E6%8E%A7%E5%AE%9A%E4%BD%8D%E6%80%9D%E8%B7%AF%E5%90%88%E9%9B%86.md)
