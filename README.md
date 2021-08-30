@@ -26,6 +26,7 @@
 - [[NOVASEC]-2021-8-9-whatweb增强版公开发布.md](https://github.com/izj007/wechat/blob/main/articles/[NOVASEC]-2021-8-9-whatweb%E5%A2%9E%E5%BC%BA%E7%89%88%E5%85%AC%E5%BC%80%E5%8F%91%E5%B8%83.md)
 - [[NearSec]-2021-8-22-Invoke-Obfuscation-Bypass + PS2EXE 绕过主流杀软.md](https://github.com/izj007/wechat/blob/main/articles/[NearSec]-2021-8-22-Invoke-Obfuscation-Bypass%20%2B%20PS2EXE%20%E7%BB%95%E8%BF%87%E4%B8%BB%E6%B5%81%E6%9D%80%E8%BD%AF.md)
 - [[PeiQi文库]-2021-8-16-某设备快速代码审计 (Bash审计).md](https://github.com/izj007/wechat/blob/main/articles/[PeiQi%E6%96%87%E5%BA%93]-2021-8-16-%E6%9F%90%E8%AE%BE%E5%A4%87%E5%BF%AB%E9%80%9F%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20(Bash%E5%AE%A1%E8%AE%A1).md)
+- [[RedTeaming]-2021-8-30-Nim套娃加载.NET程序集.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-30-Nim%E5%A5%97%E5%A8%83%E5%8A%A0%E8%BD%BD.NET%E7%A8%8B%E5%BA%8F%E9%9B%86.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
 - [[SecWiki]-2021-8-9-SecWiki周刊（第388期）.md](https://github.com/izj007/wechat/blob/main/articles/[SecWiki]-2021-8-9-SecWiki%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC388%E6%9C%9F%EF%BC%89.md)
 - [[SilverNeedleLab]-2021-8-17-Java内存攻击技术漫谈.md](https://github.com/izj007/wechat/blob/main/articles/[SilverNeedleLab]-2021-8-17-Java%E5%86%85%E5%AD%98%E6%94%BB%E5%87%BB%E6%8A%80%E6%9C%AF%E6%BC%AB%E8%B0%88.md)
