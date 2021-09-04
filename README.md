@@ -258,6 +258,7 @@
 - [[鸿鹄实验室]-2021-8-21-C2基石--syscall模块及amsi bypass.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-21-C2%E5%9F%BA%E7%9F%B3--syscall%E6%A8%A1%E5%9D%97%E5%8F%8Aamsi%20bypass.md)
 - [[鸿鹄实验室]-2021-8-22-Sideloading DLL攻击.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-22-Sideloading%20DLL%E6%94%BB%E5%87%BB.md)
 - [[鸿鹄实验室]-2021-8-5-再探mimikatz免杀.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-5-%E5%86%8D%E6%8E%A2mimikatz%E5%85%8D%E6%9D%80.md)
+- [[鸿鹄实验室]-2021-9-4-AMSI调试及绕过.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-9-4-AMSI%E8%B0%83%E8%AF%95%E5%8F%8A%E7%BB%95%E8%BF%87.md)
 - [[黑白之道]-2021-8-15-干货Bypass UAC 技术总结.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%BB%91%E7%99%BD%E4%B9%8B%E9%81%93]-2021-8-15-%E5%B9%B2%E8%B4%A7Bypass%20UAC%20%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93.md)
 - [[黑白之道]-2021-8-22-0day Fortinet FortiWeb OS 命令注入.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%BB%91%E7%99%BD%E4%B9%8B%E9%81%93]-2021-8-22-0day%20Fortinet%20FortiWeb%20OS%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5.md)
 - [[黑白之道]-2021-8-6-源代码安全审计工具-Cobra.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%BB%91%E7%99%BD%E4%B9%8B%E9%81%93]-2021-8-6-%E6%BA%90%E4%BB%A3%E7%A0%81%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7-Cobra.md)
