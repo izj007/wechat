@@ -42,6 +42,7 @@
 - [[RedTeaming]-2021-8-30-Nim套娃加载.NET程序集.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-30-Nim%E5%A5%97%E5%A8%83%E5%8A%A0%E8%BD%BD.NET%E7%A8%8B%E5%BA%8F%E9%9B%86.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
 - [[SecWiki]-2021-8-9-SecWiki周刊（第388期）.md](https://github.com/izj007/wechat/blob/main/articles/[SecWiki]-2021-8-9-SecWiki%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC388%E6%9C%9F%EF%BC%89.md)
+- [[Seebug漏洞平台]-2021-9-10-一个ZoomEye查询搜尽BazarLoader C2.md](https://github.com/izj007/wechat/blob/main/articles/[Seebug%E6%BC%8F%E6%B4%9E%E5%B9%B3%E5%8F%B0]-2021-9-10-%E4%B8%80%E4%B8%AAZoomEye%E6%9F%A5%E8%AF%A2%E6%90%9C%E5%B0%BDBazarLoader%20C2.md)
 - [[SilverNeedleLab]-2021-8-17-Java内存攻击技术漫谈.md](https://github.com/izj007/wechat/blob/main/articles/[SilverNeedleLab]-2021-8-17-Java%E5%86%85%E5%AD%98%E6%94%BB%E5%87%BB%E6%8A%80%E6%9C%AF%E6%BC%AB%E8%B0%88.md)
 - [[Snaker独行者]-2021-8-22-记录：已下线的某QP站点的渗透测试.md](https://github.com/izj007/wechat/blob/main/articles/[Snaker%E7%8B%AC%E8%A1%8C%E8%80%85]-2021-8-22-%E8%AE%B0%E5%BD%95%EF%BC%9A%E5%B7%B2%E4%B8%8B%E7%BA%BF%E7%9A%84%E6%9F%90QP%E7%AB%99%E7%82%B9%E7%9A%84%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95.md)
 - [[Snaker独行者]-2021-8-25-我的免杀之路：内存隐藏.md](https://github.com/izj007/wechat/blob/main/articles/[Snaker%E7%8B%AC%E8%A1%8C%E8%80%85]-2021-8-25-%E6%88%91%E7%9A%84%E5%85%8D%E6%9D%80%E4%B9%8B%E8%B7%AF%EF%BC%9A%E5%86%85%E5%AD%98%E9%9A%90%E8%97%8F.md)
