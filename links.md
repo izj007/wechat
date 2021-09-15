@@ -8,4 +8,8 @@
 
 [HFish](https://github.com/hacklcs/HFish)
 
+
+
 [fastjson_rce_tool](https://github.com/wyzxxz/fastjson_rce_tool)
+
+[CVE-2021-24741](https://github.com/itsjeffersonli/CVE-2021-24741)
