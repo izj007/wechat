@@ -49,6 +49,7 @@
 - [[PeiQi文库]-2021-8-16-某设备快速代码审计 (Bash审计).md](https://github.com/izj007/wechat/blob/main/articles/[PeiQi%E6%96%87%E5%BA%93]-2021-8-16-%E6%9F%90%E8%AE%BE%E5%A4%87%E5%BF%AB%E9%80%9F%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20(Bash%E5%AE%A1%E8%AE%A1).md)
 - [[RedTeaming]-2021-8-30-Nim套娃加载.NET程序集.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-30-Nim%E5%A5%97%E5%A8%83%E5%8A%A0%E8%BD%BD.NET%E7%A8%8B%E5%BA%8F%E9%9B%86.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
+- [[SecOps急行军]-2021-9-29-对网络安全行业的信心不变.md](https://github.com/izj007/wechat/blob/main/articles/[SecOps%E6%80%A5%E8%A1%8C%E5%86%9B]-2021-9-29-%E5%AF%B9%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%A1%8C%E4%B8%9A%E7%9A%84%E4%BF%A1%E5%BF%83%E4%B8%8D%E5%8F%98.md)
 - [[SecWiki]-2021-8-9-SecWiki周刊（第388期）.md](https://github.com/izj007/wechat/blob/main/articles/[SecWiki]-2021-8-9-SecWiki%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC388%E6%9C%9F%EF%BC%89.md)
 - [[Seebug漏洞平台]-2021-9-10-一个ZoomEye查询搜尽BazarLoader C2.md](https://github.com/izj007/wechat/blob/main/articles/[Seebug%E6%BC%8F%E6%B4%9E%E5%B9%B3%E5%8F%B0]-2021-9-10-%E4%B8%80%E4%B8%AAZoomEye%E6%9F%A5%E8%AF%A2%E6%90%9C%E5%B0%BDBazarLoader%20C2.md)
 - [[Seebug漏洞平台]-2021-9-16-dll 劫持和应用.md](https://github.com/izj007/wechat/blob/main/articles/[Seebug%E6%BC%8F%E6%B4%9E%E5%B9%B3%E5%8F%B0]-2021-9-16-dll%20%E5%8A%AB%E6%8C%81%E5%92%8C%E5%BA%94%E7%94%A8.md)
