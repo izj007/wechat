@@ -47,6 +47,7 @@
 - [[NOVASEC]-2021-8-9-whatweb增强版公开发布.md](https://github.com/izj007/wechat/blob/main/articles/[NOVASEC]-2021-8-9-whatweb%E5%A2%9E%E5%BC%BA%E7%89%88%E5%85%AC%E5%BC%80%E5%8F%91%E5%B8%83.md)
 - [[NearSec]-2021-8-22-Invoke-Obfuscation-Bypass + PS2EXE 绕过主流杀软.md](https://github.com/izj007/wechat/blob/main/articles/[NearSec]-2021-8-22-Invoke-Obfuscation-Bypass%20%2B%20PS2EXE%20%E7%BB%95%E8%BF%87%E4%B8%BB%E6%B5%81%E6%9D%80%E8%BD%AF.md)
 - [[PeiQi文库]-2021-8-16-某设备快速代码审计 (Bash审计).md](https://github.com/izj007/wechat/blob/main/articles/[PeiQi%E6%96%87%E5%BA%93]-2021-8-16-%E6%9F%90%E8%AE%BE%E5%A4%87%E5%BF%AB%E9%80%9F%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20(Bash%E5%AE%A1%E8%AE%A1).md)
+- [[RCE TEAM]-2021-9-30-文件上云 - 对象存储的攻击方式.md](https://github.com/izj007/wechat/blob/main/articles/[RCE%20TEAM]-2021-9-30-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BA%91%20-%20%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%94%BB%E5%87%BB%E6%96%B9%E5%BC%8F.md)
 - [[RedTeaming]-2021-8-30-Nim套娃加载.NET程序集.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-30-Nim%E5%A5%97%E5%A8%83%E5%8A%A0%E8%BD%BD.NET%E7%A8%8B%E5%BA%8F%E9%9B%86.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
 - [[SecOps急行军]-2021-9-29-对网络安全行业的信心不变.md](https://github.com/izj007/wechat/blob/main/articles/[SecOps%E6%80%A5%E8%A1%8C%E5%86%9B]-2021-9-29-%E5%AF%B9%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%A1%8C%E4%B8%9A%E7%9A%84%E4%BF%A1%E5%BF%83%E4%B8%8D%E5%8F%98.md)
