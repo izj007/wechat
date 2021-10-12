@@ -67,6 +67,7 @@
 - [[WgpSec狼组安全团队]-2021-9-4-.Jar To .EXE免杀马探索.md](https://github.com/izj007/wechat/blob/main/articles/[WgpSec%E7%8B%BC%E7%BB%84%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F]-2021-9-4-.Jar%20To%20.EXE%E5%85%8D%E6%9D%80%E9%A9%AC%E6%8E%A2%E7%B4%A2.md)
 - [[XG小刚]-2021-9-10-null.md](https://github.com/izj007/wechat/blob/main/articles/[XG%E5%B0%8F%E5%88%9A]-2021-9-10-null.md)
 - [[]-2021-10-11-美团App有重大安全漏洞，@王思聪  账号可能就是这样被盗的.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-11-%E7%BE%8E%E5%9B%A2App%E6%9C%89%E9%87%8D%E5%A4%A7%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%EF%BC%8C@%E7%8E%8B%E6%80%9D%E8%81%AA%20%20%E8%B4%A6%E5%8F%B7%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E8%BF%99%E6%A0%B7%E8%A2%AB%E7%9B%97%E7%9A%84.md)
+- [[]-2021-10-12-GitHub - yhy0](https://github.com/izj007/wechat/tree/main/articles/[]-2021-10-12-GitHub%20-%20yhy0)
 - [[]-2021-10-12-电梯免广告特权.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-12-%E7%94%B5%E6%A2%AF%E5%85%8D%E5%B9%BF%E5%91%8A%E7%89%B9%E6%9D%83.md)
 - [[]-2021-10-8-作为一个白帽子，你挖到第一个漏洞的经历是怎样的？ - 知乎.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-8-%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%99%BD%E5%B8%BD%E5%AD%90%EF%BC%8C%E4%BD%A0%E6%8C%96%E5%88%B0%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%BC%8F%E6%B4%9E%E7%9A%84%E7%BB%8F%E5%8E%86%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%EF%BC%9F%20-%20%E7%9F%A5%E4%B9%8E.md)
 - [[]-2021-8-30-内网与域渗透专题 · 语雀.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-8-30-%E5%86%85%E7%BD%91%E4%B8%8E%E5%9F%9F%E6%B8%97%E9%80%8F%E4%B8%93%E9%A2%98%20%C2%B7%20%E8%AF%AD%E9%9B%80.md)
