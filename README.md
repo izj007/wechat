@@ -82,6 +82,7 @@
 - [[]-2021-9-6-反制爬虫之Burp Suite RCE.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-9-6-%E5%8F%8D%E5%88%B6%E7%88%AC%E8%99%AB%E4%B9%8BBurp%20Suite%20RCE.md)
 - [[freebuf]-2021-08-09-使用RomBuster获取网络路由器密码.md](https://github.com/izj007/wechat/blob/main/articles/[freebuf]-2021-08-09-%E4%BD%BF%E7%94%A8RomBuster%E8%8E%B7%E5%8F%96%E7%BD%91%E7%BB%9C%E8%B7%AF%E7%94%B1%E5%99%A8%E5%AF%86%E7%A0%81.md)
 - [[here404]-2021-8-24-记一次审计小师妹的Code.md](https://github.com/izj007/wechat/blob/main/articles/[here404]-2021-8-24-%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AE%A1%E8%AE%A1%E5%B0%8F%E5%B8%88%E5%A6%B9%E7%9A%84Code.md)
+- [[luomasec]-2021-10-15-ProcessGhosting-一套通用的免杀，自删除解决方案.md](https://github.com/izj007/wechat/blob/main/articles/[luomasec]-2021-10-15-ProcessGhosting-%E4%B8%80%E5%A5%97%E9%80%9A%E7%94%A8%E7%9A%84%E5%85%8D%E6%9D%80%EF%BC%8C%E8%87%AA%E5%88%A0%E9%99%A4%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md)
 - [[moonsec]-2021-8-16-基于ProxyPool创建Proxifier代理配置文件.md](https://github.com/izj007/wechat/blob/main/articles/[moonsec]-2021-8-16-%E5%9F%BA%E4%BA%8EProxyPool%E5%88%9B%E5%BB%BAProxifier%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.md)
 - [[moonsec]-2021-8-30-魔改CobaltStrike重写Stager和Beacon.md](https://github.com/izj007/wechat/blob/main/articles/[moonsec]-2021-8-30-%E9%AD%94%E6%94%B9CobaltStrike%E9%87%8D%E5%86%99Stager%E5%92%8CBeacon.md)
 - [[moonsec]-2021-8-9-eve模拟真实环境的靶场渗透.md](https://github.com/izj007/wechat/blob/main/articles/[moonsec]-2021-8-9-eve%E6%A8%A1%E6%8B%9F%E7%9C%9F%E5%AE%9E%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9D%B6%E5%9C%BA%E6%B8%97%E9%80%8F.md)
