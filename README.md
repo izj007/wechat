@@ -55,6 +55,7 @@
 - [[RCE TEAM]-2021-9-30-文件上云 - 对象存储的攻击方式.md](https://github.com/izj007/wechat/blob/main/articles/[RCE%20TEAM]-2021-9-30-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BA%91%20-%20%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%94%BB%E5%87%BB%E6%96%B9%E5%BC%8F.md)
 - [[RedTeaming]-2021-8-30-Nim套娃加载.NET程序集.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-30-Nim%E5%A5%97%E5%A8%83%E5%8A%A0%E8%BD%BD.NET%E7%A8%8B%E5%BA%8F%E9%9B%86.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
+- [[SecOps急行军]-2021-10-19-中国人民银行遭受供应链攻击事件.md](https://github.com/izj007/wechat/blob/main/articles/[SecOps%E6%80%A5%E8%A1%8C%E5%86%9B]-2021-10-19-%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E9%81%AD%E5%8F%97%E4%BE%9B%E5%BA%94%E9%93%BE%E6%94%BB%E5%87%BB%E4%BA%8B%E4%BB%B6.md)
 - [[SecOps急行军]-2021-9-29-对网络安全行业的信心不变.md](https://github.com/izj007/wechat/blob/main/articles/[SecOps%E6%80%A5%E8%A1%8C%E5%86%9B]-2021-9-29-%E5%AF%B9%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%A1%8C%E4%B8%9A%E7%9A%84%E4%BF%A1%E5%BF%83%E4%B8%8D%E5%8F%98.md)
 - [[SecWiki]-2021-8-9-SecWiki周刊（第388期）.md](https://github.com/izj007/wechat/blob/main/articles/[SecWiki]-2021-8-9-SecWiki%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC388%E6%9C%9F%EF%BC%89.md)
 - [[Seebug漏洞平台]-2021-9-10-一个ZoomEye查询搜尽BazarLoader C2.md](https://github.com/izj007/wechat/blob/main/articles/[Seebug%E6%BC%8F%E6%B4%9E%E5%B9%B3%E5%8F%B0]-2021-9-10-%E4%B8%80%E4%B8%AAZoomEye%E6%9F%A5%E8%AF%A2%E6%90%9C%E5%B0%BDBazarLoader%20C2.md)
