@@ -77,6 +77,7 @@
 - [[]-2021-10-12-GitHub - yhy0](https://github.com/izj007/wechat/tree/main/articles/[]-2021-10-12-GitHub%20-%20yhy0)
 - [[]-2021-10-12-电梯免广告特权.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-12-%E7%94%B5%E6%A2%AF%E5%85%8D%E5%B9%BF%E5%91%8A%E7%89%B9%E6%9D%83.md)
 - [[]-2021-10-15-【XSS】XSS修炼之独孤九剑 - --Kisaragi-- - 博客园.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-15-%E3%80%90XSS%E3%80%91XSS%E4%BF%AE%E7%82%BC%E4%B9%8B%E7%8B%AC%E5%AD%A4%E4%B9%9D%E5%89%91%20-%20--Kisaragi--%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD.md)
+- [[]-2021-10-22-如何用 FTP 被动模式打穿内网.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-22-%E5%A6%82%E4%BD%95%E7%94%A8%20FTP%20%E8%A2%AB%E5%8A%A8%E6%A8%A1%E5%BC%8F%E6%89%93%E7%A9%BF%E5%86%85%E7%BD%91.md)
 - [[]-2021-10-22-新型网络犯罪攻防技术研究.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-22-%E6%96%B0%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%8A%AF%E7%BD%AA%E6%94%BB%E9%98%B2%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6.md)
 - [[]-2021-10-8-作为一个白帽子，你挖到第一个漏洞的经历是怎样的？ - 知乎.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-8-%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%99%BD%E5%B8%BD%E5%AD%90%EF%BC%8C%E4%BD%A0%E6%8C%96%E5%88%B0%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%BC%8F%E6%B4%9E%E7%9A%84%E7%BB%8F%E5%8E%86%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%EF%BC%9F%20-%20%E7%9F%A5%E4%B9%8E.md)
 - [[]-2021-8-30-内网与域渗透专题 · 语雀.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-8-30-%E5%86%85%E7%BD%91%E4%B8%8E%E5%9F%9F%E6%B8%97%E9%80%8F%E4%B8%93%E9%A2%98%20%C2%B7%20%E8%AF%AD%E9%9B%80.md)
