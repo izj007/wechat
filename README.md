@@ -77,6 +77,7 @@
 - [[WgpSec狼组安全团队]-2021-9-3-.Jar To .EXE免杀马探索.md](https://github.com/izj007/wechat/blob/main/articles/[WgpSec%E7%8B%BC%E7%BB%84%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F]-2021-9-3-.Jar%20To%20.EXE%E5%85%8D%E6%9D%80%E9%A9%AC%E6%8E%A2%E7%B4%A2.md)
 - [[WgpSec狼组安全团队]-2021-9-4-.Jar To .EXE免杀马探索.md](https://github.com/izj007/wechat/blob/main/articles/[WgpSec%E7%8B%BC%E7%BB%84%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F]-2021-9-4-.Jar%20To%20.EXE%E5%85%8D%E6%9D%80%E9%A9%AC%E6%8E%A2%E7%B4%A2.md)
 - [[XG小刚]-2021-9-10-null.md](https://github.com/izj007/wechat/blob/main/articles/[XG%E5%B0%8F%E5%88%9A]-2021-9-10-null.md)
+- [[Yak Project]-2022-2-16-Yak基础插件案例——CDN检测.md](https://github.com/izj007/wechat/blob/main/articles/[Yak%20Project]-2022-2-16-Yak%E5%9F%BA%E7%A1%80%E6%8F%92%E4%BB%B6%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94CDN%E6%A3%80%E6%B5%8B.md)
 - [[]-2021-10-11-美团App有重大安全漏洞，@王思聪  账号可能就是这样被盗的.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-11-%E7%BE%8E%E5%9B%A2App%E6%9C%89%E9%87%8D%E5%A4%A7%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%EF%BC%8C@%E7%8E%8B%E6%80%9D%E8%81%AA%20%20%E8%B4%A6%E5%8F%B7%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E8%BF%99%E6%A0%B7%E8%A2%AB%E7%9B%97%E7%9A%84.md)
 - [[]-2021-10-12-GitHub - yhy0](https://github.com/izj007/wechat/tree/main/articles/[]-2021-10-12-GitHub%20-%20yhy0)
 - [[]-2021-10-12-电梯免广告特权.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-10-12-%E7%94%B5%E6%A2%AF%E5%85%8D%E5%B9%BF%E5%91%8A%E7%89%B9%E6%9D%83.md)
