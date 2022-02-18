@@ -97,6 +97,7 @@
 - [[]-2021-9-4-跟我张美玉拼你有这实力吗.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-9-4-%E8%B7%9F%E6%88%91%E5%BC%A0%E7%BE%8E%E7%8E%89%E6%8B%BC%E4%BD%A0%E6%9C%89%E8%BF%99%E5%AE%9E%E5%8A%9B%E5%90%97.md)
 - [[]-2021-9-5-野摩托 (DJ阿卓版).md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-9-5-%E9%87%8E%E6%91%A9%E6%89%98%20(DJ%E9%98%BF%E5%8D%93%E7%89%88).md)
 - [[]-2021-9-6-反制爬虫之Burp Suite RCE.md](https://github.com/izj007/wechat/blob/main/articles/[]-2021-9-6-%E5%8F%8D%E5%88%B6%E7%88%AC%E8%99%AB%E4%B9%8BBurp%20Suite%20RCE.md)
+- [[]-2022-2-18-当你上班摸鱼被普京大帝发现时.md](https://github.com/izj007/wechat/blob/main/articles/[]-2022-2-18-%E5%BD%93%E4%BD%A0%E4%B8%8A%E7%8F%AD%E6%91%B8%E9%B1%BC%E8%A2%AB%E6%99%AE%E4%BA%AC%E5%A4%A7%E5%B8%9D%E5%8F%91%E7%8E%B0%E6%97%B6.md)
 - [[freebuf]-2021-08-09-使用RomBuster获取网络路由器密码.md](https://github.com/izj007/wechat/blob/main/articles/[freebuf]-2021-08-09-%E4%BD%BF%E7%94%A8RomBuster%E8%8E%B7%E5%8F%96%E7%BD%91%E7%BB%9C%E8%B7%AF%E7%94%B1%E5%99%A8%E5%AF%86%E7%A0%81.md)
 - [[here404]-2021-8-24-记一次审计小师妹的Code.md](https://github.com/izj007/wechat/blob/main/articles/[here404]-2021-8-24-%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AE%A1%E8%AE%A1%E5%B0%8F%E5%B8%88%E5%A6%B9%E7%9A%84Code.md)
 - [[luomasec]-2021-10-15-ProcessGhosting-一套通用的免杀，自删除解决方案.md](https://github.com/izj007/wechat/blob/main/articles/[luomasec]-2021-10-15-ProcessGhosting-%E4%B8%80%E5%A5%97%E9%80%9A%E7%94%A8%E7%9A%84%E5%85%8D%E6%9D%80%EF%BC%8C%E8%87%AA%E5%88%A0%E9%99%A4%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md)
