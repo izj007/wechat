@@ -395,6 +395,7 @@
 - [[鸿鹄实验室]-2021-8-22-Sideloading DLL攻击.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-22-Sideloading%20DLL%E6%94%BB%E5%87%BB.md)
 - [[鸿鹄实验室]-2021-8-5-再探mimikatz免杀.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-5-%E5%86%8D%E6%8E%A2mimikatz%E5%85%8D%E6%9D%80.md)
 - [[鸿鹄实验室]-2021-9-4-AMSI调试及绕过.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-9-4-AMSI%E8%B0%83%E8%AF%95%E5%8F%8A%E7%BB%95%E8%BF%87.md)
+- [[鸿鹄实验室]-2022-3-16-从外网 Weblogic 打进内网接管域控.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2022-3-16-%E4%BB%8E%E5%A4%96%E7%BD%91%20Weblogic%20%E6%89%93%E8%BF%9B%E5%86%85%E7%BD%91%E6%8E%A5%E7%AE%A1%E5%9F%9F%E6%8E%A7.md)
 - [[鹅直播]-2022-3-12-关于内存马讨论分享.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B9%85%E7%9B%B4%E6%92%AD]-2022-3-12-%E5%85%B3%E4%BA%8E%E5%86%85%E5%AD%98%E9%A9%AC%E8%AE%A8%E8%AE%BA%E5%88%86%E4%BA%AB.md)
 - [[鹏组安全]-2022-3-4-信息收集利器SharpXDecrypt.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B9%8F%E7%BB%84%E5%AE%89%E5%85%A8]-2022-3-4-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%88%A9%E5%99%A8SharpXDecrypt.md)
 - [[黑哥说安全]-2021-11-3-无干货不KCon｜KCon 2021 部分ppt发布.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%BB%91%E5%93%A5%E8%AF%B4%E5%AE%89%E5%85%A8]-2021-11-3-%E6%97%A0%E5%B9%B2%E8%B4%A7%E4%B8%8DKCon%EF%BD%9CKCon%202021%20%E9%83%A8%E5%88%86ppt%E5%8F%91%E5%B8%83.md)
