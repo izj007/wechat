@@ -91,6 +91,7 @@
 - [[TeamsSix]-2021-10-27-null.md](https://github.com/izj007/wechat/blob/main/articles/[TeamsSix]-2021-10-27-null.md)
 - [[Th0r安全]-2022-4-19-利用卷影拷贝服务提取ntds.dit.md](https://github.com/izj007/wechat/blob/main/articles/[Th0r%E5%AE%89%E5%85%A8]-2022-4-19-%E5%88%A9%E7%94%A8%E5%8D%B7%E5%BD%B1%E6%8B%B7%E8%B4%9D%E6%9C%8D%E5%8A%A1%E6%8F%90%E5%8F%96ntds.dit.md)
 - [[Tide安全团队]-2022-3-16-frp优化.md](https://github.com/izj007/wechat/blob/main/articles/[Tide%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F]-2022-3-16-frp%E4%BC%98%E5%8C%96.md)
+- [[Tide安全团队]-2022-4-21-双向认证APP自吐证书密码与抓包.md](https://github.com/izj007/wechat/blob/main/articles/[Tide%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F]-2022-4-21-%E5%8F%8C%E5%90%91%E8%AE%A4%E8%AF%81APP%E8%87%AA%E5%90%90%E8%AF%81%E4%B9%A6%E5%AF%86%E7%A0%81%E4%B8%8E%E6%8A%93%E5%8C%85.md)
 - [[Timeline Sec]-2021-8-10-CVE-2021-34429：Jetty WEB-INF文件读取复现.md](https://github.com/izj007/wechat/blob/main/articles/[Timeline%20Sec]-2021-8-10-CVE-2021-34429%EF%BC%9AJetty%20WEB-INF%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E5%A4%8D%E7%8E%B0.md)
 - [[Timeline Sec]-2021-8-25-Exchange ProxyShell 远程代码执行漏洞复现.md](https://github.com/izj007/wechat/blob/main/articles/[Timeline%20Sec]-2021-8-25-Exchange%20ProxyShell%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md)
 - [[Timeline Sec]-2021-8-5-CVE-2021-167534527：Windows Print Spooler权限提升复现.md](https://github.com/izj007/wechat/blob/main/articles/[Timeline%20Sec]-2021-8-5-CVE-2021-167534527%EF%BC%9AWindows%20Print%20Spooler%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E5%A4%8D%E7%8E%B0.md)
