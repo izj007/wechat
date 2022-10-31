@@ -460,6 +460,7 @@
 - [[雾晓安全]-2021-8-20-微小的XSS Payloads集合.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%9B%BE%E6%99%93%E5%AE%89%E5%85%A8]-2021-8-20-%E5%BE%AE%E5%B0%8F%E7%9A%84XSS%20Payloads%E9%9B%86%E5%90%88.md)
 - [[雾晓安全]-2022-10-5-任意账号密码重置的6种方法.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%9B%BE%E6%99%93%E5%AE%89%E5%85%A8]-2022-10-5-%E4%BB%BB%E6%84%8F%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E7%9A%846%E7%A7%8D%E6%96%B9%E6%B3%95.md)
 - [[雾晓安全]-2022-9-29-睡眠混淆技术.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%9B%BE%E6%99%93%E5%AE%89%E5%85%A8]-2022-9-29-%E7%9D%A1%E7%9C%A0%E6%B7%B7%E6%B7%86%E6%8A%80%E6%9C%AF.md)
+- [[风之卷轴]-2022-10-31-风之卷轴.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%A3%8E%E4%B9%8B%E5%8D%B7%E8%BD%B4]-2022-10-31-%E9%A3%8E%E4%B9%8B%E5%8D%B7%E8%BD%B4.md)
 - [[骨哥说事]-2022-4-19-（CVE-2022-29072）7zip漏洞EXP.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%AA%A8%E5%93%A5%E8%AF%B4%E4%BA%8B]-2022-4-19-%EF%BC%88CVE-2022-29072%EF%BC%897zip%E6%BC%8F%E6%B4%9EEXP.md)
 - [[鸿鹄实验室]-2021-10-15-DLL injection.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-10-15-DLL%20injection.md)
 - [[鸿鹄实验室]-2021-8-1-工具推荐：BadAssMacros免杀宏生成器.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%B8%BF%E9%B9%84%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2021-8-1-%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90%EF%BC%9ABadAssMacros%E5%85%8D%E6%9D%80%E5%AE%8F%E7%94%9F%E6%88%90%E5%99%A8.md)
