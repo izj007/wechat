@@ -11,6 +11,7 @@
 - [[Admin Team]-2021-9-6-web类漏洞总结（附exp、代码分析和漏洞修补）.md](https://github.com/izj007/wechat/blob/main/articles/[Admin%20Team]-2021-9-6-web%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93%EF%BC%88%E9%99%84exp%E3%80%81%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E5%92%8C%E6%BC%8F%E6%B4%9E%E4%BF%AE%E8%A1%A5%EF%BC%89.md)
 - [[Bypass]-2021-8-11-使用SonarQube实现自动化代码扫描.md](https://github.com/izj007/wechat/blob/main/articles/[Bypass]-2021-8-11-%E4%BD%BF%E7%94%A8SonarQube%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%A3%E7%A0%81%E6%89%AB%E6%8F%8F.md)
 - [[Bypass]-2021-8-23-openrasp-iast 灰盒扫描工具.md](https://github.com/izj007/wechat/blob/main/articles/[Bypass]-2021-8-23-openrasp-iast%20%E7%81%B0%E7%9B%92%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7.md)
+- [[Bypass]-2022-12-8-基于AD Event日志检测哈希传递攻击.md](https://github.com/izj007/wechat/blob/main/articles/[Bypass]-2022-12-8-%E5%9F%BA%E4%BA%8EAD%20Event%E6%97%A5%E5%BF%97%E6%A3%80%E6%B5%8B%E5%93%88%E5%B8%8C%E4%BC%A0%E9%80%92%E6%94%BB%E5%87%BB.md)
 - [[ChaBug]-2021-10-22-WorkFolders.exe 一个新的lolbin.md](https://github.com/izj007/wechat/blob/main/articles/[ChaBug]-2021-10-22-WorkFolders.exe%20%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84lolbin.md)
 - [[ChaBug]-2021-8-30-通过PELoader加载mimikatz.md](https://github.com/izj007/wechat/blob/main/articles/[ChaBug]-2021-8-30-%E9%80%9A%E8%BF%87PELoader%E5%8A%A0%E8%BD%BDmimikatz.md)
 - [[EchoSec]-2022-10-5-分享 | mimikatz和shellcode免杀.md](https://github.com/izj007/wechat/blob/main/articles/[EchoSec]-2022-10-5-%E5%88%86%E4%BA%AB%20%7C%20mimikatz%E5%92%8Cshellcode%E5%85%8D%E6%9D%80.md)
