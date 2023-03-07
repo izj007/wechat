@@ -546,6 +546,7 @@
 - [[雾晓安全]-2021-8-20-微小的XSS Payloads集合.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%9B%BE%E6%99%93%E5%AE%89%E5%85%A8]-2021-8-20-%E5%BE%AE%E5%B0%8F%E7%9A%84XSS%20Payloads%E9%9B%86%E5%90%88.md)
 - [[雾晓安全]-2022-10-5-任意账号密码重置的6种方法.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%9B%BE%E6%99%93%E5%AE%89%E5%85%A8]-2022-10-5-%E4%BB%BB%E6%84%8F%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E7%9A%846%E7%A7%8D%E6%96%B9%E6%B3%95.md)
 - [[雾晓安全]-2022-9-29-睡眠混淆技术.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%9B%BE%E6%99%93%E5%AE%89%E5%85%A8]-2022-9-29-%E7%9D%A1%E7%9C%A0%E6%B7%B7%E6%B7%86%E6%8A%80%E6%9C%AF.md)
+- [[靶机狂魔]-2023-3-7-靶机——Awkward.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%9D%B6%E6%9C%BA%E7%8B%82%E9%AD%94]-2023-3-7-%E9%9D%B6%E6%9C%BA%E2%80%94%E2%80%94Awkward.md)
 - [[风之卷轴]-2022-10-31-风之卷轴.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%A3%8E%E4%B9%8B%E5%8D%B7%E8%BD%B4]-2022-10-31-%E9%A3%8E%E4%B9%8B%E5%8D%B7%E8%BD%B4.md)
 - [[风之卷轴]-2022-11-1-风之卷轴.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%A3%8E%E4%B9%8B%E5%8D%B7%E8%BD%B4]-2022-11-1-%E9%A3%8E%E4%B9%8B%E5%8D%B7%E8%BD%B4.md)
 - [[风之卷轴]-2022-11-2-风之卷轴.md](https://github.com/izj007/wechat/blob/main/articles/[%E9%A3%8E%E4%B9%8B%E5%8D%B7%E8%BD%B4]-2022-11-2-%E9%A3%8E%E4%B9%8B%E5%8D%B7%E8%BD%B4.md)
