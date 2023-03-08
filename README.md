@@ -184,6 +184,7 @@
 - [[]-2023-3-7-null.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-3-7-null.md)
 - [[]-2023-3-8-IFQ无名小菜鸟邀请你加入帮会: 平安安全实验室.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-3-8-IFQ%E6%97%A0%E5%90%8D%E5%B0%8F%E8%8F%9C%E9%B8%9F%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E5%B8%AE%E4%BC%9A:%20%E5%B9%B3%E5%AE%89%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4.md)
 - [[]-2023-3-8-null.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-3-8-null.md)
+- [[]-2023-3-8-向黑客精神致敬！.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-3-8-%E5%90%91%E9%BB%91%E5%AE%A2%E7%B2%BE%E7%A5%9E%E8%87%B4%E6%95%AC%EF%BC%81.md)
 - [[debugeeker]-2022-11-8-美国NSA超级后门Bvp47的隐身技能：网络隐身1.md](https://github.com/izj007/wechat/blob/main/articles/[debugeeker]-2022-11-8-%E7%BE%8E%E5%9B%BDNSA%E8%B6%85%E7%BA%A7%E5%90%8E%E9%97%A8Bvp47%E7%9A%84%E9%9A%90%E8%BA%AB%E6%8A%80%E8%83%BD%EF%BC%9A%E7%BD%91%E7%BB%9C%E9%9A%90%E8%BA%AB1.md)
 - [[debugeeker]-2022-11-8-美国NSA超级后门Bvp47的隐身技能：网络隐身2.md](https://github.com/izj007/wechat/blob/main/articles/[debugeeker]-2022-11-8-%E7%BE%8E%E5%9B%BDNSA%E8%B6%85%E7%BA%A7%E5%90%8E%E9%97%A8Bvp47%E7%9A%84%E9%9A%90%E8%BA%AB%E6%8A%80%E8%83%BD%EF%BC%9A%E7%BD%91%E7%BB%9C%E9%9A%90%E8%BA%AB2.md)
 - [[dotNet安全矩阵]-2022-9-26-互动答疑 | ASPX的webshell权限为什么比ASP的大？.md](https://github.com/izj007/wechat/blob/main/articles/[dotNet%E5%AE%89%E5%85%A8%E7%9F%A9%E9%98%B5]-2022-9-26-%E4%BA%92%E5%8A%A8%E7%AD%94%E7%96%91%20%7C%20ASPX%E7%9A%84webshell%E6%9D%83%E9%99%90%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AF%94ASP%E7%9A%84%E5%A4%A7%EF%BC%9F.md)
