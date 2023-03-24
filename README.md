@@ -118,6 +118,7 @@
 - [[NearSec]-2021-8-22-Invoke-Obfuscation-Bypass + PS2EXE 绕过主流杀软.md](https://github.com/izj007/wechat/blob/main/articles/[NearSec]-2021-8-22-Invoke-Obfuscation-Bypass%20%2B%20PS2EXE%20%E7%BB%95%E8%BF%87%E4%B8%BB%E6%B5%81%E6%9D%80%E8%BD%AF.md)
 - [[PeiQi文库]-2021-8-16-某设备快速代码审计 (Bash审计).md](https://github.com/izj007/wechat/blob/main/articles/[PeiQi%E6%96%87%E5%BA%93]-2021-8-16-%E6%9F%90%E8%AE%BE%E5%A4%87%E5%BF%AB%E9%80%9F%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20(Bash%E5%AE%A1%E8%AE%A1).md)
 - [[RCE TEAM]-2021-9-30-文件上云 - 对象存储的攻击方式.md](https://github.com/izj007/wechat/blob/main/articles/[RCE%20TEAM]-2021-9-30-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BA%91%20-%20%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%94%BB%E5%87%BB%E6%96%B9%E5%BC%8F.md)
+- [[RainSec]-2023-3-24-对5.6w条xray结果的简单分析.md](https://github.com/izj007/wechat/blob/main/articles/[RainSec]-2023-3-24-%E5%AF%B95.6w%E6%9D%A1xray%E7%BB%93%E6%9E%9C%E7%9A%84%E7%AE%80%E5%8D%95%E5%88%86%E6%9E%90.md)
 - [[RedTeaming]-2021-8-30-Nim套娃加载.NET程序集.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-30-Nim%E5%A5%97%E5%A8%83%E5%8A%A0%E8%BD%BD.NET%E7%A8%8B%E5%BA%8F%E9%9B%86.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
 - [[Reset安全]-2022-2-16-钉钉RCE漏洞复现.md](https://github.com/izj007/wechat/blob/main/articles/[Reset%E5%AE%89%E5%85%A8]-2022-2-16-%E9%92%89%E9%92%89RCE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md)
