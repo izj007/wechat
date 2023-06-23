@@ -1,0 +1,271 @@
+#  浅聊一下 C#程序的 内存映射文件 玩法
+
+原创 一线码农聊技术 [ 一线码农聊技术 ](javascript:void\(0\);)
+
+**一线码农聊技术** ![]()
+
+微信号 dotnetfly
+
+功能介绍 专治.NET各种内存泄漏 CPU暴涨 程序呆滞 崩溃死锁，带您一起逆向侦读那些企业级生产事故！
+
+____
+
+___发表于_
+
+收录于合集
+
+## 一：背景
+
+### 1\. 讲故事
+
+前段时间训练营里有朋友问 `内存映射文件`
+是怎么玩的？说实话这东西理论我相信很多朋友都知道，就是将文件映射到进程的虚拟地址，说起来很容易，那如何让大家眼见为实呢？可能会难倒很多人，所以这篇我以自己的认知尝试让大家眼见为实。
+
+## 二：如何眼见为实
+
+### 1\. 我想象的文件映射
+
+在任何讨论之前，内存文件映射大概像下面这样，多个进程可以完全View一个文件，也可以 View 文件的一部分到进程的虚拟地址中，画个图大概像下面这样。
+
+![](https://gitee.com/fuli009/images/raw/master/public/20230623090644.png)
+
+但仔细一想，这里还有很多的小细节，比如：
+
+> 疑问1：到底是映射文件还是映射磁盘的物理地址 ?
+
+> 疑问2：既然是后备存储，那是不是每次修改虚拟地址都要刷硬盘 ?
+
+> 疑问3：内存页是4k为一个单位，文件大小不是 4k 整数倍怎么办 ?
+
+这三个疑问我相信很多朋友或多或少都会遇到，这里我简单解答一下，后面再用 windbg 验证。
+
+  1. 严格来说是 `硬盘物理地址`。
+
+  2. 文件所处的硬盘地址为后备存储这个不假，但这里有个小细节，对虚拟地址的读写涉及到 `内存页` 概念，如果访问的虚拟地址所在的物理地址不在 `物理内存` 中，就会引发缺页中断，操作系统会将 磁盘上的 4k 页粒度灌入到 `物理内存` 中，同样的道理，如果修改了虚拟地址，那么物理内存页就是脏数据，会在后续的某个时刻刷新到 `硬盘` 上，产生磁盘 IO。
+
+总的来说：从磁盘到物理内存（内存条） 之间的内存页的换入换出都是一种按需的 **懒加载懒写入行为** ，稍后我们用 windbg 验证下。
+
+  3. 内存的管理采用的是内存页的方式，如果 View 大于 文件Size，那么文件会扩容到 4k 对齐，这样方便对文件追加写入。
+
+综合上面的三点信息，图就可以画的再详细一点了，比如下面这样：
+
+![](https://gitee.com/fuli009/images/raw/master/public/20230623090653.png)
+
+熟悉内存管理的朋友应该知道，我们程序的 exe 和 dll 就是用 `内存映射文件` 的方式加载到虚拟地址中的，所以就拿它开刀吧。
+
+### 2\. 一段测试代码
+
+为了方便演示，上一段简单的的测试代码，观察 `ConsoleApp1.exe` 的映射方式。
+
+    
+    
+      
+            static void Main(string[] args)  
+            {  
+                Console.WriteLine($"当前时间：{DateTime.Now}， 程序启动！");  
+                Console.ReadLine();  
+            }  
+      
+    
+
+接下来用 windbg 启动 `ConsoleApp1.exe` 两次，结合详细分解图，我们观察下这两个进程的虚拟地址所映射的内存条物理地址是否一致？
+
+  1. 实例1
+
+    
+    
+      
+    ModLoad: 00007ff6`bfe00000 00007ff6`bfe2a000   apphost.exe  
+    ModLoad: 00007ff9`b1450000 00007ff9`b1648000   ntdll.dll  
+    ...  
+      
+    0:008> lmvm apphost  
+    Browse full module list  
+    start             end                 module name  
+    00007ff6`bfe00000 00007ff6`bfe2a000   apphost  C (private pdb symbols)  c:\mysymbols\apphost.pdb\1643A9EB126F4FE184548E9CC1B740B71\apphost.pdb  
+        Loaded symbol image file: D:\net7\ConsoleApplication1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.exe  
+        Image path: apphost.exe  
+        Image name: apphost.exe  
+        ...  
+      
+    0:008> ~  
+       0  Id: 232c.4abc Suspend: 1 Teb: 0000000e`7b1a5000 Unfrozen  
+      
+    
+
+  2. 实例2
+
+    
+    
+      
+    ModLoad: 00007ff6`bfe00000 00007ff6`bfe2a000   apphost.exe  
+    ModLoad: 00007ff9`b1450000 00007ff9`b1648000   ntdll.dll  
+    ...  
+      
+    0:008> ~  
+       0  Id: 60e8.3e3c Suspend: 1 Teb: 000000da`ab498000 Unfrozen  
+       1  Id: 60e8.53b0 Suspend: 1 Teb: 000000da`ab49a000 Unfrozen  
+      
+    
+
+这里要提醒一下的是在 Windows 平台上 `ConsoleApp1.exe` 已经成了一个引导程序，通过 lmvm 可以看到它其实是
+`apphost.exe`。
+
+两个实例都开起来后，可以看到 `apphost.exe` 在各自进程的虚拟地址都一样，那他们的物理地址是否也一样呢？要寻找答案，接下来我们到 Windows
+内核态去挖一挖。
+
+    
+    
+      
+    lkd> !process 0 0 ConsoleApp1.exe  
+      
+    PROCESS ffff838bd84c9080  
+        SessionId: 8  Cid: 232c    Peb: e7b1a4000  ParentCid: 0b14  
+    FreezeCount 2  
+        DirBase: 3468cf000  ObjectTable: ffff938feae02900  HandleCount: 172.  
+        Image: ConsoleApp1.exe  
+      
+    PROCESS ffff838bef157080  
+        SessionId: 8  Cid: 60e8    Peb: daab497000  ParentCid: 4804  
+    FreezeCount 2  
+        DirBase: 3552f3000  ObjectTable: ffff938fe8f7ec40  HandleCount: 166.  
+        Image: ConsoleApp1.exe  
+      
+    
+
+从卦中看，`Cid: 232c` 是我们的实例1， `Cid: 60e8` 是我们的实例2，接下来用 windbg 提供的 !vtop 命令观察
+apphost.exe 的首地址对应的物理地址。
+
+    
+    
+      
+    // ----  实例1 -----  
+    lkd> !vtop 3468cf000 00007ff6bfe00000  
+    Amd64VtoP: Virt 00007ff6bfe00000, pagedir 00000003468cf000  
+    Amd64VtoP: PML4E 00000003468cf7f8  
+    Amd64VtoP: PDPE 00000001138dbed0  
+    Amd64VtoP: PDE 00000002153dcff8  
+    Amd64VtoP: PTE 000000024dadd000  
+    Amd64VtoP: Mapped phys 00000002271c2000  
+    Virtual address 7ff6bfe00000 translates to physical address 2271c2000.  
+      
+    //----  实例2 -----  
+      
+    lkd> !vtop 3552f3000 00007ff6bfe00000  
+    Amd64VtoP: Virt 00007ff6bfe00000, pagedir 00000003552f3000  
+    Amd64VtoP: PML4E 00000003552f37f8  
+    Amd64VtoP: PDPE 00000002db7ffed0  
+    Amd64VtoP: PDE 0000000208100ff8  
+    Amd64VtoP: PTE 000000033de01000  
+    Amd64VtoP: Mapped phys 00000002271c2000  
+    Virtual address 7ff6bfe00000 translates to physical address 2271c2000.  
+      
+    
+
+从卦中看，实例1 和 实例2 的 `虚拟地址` 映射的 `物理地址` 是相同的 `2271c2000`。这也很好的解释了那张图。
+
+有朋友可能会有疑问，能否看下 2271c2000 这个 `物理地址` 的内容？这当然是可以的，用 windbg 的 `!da` 就好了。
+
+    
+    
+      
+    lkd> !db 2271c2000  
+    #2271c2000 4d 5a 90 00 03 00 00 00-04 00 00 00 ff ff 00 00 MZ..............  
+    #2271c2010 b8 00 00 00 00 00 00 00-40 00 00 00 00 00 00 00 ........@.......  
+    #2271c2020 00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00 ................  
+    #2271c2030 00 00 00 00 00 00 00 00-00 00 00 00 e8 00 00 00 ................  
+    #2271c2040 0e 1f ba 0e 00 b4 09 cd-21 b8 01 4c cd 21 54 68 ........!..L.!Th  
+    #2271c2050 69 73 20 70 72 6f 67 72-61 6d 20 63 61 6e 6e 6f is program canno  
+    #2271c2060 74 20 62 65 20 72 75 6e-20 69 6e 20 44 4f 53 20 t be run in DOS   
+    #2271c2070 6d 6f 64 65 2e 0d 0d 0a-24 00 00 00 00 00 00 00 mode....$.......  
+      
+    
+
+从卦中看，物理地址上有一段 `This program cannot be run in DOS mode`，这不就是经典的 PE 文件哈，如果不相信可以用
+WinHex 打开 `ConsoleApp1.exe` 即可，截图如下：
+
+![](https://gitee.com/fuli009/images/raw/master/public/20230623090654.png)
+
+最后就是内核中的 `内存管理器` 会将 物理地址 与 磁盘地址 进行打通，实现懒加载和懒写入。
+
+### 3\. 如何自定义实现
+
+Image 虽然是一个快捷的观察 **内存文件映射方式** ，那如果自己能实现一个就更有意思了，比如下面对 `1.txt` 进行文件映射，在 C#
+中有一个快捷类 `MemoryMappedFile` 实现了 win32api 的封装，参考代码如下：
+
+    
+    
+      
+        internal class Program  
+        {  
+            static void Main(string[] args)  
+            {  
+                int capaticy = 1024; //1k  
+      
+                using (var mmf = MemoryMappedFile.CreateFromFile(@"C:\1.txt", FileMode.OpenOrCreate,  
+                                                                "testmapfile",  
+                                                                 capaticy,  
+                                                                 MemoryMappedFileAccess.ReadWrite))  
+                {  
+                    var viewAccessor = mmf.CreateViewAccessor(0, capaticy);  
+      
+                    while (true)  
+                    {  
+                        Console.WriteLine("请输入你要写入的内容: ");  
+      
+                        string input = Console.ReadLine();  
+      
+                        viewAccessor.WriteArray(0, input.ToArray(), 0, input.Length);  
+                    }  
+                }  
+            }  
+        }  
+      
+    
+
+接下来用 windbg 附加一下，观察 1.txt 是不是被 MappedFile 上了，同时做的修改有没有更新到物理磁盘上。
+
+    
+    
+      
+    0:006> !address  
+      
+      BaseAddr EndAddr+1 RgnSize     Type       State                 Protect             Usage  
+    -----------------------------------------------------------------------------------------------  
+    ...  
+    +  31a0000  31a1000     1000 MEM_MAPPED  MEM_COMMIT  PAGE_READWRITE                     MappedFile "\Device\HarddiskVolume3\1.txt"  
+    ...  
+      
+    0:006> du 31a0000  
+    031a0000  "helloworld!"  
+      
+    
+
+![](https://gitee.com/fuli009/images/raw/master/public/20230623090655.png)
+
+从卦中可以看到，虽然 1.txt 最大的 View 区间是 1k，但提交的内存页还是按照最小粒度 4k 给的。
+
+## 三：总结
+
+这篇我们就简单的浅聊一下，如果这块是知识盲区的朋友应该会有一点帮助，希望没有带偏大家，更多的细节期待大家挖掘！
+
+预览时标签不可点
+
+微信扫一扫  
+关注该公众号
+
+[知道了](javascript:;)
+
+微信扫一扫  
+使用小程序
+
+****
+
+[取消](javascript:void\(0\);) [允许](javascript:void\(0\);)
+
+****
+
+[取消](javascript:void\(0\);) [允许](javascript:void\(0\);)
+
+： ， 。   视频 小程序 赞 ，轻点两下取消赞 在看 ，轻点两下取消在看
+
