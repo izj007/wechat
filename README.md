@@ -144,6 +144,7 @@
 - [[Reset安全]-2022-2-16-钉钉RCE漏洞复现.md](https://github.com/izj007/wechat/blob/main/articles/[Reset%E5%AE%89%E5%85%A8]-2022-2-16-%E9%92%89%E9%92%89RCE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md)
 - [[RowTeam]-2023-4-1-SharpExchangeKing v1.6.0.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpExchangeKing%20v1.6.0.md)
 - [[RowTeam]-2023-4-1-SharpViewStateShell v1.0.2.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpViewStateShell%20v1.0.2.md)
+- [[SafetyTeam]-2023-6-23-Cobaltstrike二开源码.md](https://github.com/izj007/wechat/blob/main/articles/[SafetyTeam]-2023-6-23-Cobaltstrike%E4%BA%8C%E5%BC%80%E6%BA%90%E7%A0%81.md)
 - [[SecOps急行军]-2021-10-19-中国人民银行遭受供应链攻击事件.md](https://github.com/izj007/wechat/blob/main/articles/[SecOps%E6%80%A5%E8%A1%8C%E5%86%9B]-2021-10-19-%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E9%93%B6%E8%A1%8C%E9%81%AD%E5%8F%97%E4%BE%9B%E5%BA%94%E9%93%BE%E6%94%BB%E5%87%BB%E4%BA%8B%E4%BB%B6.md)
 - [[SecOps急行军]-2021-9-29-对网络安全行业的信心不变.md](https://github.com/izj007/wechat/blob/main/articles/[SecOps%E6%80%A5%E8%A1%8C%E5%86%9B]-2021-9-29-%E5%AF%B9%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%A1%8C%E4%B8%9A%E7%9A%84%E4%BF%A1%E5%BF%83%E4%B8%8D%E5%8F%98.md)
 - [[SecWiki]-2021-8-9-SecWiki周刊（第388期）.md](https://github.com/izj007/wechat/blob/main/articles/[SecWiki]-2021-8-9-SecWiki%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC388%E6%9C%9F%EF%BC%89.md)
