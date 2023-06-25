@@ -234,6 +234,7 @@
 - [[]-2023-6-16-403 Forbidden.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-6-16-403%20Forbidden.md)
 - [[]-2023-6-16-内部人才市场.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-6-16-%E5%86%85%E9%83%A8%E4%BA%BA%E6%89%8D%E5%B8%82%E5%9C%BA.md)
 - [[]-2023-6-16-顺易充.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-6-16-%E9%A1%BA%E6%98%93%E5%85%85.md)
+- [[]-2023-6-25-In-Memory shellcode decoding to evade AVs](https://github.com/izj007/wechat/tree/main/articles/[]-2023-6-25-In-Memory%20shellcode%20decoding%20to%20evade%20AVs)
 - [[debugeeker]-2022-11-8-美国NSA超级后门Bvp47的隐身技能：网络隐身1.md](https://github.com/izj007/wechat/blob/main/articles/[debugeeker]-2022-11-8-%E7%BE%8E%E5%9B%BDNSA%E8%B6%85%E7%BA%A7%E5%90%8E%E9%97%A8Bvp47%E7%9A%84%E9%9A%90%E8%BA%AB%E6%8A%80%E8%83%BD%EF%BC%9A%E7%BD%91%E7%BB%9C%E9%9A%90%E8%BA%AB1.md)
 - [[debugeeker]-2022-11-8-美国NSA超级后门Bvp47的隐身技能：网络隐身2.md](https://github.com/izj007/wechat/blob/main/articles/[debugeeker]-2022-11-8-%E7%BE%8E%E5%9B%BDNSA%E8%B6%85%E7%BA%A7%E5%90%8E%E9%97%A8Bvp47%E7%9A%84%E9%9A%90%E8%BA%AB%E6%8A%80%E8%83%BD%EF%BC%9A%E7%BD%91%E7%BB%9C%E9%9A%90%E8%BA%AB2.md)
 - [[dotNet安全矩阵]-2022-9-26-互动答疑 | ASPX的webshell权限为什么比ASP的大？.md](https://github.com/izj007/wechat/blob/main/articles/[dotNet%E5%AE%89%E5%85%A8%E7%9F%A9%E9%98%B5]-2022-9-26-%E4%BA%92%E5%8A%A8%E7%AD%94%E7%96%91%20%7C%20ASPX%E7%9A%84webshell%E6%9D%83%E9%99%90%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AF%94ASP%E7%9A%84%E5%A4%A7%EF%BC%9F.md)
