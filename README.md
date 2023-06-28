@@ -505,6 +505,7 @@
 - [[无界信安]-2021-9-10-浅谈K8S攻防：从进入POD到控制K8S集群.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%97%A0%E7%95%8C%E4%BF%A1%E5%AE%89]-2021-9-10-%E6%B5%85%E8%B0%88K8S%E6%94%BB%E9%98%B2%EF%BC%9A%E4%BB%8E%E8%BF%9B%E5%85%A5POD%E5%88%B0%E6%8E%A7%E5%88%B6K8S%E9%9B%86%E7%BE%A4.md)
 - [[无级安全]-2021-9-13-CVE-2020-0787 Windows 全版本 本地提权.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%97%A0%E7%BA%A7%E5%AE%89%E5%85%A8]-2021-9-13-CVE-2020-0787%20Windows%20%E5%85%A8%E7%89%88%E6%9C%AC%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83.md)
 - [[昆仑云安全]-2023-3-28-对某SRC的渗透测试实战.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%86%E4%BB%91%E4%BA%91%E5%AE%89%E5%85%A8]-2023-3-28-%E5%AF%B9%E6%9F%90SRC%E7%9A%84%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%98.md)
+- [[星冥安全]-2023-6-28-免杀绕某数字杀软.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E5%86%A5%E5%AE%89%E5%85%A8]-2023-6-28-%E5%85%8D%E6%9D%80%E7%BB%95%E6%9F%90%E6%95%B0%E5%AD%97%E6%9D%80%E8%BD%AF.md)
 - [[星海安全实验室]-2023-6-16-Dedecms最新版审计-0dayRCE.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E6%B5%B7%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2023-6-16-Dedecms%E6%9C%80%E6%96%B0%E7%89%88%E5%AE%A1%E8%AE%A1-0dayRCE.md)
 - [[未分类]--MQTT协议.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--MQTT%E5%8D%8F%E8%AE%AE.md)
 - [[未分类]--a href=](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--a%20href=)
