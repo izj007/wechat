@@ -579,6 +579,7 @@
 - [[渝安服]-2023-6-29-金山V8过滤空格后的绕过.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B8%9D%E5%AE%89%E6%9C%8D]-2023-6-29-%E9%87%91%E5%B1%B1V8%E8%BF%87%E6%BB%A4%E7%A9%BA%E6%A0%BC%E5%90%8E%E7%9A%84%E7%BB%95%E8%BF%87.md)
 - [[湛卢工作室]-2021-10-15-WatchAD攻防实战.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B9%9B%E5%8D%A2%E5%B7%A5%E4%BD%9C%E5%AE%A4]-2021-10-15-WatchAD%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98.md)
 - [[溪琉安全录]-2023-6-22-【代码审计】某OA的Nday漏洞收集.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%BA%AA%E7%90%89%E5%AE%89%E5%85%A8%E5%BD%95]-2023-6-22-%E3%80%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E3%80%91%E6%9F%90OA%E7%9A%84Nday%E6%BC%8F%E6%B4%9E%E6%94%B6%E9%9B%86.md)
+- [[溪琉安全录]-2023-6-29-【vCenter】vpxuser密码解密.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%BA%AA%E7%90%89%E5%AE%89%E5%85%A8%E5%BD%95]-2023-6-29-%E3%80%90vCenter%E3%80%91vpxuser%E5%AF%86%E7%A0%81%E8%A7%A3%E5%AF%86.md)
 - [[漏洞推送]-2021-9-8-红蓝对抗中的suid.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%BC%8F%E6%B4%9E%E6%8E%A8%E9%80%81]-2021-9-8-%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97%E4%B8%AD%E7%9A%84suid.md)
 - [[漏洞推送]-2022-9-23-蓝凌oa安装及调试.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%BC%8F%E6%B4%9E%E6%8E%A8%E9%80%81]-2022-9-23-%E8%93%9D%E5%87%8Coa%E5%AE%89%E8%A3%85%E5%8F%8A%E8%B0%83%E8%AF%95.md)
 - [[潇湘信安]-2021-8-10-利用goproxy http上线不出网主机.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%BD%87%E6%B9%98%E4%BF%A1%E5%AE%89]-2021-8-10-%E5%88%A9%E7%94%A8goproxy%20http%E4%B8%8A%E7%BA%BF%E4%B8%8D%E5%87%BA%E7%BD%91%E4%B8%BB%E6%9C%BA.md)
