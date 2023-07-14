@@ -550,6 +550,7 @@
 - [[星冥安全]-2023-6-28-免杀绕某数字杀软.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E5%86%A5%E5%AE%89%E5%85%A8]-2023-6-28-%E5%85%8D%E6%9D%80%E7%BB%95%E6%9F%90%E6%95%B0%E5%AD%97%E6%9D%80%E8%BD%AF.md)
 - [[星悦安全]-2023-7-14-Sourcecodeste Faculty Evaluation System v1.0 Rce(CVE-2023-33569).md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E6%82%A6%E5%AE%89%E5%85%A8]-2023-7-14-Sourcecodeste%20Faculty%20Evaluation%20System%20v1.0%20Rce(CVE-2023-33569).md)
 - [[星海安全实验室]-2023-6-16-Dedecms最新版审计-0dayRCE.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E6%B5%B7%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2023-6-16-Dedecms%E6%9C%80%E6%96%B0%E7%89%88%E5%AE%A1%E8%AE%A1-0dayRCE.md)
+- [[星盟安全]-2023-7-14-攻防演练总结.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E7%9B%9F%E5%AE%89%E5%85%A8]-2023-7-14-%E6%94%BB%E9%98%B2%E6%BC%94%E7%BB%83%E6%80%BB%E7%BB%93.md)
 - [[未分类]--MQTT协议.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--MQTT%E5%8D%8F%E8%AE%AE.md)
 - [[未分类]--a href=](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--a%20href=)
 - [[未分类]--文章导航.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--%E6%96%87%E7%AB%A0%E5%AF%BC%E8%88%AA.md)
