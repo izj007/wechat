@@ -570,6 +570,7 @@
 - [[星悦安全]-2023-7-14-Sourcecodeste Faculty Evaluation System v1.0 Rce(CVE-2023-33569).md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E6%82%A6%E5%AE%89%E5%85%A8]-2023-7-14-Sourcecodeste%20Faculty%20Evaluation%20System%20v1.0%20Rce(CVE-2023-33569).md)
 - [[星海安全实验室]-2023-6-16-Dedecms最新版审计-0dayRCE.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E6%B5%B7%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2023-6-16-Dedecms%E6%9C%80%E6%96%B0%E7%89%88%E5%AE%A1%E8%AE%A1-0dayRCE.md)
 - [[星盟安全]-2023-7-14-攻防演练总结.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%98%9F%E7%9B%9F%E5%AE%89%E5%85%A8]-2023-7-14-%E6%94%BB%E9%98%B2%E6%BC%94%E7%BB%83%E6%80%BB%E7%BB%93.md)
+- [[暗魂攻防实验室]-2023-7-15-【漏洞复现】泛微e-cology 前台未授权sql注入.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9A%97%E9%AD%82%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C%E5%AE%A4]-2023-7-15-%E3%80%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E3%80%91%E6%B3%9B%E5%BE%AEe-cology%20%E5%89%8D%E5%8F%B0%E6%9C%AA%E6%8E%88%E6%9D%83sql%E6%B3%A8%E5%85%A5.md)
 - [[未分类]--MQTT协议.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--MQTT%E5%8D%8F%E8%AE%AE.md)
 - [[未分类]--a href=](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--a%20href=)
 - [[未分类]--文章导航.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%9C%AA%E5%88%86%E7%B1%BB]--%E6%96%87%E7%AB%A0%E5%AF%BC%E8%88%AA.md)
