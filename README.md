@@ -174,6 +174,7 @@
 - [[RowTeam]-2023-4-1-SharpExchangeKing v1.6.0.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpExchangeKing%20v1.6.0.md)
 - [[RowTeam]-2023-4-1-SharpViewStateShell v1.0.2.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpViewStateShell%20v1.0.2.md)
 - [[RowTeam]-2023-7-14-【Office 365】通过 OneDrive 枚举.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-7-14-%E3%80%90Office%20365%E3%80%91%E9%80%9A%E8%BF%87%20OneDrive%20%E6%9E%9A%E4%B8%BE.md)
+- [[RowTeam]-2023-7-26-通过 RDP 文件钓鱼.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-7-26-%E9%80%9A%E8%BF%87%20RDP%20%E6%96%87%E4%BB%B6%E9%92%93%E9%B1%BC.md)
 - [[SafeTime]-2023-7-14-内存规避Shellcodeloader.md](https://github.com/izj007/wechat/blob/main/articles/[SafeTime]-2023-7-14-%E5%86%85%E5%AD%98%E8%A7%84%E9%81%BFShellcodeloader.md)
 - [[SafetyTeam]-2023-6-23-Cobaltstrike二开源码.md](https://github.com/izj007/wechat/blob/main/articles/[SafetyTeam]-2023-6-23-Cobaltstrike%E4%BA%8C%E5%BC%80%E6%BA%90%E7%A0%81.md)
 - [[SafetyTeam]-2023-7-21-vue站点渗透技巧及实战到getshell.md](https://github.com/izj007/wechat/blob/main/articles/[SafetyTeam]-2023-7-21-vue%E7%AB%99%E7%82%B9%E6%B8%97%E9%80%8F%E6%8A%80%E5%B7%A7%E5%8F%8A%E5%AE%9E%E6%88%98%E5%88%B0getshell.md)
