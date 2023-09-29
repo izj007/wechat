@@ -327,6 +327,7 @@
 - [[freebuf]-2021-08-09-使用RomBuster获取网络路由器密码.md](https://github.com/izj007/wechat/blob/main/articles/[freebuf]-2021-08-09-%E4%BD%BF%E7%94%A8RomBuster%E8%8E%B7%E5%8F%96%E7%BD%91%E7%BB%9C%E8%B7%AF%E7%94%B1%E5%99%A8%E5%AF%86%E7%A0%81.md)
 - [[here404]-2021-8-24-记一次审计小师妹的Code.md](https://github.com/izj007/wechat/blob/main/articles/[here404]-2021-8-24-%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AE%A1%E8%AE%A1%E5%B0%8F%E5%B8%88%E5%A6%B9%E7%9A%84Code.md)
 - [[kali笔记]-2023-9-26-企业级黑盒漏洞扫描系统NextScan.md](https://github.com/izj007/wechat/blob/main/articles/[kali%E7%AC%94%E8%AE%B0]-2023-9-26-%E4%BC%81%E4%B8%9A%E7%BA%A7%E9%BB%91%E7%9B%92%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E7%B3%BB%E7%BB%9FNextScan.md)
+- [[kali笔记]-2023-9-29-蓝队攻击分析工具箱-BTAB.md](https://github.com/izj007/wechat/blob/main/articles/[kali%E7%AC%94%E8%AE%B0]-2023-9-29-%E8%93%9D%E9%98%9F%E6%94%BB%E5%87%BB%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E7%AE%B1-BTAB.md)
 - [[leveryd]-2023-3-26-基于任务编排的漏扫实现(asm项目).md](https://github.com/izj007/wechat/blob/main/articles/[leveryd]-2023-3-26-%E5%9F%BA%E4%BA%8E%E4%BB%BB%E5%8A%A1%E7%BC%96%E6%8E%92%E7%9A%84%E6%BC%8F%E6%89%AB%E5%AE%9E%E7%8E%B0(asm%E9%A1%B9%E7%9B%AE).md)
 - [[luomasec]-2021-10-15-ProcessGhosting-一套通用的免杀，自删除解决方案.md](https://github.com/izj007/wechat/blob/main/articles/[luomasec]-2021-10-15-ProcessGhosting-%E4%B8%80%E5%A5%97%E9%80%9A%E7%94%A8%E7%9A%84%E5%85%8D%E6%9D%80%EF%BC%8C%E8%87%AA%E5%88%A0%E9%99%A4%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md)
 - [[moonsec]-2021-8-16-基于ProxyPool创建Proxifier代理配置文件.md](https://github.com/izj007/wechat/blob/main/articles/[moonsec]-2021-8-16-%E5%9F%BA%E4%BA%8EProxyPool%E5%88%9B%E5%BB%BAProxifier%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.md)
@@ -998,4 +999,3 @@
 - [[跳跳糖社区]-2023-8-7-浅谈JspWebshell之编码.md](https://github.com/izj007/wechat/blob/main/articles/[%E8%B7%B3%E8%B7%B3%E7%B3%96%E7%A4%BE%E5%8C%BA]-2023-8-7-%E6%B5%85%E8%B0%88JspWebshell%E4%B9%8B%E7%BC%96%E7%A0%81.md)
 - [[轩公子谈技术]-2023-3-12-Fastjson不出网利用总结.md](https://github.com/izj007/wechat/blob/main/articles/[%E8%BD%A9%E5%85%AC%E5%AD%90%E8%B0%88%E6%8A%80%E6%9C%AF]-2023-3-12-Fastjson%E4%B8%8D%E5%87%BA%E7%BD%91%E5%88%A9%E7%94%A8%E6%80%BB%E7%BB%93.md)
 - [[轩公子谈技术]-2023-3-20-Fastjson不出网利用总结.md](https://github.com/izj007/wechat/blob/main/articles/[%E8%BD%A9%E5%85%AC%E5%AD%90%E8%B0%88%E6%8A%80%E6%9C%AF]-2023-3-20-Fastjson%E4%B8%8D%E5%87%BA%E7%BD%91%E5%88%A9%E7%94%A8%E6%80%BB%E7%BB%93.md)
-- [[边界骇客]-2021-9-10-CVE-2021-40444复现.md](https://github.com/izj007/wechat/blob/main/articles/[%E8%BE%B9%E7%95%8C%E9%AA%87%E5%AE%A2]-2021-9-10-CVE-2021-40444%E5%A4%8D%E7%8E%B0.md)
