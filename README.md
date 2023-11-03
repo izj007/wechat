@@ -207,6 +207,7 @@
 - [[RainSec]-2023-3-24-对5.6w条xray结果的简单分析.md](https://github.com/izj007/wechat/blob/main/articles/[RainSec]-2023-3-24-%E5%AF%B95.6w%E6%9D%A1xray%E7%BB%93%E6%9E%9C%E7%9A%84%E7%AE%80%E5%8D%95%E5%88%86%E6%9E%90.md)
 - [[RedTeaming]-2021-8-30-Nim套娃加载.NET程序集.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-30-Nim%E5%A5%97%E5%A8%83%E5%8A%A0%E8%BD%BD.NET%E7%A8%8B%E5%BA%8F%E9%9B%86.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
+- [[Relay学安全]-2023-11-3-免杀专题基础(1).md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2023-11-3-%E5%85%8D%E6%9D%80%E4%B8%93%E9%A2%98%E5%9F%BA%E7%A1%80(1).md)
 - [[Reset安全]-2022-2-16-钉钉RCE漏洞复现.md](https://github.com/izj007/wechat/blob/main/articles/[Reset%E5%AE%89%E5%85%A8]-2022-2-16-%E9%92%89%E9%92%89RCE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md)
 - [[RowTeam]-2023-4-1-SharpExchangeKing v1.6.0.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpExchangeKing%20v1.6.0.md)
 - [[RowTeam]-2023-4-1-SharpViewStateShell v1.0.2.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpViewStateShell%20v1.0.2.md)
@@ -998,4 +999,3 @@
 - [[等保不好做啊]-2023-10-23-等保2.0测评 — Apache Tomcat中间件.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%AD%89%E4%BF%9D%E4%B8%8D%E5%A5%BD%E5%81%9A%E5%95%8A]-2023-10-23-%E7%AD%89%E4%BF%9D2.0%E6%B5%8B%E8%AF%84%20%E2%80%94%20Apache%20Tomcat%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
 - [[系统安全运维]-2021-8-7-ApplicationScanner：一款App等保的预检测工具.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E8%BF%90%E7%BB%B4]-2021-8-7-ApplicationScanner%EF%BC%9A%E4%B8%80%E6%AC%BEApp%E7%AD%89%E4%BF%9D%E7%9A%84%E9%A2%84%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7.md)
 - [[红客突击队]-2021-8-16-内网渗透系列：权限提升方法小结.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%BA%A2%E5%AE%A2%E7%AA%81%E5%87%BB%E9%98%9F]-2021-8-16-%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%B3%BB%E5%88%97%EF%BC%9A%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E6%96%B9%E6%B3%95%E5%B0%8F%E7%BB%93.md)
-- [[红客突击队]-2021-8-16-内网渗透系列：隐匿攻击方法.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%BA%A2%E5%AE%A2%E7%AA%81%E5%87%BB%E9%98%9F]-2021-8-16-%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%B3%BB%E5%88%97%EF%BC%9A%E9%9A%90%E5%8C%BF%E6%94%BB%E5%87%BB%E6%96%B9%E6%B3%95.md)
