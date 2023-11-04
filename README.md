@@ -208,6 +208,7 @@
 - [[RedTeaming]-2021-8-30-Nim套娃加载.NET程序集.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-30-Nim%E5%A5%97%E5%A8%83%E5%8A%A0%E8%BD%BD.NET%E7%A8%8B%E5%BA%8F%E9%9B%86.md)
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
 - [[Relay学安全]-2023-11-3-免杀专题基础(1).md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2023-11-3-%E5%85%8D%E6%9D%80%E4%B8%93%E9%A2%98%E5%9F%BA%E7%A1%80(1).md)
+- [[Relay学安全]-2023-11-4-免杀专题基础(2).md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2023-11-4-%E5%85%8D%E6%9D%80%E4%B8%93%E9%A2%98%E5%9F%BA%E7%A1%80(2).md)
 - [[Reset安全]-2022-2-16-钉钉RCE漏洞复现.md](https://github.com/izj007/wechat/blob/main/articles/[Reset%E5%AE%89%E5%85%A8]-2022-2-16-%E9%92%89%E9%92%89RCE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md)
 - [[RowTeam]-2023-4-1-SharpExchangeKing v1.6.0.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpExchangeKing%20v1.6.0.md)
 - [[RowTeam]-2023-4-1-SharpViewStateShell v1.0.2.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpViewStateShell%20v1.0.2.md)
@@ -998,4 +999,3 @@
 - [[秘术]-2023-3-7-app渗透，frida解密参数定制抓包.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%A7%98%E6%9C%AF]-2023-3-7-app%E6%B8%97%E9%80%8F%EF%BC%8Cfrida%E8%A7%A3%E5%AF%86%E5%8F%82%E6%95%B0%E5%AE%9A%E5%88%B6%E6%8A%93%E5%8C%85.md)
 - [[程序猿编码]-2023-7-31-将shllcode注入Linux中正在运行的进程（C](https://github.com/izj007/wechat/tree/main/articles/[%E7%A8%8B%E5%BA%8F%E7%8C%BF%E7%BC%96%E7%A0%81]-2023-7-31-%E5%B0%86shllcode%E6%B3%A8%E5%85%A5Linux%E4%B8%AD%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E8%BF%9B%E7%A8%8B%EF%BC%88C)
 - [[程序猿阿朗]-2023-7-20-如何破解滑动验证码？.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%A8%8B%E5%BA%8F%E7%8C%BF%E9%98%BF%E6%9C%97]-2023-7-20-%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3%E6%BB%91%E5%8A%A8%E9%AA%8C%E8%AF%81%E7%A0%81%EF%BC%9F.md)
-- [[笑谈安全阁]-2023-7-15-实战蓝凌OA系统漏洞复现拿shell-工具分享.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%AC%91%E8%B0%88%E5%AE%89%E5%85%A8%E9%98%81]-2023-7-15-%E5%AE%9E%E6%88%98%E8%93%9D%E5%87%8COA%E7%B3%BB%E7%BB%9F%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E6%8B%BFshell-%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB.md)
