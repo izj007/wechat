@@ -349,6 +349,7 @@
 - [[]-2023-6-16-内部人才市场.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-6-16-%E5%86%85%E9%83%A8%E4%BA%BA%E6%89%8D%E5%B8%82%E5%9C%BA.md)
 - [[]-2023-6-16-顺易充.md](https://github.com/izj007/wechat/blob/main/articles/[]-2023-6-16-%E9%A1%BA%E6%98%93%E5%85%85.md)
 - [[]-2023-6-25-In-Memory shellcode decoding to evade AVs](https://github.com/izj007/wechat/tree/main/articles/[]-2023-6-25-In-Memory%20shellcode%20decoding%20to%20evade%20AVs)
+- [[backdoor]-2023-11-10-蓝凌OA 任意用户登录.md](https://github.com/izj007/wechat/blob/main/articles/[backdoor]-2023-11-10-%E8%93%9D%E5%87%8COA%20%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95.md)
 - [[conman]-2023-7-31-如何黑盒检测fasterxml-jackson反序列化漏洞.md](https://github.com/izj007/wechat/blob/main/articles/[conman]-2023-7-31-%E5%A6%82%E4%BD%95%E9%BB%91%E7%9B%92%E6%A3%80%E6%B5%8Bfasterxml-jackson%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md)
 - [[conman]-2023-7-31-黑盒能判断fastjson开启autotype了吗.md](https://github.com/izj007/wechat/blob/main/articles/[conman]-2023-7-31-%E9%BB%91%E7%9B%92%E8%83%BD%E5%88%A4%E6%96%ADfastjson%E5%BC%80%E5%90%AFautotype%E4%BA%86%E5%90%97.md)
 - [[debugeeker]-2022-11-8-美国NSA超级后门Bvp47的隐身技能：网络隐身1.md](https://github.com/izj007/wechat/blob/main/articles/[debugeeker]-2022-11-8-%E7%BE%8E%E5%9B%BDNSA%E8%B6%85%E7%BA%A7%E5%90%8E%E9%97%A8Bvp47%E7%9A%84%E9%9A%90%E8%BA%AB%E6%8A%80%E8%83%BD%EF%BC%9A%E7%BD%91%E7%BB%9C%E9%9A%90%E8%BA%AB1.md)
@@ -998,4 +999,3 @@
 - [[琴音安全]-2023-7-26-红蓝对抗重点OA系统漏洞利用工具1.0 首发(集合18款OA共85个漏洞含最新漏洞).md](https://github.com/izj007/wechat/blob/main/articles/[%E7%90%B4%E9%9F%B3%E5%AE%89%E5%85%A8]-2023-7-26-%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97%E9%87%8D%E7%82%B9OA%E7%B3%BB%E7%BB%9F%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E5%B7%A5%E5%85%B71.0%20%E9%A6%96%E5%8F%91(%E9%9B%86%E5%90%8818%E6%AC%BEOA%E5%85%B185%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%90%AB%E6%9C%80%E6%96%B0%E6%BC%8F%E6%B4%9E).md)
 - [[琴音安全]-2023-8-3-[红蓝对抗]--剑走偏锋拿下了所有**云.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%90%B4%E9%9F%B3%E5%AE%89%E5%85%A8]-2023-8-3-[%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97]--%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E6%8B%BF%E4%B8%8B%E4%BA%86%E6%89%80%E6%9C%89**%E4%BA%91.md)
 - [[甲方叫我安服仔]-2023-6-28-腾讯QQ](https://github.com/izj007/wechat/tree/main/articles/[%E7%94%B2%E6%96%B9%E5%8F%AB%E6%88%91%E5%AE%89%E6%9C%8D%E4%BB%94]-2023-6-28-%E8%85%BE%E8%AE%AFQQ)
-- [[甲方叫我安服仔]-2023-8-8-IP.SY.md](https://github.com/izj007/wechat/blob/main/articles/[%E7%94%B2%E6%96%B9%E5%8F%AB%E6%88%91%E5%AE%89%E6%9C%8D%E4%BB%94]-2023-8-8-IP.SY.md)
