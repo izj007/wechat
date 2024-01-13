@@ -217,6 +217,7 @@
 - [[RedTeaming]-2021-8-8-SharpReflectiveDll.md](https://github.com/izj007/wechat/blob/main/articles/[RedTeaming]-2021-8-8-SharpReflectiveDll.md)
 - [[Relay学安全]-2023-11-3-免杀专题基础(1).md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2023-11-3-%E5%85%8D%E6%9D%80%E4%B8%93%E9%A2%98%E5%9F%BA%E7%A1%80(1).md)
 - [[Relay学安全]-2023-11-4-免杀专题基础(2).md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2023-11-4-%E5%85%8D%E6%9D%80%E4%B8%93%E9%A2%98%E5%9F%BA%E7%A1%80(2).md)
+- [[Relay学安全]-2024-1-13-挂钩Sleep函数绕过BeaocnEye.md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2024-1-13-%E6%8C%82%E9%92%A9Sleep%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87BeaocnEye.md)
 - [[Reset安全]-2022-2-16-钉钉RCE漏洞复现.md](https://github.com/izj007/wechat/blob/main/articles/[Reset%E5%AE%89%E5%85%A8]-2022-2-16-%E9%92%89%E9%92%89RCE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md)
 - [[RowTeam]-2023-4-1-SharpExchangeKing v1.6.0.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpExchangeKing%20v1.6.0.md)
 - [[RowTeam]-2023-4-1-SharpViewStateShell v1.0.2.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpViewStateShell%20v1.0.2.md)
@@ -998,4 +999,3 @@
 - [[湛卢工作室]-2021-10-15-WatchAD攻防实战.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B9%9B%E5%8D%A2%E5%B7%A5%E4%BD%9C%E5%AE%A4]-2021-10-15-WatchAD%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98.md)
 - [[溪琉安全录]-2023-6-22-【代码审计】某OA的Nday漏洞收集.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%BA%AA%E7%90%89%E5%AE%89%E5%85%A8%E5%BD%95]-2023-6-22-%E3%80%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E3%80%91%E6%9F%90OA%E7%9A%84Nday%E6%BC%8F%E6%B4%9E%E6%94%B6%E9%9B%86.md)
 - [[溪琉安全录]-2023-6-29-【vCenter】vpxuser密码解密.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%BA%AA%E7%90%89%E5%AE%89%E5%85%A8%E5%BD%95]-2023-6-29-%E3%80%90vCenter%E3%80%91vpxuser%E5%AF%86%E7%A0%81%E8%A7%A3%E5%AF%86.md)
-- [[溪琉安全录]-2023-6-29-【代码审计】某OA的Nday漏洞收集.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%BA%AA%E7%90%89%E5%AE%89%E5%85%A8%E5%BD%95]-2023-6-29-%E3%80%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E3%80%91%E6%9F%90OA%E7%9A%84Nday%E6%BC%8F%E6%B4%9E%E6%94%B6%E9%9B%86.md)
