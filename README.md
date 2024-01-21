@@ -222,6 +222,7 @@
 - [[Relay学安全]-2023-11-4-免杀专题基础(2).md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2023-11-4-%E5%85%8D%E6%9D%80%E4%B8%93%E9%A2%98%E5%9F%BA%E7%A1%80(2).md)
 - [[Relay学安全]-2024-1-13-挂钩Sleep函数绕过BeaocnEye.md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2024-1-13-%E6%8C%82%E9%92%A9Sleep%E5%87%BD%E6%95%B0%E7%BB%95%E8%BF%87BeaocnEye.md)
 - [[Relay学安全]-2024-1-18-Mythic C2 学习.md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2024-1-18-Mythic%20C2%20%E5%AD%A6%E4%B9%A0.md)
+- [[Relay学安全]-2024-1-21-隐藏DOS黑窗口的一个技巧.md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2024-1-21-%E9%9A%90%E8%97%8FDOS%E9%BB%91%E7%AA%97%E5%8F%A3%E7%9A%84%E4%B8%80%E4%B8%AA%E6%8A%80%E5%B7%A7.md)
 - [[Reset安全]-2022-2-16-钉钉RCE漏洞复现.md](https://github.com/izj007/wechat/blob/main/articles/[Reset%E5%AE%89%E5%85%A8]-2022-2-16-%E9%92%89%E9%92%89RCE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md)
 - [[RowTeam]-2023-4-1-SharpExchangeKing v1.6.0.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpExchangeKing%20v1.6.0.md)
 - [[RowTeam]-2023-4-1-SharpViewStateShell v1.0.2.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpViewStateShell%20v1.0.2.md)
@@ -998,4 +999,3 @@
 - [[渗透云笔记]-2022-2-18-使用reconFTW自动化侦察数据.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B8%97%E9%80%8F%E4%BA%91%E7%AC%94%E8%AE%B0]-2022-2-18-%E4%BD%BF%E7%94%A8reconFTW%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BE%A6%E5%AF%9F%E6%95%B0%E6%8D%AE.md)
 - [[渗透云笔记]-2023-3-9-开源项目Dolphin-网络资产风险监测系统.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B8%97%E9%80%8F%E4%BA%91%E7%AC%94%E8%AE%B0]-2023-3-9-%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEDolphin-%E7%BD%91%E7%BB%9C%E8%B5%84%E4%BA%A7%E9%A3%8E%E9%99%A9%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F.md)
 - [[渗透安全HackTwo]-2024-1-15-最新代码审计利器Fortify_SCA_v23.2.0](https://github.com/izj007/wechat/tree/main/articles/[%E6%B8%97%E9%80%8F%E5%AE%89%E5%85%A8HackTwo]-2024-1-15-%E6%9C%80%E6%96%B0%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%88%A9%E5%99%A8Fortify_SCA_v23.2.0)
-- [[渗透安全HackTwo]-2024-1-21-网康应用安全网关(NS-ASG) SQL注入漏洞.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B8%97%E9%80%8F%E5%AE%89%E5%85%A8HackTwo]-2024-1-21-%E7%BD%91%E5%BA%B7%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E7%BD%91%E5%85%B3(NS-ASG)%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md)
