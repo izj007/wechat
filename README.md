@@ -230,6 +230,7 @@
 - [[Relay学安全]-2024-1-25-DLL转发劫持还能这么玩？.md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2024-1-25-DLL%E8%BD%AC%E5%8F%91%E5%8A%AB%E6%8C%81%E8%BF%98%E8%83%BD%E8%BF%99%E4%B9%88%E7%8E%A9%EF%BC%9F.md)
 - [[Relay学安全]-2024-1-28-通过VBS脚本下载文件并执行.md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2024-1-28-%E9%80%9A%E8%BF%87VBS%E8%84%9A%E6%9C%AC%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E5%B9%B6%E6%89%A7%E8%A1%8C.md)
 - [[Relay学安全]-2024-1-31-关于Lnk攻击的一些技巧.md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2024-1-31-%E5%85%B3%E4%BA%8ELnk%E6%94%BB%E5%87%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7.md)
+- [[Relay学安全]-2024-2-2-白程序？360？ApplicationDomain注入？.md](https://github.com/izj007/wechat/blob/main/articles/[Relay%E5%AD%A6%E5%AE%89%E5%85%A8]-2024-2-2-%E7%99%BD%E7%A8%8B%E5%BA%8F%EF%BC%9F360%EF%BC%9FApplicationDomain%E6%B3%A8%E5%85%A5%EF%BC%9F.md)
 - [[Reset安全]-2022-2-16-钉钉RCE漏洞复现.md](https://github.com/izj007/wechat/blob/main/articles/[Reset%E5%AE%89%E5%85%A8]-2022-2-16-%E9%92%89%E9%92%89RCE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md)
 - [[RowTeam]-2023-4-1-SharpExchangeKing v1.6.0.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpExchangeKing%20v1.6.0.md)
 - [[RowTeam]-2023-4-1-SharpViewStateShell v1.0.2.md](https://github.com/izj007/wechat/blob/main/articles/[RowTeam]-2023-4-1-SharpViewStateShell%20v1.0.2.md)
@@ -998,4 +999,3 @@
 - [[浪飒sec]-2023-10-20-合规利器 - AppScan正式开源.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B5%AA%E9%A3%92sec]-2023-10-20-%E5%90%88%E8%A7%84%E5%88%A9%E5%99%A8%C2%A0-%20AppScan%E6%AD%A3%E5%BC%8F%E5%BC%80%E6%BA%90.md)
 - [[浪飒sec]-2023-10-21-【附POC】用友GRP-U8 bx_historyDataCheck.jsp SQL注入漏洞.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B5%AA%E9%A3%92sec]-2023-10-21-%E3%80%90%E9%99%84POC%E3%80%91%E7%94%A8%E5%8F%8BGRP-U8%20bx_historyDataCheck.jsp%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md)
 - [[浪飒sec]-2023-10-23-【紧跟时事】Apache Solr 远程代码执行漏洞.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B5%AA%E9%A3%92sec]-2023-10-23-%E3%80%90%E7%B4%A7%E8%B7%9F%E6%97%B6%E4%BA%8B%E3%80%91Apache%20Solr%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md)
-- [[浪飒sec]-2023-10-26-什么，Windows自带木马捆绑器？.md](https://github.com/izj007/wechat/blob/main/articles/[%E6%B5%AA%E9%A3%92sec]-2023-10-26-%E4%BB%80%E4%B9%88%EF%BC%8CWindows%E8%87%AA%E5%B8%A6%E6%9C%A8%E9%A9%AC%E6%8D%86%E7%BB%91%E5%99%A8%EF%BC%9F.md)
