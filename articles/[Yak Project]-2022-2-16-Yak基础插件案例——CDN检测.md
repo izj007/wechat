@@ -93,9 +93,9 @@ CNAME指纹
 
        配置中说的第一种方法是去配置一个`CNAME`记录为CDN厂商提供的域名，这个域名通常会有一个前缀，后缀一般都是固定的。找了两个加载js库的CDN加速服务，看一下他们的`CNAME`记录。 
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143807.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143807.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143809.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143809.png)
 
        可以看到不同的CDN厂商的域名一般会有个共同点，就是带有cdn/dns等字眼（不一定），这就相当于CDN厂商的一个指纹。我们只需要维护一个常见CDN厂商的`CNAME`指纹字典，可以去里面查目标的CNAME记录是否为某个CDN厂商的域名。但是这种方式的缺点十分明显，就是维护指纹的成本很高，如果某个CDN厂商加了新的域名，那就需要重新添加指纹了。  
 
@@ -105,7 +105,7 @@ IP段
 
      我们都知道CDN厂商一般会有很多个节点，而这些节点一般是是在一些IP段里面。所以我们可以维护一个常见CDN厂商的IP段列表。 
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143810.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143810.png)
 
   
 
@@ -128,7 +128,7 @@ ASN介绍
 
        我们可以整理出常见CDN厂商的ASN号列表，如果目标域名`A`记录IP的ASN号在列表中，那么我们也可以暂时认为其接入了CDN。 
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143811.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143811.png)
 
       但是还是有明显的误报/漏报问题，因为谁也不知道会不会突然冒出一个新的CDN厂商被我们遇到，或者某些家大业大的大厂自己实现了CDN的接入，没有使用CDN厂商的服务。
 
@@ -146,7 +146,7 @@ ASN介绍
 
       但是这样成本非常高，好在网上有现成的服务可以使用。例如：站长之家多地区ping
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143812.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143812.png)
 
       但是在官网使用该服务一次只会请求一部分监测点进行ping操作，效率不高。所以我打算使用`yaklang`利用其探测点，重新写一个并发的版本。
 
@@ -170,7 +170,7 @@ ASN介绍
 
  接着带着上一步获取到的参数发送一个`POST`请求到`https://ping.chinaz.com/iframe.ashx?t=ping`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143813.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143813.png)
 
  如果成功则返回格式如下  
 
@@ -456,7 +456,7 @@ ping()`。
 
  **最终插件效果  **
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143814.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143814.png)
 
 （其实还可以再给每个域名都分配一个`goroutine`，让每个目标间的监测也是异步进行的。但是考虑到可能会对接口产生较大的压力，所以就没这样做了。
 
@@ -475,11 +475,11 @@ store`插件库。地址为：https://github.com/Acmesec/yakit-store
 
 更新后点击头部的刷新按钮
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143816.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143816.png)
 
  就可以在插件仓库或者基础安全工具中看到插件啦！
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143817.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143817.png)
 
   
 
@@ -499,7 +499,7 @@ END
 
 下载地址：https://github.com/yaklang/yakit
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220216143818.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216143818.png)
 
 预览时标签不可点
 

@@ -17,14 +17,14 @@ ___发表于_
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230619142639.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619142639.png)
 
 ******编辑   **｜  阎锡叁********
 
 Kubernetes社区披露两起安全事件，涉及kube-
 apiserver组件，主要为准入插件的逃逸漏洞，CVE-2023-2727及CVE-2023-2728，详细内容参见下文
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230619142640.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619142640.png)
 
  **CVE-2023-2727:  ImagePolicyWebhook准入插件的逃逸**
 
@@ -35,7 +35,7 @@ CVSS评分: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N
 在Kubernetes中发现了一个安全问题，当使用临时容器（即ephemeral
 container）时，用户能够绕过被ImagePolicyWebhook限制的镜像来启动容器。只有使用了ImagePolicyWebhook准入插件和临时容器的Kubernetes集群才会受到影响。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230619142642.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619142642.png)
 
 ###  **Am I vulnerable?**
 
@@ -80,7 +80,7 @@ kubectl get pods 命令，查找上述容器。
 这个漏洞是由Stanislav Láznička报告的，由Rita Zhang修复。
 
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230619142643.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619142643.png)
 
  **CVE-2023-2728: ServiceAccount准入插件的逃逸**
 

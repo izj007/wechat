@@ -14,7 +14,7 @@ __
 
 收录于合集
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103649.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103649.png)
 
 文章来源：先知社区（海鸥i）
 
@@ -36,7 +36,7 @@ __
 
  **模拟环境：** Windows+Mysql 5.7.26，web目录没有写入权限，但是对lib/plugin有写入权限，可以使用UDF执行命令。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103709.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103709.png)
 
   
 
@@ -52,13 +52,13 @@ __
     
     select unhex("exe文件的16进制") into dumpfile "\\路径\\文件名.exe"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103710.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103710.png)
 
   
 
 导出后的文件可以正常执行
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103711.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103711.png)
 
   
 
@@ -72,21 +72,21 @@ __
     
     select sys_eval('C:\\phpstudy_pro\\Extensions\\MySQL5.7.26\\lib\\plugin\\M.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" >> C:\\phpstudy_pro\\Extensions\\MySQL5.7.26\\lib\\plugin\\res1.txt"')
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103712.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103712.png)
 
   
 
 执行完毕后可以使用windows的more、type或者mysql的Load_file函数查看执行结果
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103715.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103715.png)  
 
 ####  **1.1.3 exe退出**
 
 如果运行了一个exe程序，但是没有给他退出的命令或者是他自己不会终止退出。例如我直接运行mimikatz.exe没有给参数传入，那么他会在目标服务器直接弹一个黑窗，一直卡在这，直到程序被终结。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103716.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103716.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103721.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103721.png)
 
   
 
@@ -104,7 +104,7 @@ __
 
 将结果进行16解码即可得到进程id,再Kill掉就好了。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103722.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103722.png)
 
   
 
@@ -112,23 +112,23 @@ __
 
 导出的文件，不能是已经存在的文件，否则会报错。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103724.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103724.png)
 
   
 
 导出路径中的"\"为两个，否则会转义。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103725.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103725.png)
 
   
 
 使用findstr查找进程的时候,要使用双引号包裹进程名。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103726.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103726.png)  
 
 正常执行程序的时候，会秒弹一个黑窗然后退出，使用暂时没找到解决办法。尽量避免管理员在线的时候执行exe，使用query user可查看管理员是否在线。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103730.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103730.png)
 
   
 
@@ -139,10 +139,10 @@ into outfile会转义换行符，导致exe无法正常执行。
 ![]()
 
   
-正常exe![](https://gitee.com/fuli009/images/raw/master/public/20220422103731.png)  
+正常exe![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103731.png)  
 导出的exe
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103732.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103732.png)
 
   
 在大小上也可以明显看出,导出的比正常的要大很多。
@@ -163,7 +163,7 @@ into outfile会转义换行符，导致exe无法正常执行。
     
     select sys_eval("echo exe_hex >> c:\\users\\admin\\desktop\aaa.txt && certutil -decodehex c:\\users\\admin\\desktop\aaa.txt c:\\users\\admin\\desktop\aaa.exe"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103733.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103733.png)  
 将16进制全部复制执行报错了，但是echo 123可以正常写入，可能是长度问题？  
 
 ####  **1.3.2 Windows命令行限制**
@@ -175,23 +175,23 @@ into outfile会转义换行符，导致exe无法正常执行。
 复制所有16进制到cmd，echo 所有16进制>> 11.txt。因为有长度限制，只会复制一部分到cmd。查看cmd中最后的exe-hex
 08B45F4890424E85D在全部exe-hex中的位置-8176，加上echo空格>>空格11.txt刚好8190个字节。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103734.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103734.png)  
 
 ####  **1.3.3 分段追加写入**
 
 直接全部写入会超出命令行限制，只能去分段写入。使用echo每追加一次都会自动换行，在百度找到了使用set /p=""这种方式可以实现不换行追加。  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103735.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103735.png)
 
   
 这个是个体力活，在本地就不手动了追加了，写个脚本假装手工追加写入。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103736.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103736.png)
 
   
 将导入的16进制文件解码即可得到可执行文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103737.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103737.png)
 
   
 
@@ -199,7 +199,7 @@ into outfile会转义换行符，导致exe无法正常执行。
 
 使用set /p分段追加无论是手动还是脚本都会遇到一个问题。执行完他已经写入，但不会自己终止结束这条命令并换行，需要手动不断回车来结束。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103738.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103738.png)
 
   
 
@@ -222,7 +222,7 @@ into outfile会转义换行符，导致exe无法正常执行。
   
 设置日志路径，然后开启日志，执行select "exe-hex"，再使用正则匹配出exe-hex进行解码即可。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103740.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103740.png)
 
   
 使用powershell匹配出exe-hex
@@ -241,7 +241,7 @@ into outfile会转义换行符，导致exe无法正常执行。
 在shell中可以使用type来读取日志文件，复制到本地查看exe-
 hex在日志中的位置，我在phpmyadmin测试使用udf去执行type只读取到了118134个字节，不过刚好读取完我们的exe-hex。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103741.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103741.png)
 
   
 
@@ -253,7 +253,7 @@ hex在日志中的位置，我在phpmyadmin测试使用udf去执行type只读取
 
 2\. 在执行完select "exe-hex"之后要关闭日志记录，否则powershell无法打开。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103742.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103742.png)
 
   
 
@@ -284,7 +284,7 @@ hex在日志中的位置，我在phpmyadmin测试使用udf去执行type只读取
     
     python -c "import binascii;text=open('res.exe','ab');text.write(binascii.a2b_hex(open('exe-hex.txt').read()))"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103743.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103743.png)  
 
 outfile既然导出二进制会增加转义、换行，如果可以使用powershell、编程语言将其再过滤，是不是也可以用。（未解决）
 
@@ -298,7 +298,7 @@ outfile既然导出二进制会增加转义、换行，如果可以使用powersh
     
     python -c "import re;import binascii;z=re.findall('(4D5A.*?6500)\"',open('log.log').read());text=open('res1.exe','ab');text.write(binascii.a2b_hex(z[0]))"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103744.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103744.png)  
 
 感觉echo导出方式这个也适用于不出网对web目录没写入权限的命令执行。
 
@@ -306,7 +306,7 @@ outfile既然导出二进制会增加转义、换行，如果可以使用powersh
 
  **0x08  总结**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103745.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103745.png)
 
   
 
@@ -332,9 +332,9 @@ https://blog.csdn.net/weixin_39914107/article/details/111429294
 
 如侵权请私聊公众号删文
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220422103746.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103746.png)
 
-多一个点在看![](https://gitee.com/fuli009/images/raw/master/public/20220422103747.png)多一条小鱼干
+多一个点在看![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220422103747.png)多一条小鱼干
 
   
 

@@ -14,7 +14,7 @@ __
 
 收录于话题 #攻击技术研判 34个
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220307210529.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220307210529.png)
 
 **情报背景**
 
@@ -76,7 +76,7 @@ actor-uses-compromised-private-ukrainian-military-emails
 
 6\. 恶意Lua脚本将获取C盘的序列信息，并每两秒一次与攻击者的C2地址通讯，执行攻击者的下达的后续请求
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220307210539.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220307210539.png)
 
   
 
@@ -100,7 +100,7 @@ Installer对象的InstallProduct方法会将从URL获取的MSI安装文件，缓
 Installer来实现恶意后门的部署，这种方式还比较独特和少见。从使用效果来看，该方式非常方便，不需要很多的宏代码和行为就将攻击过程从office转移到msi，只要终端安全软件针对宏代码执行windows
 installer没有限制执行，就可以利用这个合法对象切入下一阶段的恶意攻击。较为有效和隐蔽。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220307210540.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220307210540.png)
 
   
 
@@ -171,7 +171,7 @@ installer对象安装恶意的MSI安装包。之后利用MSI包来安装基于�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220307210541.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220307210541.png)
 
  **绿盟科技天元实验室** 专注于新型实战化攻防对抗技术研究。
 
@@ -179,7 +179,7 @@ installer对象安装恶意的MSI安装包。之后利用MSI包来安装基于�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220307210542.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220307210542.png)
 
  **M01N Team**
 
@@ -194,16 +194,16 @@ installer对象安装恶意的MSI安装包。之后利用MSI包来安装基于�
 [攻击技术研判
 ｜Lazarus搭载新的载荷执行与控制流劫持技术](http://mp.weixin.qq.com/s?__biz=MzkyMTI0NjA3OA==&mid=2247486868&idx=1&sn=0bb5b2b51296bcd2cfc65adfaed3f836&chksm=c187cd85f6f04493cc8ec77e904227a7f5a63db61da12eae72c07edaab3484c1231515251973&scene=21#wechat_redirect)  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220307210543.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220307210543.png)
 
 [攻击技术研判 ｜
 利用SEO技术的钓鱼攻击与样本隐匿持久化技术](http://mp.weixin.qq.com/s?__biz=MzkyMTI0NjA3OA==&mid=2247486819&idx=1&sn=f45a4af8793628fa4a25e8f1b679ff27&chksm=c187cd72f6f0446403264c6df814f0145375514cd80fb8e4f81d3633972715bc95643d63f360&scene=21#wechat_redirect)  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220307210543.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220307210543.png)
 
 [攻击技术研判｜在野Web注入及证书透明度检测规避手法分析](http://mp.weixin.qq.com/s?__biz=MzkyMTI0NjA3OA==&mid=2247486777&idx=1&sn=e35345a65a62764d9182ef750b349de8&chksm=c187cd28f6f0443e1ee1cd2ad67b670d4565cc4e80d1bca43004fd9af4115d59df971c2477df&scene=21#wechat_redirect)  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220307210543.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220307210543.png)
 
   
 

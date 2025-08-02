@@ -43,7 +43,7 @@ ___发表于_
     
     ./fupo_for_yonyou -u http[s]://1.1.1.1/
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714174028.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174028.png)
 
  **0x03 项目链接下载**
 

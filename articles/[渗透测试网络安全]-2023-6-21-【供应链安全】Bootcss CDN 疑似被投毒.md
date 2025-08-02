@@ -26,17 +26,17 @@ ___发表于_
 
 主要涉及的两个恶意域名均注册于 5 月底：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621120620.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621120620.png)
 
  **0x02  分析过程**
 
 检查跳转网络请求的调用堆栈，发现一个名为`jquery.min-4.0.2.js`的可疑文件。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621120621.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621120621.png)
 
 检查此文件，发现它并不是 jQuery ，而是一段混淆过的恶意代码，推测是用来跳转到恶意网站。可以从原链接或者Internet Archive获取：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621120622.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621120622.png)
 
 这个 evil jQuery 是由托管在 cdn.bootcss.com 上的highlight.js引入的。当对此 highlight.js 的请求具有
 **特定的 Referer** 和 **移动端 UA** 时，服务器才会返回带有恶意代码的 highlight.js
@@ -45,7 +45,7 @@ ___发表于_
 恶意的 highlight.js 可以从这里获取到，恶意代码位于文件尾部，粗略看了一下，大概是如果浏览器不是桌面端，就在 head 部分放置一个
 script 标签，应该就是引入恶意 jQuery 的方法了。下图是恶意 highlight.js 与同版本正常 highlight.js 的 diff 。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621120624.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621120624.png)
 
 发出如下网络请求，可以获取到带有恶意代码的 highlight.js ，截至写作时依然有效：
 
@@ -76,14 +76,14 @@ script 标签，应该就是引入恶意 jQuery 的方法了。下图是恶意 h
 
 备注：进群，将会自动邀请您加入 渗透测试网络安全 技术 官方 交流群
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621120625.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621120625.png)
 
 好文分享收藏赞一下最美点在看哦
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621120626.png)
-还在等什么？赶紧点击下方名片开始学习吧！![](https://gitee.com/fuli009/images/raw/master/public/20230621120626.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621120626.png)
+还在等什么？赶紧点击下方名片开始学习吧！![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621120626.png)
 
   
 

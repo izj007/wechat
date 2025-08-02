@@ -40,7 +40,7 @@ __
     
     python sqlmap.py -d "postgresql://postgres:123456@114.114.114.114:5432/postgres" --os-shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114319.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114319.png)
 
 最后无论是选择32-bit和64-bit都无法完成自动udf执行命令，不过得到了两个有用信息：
 
@@ -50,9 +50,9 @@ __
 
 当sqlmap自动无法完成的时候我想到了自己手动从sqlmap中提取dll然后写入到目标系统中再创建恶意函数，看看会发生什么，当打开sqlmap的时候我发现sqlmap中只有32位的dll，并且还只到9.0版本，并没有档期目标这个版本的：  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114321.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114321.png)  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114322.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114322.png)
 
 只能试试再说了，于是我决定用32位的9.0版本dll做实验，至于如何把dll导入到目标系统中并创建恶意函数，参考：https://github.com/No-
 Github/postgresql_udf_help
@@ -68,7 +68,7 @@ Github/postgresql_udf_help
 我在将32位的9.0版本的dll导入的时候报了not a valid Win32
 application错误，我认为此处是由于架构不对导致的，目标PostgreSQL为64位：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114323.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114323.png)
 
 ### 自己动手，丰衣足食
 
@@ -97,7 +97,7 @@ binaries.zip(https://www.enterprisedb.com/download-postgresql-binaries)
     
     C:\Users\xxxxx\Downloads\postgresql-9.1.24-1-windows-binaries\pgsql\include\serverC:\Users\xxxxx\Downloads\postgresql-9.1.24-1-windows-binaries\pgsql\includeC:\Users\xxxxx\Downloads\postgresql-9.1.24-1-windows-binaries\pgsql\include\server\port\win32
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114325.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114325.png)
 
 然后由于我不太想用这个项目的c文件编译成dll，因为我没测试过，为了稳妥还是选择了网上最喜闻乐见的lib_postgresqludf_sys.c，这个文件在https://github.com/No-
 Github/postgresql_udf_help有。
@@ -154,7 +154,7 @@ Github/postgresql_udf_help有。
 然后还要注释掉pg_config_os.h的201行到215行两个结构体，因为这里也会报错，然后再编译release->x64即可。中间有个小插曲，如果你的vs报错，无法打开输入文件postgres.lib，那么请将PostgreSQL
 zip包中的postgre.lib文件复制到项目文件夹中和main.c同目录的位置再编译。  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114326.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114326.png)  
 
 生成的dll在PolyUDF-master\x64\Release\PolyUDF.dll，然后再执行：
 
@@ -166,14 +166,14 @@ zip包中的postgre.lib文件复制到项目文件夹中和main.c同目录的位
 
 将sqlcmd.txt里面的so路径替换为想要将dll保存到目标系统路径的位置（c:\windows\temp\test.dll或其他位置都行，只要目标postgreSQL有权限）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114327.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114327.png)
 
 然而问题又来了，postgreSQL报错The specified module could not be
 foud。我一开始以为是不是dll的代码有问题，后来我看了代码感觉应该没问题，因为我之前注释的内容都不是我要用的导出函数。那问题出在哪呢？此时我突然想到了之前编译免杀马在不做静态编译时无法在其他人电脑上正常运行的情况。于是我们选择使用静态编译试试。
 
 选择在静态库中使用MFC：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114329.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114329.png)
 
 最后生成了一个100k的dll，而之前的dll才16k，然后再用该dll生成sqlcmd.txt，最后sqlcmd.txt内容如下：  
 
@@ -246,7 +246,7 @@ foud。我一开始以为是不是dll的代码有问题，后来我看了代码�
 
 和之前一样把sqlcmd.txt中.so路径改成.dll路径放到PostgreSQL里面执行即可，最后成功Getshell：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210911114332.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210911114332.png)
 
 ### 后记
 

@@ -21,31 +21,31 @@ __
 我很高兴地通知您 Cobalt Strike 4.4 现已推出！此版本为您提供了更多控制权，提高了 Cobalt Strike
 的回避质量，并解决了我们用户要求的一些较小的更改……是的！我们添加了重新连接按钮！以下是有关最新功能的更多详细信息：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808101817.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808101817.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808101818.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808101818.png)
 
  **  
 **
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808101819.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808101819.png)
 
  **  
 **
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808101821.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808101821.png)
 
  **  
 **
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808101822.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808101822.png)
 
  **  
 **
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808101823.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808101823.png)
 
  **  
 **
@@ -210,7 +210,7 @@ https://s.threatbook.cn/search?query=fdcc265fcf1d87bdfd0f7ea91138d7d9f8128f8ed15
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808101824.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808101824.png)
 
   
 

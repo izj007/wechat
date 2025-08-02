@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集 #2023漏洞风险提示 16个
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181033.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181033.png)
 
   
 
@@ -66,7 +66,7 @@ cology某处功能点最初针对用户输入的过滤不太完善，导致在�
     
     xpoc -r 401 -t http://xpoc.org
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181034.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181034.png)
 
 ###
 
@@ -88,7 +88,7 @@ https://stack.chaitin.com/tool/detail?id=1036
     
     weaver_ecology_xxe_vuln_scanner_windows_amd64.exe
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181035.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181035.png)
 
 工具获取方式：
 

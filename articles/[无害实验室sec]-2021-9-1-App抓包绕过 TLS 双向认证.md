@@ -36,7 +36,7 @@ __
 
  如下图
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210901083222.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210901083222.png)
 
   
 
@@ -44,7 +44,7 @@ __
 
 如下图  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210901083224.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210901083224.png)
 
 基于用户名/密码的认证可以说是最易于理解的方案, 在很多 app 里面也得到了应用  
 而相对 TLS 双向认证而言, 前者对代码侵入更多, 耦合性更高, 难于维护  
@@ -58,16 +58,16 @@ __
 另外准备了 dex2jar 和 Java Decompiler 用来做逆向, 网上教程一搜一大把  
 想都不要想下载最新版 app, 直接解压缩 apk 文件, 发现有好几个 `.dex` 文件(multidex), 如下图
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210901083225.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210901083225.png)
 
 另外在 `assets` 目录下发现了我们需要的客户端证书 `client.p12`, 如下图
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210901083226.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210901083226.png)
 
 我们尝试导入这个证书, 发现是需要密码的(这不废话吗xD), 故准备反编译 dex 了  
 祭出神器 dex2jar, 一顿操作猛如虎, 然而…
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210901083227.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210901083227.png)
 
 大胆猜测是加了壳或者用了什么混淆, 上网查阅发现 dex2jar 已经很久没更新了, 陷入僵局  
 
@@ -77,19 +77,19 @@ __
 于是乎, 下载了一堆历史版本, 逐个尝试后终于发现在某个版本是没有给 dex 加壳的  
 立马脱掉裤子开干, 用 jd 打开 jar 文件, 全局搜索一下, 此时屏幕上已经出现了一点精斑
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210901083228.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210901083228.png)
 
 拿到密码后就简单了, 启动 charles, 导入 p12 格式证书(Client Certificates), 设置 SSL 白名单(SSL
 Proxying)  
 Proxy -> SSL Proxying Settings -> SSL Proxying && Client Certificates  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210901083230.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210901083230.png)
 
 ![]()
 
 在 app 里发一次请求后 charles 提示输入证书的密码, 一顿操作后顺利完成任务, 打完收工
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210901083232.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210901083232.png)
 
 # refs
 

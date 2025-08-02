@@ -14,7 +14,7 @@ __
 
 收录于话题
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182128.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182128.png)
 
   
 
@@ -29,7 +29,7 @@ MITRE在2013年推出了ATT&CK模型，将已知攻击者行为转换为结构�
 本文将介绍MITRE
 ATT&CK框架的IaaS矩阵部分，以及ATT&CK如何帮助用户识别与云环境相关的威胁并保护用户的云基础设施。这也是很多安全研究人员关注的内容。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182132.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182132.png)
 
   
 
@@ -41,7 +41,7 @@ ATT&CK框架的IaaS矩阵部分，以及ATT&CK如何帮助用户识别与云环�
 
 与企业ATT&CK矩阵不同，新的IaaSATT&CK矩阵是企业ATT&CK矩阵的子集，如下图：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182133.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182133.png)
 
 ATT＆CK容器矩阵有助于了解与容器相关的风险，包括配置问题（通常是攻击的初始向量）以及在野攻击技术的具体实施。目前，越来越多的公司采用容器和容器编排技术（例如Kubernetes），ATT＆CK容器矩阵介绍了检测容器威胁的方法，有助于提供全面的保护。下面我们将介绍ATT&CK框架中针对容器安全新增加的技术。
 
@@ -62,7 +62,7 @@ ATT＆CK容器矩阵有助于了解与容器相关的风险，包括配置问题
 例如利用存在Struts2
 s2-061漏洞的攻击容器，通过发送此精心编制的HTTP请求，可以启动一个反向shell，实现“云横向移动”，并从中攻击整个云基础设施：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182135.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182135.png)
 
 值得注意的是，初始访问还可以通过Github等第三方来实现，如果泄漏的凭证被恶意利用，可能会导致用户上层的资源（如ECS）被攻击者控制。
 
@@ -74,7 +74,7 @@ s2-061漏洞的攻击容器，通过发送此精心编制的HTTP请求，可以�
 
 执行是指攻击者用来在集群内运行其代码的技术。如下图，可以看到攻击者如何欺骗用户在其环境中部署恶意镜像：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182136.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182136.png)
 
 在这种方法中，攻击者可以使用合法的镜像，如操作系统镜像（如Ubuntu）作为后门容器，将包含后门的镜像上传到公共存储库，并通过使用"kubectl exec
 "远程运行其恶意代码，直接获取环境的访问权限。
@@ -135,7 +135,7 @@ s2-061漏洞的攻击容器，通过发送此精心编制的HTTP请求，可以�
 
 凭证访问战术包括攻击者用来窃取凭证的一系列技术。这些凭证提供对云环境中系统和服务的访问或控制。获取凭据的技术包括暴力破解、查找并获取不安全存储的凭据等。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182138.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182138.png)
 
 通过使用云实例元数据API，可以找到登陆凭证和敏感信息。使用以下命令可以找到AWS的登录凭证，这些凭证是给群集节点相关角色来使用的。
 
@@ -171,7 +171,7 @@ s2-061漏洞的攻击容器，通过发送此精心编制的HTTP请求，可以�
 
 在这个阶段，攻击者使用的技术可能会有所不同。为了收集信息，攻击者经常使用自动收集内部数据的技术来加速操作。下面的屏幕截图是一个真实案例，攻击者试图从蜜罐中的容器收集配置文件和机密信息：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182139.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182139.png)
 
   
 
@@ -183,7 +183,7 @@ s2-061漏洞的攻击容器，通过发送此精心编制的HTTP请求，可以�
 
 下面的代码演示了攻击者试图通过ssh将收集到的所有数据复制到自己的计算机上，该计算机可能托管在云环境中。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182140.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182140.png)
 
 攻击者也可以使用云存储来窃取数据。以下命令使用S3 bucket复制以前收集的所有文件，并将其保存在自己的S3 bucket中。
 
@@ -201,7 +201,7 @@ s2-061漏洞的攻击容器，通过发送此精心编制的HTTP请求，可以�
 
 包括攻击者用来劫持或破坏正常应用可用性或损害数据完整性，从而实现其最终目标的技术。本节中使用的经典技术包括拒绝服务（DoS）和销毁或篡改数据。如果攻击者决定删除整个基础结构，受害者可能需要数月甚至更长的时间才能恢复。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182142.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182142.png)
 
   
 
@@ -290,7 +290,7 @@ ATT&CK容器矩阵涵盖了编排层（例如Kubernetes）和容器层（例如D
 
 3．本文档中提到的信息为正常公开的信息，若因本文档或其所提到的任何信息引起了他人直接或间接的资料流失、利益损失，天融信及其员工不承担任何责任。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915182143.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915182143.png)
 
   
 

@@ -44,22 +44,22 @@ http://www.nssm.cc/download
 
 填写木马路径和服务名，可以填写欺骗性较强的服务名
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808102544.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808102544.png)
 
 在服务里设置自动启动
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808102545.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808102545.png)
 
 重启对方机器，在msf中开启监听，成功得到shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210808102546.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808102546.png)
 
 作者：Leticia's Blog ，详情点击阅读原文。
 
  **推荐阅读**[
 **![]()**](http://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&mid=2247496904&idx=1&sn=e6c717bc2709f7c4ec8523bc681f43f3&chksm=9acd2457adbaad4169ed38ebf0d969553b6cf4dee26307f2ce6a137c52849e4ffdf06325347e&scene=21#wechat_redirect)  
  **觉得不错点个 **“赞”** 、“在看”，支持下小编**
-**![](https://gitee.com/fuli009/images/raw/master/public/20210808102547.png)**
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210808102547.png)**
 
 预览时标签不可点
 

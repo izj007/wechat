@@ -19,7 +19,7 @@ ___发表于_
 
 #数字安全 15 个
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230221194857.png)![](https://gitee.com/fuli009/images/raw/master/public/20230221194915.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194857.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194915.png)
 
   
 
@@ -69,7 +69,7 @@ Professional,CCPTP）**，旨在提供针对云计算渗透测试所需的专业
 
   * 根据渗透测试的情况撰写专业的云渗透测试报告（报告内容包括但不限于漏洞证明过程、修复或安全加固建议）。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230221194916.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194916.png)
 
   
 
@@ -99,7 +99,7 @@ CSA大中华区将在2023年3月31日举办的第六届云安全联盟大中华�
 
 如果您意向参加首期培训班，请咨询 CSA Training 微信，了解学习计划：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230221194917.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194917.png)
 
 CSA Training微信
 
@@ -116,17 +116,17 @@ GCR）作为CSA全球四大区之一，2016年在香港独立注册，于2021年
 CSA发布的《云计算关键领域安全指南》是云安全领域奠基性研究成果，全球范围认可，具有广泛影响力，此外，《云控制矩阵CCM》被誉为云安全的“黄金标准”，是全球性通用性标准。CSA与CSA
 GCR区面向云计算与下一代数字技术安全的产业发展需要，持续丰富完善数字安全的人才培养体系。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230221194918.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194918.png)
 
   
 
  **往期推荐**
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20230221194919.png)](https://mp.weixin.qq.com/s?__biz=MzA3NzM2MTQ3OA==&mid=2649810516&idx=1&sn=91b3b15ebafe615aac4de37023e9eef5&scene=21#wechat_redirect)[![](https://gitee.com/fuli009/images/raw/master/public/20230221194920.png)](https://mp.weixin.qq.com/s?__biz=MzA3NzM2MTQ3OA==&mid=2649814432&idx=1&sn=a0333c7203ed8c11ad6101ffad98bc3b&scene=21#wechat_redirect)[![](https://gitee.com/fuli009/images/raw/master/public/20230221194921.png)](https://mp.weixin.qq.com/s?__biz=MzA3NzM2MTQ3OA==&mid=2649806472&idx=1&sn=f7e4463642bc7ea4f8d914cbc41c01d9&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194919.png)](https://mp.weixin.qq.com/s?__biz=MzA3NzM2MTQ3OA==&mid=2649810516&idx=1&sn=91b3b15ebafe615aac4de37023e9eef5&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194920.png)](https://mp.weixin.qq.com/s?__biz=MzA3NzM2MTQ3OA==&mid=2649814432&idx=1&sn=a0333c7203ed8c11ad6101ffad98bc3b&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194921.png)](https://mp.weixin.qq.com/s?__biz=MzA3NzM2MTQ3OA==&mid=2649806472&idx=1&sn=f7e4463642bc7ea4f8d914cbc41c01d9&scene=21#wechat_redirect)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230221194922.png)![](https://gitee.com/fuli009/images/raw/master/public/20230221194923.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194922.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230221194923.png)
 
 预览时标签不可点
 

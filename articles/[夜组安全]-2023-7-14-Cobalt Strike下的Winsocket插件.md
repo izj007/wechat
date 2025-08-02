@@ -21,11 +21,11 @@ ___发表于_
 
 朋友们现在只对常读和星标的公众号才展示大图推送，建议大家把 **夜组安全** “ **设为星标** ”，否则可能就看不到了啦！
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180139.png)![](https://gitee.com/fuli009/images/raw/master/public/20230714180139.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180139.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180139.png)
 
  **Cobalt Strike**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180139.png)![](https://gitee.com/fuli009/images/raw/master/public/20230714180139.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180139.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180139.png)
 
  **01**
 
@@ -92,17 +92,17 @@ Then load `socket.cna` to Cobalt Strike. To use it, run the following command:
 值得加入的安全WIKI，涉及30个方向的资料
 
 ](http://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247487281&idx=1&sn=e5cedf2a72956941381803471b4edb5f&chksm=c3684bc9f41fc2dfbdd38dbd1944c86e191a1d257befaa894e824b168c1dc149c8980c673080&scene=21#wechat_redirect)  
-[ ![](https://gitee.com/fuli009/images/raw/master/public/20230714180142.png)
+[ ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180142.png)
 
 一个终身免费的安全武器库
 
 ](http://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247487269&idx=1&sn=58a73b9c68cc3e50db835b23c7a27e1a&chksm=c3684bddf41fc2cb8e9355095e181e797522178ae96b99ebd81c6b998406ff7a1bda9d1db334&scene=21#wechat_redirect)  
-[ ![](https://gitee.com/fuli009/images/raw/master/public/20230714180144.png)
+[ ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180144.png)
 
 康威视综合安防管理平台任意文件上传，一键getshell
 
 ](http://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247487396&idx=1&sn=8562fe48d4c0101a363eb2da7fdc650b&chksm=c3684b5cf41fc24aee672ba32a1cd7ff7a66148f56fbf6776ed098bcdd70d3c8c14c57a0f03d&scene=21#wechat_redirect)
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180145.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180145.png)  
 
 预览时标签不可点
 

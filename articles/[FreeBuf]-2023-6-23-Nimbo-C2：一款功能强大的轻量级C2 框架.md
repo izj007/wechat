@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集 #工具 76个
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164745.png)![](https://gitee.com/fuli009/images/raw/master/public/20230623164746.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164745.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164746.png)
 
 ##  
 
@@ -285,21 +285,21 @@ Windows&Linux操作系统。该工具基于Nim和Python开发，其WIndows端使
 
   
 工具主界面：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164747.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164747.png)  
 代理下载文件：  
 ![]()  
 注入Shellcode：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164748.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164748.png)  
 记录麦克风数据（录音）：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164749.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164749.png)  
 发送命令：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164750.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164750.png)  
 获取剪切板数据和屏幕截图：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164751.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164751.png)  
 UAC绕过：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164752.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164752.png)  
 服务器端主界面：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164753.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164753.png)
 
 ##
 
@@ -323,16 +323,16 @@ UAC绕过：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164754.png)https://github.com/itaymigdal/NimProtecthttps://github.com/upx/upx  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164754.png)https://github.com/itaymigdal/NimProtecthttps://github.com/upx/upx  
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164755.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164755.png)  
 
-[![]()](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247490948&idx=1&sn=7562d1d417c7a70b2b74086a1fc9e949&chksm=ce1ce71bf96b6e0d764474a5d1d79f764feaceb056e0cf9969fa49a5495383bc2f3e404daef4&scene=21#wechat_redirect)[![](https://gitee.com/fuli009/images/raw/master/public/20230623164756.png)](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247490922&idx=1&sn=bb73f64157cb710773a0523f7abd7f17&chksm=ce1ce7f5f96b6ee30127150dde8cd90350e497b365e1c591e8cd91056dbf99245ac0018333ef&scene=21#wechat_redirect)
+[![]()](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247490948&idx=1&sn=7562d1d417c7a70b2b74086a1fc9e949&chksm=ce1ce71bf96b6e0d764474a5d1d79f764feaceb056e0cf9969fa49a5495383bc2f3e404daef4&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164756.png)](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247490922&idx=1&sn=bb73f64157cb710773a0523f7abd7f17&chksm=ce1ce7f5f96b6ee30127150dde8cd90350e497b365e1c591e8cd91056dbf99245ac0018333ef&scene=21#wechat_redirect)
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20230623164757.png)](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247490903&idx=1&sn=861d15fcbe0026fb18aedb41d7f08e9b&chksm=ce1ce7c8f96b6edecdd5e5f16bf4a4fd5a00fb705f70d2f5a485ae14d40b420b08785a28d82a&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164757.png)](http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247490903&idx=1&sn=861d15fcbe0026fb18aedb41d7f08e9b&chksm=ce1ce7c8f96b6edecdd5e5f16bf4a4fd5a00fb705f70d2f5a485ae14d40b420b08785a28d82a&scene=21#wechat_redirect)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230623164758.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623164758.png)
 
 预览时标签不可点
 

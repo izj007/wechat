@@ -50,7 +50,7 @@ ___发表于_
 
 https://github.com/z2p/sweetPotato/blob/main/picture/show.gif
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617223234.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617223234.png)
 
   
 
@@ -60,7 +60,7 @@ https://github.com/z2p/sweetPotato/blob/main/picture/show.gif
 
 https://github.com/z2p/sweetPotato/blob/main/resources/finger.json
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617223249.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617223249.png)
 
   
 

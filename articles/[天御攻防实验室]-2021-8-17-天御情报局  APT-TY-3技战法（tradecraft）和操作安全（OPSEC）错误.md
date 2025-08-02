@@ -15,7 +15,7 @@ __
 
 收录于话题
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817185435.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817185435.png)
 
 技战法（tradecraft）：
 
@@ -66,7 +66,7 @@ TY-3在TTPs中犯的错误是在配置注册表键的名称上（他们只用了
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817185446.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817185446.png)
 
 预览时标签不可点
 

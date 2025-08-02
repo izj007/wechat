@@ -22,12 +22,12 @@ __
 
 一大早就看到L-codes师傅发消息说，Neo-reGeorg jsp服务端又出现问题了，印象里已经不是一两次了。大部分都是兼容性问题，这次也不例外。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210906120658.png)是时候设计一个一劳永逸的方案了。  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906120658.png)是时候设计一个一劳永逸的方案了。  
  **  0x02 ** **分析原因**  
-我们知道jsp从被访问到运行，经历如下阶段。![](https://gitee.com/fuli009/images/raw/master/public/20210906120703.png)本案例中发现tomcat
+我们知道jsp从被访问到运行，经历如下阶段。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906120703.png)本案例中发现tomcat
 work目录下已经存在了tunnel_jsp.java,但是没有tunnel_jsp.class，说明阶段1已经过。结合页面报错信息，在2阶段时Tomcat内置的编译器JDTCompiler，编译报错了。  
   
-检查tunnel_jsp.java代码并没有语法错误，尝试使用javac编译，编译成功！看来JDTCompiler与javac实现逻辑并不同，而且没有javac强大。![](https://gitee.com/fuli009/images/raw/master/public/20210906120705.png)编译成功之后我再访问tunnel.jsp页面不再报错了。可见提高一个.jsp的兼容，无非就是让它在各个中间件下成功变成一个.class。而这个过程与具体中间件的jsp转换器的解析机制，java编译器的编译机制和servlet-
+检查tunnel_jsp.java代码并没有语法错误，尝试使用javac编译，编译成功！看来JDTCompiler与javac实现逻辑并不同，而且没有javac强大。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906120705.png)编译成功之后我再访问tunnel.jsp页面不再报错了。可见提高一个.jsp的兼容，无非就是让它在各个中间件下成功变成一个.class。而这个过程与具体中间件的jsp转换器的解析机制，java编译器的编译机制和servlet-
 api的版本息息相关。  
   
 那么我们是不是可以把Neo-reGeorg的服务端代码提取变成class字节码，然后jsp来加载和调用，来提高这个过程的成功率呢？。 **  
@@ -36,11 +36,11 @@ api的版本息息相关。
 我们先来移植服务端模版代码为java代码。直接新建一个NeoreGeorg.java，将jsp中的方法直接copy,主体代码的移植需要注意2个问题。  
 第一、参数提炼问题。我们需要把模版变化的地方，提取出来作为参数，比如X-CMD这样的指令，POST request read filed这样的提示，Neo-
 reGorg需要通过随机替换它们实现流量加密。  
-第二、参数传递问题。参数可以通过构造方法或者自定义方法传递进来，但是这样要多写些反射代码。本着jsp代码越少越好原则，使用每个类都有的equal(java.lang.Object)方法。![](https://gitee.com/fuli009/images/raw/master/public/20210906120707.png)为了兼容更多的jdk版本我们这里选择使用1.5编译，同时为了class体积更小，可以使用-g:none去掉调试信息。![](https://gitee.com/fuli009/images/raw/master/public/20210906120710.png)jsp部分很简单，定义一个classloader用于加载class，然后将该class
+第二、参数传递问题。参数可以通过构造方法或者自定义方法传递进来，但是这样要多写些反射代码。本着jsp代码越少越好原则，使用每个类都有的equal(java.lang.Object)方法。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906120707.png)为了兼容更多的jdk版本我们这里选择使用1.5编译，同时为了class体积更小，可以使用-g:none去掉调试信息。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906120710.png)jsp部分很简单，定义一个classloader用于加载class，然后将该class
 newInstance进行调用。有二个点可以简单讲讲。  
 第一，class字节码的存储方式问题。本着少用api的原则，我直接用byte数组存储。当然如果字节码太多，可能会有The code of method
 _jspService(...) is exceeding the 65535 bytes limit报错问题，推荐用hex编码解决。  
-第二，全局存储class对象问题。推荐使用application对象，而不是session对象进行存储，否则遇到负载的情况就麻烦了。![](https://gitee.com/fuli009/images/raw/master/public/20210906120712.png)经过测试在各个中间件下稳定运行，顺手给L-
+第二，全局存储class对象问题。推荐使用application对象，而不是session对象进行存储，否则遇到负载的情况就麻烦了。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906120712.png)经过测试在各个中间件下稳定运行，顺手给L-
 codes师傅一个pr。  
  **  0x04 ** **总结**  
 其实这个方法可以使用很多jsp脚本的改造，比如内存马注入jsp，jsp大马，蚁剑一句话木马等等。大家可以照猫画虎，自行修改。  

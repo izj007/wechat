@@ -14,11 +14,11 @@ __
 
 收录于话题
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823075153.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075153.png)
 
 > 文章来源：Khan安全攻防实验室
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823075154.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075154.png)
 
   
 
@@ -66,11 +66,11 @@ POC：
 
 侵权请私聊公众号删文
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823075155.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075155.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823075156.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075156.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823075157.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075157.png)
 
 预览时标签不可点
 

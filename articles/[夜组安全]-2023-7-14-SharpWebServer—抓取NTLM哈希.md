@@ -21,11 +21,11 @@ ___发表于_
 
 朋友们现在只对常读和星标的公众号才展示大图推送，建议大家把 **夜组安全** “ **设为星标** ”，否则可能就看不到了啦！
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714145050.png)![](https://gitee.com/fuli009/images/raw/master/public/20230714145050.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714145050.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714145050.png)
 
  **域渗透**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714145050.png)![](https://gitee.com/fuli009/images/raw/master/public/20230714145050.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714145050.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714145050.png)
 
  **01**
 
@@ -107,17 +107,17 @@ NTLM哈希的功能。它可以用于在受感染的计算机上提供载荷以�
 
  **往期精彩**
 
-[ ![](https://gitee.com/fuli009/images/raw/master/public/20230714145107.png)
+[ ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714145107.png)
 
 一个终身免费的安全武器库
 
 ](http://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247487269&idx=1&sn=58a73b9c68cc3e50db835b23c7a27e1a&chksm=c3684bddf41fc2cb8e9355095e181e797522178ae96b99ebd81c6b998406ff7a1bda9d1db334&scene=21#wechat_redirect)  
-[ ![](https://gitee.com/fuli009/images/raw/master/public/20230714145108.png)
+[ ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714145108.png)
 
 内网探测工具
 
 ](http://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247487399&idx=1&sn=9849af6acb107c1176e30b056316637d&chksm=c3684b5ff41fc2498fc9a78a897803b5c6c6161942f66c4bf93deb838e2b35c35824c078e2d0&scene=21#wechat_redirect)  
-[ ![](https://gitee.com/fuli009/images/raw/master/public/20230714145109.png)
+[ ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714145109.png)
 
 集成化的渗透工具箱
 

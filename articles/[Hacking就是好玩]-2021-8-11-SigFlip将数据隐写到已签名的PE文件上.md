@@ -54,7 +54,7 @@ c#和Bof会写入`"\xFE\xED\xFA\xCE\xFE\xED\xFA\xCE"`
 https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#optional-
 header-data-directories-image-only
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811102751.png)image-20210809175208347
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811102751.png)image-20210809175208347
 
 _IMAGE_DATA_DIRECTORY 第4个偏移的位置（从0开始）。
 
@@ -63,7 +63,7 @@ _IMAGE_DATA_DIRECTORY 第4个偏移的位置（从0开始）。
 https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#the-attribute-
 certificate-table-image-only
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811102752.png)签名位置
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811102752.png)签名位置
 
 灰色背景的部分，不参与签名的hash计算。粗体的部分，就是签名的相关内容。
 
@@ -126,17 +126,17 @@ Ps:为什么添加数据在bCertificate后面不影响证书的校验呢，我�
 
 有了上面的描述，我们可以手动修改试试，以“微信”为例，用它的主程序，数字签名也都正常。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811102754.png)image-20210810151212409
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811102754.png)image-20210810151212409
 
 用`CFF Explore`打开wechat.exe，定位到证书表的选项
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811102755.png)image-20210810151336872
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811102755.png)image-20210810151336872
 
 可以知道证书的位置在文件偏移的`000EA800`，大小是000035F8
 
 用`010 Editor`跳转到这个地方
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811102757.png)image-20210810151722788
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811102757.png)image-20210810151722788
 
 头部对应上数据结构的值
 
@@ -158,11 +158,11 @@ wCertificateType=0x02
 
 后面即证书的字节了，跳转到最后可以看到有七个字节用作了对齐
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811102758.png)image-20210810151911438
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811102758.png)image-20210810151911438
 
 我们可以在后面添加自己需要的字节(要是8的倍数)，例如我添加16个。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811102800.png)image-20210810152151990
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811102800.png)image-20210810152151990
 
 所以新的长度就是0x35f8+16 = 0x3608 ,新的长度更新到两个地方
 
@@ -172,7 +172,7 @@ wCertificateType=0x02
 
 最后它的证书也是正常的。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811102801.png)image-20210810152502566
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811102801.png)image-20210810152502566
 
 ## 防御手法
 

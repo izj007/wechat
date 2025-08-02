@@ -24,17 +24,17 @@ Sonar有自己的默认的扫描规则，可通过安装Findbugs插件，来提�
 
 （1）安装Findbugs插件进入配置→应用市场，搜索Findbugs，点击安装即可。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811100635.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811100635.png)
 
 在质量配置中，设置FindBugs Security Audit为默认。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811100642.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811100642.png)
 
 （2）代码漏洞扫描效果测试：
 
 默认的扫描规则与FindBugs Security Audit的对比。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811100643.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811100643.png)
 
  **2、IDEA集成**
 
@@ -50,7 +50,7 @@ Sonar有自己的默认的扫描规则，可通过安装Findbugs插件，来提�
 
 在IDEA中安装SonarLint插件，实现自动检测项目文件分析或者对整个项目进行分析。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811100644.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811100644.png)
 
  **3、Gitlab集成**
 
@@ -58,11 +58,11 @@ Sonar有自己的默认的扫描规则，可通过安装Findbugs插件，来提�
 
 （1）在项目根目录编写.gitlab-ci.yml文件，通过GitLab-Runner实现Gitlab与Sonarqube集成。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811100645.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811100645.png)
 
 （2）当提交代码的时候，自动检测代码并发送报告给提交者。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811100646.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811100646.png)
 
  **4、Jenkins集成**
 
@@ -70,11 +70,11 @@ Sonar有自己的默认的扫描规则，可通过安装Findbugs插件，来提�
 
 （1）在Jenkins中，使用Pipeline流水线，拉取代码、执行打包、代码扫描。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811100647.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811100647.png)
 
 （2）流水线构建成功。  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210811100648.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811100648.png)
 
 ![]()
 

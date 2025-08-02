@@ -47,7 +47,7 @@ __
 
 ## 效果演示
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220304114648.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220304114648.png)
 
   
 
@@ -65,13 +65,13 @@ https://github.com/HyperSine/how-does-Xmanager-encrypt-password
 
 https://github.com/uknowsec/SharpDecryptPwd
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220304114652.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220304114652.png)
 
   
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220304114653.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220304114653.png)
 
   
 

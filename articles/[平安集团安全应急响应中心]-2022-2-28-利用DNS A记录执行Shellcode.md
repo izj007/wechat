@@ -127,10 +127,10 @@ DNSmasq是一个小巧且方便地用于配置DNS和DHCP的工具，通过它就
 
   
 这时候一个简易的dns服务器就搭建好了。查看这台vps的ip（dns server）：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220228185958.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228185958.png)  
 这时候我们将nslookup的dns server设置成我们自己的ip，来看java.com解析出的A记录：  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220228185959.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228185959.png)
 
   
 如图，解析出来的A记录的ip地址就是我们自己设定的ip地址。  
@@ -351,11 +351,11 @@ A记录解析数据拼接起来才是完整的payload数据。 多域名解析�
   
 
 生成DNS A记录
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190000.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190000.png)  
 启动dns解析服务  
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190001.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190001.png)  
 运行解析结果
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190002.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190002.png)  
   
 
  **0x04  IPV6 DNS A记录的利用设计**
@@ -560,7 +560,7 @@ AAAA解析数据。后面由于ipv6的0位压缩表示法，会将01c1这种数�
 
 ##  **4.5 利用结果**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190003.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190003.png)
 
 #  
 
@@ -581,7 +581,7 @@ DNS协议在很多的IDS/IPS设备中都是不被检测的，利用DNS解析来�
 
 银河实验室
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190004.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190004.png)
 
 银河实验室（GalaxyLab）是平安集团信息安全部下一个相对独立的安全实验室，主要从事安全技术研究和安全测试工作。团队内现在覆盖逆向、物联网、Web、Android、iOS、云平台区块链安全等多个安全方向。官网：http://galaxylab.pingan.com.cn/
 
@@ -617,7 +617,7 @@ Manager历史表达式注入漏洞分析](http://mp.weixin.qq.com/s?__biz=MzIzOD
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190005.png)![]()![](https://gitee.com/fuli009/images/raw/master/public/20220228190006.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190005.png)![]()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190006.png)
 
  **长按识别二维码关注我们**
 
@@ -627,15 +627,15 @@ Manager历史表达式注入漏洞分析](http://mp.weixin.qq.com/s?__biz=MzIzOD
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190007.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190007.png)
 
  **球分享**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190007.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190007.png)
 
  **球点赞**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220228190007.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228190007.png)
 
  **球在看**
 

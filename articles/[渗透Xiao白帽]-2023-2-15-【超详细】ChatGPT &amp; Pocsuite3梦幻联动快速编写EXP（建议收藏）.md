@@ -28,7 +28,7 @@ ___发表于_
 
 简单来说，ChatGPT是一个AI，能够分析我们题出的问题，并且对此做出解答。可以通过ChatGPT来分析代码，或者让其根据我们的需求写出相应的代码，如下。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230215145844.png)所以，我就在想，能不能让它给我们编写poc，简化平时的一个工作，于是便有了这篇文章。
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230215145844.png)所以，我就在想，能不能让它给我们编写poc，简化平时的一个工作，于是便有了这篇文章。
 
 ##
 
@@ -58,26 +58,26 @@ ___发表于_
 
 在一开始，最好向CG(ChatGPT的简称)提供漏洞的相关原理，但是由我们直接去叙述，其准确性比较低，因为语言存在歧义，那么，我们可以通过引导的方式，去让CG了解和漏洞有关的信息，比如ThinkPHP最新的漏洞原理是因为多语言模式的开启导致的文件包含，如果我们直接询问。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230215145900.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230215145900.png)
 
 我们会发现，CG无法为我们解析出来，因为其实在这里lang_switch_on是config.php返回数组中的一个键名，准确来说并不是参数，所以这里解析才会出错。我们知道config.php会返回一个数组，但是CG因为并不会去解析config.php,所以在它并不觉得config.php会返回什么。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230215145901.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230215145901.png)  
 但是我们换一种方法，我们询问，
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230215145902.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230215145902.png)  
 我们会发现，CG给出了我们一个流程，那么在这里，CG就记住了这一答案，当我们在漏洞原理中加入了这句话，那么CG就能正确解析。
 
 #### 分段
 
 当我们直接通过一大段话让其给我们编写程序的时候，你会发现会有很多错误，如下。  
-![](https://gitee.com/fuli009/images/raw/master/public/20230215145903.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230215145903.png)
 
 根据我上面的发现，我突然想 ，我们可以先给出一个简单的需求，在后面不断基于之前给的答案，增加其准确度就行。如下。
 
 首先，询问是否知道pocsuite，并要求给出一个例子。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230215145904.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230215145904.png)
 
     
     
@@ -172,7 +172,7 @@ ___发表于_
 
 这时候，我们再添加一些信息。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230215145905.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230215145905.png)
 
     
     
@@ -237,7 +237,7 @@ ___发表于_
 
 最后，我们再补充一点。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230215145906.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230215145906.png)
 
     
     

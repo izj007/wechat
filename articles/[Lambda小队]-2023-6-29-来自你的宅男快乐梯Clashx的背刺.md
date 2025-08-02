@@ -24,7 +24,7 @@ ___发表于_
   
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175629.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175629.png)  
 
   
 
@@ -32,13 +32,13 @@ ___发表于_
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175637.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175637.png)
 
 小外包看到后的第一反应：woc实验室大佬都被上线了？
 
 再提取下苹果电脑、某行动、终端权限、开除等关键词，瞬间
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175638.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175638.png)
 
   
 
@@ -53,13 +53,13 @@ https://www.youtube.com/watch?v=4AnapDDMlyI
   
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175629.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175629.png)  
 
   
 
 mac clashx页面
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175640.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175640.png)
 
 ClashX初次运行会在~/.config/clash/目录产生一个名为config.yaml的主配置文件，文件内容如下。
 
@@ -80,7 +80,7 @@ ClashX初次运行会在~/.config/clash/目录产生一个名为config.yaml的�
 ClashX的使用也是基于一份配置文件，同样只需将可用的主配置文件放到~/.config/clash/目录下，之后就可以使用了。也可以选择「Config」-「Remote
 config」-「Manage」-「Add」，将远程链接填入Url栏中，可自动下载远程的配置文件到本地。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175641.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175641.png)
 
   
 
@@ -93,17 +93,17 @@ config」-「Manage」-「Add」，将远程链接填入Url栏中，可自动下
   
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175629.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175629.png)  
 
   
 
  **1、 CFW XSS2RCE**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175643.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175643.png)
 
  ****
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175644.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175644.png)
 
 具体细节可参考大佬文章： https://github.com/Fndroid/clash_for_windows_pkg/issues/2710  
 视频：  
@@ -111,7 +111,7 @@ https://www.youtube.com/watch?v=b04N4KxuLfg
 
  **2、 CFW路径穿越致使parsers JS RCE**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175645.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175645.png)
 
  ****
 
@@ -130,7 +130,7 @@ https://bulianglin.com/archives/clashrce.html
   
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175629.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175629.png)  
 
   
 
@@ -243,34 +243,34 @@ Web服务，同时允许跨域，对外提供如上index.html和exp.yaml恶意�
     
     yum -y install golanggo mod init maingo get github.com/gin-contrib/corsgo get github.com/gin-gonic/gingo run main.go
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175647.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175647.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175648.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175648.png)
 
   
 尝试访问触发
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175649.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175649.png)
 
   
 
 在windows虚拟机中安装了低版本的clash_for_windows并成功复现了此漏洞
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175650.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175650.png)
 
 同事也在未更新clashx的mac环境下复现成功，mac os版本为10.13.6
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175651.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175651.png)
 
 也有大佬说漏洞与macos版本也有关，笔者做了实验，在最新的clashx（未修改配置文件）和最新的mac系统下已无法复现此漏洞，建议各位红队大哥们及时升级clashx和自己的mac电脑到最新版本，防止中招。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175652.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175652.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175653.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175653.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175654.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175654.png)
 
   
 
@@ -281,15 +281,15 @@ Web服务，同时允许跨域，对外提供如上index.html和exp.yaml恶意�
   
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175629.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175629.png)  
 
   
 
 有clashx的小伙伴访问本机127.0.0.1:9090端口，若出现下图同样结果且clashx非最新版本，则存在被攻击风险。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175656.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175656.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175657.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175657.png)
 
   
 
@@ -300,17 +300,17 @@ Web服务，同时允许跨域，对外提供如上index.html和exp.yaml恶意�
   
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175629.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175629.png)  
   
 1、注释配置文件中external-controller这一行代码（注意需要重启客户端）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175700.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175700.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175701.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175701.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175702.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175702.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175703.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175703.png)
 
  ****
 
@@ -318,7 +318,7 @@ Web服务，同时允许跨域，对外提供如上index.html和exp.yaml恶意�
 
   1. 2、在配置文件中增加强度足够的 secret值
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175704.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175704.png)
 
  ****
 
@@ -357,9 +357,9 @@ rce/index.html
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175705.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175705.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175706.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175706.png)
 
   
 
@@ -369,42 +369,42 @@ rce/index.html
 
  **关于Lambda小队**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175707.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175707.png)  
 
 Lambda小队经过多年的一线红队磨炼，取得了众多辉煌的战绩，同时也积淀了丰富的实战经验，后续将为大家带来更多一线的实战经历和研究成果。
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175708.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175708.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175709.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175709.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175710.png)![](https://gitee.com/fuli009/images/raw/master/public/20230629175711.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175710.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175711.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175712.png)![](https://gitee.com/fuli009/images/raw/master/public/20230629175713.png)
-
-  
-
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175715.png)
-
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175716.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175712.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175713.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175717.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175715.png)
+
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175716.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175718.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175717.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175719.png)  
+  
+
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175718.png)
+
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175719.png)  
 
 END
 
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629175720.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629175720.png)
 
   
 

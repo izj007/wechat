@@ -19,15 +19,15 @@ __
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130905.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130905.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130908.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130908.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130909.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130909.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130911.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130911.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130912.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130912.png)
 
 推荐阅读：
 
@@ -45,19 +45,19 @@ https://www.cnblogs.com/claidx/p/7354034.html
 
 使用异或+随机数字混淆的方式，加密方式可以自定义，尽量做到小众、独创，然后只要在运行时解码就行，也可以想办法利用加载器加载加密到txt里面到shellcode或者其他加密的资源文件的加密shellcode，也可以实现绕过静态查杀。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130914.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130914.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130915.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130915.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130917.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130917.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130918.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130918.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130920.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130920.png)
 
   
 
@@ -77,9 +77,9 @@ https://www.cnblogs.com/claidx/p/7354034.html
 
   3. 创建远程线程，执行LoadLibrary();
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130921.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130921.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130923.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130923.png)
 
   
 
@@ -98,7 +98,7 @@ https://www.cnblogs.com/claidx/p/7354034.html
 
 通过域前置的方法可以有效的隐藏我们C2地址或加载器的文件服务器。同时此类CDN地址可能存在于白名单，也可用于绕过流量监测。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130924.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130924.png)
 
   
 
@@ -122,7 +122,7 @@ https://uknowsec.cn/posts/notes/ShellCode%E8%BF%9C%E7%A8%8B%E5%8A%A0%E8%BD%BD%E5
 
 原创投稿作者：cacker
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903130925.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903130925.png)
 
 预览时标签不可点
 

@@ -181,7 +181,7 @@ ApplicationScanner是一个快速稳定的App代码扫描工具，该工具基�
  **欢迎关注 系统安全运维  **
 
  **觉得不错点个 **“赞”** 、“在看”哦**
-**![](https://gitee.com/fuli009/images/raw/master/public/20210807085533.png)**
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210807085533.png)**
 
 预览时标签不可点
 

@@ -30,7 +30,7 @@ dll注入实现过程
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094909.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094909.png)
 
   
 
@@ -91,7 +91,7 @@ OpenProcess、VirtualAllocEx、WriteProcessMemory、CreateRemoteThread
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094913.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094913.png)
 
   
 
@@ -140,7 +140,7 @@ msf已经有了相应的模块：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094914.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094914.png)
 
   
 
@@ -148,7 +148,7 @@ msf已经有了相应的模块：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094914.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094914.png)
 
   
 
@@ -156,7 +156,7 @@ msf已经有了相应的模块：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094916.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094916.png)
 
   
 
@@ -182,7 +182,7 @@ https://www.mdsec.co.uk/2021/06/bypassing-image-load-kernel-callbacks/
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094918.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094918.png)
 
   
 
@@ -194,7 +194,7 @@ https://www.mdsec.co.uk/2021/06/bypassing-image-load-kernel-callbacks/
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094919.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094919.png)
 
   
 
@@ -202,7 +202,7 @@ https://www.mdsec.co.uk/2021/06/bypassing-image-load-kernel-callbacks/
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094920.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094920.png)
 
   
 
@@ -210,7 +210,7 @@ https://www.mdsec.co.uk/2021/06/bypassing-image-load-kernel-callbacks/
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094921.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094921.png)
 
   
 
@@ -226,7 +226,7 @@ https://www.mdsec.co.uk/2021/06/bypassing-image-load-kernel-callbacks/
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015094922.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015094922.png)
 
   
 

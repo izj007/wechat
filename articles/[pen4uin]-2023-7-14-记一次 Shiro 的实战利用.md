@@ -29,7 +29,7 @@ ___发表于_
 
 1、验证后端反序列化功能是否正常
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175128.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175128.png)
 
   
 
@@ -39,7 +39,7 @@ ___发表于_
 
 2、删减到 300 左右，正常放行
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175129.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175129.png)
 
   
 
@@ -57,7 +57,7 @@ OPTIONS 请求方式 + 静态资源 uri 路径
 
 但超过 7000 依然会被拦截，没法再绕
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175130.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175130.png)
 
   
 
@@ -73,7 +73,7 @@ OPTIONS 请求方式 + 静态资源 uri 路径
 
 延时成功，说明后端功能正常
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175131.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175131.png)
 
   
 
@@ -85,7 +85,7 @@ OPTIONS 请求方式 + 静态资源 uri 路径
 
 通过延时探测反序列化链
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175132.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175132.png)
 
   
 
@@ -119,7 +119,7 @@ OPTIONS 请求方式 + 静态资源 uri 路径
 
 延时6s，说明目标操作系统极大概率为 *nix
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175133.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175133.png)
 
 9、尝试写文件马
 
@@ -175,7 +175,7 @@ OPTIONS 请求方式 + 静态资源 uri 路径
 
 拆分成了 14 组
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175134.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175134.png)
 
 3）写入内存马的字节码
 
@@ -198,7 +198,7 @@ OPTIONS 请求方式 + 静态资源 uri 路径
 
 5）成功注入内存马
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175135.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175135.png)
 
 ### 0x05  总结
 

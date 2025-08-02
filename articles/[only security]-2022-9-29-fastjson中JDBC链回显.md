@@ -73,7 +73,7 @@ fastjson的JDBC(com.mysql.jdbc.JDBC4Connection)，之前遇到过一次，但是
     }  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133336.png)![](https://gitee.com/fuli009/images/raw/master/public/20220929133339.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133336.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133339.png)
 
 # 0x03 工具用法
 
@@ -83,7 +83,7 @@ fastjson环境搭建完毕，了解一下fakeMySQL与ysoserial用法
 
 https://github.com/fnmsd/MySQL_Fake_Server
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133341.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133341.png)
 
 得到两点关键信息
 
@@ -94,7 +94,7 @@ https://github.com/fnmsd/MySQL_Fake_Server
 
 https://github.com/su18/ysoserial
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133343.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133343.png)
 
     
     
@@ -116,23 +116,23 @@ https://github.com/su18/ysoserial
 
 但是在利用的时候遇到了点问题
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133344.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133344.png)
 
 发现可能是将`' CommonsBeanutils1'`作为参数传入了`ysuserial.jar`一样的报错
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133346.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133346.png)
 
 查看`fakeMySQL`端的完整命令
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133349.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133349.png)
 
 去看server.py源码，发现这里是直接获取到`yso_type`参数传入`subprocess.Popen`函数
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133352.png)![](https://gitee.com/fuli009/images/raw/master/public/20220929133353.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133352.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133353.png)
 
 对`subprocess.Popen`函数进行测试：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133354.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133354.png)
 
 就是这里参数的问题了，后续发现，可以将`-g
 CommonsBeanutils1`变成`-gCommonsBeanutils1`，这样ysoserial也可以正常工作
@@ -142,7 +142,7 @@ gCommonsBeanutils1_-pEX-TomcatEcho`也可行)
 
 `X-Token-Data: whoami`作为命令输入点
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133355.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133355.png)
 
 得到了命令回显
 
@@ -154,7 +154,7 @@ gCommonsBeanutils1_-pEX-TomcatEcho`也可行)
     X-SSRF-TOKEN: bx  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220929133357.png)![](https://gitee.com/fuli009/images/raw/master/public/20220929133358.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133357.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133358.png)
 
 也可以注入哥斯拉内存马等等，包括最近比较火的Upgrade内存马、Executor内存马、Websocket内存马等，作者都进行了更新，不过貌似没有完全利用，期待作者后续更新
 

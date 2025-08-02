@@ -20,7 +20,7 @@ __
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211015090901.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015090901.png)
 
   
 

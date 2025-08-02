@@ -14,7 +14,7 @@ __
 
 收录于话题
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101543.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101543.png)
 
 > ******作者：ConsT27**
 >
@@ -30,7 +30,7 @@ Vista)及更高版本操作系统中采用的一种控制机制，保护系统�
 
 管理员在正常情况下是以低权限运行任务的，这个状态被称为被保护的管理员。但当管理员要执行高风险操作（如安装程序等），就需要提升权限去完成这些任务。这个提升权限的过程通常是这样的，相信各位都眼熟过。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101544.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101544.png)
 
 点击“是”，管理员就会提升到高权限再去运行该任务。
 
@@ -46,9 +46,9 @@ Vista)及更高版本操作系统中采用的一种控制机制，保护系统�
 
 网上常拿C:\Windows\SysWOW64\SystemPropertiesAdvanced.exe 举列子
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101545.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101545.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101546.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101546.png)
 
 这个东西很有用，是下面部分方法的前提条件
 
@@ -62,7 +62,7 @@ asInvoker：父进程是什么权限，此应用程序就是什么权限
 
 requireAdministrator：需要以管理员权限来运行，此类应用程序图标右下方会有个盾牌标记
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101547.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101547.png)
 
 highestAvailable：此程序以当前用户能获取到的最高权限运行。当你在管理员账户下运行此程序就会要求权限提升以及弹出UAC框。当你在标准账户下运行此程序，由于此账户的最高权限就是标准账户，所以双击便运行
 
@@ -115,11 +115,11 @@ DLL搜索顺序劫持：当应用程序加载DLL的时候，如果没有带指�
 
 这里我们先用第一种方法来进行实验，实验对象是C:\Windows\SysWOW64\SystemPropertiesAdvanced.exe和Listary。Listary是一个很好用的检索小工具，我通过processmonitor，设置好过滤条件，查看SystemPropertiesAdvanced.exe调用的dll时发现它会调用一个Listary下的一个名为ListaryHook.dll的dll。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101548.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101548.png)
 
 由于listary目录权限不高，我们可以直接替换该dll，换成dllmain为打开cmd的dll。然后点击运行SystemPropertiesAdvanced.exe，就会发现会弹出高权限cmd窗口
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101549.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101549.png)
 
 bypassuac成功。当然这种都不能算是一个洞，listary并不是人人电脑上都有的，而且这个软件装机量应该是极少数少的，所以这里只是提供一个思路，这种洞该怎么去找。
 
@@ -134,7 +134,7 @@ eventvwr.msc来运行它,并且在process exploer中只能看到个mmc.exe。
 
 cmd运行 mmc eventvwr.msc,查看调用
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101550.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101550.png)
 
 dll搜索顺序确实是
 程序目录->SYSTEM32->SYSTEM->WINDOWS->当前目录（这里也是SYSTEM32目录，我认为的原因是mmc会自动提升权限导致当前目录为System32导致的）->PATH目录。
@@ -218,11 +218,11 @@ net4.0后，会先查找COR_PROFILER_PATH是否指定dll文件路径，若没有
 
 这个方法很简单。打开C:\Windows\system32\odbcad32.exe，然后通过以下方法打开powershell或者cmd
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101551.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101551.png)
 
 成功bypass
 
-### ![](https://gitee.com/fuli009/images/raw/master/public/20210815101552.png)
+### ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101552.png)
 
 ### 管理工具
 
@@ -278,7 +278,7 @@ Win10后这个程序才有自动提升权限的能力
   
 ---  
   
-### ![](https://gitee.com/fuli009/images/raw/master/public/20210815101554.png)
+### ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101554.png)
 
 ### eventvmr
 
@@ -331,7 +331,7 @@ win10，win7均无效,不知道是哪个版本的事了，反正记录下来吧�
 
 ### ICMLuaUtil
 
-### ![](https://gitee.com/fuli009/images/raw/master/public/20210815101555.png)
+### ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101555.png)
 
 # 五. UACME
 
@@ -343,7 +343,7 @@ https://github.com/hfiref0x/UACME/tree/v3.2.x
 
 侵权请私聊公众号删文![]()
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210815101556.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815101556.png)
 
 ![]()
 

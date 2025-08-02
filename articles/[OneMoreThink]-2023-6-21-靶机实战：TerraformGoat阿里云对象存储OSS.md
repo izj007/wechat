@@ -53,7 +53,7 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 
 1、搭建靶机，获得Bucket域名。（bucket_public_access靶机）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223729.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223729.png)
 
 2、通过 **信息收集** 方式发现Bucket资产，就是对收集到的Bucket域名进行访问确认。
 
@@ -63,26 +63,26 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 
 > 参考文档：The bucket you access does not belong to you[3]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223730.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223730.png)
 
 2.1.2、登录OSS管理控制台，授予所有用户 `ListObjects` 权限，返回结果就是 **ListBucketResult** 。返回结果中没有
 `Contents` 字段，说明Bucket中没有Object。
 
 > 参考文档：ListObjectsV2（GetBucketV2）[4]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223731.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223731.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223732.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223732.png)
 
 2.2、如果Bucket不存在：
 
 2.2.1、注销靶机，返回结果就是 **NoSuchBucket** ，现实场景中一般是不用了销毁了。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223733.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223733.png)
 
 此时可以接管Bucket。登录自己的OSS管理控制台，创建完全相同的Bucket域名（BucketName和Region都相同）就能接管Bucket了。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223734.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223734.png)
 
 3、通过 **暴力破解** 方式发现Bucket资产，就是构造Bucket域名进行访问确认，格式需满足
 `<BucketName>.<Region>.aliyuncs.com`。
@@ -100,7 +100,7 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 >     > 2、以小写字母或者数字开头和结尾  
 >     > 3、长度必须在3~63字符之间
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223735.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223735.png)
 
 3.2、如果格式正确，返回结果包括AccessDenied、ListBucketResult、NoSuchBucket，注意以下几种情况：
 
@@ -108,7 +108,7 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 
 > 参考文档：The specified bucket does not exist[7]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223736.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223736.png)
 
 3.2.2、`Region` 错误，返回结果是 **AccessDenied**
 ，说明BucketName正确但是Region错误，此时爆破其它Region即可。
@@ -118,7 +118,7 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 >
 > 参考文档：访问域名和数据中心[9]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223737.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223737.png)
 
 4、安全建议
 
@@ -137,25 +137,25 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 2、访问Bucket域名，返回结果是 **ListBucketResult** ，说明Bucket存在，而且匿名用户有 `ListObjects` 权限。有
 `Contents` 字段，说明Bucket中有Object，并能拿到所有Object的 `Key`。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223738.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223738.png)
 
 3、访问Key即可获得对象内容。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223739.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223739.png)
 
 4、安全建议
 
 4.1、如非业务必须，禁止授予匿名用户 `ListObjects` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223740.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223740.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223741.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223741.png)
 
 ### 2.2、GetBucketPolicy权限
 
 1、搭建靶机，获得Bucket域名。（bucket_policy_readable靶机）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223742.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223742.png)
 
 1.1、访问Bucket域名，返回结果是 **AccessDenied** ，说明Bucket存在，只是匿名用户没有 `ListObjects` 权限。
 
@@ -165,21 +165,21 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 
 > 参考文档：GetBucketPolicy[10]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223743.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223743.png)
 
 1.3、安全建议
 
 1.3.1、如非业务必须，禁止授予匿名用户 `GetBucketPolicy` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223744.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223744.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223745.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223745.png)
 
 2、搭建靶机，获得Bucket域名。（special_bucket_policy靶机）
 
 需要说明的是，该靶机不是考核通过匿名用户查看Bucket Policy的能力，而是考核通过AKSK查看Bucket Policy的能力。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223746.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223746.png)
 
 2.1、访问Bucket域名，返回结果是 **AccessDenied** ，说明Bucket存在，只是匿名用户没有 `ListObjects` 权限。
 
@@ -187,33 +187,33 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 
 2.2、访问 `?policy`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketPolicy` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223747.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223747.png)
 
 2.3、假设已经获得AKSK，先下载并安装ossutil命令：
 
 > 参考文档：下载并安装ossutil[11]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223748.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223748.png)
 
 再通过 `ossutil config` 为ossutil命令配置AKSK：
 
 > 参考文档：配置访问凭证[12]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223749.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223749.png)
 
 最后通过 `./ossutil64 bucket-policy --method get oss://bucketname local_json_file`
 获取Bucket Policy配置，发现有 `Condition` 要求UserAgent是test或HxSecurityLab。
 
 > 参考文档：获取Bucket Policy配置[13]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223750.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223750.png)
 
 2.4、通过BurpSuite修改UserAgent后，访问Bucket域名，返回结果是 **ListBucketResult** ，说明获得了
 `ListObjects` 权限。返回结果中没有 `Contents` 字段，说明Bucket中没有Object。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223751.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223751.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223752.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223752.png)
 
 2.5、安全建议
 
@@ -224,13 +224,13 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 1、没有靶机就自己制作靶机。登录OSS管理控制台创建一个Bucket，并为匿名用户添加 `GetBucketPolicy` 和
 `PutBucketPolicy` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223754.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223754.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223755.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223755.png)
 
 2、访问Bucket域名，返回结果是 **AccessDenied** ，说明Bucket存在，只是匿名用户没有 `ListObjects` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223756.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223756.png)
 
 3、访问 `?policy`，返回结果是 Bucket Policy，说明匿名用户有 `GetBucketPolicy` 权限。
 
@@ -241,9 +241,9 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 
 > 参考文档：PutBucketPolicy[15]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223757.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223757.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223758.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223758.png)
 
 5、安全建议
 
@@ -254,17 +254,17 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 1、没有靶机就自己制作靶机。登录OSS管理控制台创建一个Bucket，并为匿名用户添加 `GetBucketAcl` 和 `PutBucketAcl`
 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223759.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223759.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223800.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223800.png)
 
 2、访问Bucket域名，返回结果是 **AccessDenied** ，说明Bucket存在，只是匿名用户没有 `ListObjects` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223801.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223801.png)
 
 3、访问 `?policy`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketPolicy` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223802.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223802.png)
 
 4、修改 Bucket Policy，为匿名用户添加 `*` 权限，返回结果是 **403 Forbidden** ，说明匿名用户没有
 `PutBucketPolicy` 权限。
@@ -273,7 +273,7 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 
 > 参考文档：GetBucketAcl[16]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223803.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223803.png)
 
 6、安全建议
 
@@ -286,14 +286,14 @@ PutBucketPolicy、PutBuchetACL、PutObjectAcl 权限需先请运维团队备份�
 
 > 参考文档：PutBucketAcl[17]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223804.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223804.png)
 
 2、假设已经获得AKSK，使用ossutil命令修改 Bucket ACL，改为 `public-
 read`，修改成功，但用的是AKSK的权限，不是匿名用户的 `PutBucketAcl` 权限。
 
 > 参考文档：设置或修改Bucket ACL[18]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223805.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223805.png)
 
 ![]()
 
@@ -307,11 +307,11 @@ read`，修改成功，但用的是AKSK的权限，不是匿名用户的 `PutBuc
 
 1、搭建靶机，获得Bucket域名。（object_public_access靶机）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223806.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223806.png)
 
 2、访问Bucket域名，返回结果是 **AccessDenied** ，说明Bucket存在，只是匿名用户没有 `ListObjects` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223807.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223807.png)
 
 3、访问 `?policy`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketPolicy` 权限。
 
@@ -322,7 +322,7 @@ read`，修改成功，但用的是AKSK的权限，不是匿名用户的 `PutBuc
 
 5、访问 `?acl`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketAcl` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223808.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223808.png)
 
 6、修改 Bucket ACL，改为 `public-read-write`，返回结果是 **AccessDenied** ，说明匿名用户没有
 `PutBucketAcl` 权限。
@@ -331,11 +331,11 @@ read`，修改成功，但用的是AKSK的权限，不是匿名用户的 `PutBuc
 
 > 参考文档：GetObject[19]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223809.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223809.png)
 
 8、访问Key即可获得对象内容。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223810.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223810.png)
 
 9、安全建议
 
@@ -344,7 +344,7 @@ read` 和 `public-read-write` 权限（Bucket ACL层面）。
 
 > 参考文档：读写权限类型[20]
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223811.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223811.png)
 
 此时Key仍能访问，检查策略发现 Object ACL 是 `public-read`，需改为 `private` 才能正确禁用匿名用户的
 `GetObject` 权限。（Object ACL层面）
@@ -353,21 +353,21 @@ read` 和 `public-read-write` 权限（Bucket ACL层面）。
 
 ![]()
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223812.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223812.png)
 
 ### 3.2、PutObject权限
 
 1、搭建靶机，获得Bucket域名。（unrestricted_file_upload靶机）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223813.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223813.png)
 
 2、访问Bucket域名，返回结果是 **AccessDenied** ，说明Bucket存在，只是匿名用户没有 `ListObjects` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223814.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223814.png)
 
 3、访问 `?policy`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketPolicy` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223815.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223815.png)
 
 4、修改 Bucket Policy，为匿名用户添加 `*` 权限，返回结果是 **403 Forbidden** ，说明匿名用户没有
 `PutBucketPolicy` 权限。
@@ -381,19 +381,19 @@ read` 和 `public-read-write` 权限（Bucket ACL层面）。
 
 7、爆破 Object Key，没有爆出对象，不好判断匿名用户是否有 `GetObject` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223816.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223816.png)
 
 8、上传 Object，返回结果是 **200 OK** ，说明匿名用户有 `PutObject` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223817.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223817.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223818.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223818.png)
 
 上传图片对象。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223819.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223819.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223820.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223820.png)
 
 9、安全建议
 
@@ -409,18 +409,18 @@ read-write` 权限（Bucket ACL层面）。
 
 2、访问Bucket域名，返回结果是 **AccessDenied** ，说明Bucket存在，只是匿名用户没有 `ListObjects` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223821.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223821.png)
 
 3、访问 `?policy`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketPolicy` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223822.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223822.png)
 
 4、修改 Bucket Policy，为匿名用户添加 `*` 权限，返回结果是 **403 Forbidden** ，说明匿名用户没有
 `PutBucketPolicy` 权限。
 
 5、访问 `?acl`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketAcl` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223823.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223823.png)
 
 6、修改 Bucket ACL，改为 `public-read-write`，返回结果是 **AccessDenied** ，说明匿名用户没有
 `PutBucketAcl` 权限。
@@ -428,7 +428,7 @@ read-write` 权限（Bucket ACL层面）。
 7、爆破 Object Key，发现存在Key是 flag 的对象，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetObject`
 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223824.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223824.png)
 
 ![]()
 
@@ -436,15 +436,15 @@ read-write` 权限（Bucket ACL层面）。
 
 9、访问对象的 `?acl`，返回结果是 **AccessControlPolicy** ，说明匿名用户有 `GetObjectAcl` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223825.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223825.png)
 
 10、安全建议
 
 10.1、如非业务必须，禁止授予匿名用户 `GetObjectAcl` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223826.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223826.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223827.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223827.png)
 
 ### 3.4、PutObjectAcl权限
 
@@ -454,18 +454,18 @@ read-write` 权限（Bucket ACL层面）。
 
 2、访问Bucket域名，返回结果是 **AccessDenied** ，说明Bucket存在，只是匿名用户没有 `ListObjects` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223828.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223828.png)
 
 3、访问 `?policy`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketPolicy` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223829.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223829.png)
 
 4、修改 Bucket Policy，为匿名用户添加 `*` 权限，返回结果是 **403 Forbidden** ，说明匿名用户没有
 `PutBucketPolicy` 权限。
 
 5、访问 `?acl`，返回结果是 **AccessDenied** ，说明匿名用户没有 `GetBucketAcl` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223830.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223830.png)
 
 6、修改 Bucket ACL，改为 `public-read-write`，返回结果是 **AccessDenied** ，说明匿名用户没有
 `PutBucketAcl` 权限。
@@ -473,9 +473,9 @@ read-write` 权限（Bucket ACL层面）。
 7、爆破 Object Key，发现存在Key是 flag.txt 的对象，返回结果是 **AccessDenied** ，说明匿名用户没有
 `GetObject` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223831.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223831.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223832.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223832.png)
 
 8、上传 Object，返回结果是 **403 Forbidden** ，说明匿名用户没有 `PutObject` 权限。
 
@@ -486,11 +486,11 @@ read-write` 权限（Bucket ACL层面）。
 10、修改 Object ACL，改为 `public-read-write`，返回结果是 **200 OK** ，说明匿名用户有
 `PutObjectAcl` 权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223833.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223833.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223834.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223834.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223835.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223835.png)
 
 11、安全建议
 
@@ -502,13 +502,13 @@ read-write` 权限（Bucket ACL层面）。
 
 1、搭建靶机，获得Bucket域名。（bucket_logging_disable靶机）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223836.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223836.png)
 
 2、登录OSS管理控制台，发现 `日志存储` 是关闭状态，打开即可。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223837.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223837.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223838.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223838.png)
 
 3、安全建议
 
@@ -524,9 +524,9 @@ read-write` 权限（Bucket ACL层面）。
 
 2、登录OSS管理控制台，发现 `访问方式` 仅支持 HTTP，改为可支持 HTTPS 即可。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223839.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223839.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223840.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223840.png)
 
 3、安全建议
 
@@ -536,11 +536,11 @@ read-write` 权限（Bucket ACL层面）。
 
 1、搭建靶机，获得Bucket域名。（server_side_encryption_no_kms_set靶机）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223841.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223841.png)
 
 2、登录OSS管理控制台，发现 `服务端加密方式` 未使用KMS方式。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223842.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223842.png)
 
 3、安全建议
 
@@ -554,11 +554,11 @@ read-write` 权限（Bucket ACL层面）。
 
 1、搭建靶机，获得Bucket域名。（server_side_encryption_not_using_BYOK靶机）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223843.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223843.png)
 
 2、登录OSS管理控制台，发现 `服务端加密方式` 使用KMS方式，但 `加密密钥` 不存在自带密钥BYOK。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230621223844.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621223844.png)
 
 3.1、若有安全合规要求使用自管理、可指定的密钥，可使用KMS托管密钥的自带密钥BYOK进行加解密。 __
 

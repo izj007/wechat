@@ -157,7 +157,7 @@ server.ManageUser 这个类的 process 方法中关于 aggressor.authenticate �
 
 没错，不需要给团队成员分发，只用放在 server 端就行了
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210803151342.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210803151342.png)
 
 2、生成 TOTP SecretKey
 
@@ -169,7 +169,7 @@ server.ManageUser 这个类的 process 方法中关于 aggressor.authenticate �
 
 不要奇怪包名为啥叫麦斯威尔，我自己随便写的
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210803151343.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210803151343.png)
 
 3、掏出你的手机，下载 Google Authenticator (有些叫 谷歌身份验证器)，或者随便找一个支持 2FA 的 APP
 就行。然后扫描上面的二维码，或者是手动把 SecretKey 添加进去就行。
@@ -178,13 +178,13 @@ server.ManageUser 这个类的 process 方法中关于 aggressor.authenticate �
 
 4、生成 SecretKey 之后，根据最后一行提示，把最后一行的内容添加到 teamserver 这个文件里
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210803151344.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210803151344.png)
 
 红线上的内容之前是没有的，之后我们保存
 
 5、你之前是怎么运行 teamserver 的，现在还是怎么运行
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210803151345.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210803151345.png)
 
 比如我启动的 TeamServer 密码是 qax
 
@@ -198,7 +198,7 @@ server.ManageUser 这个类的 process 方法中关于 aggressor.authenticate �
 
  **下图是以  agscript 方式登录**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210803151346.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210803151346.png)
 
 可以看到即使输入正确的密码，也是无法登录的，只有输入正确的密码，并且在 nickname后面加上有效的 6 位动态口令，才可以成功
 
@@ -212,7 +212,7 @@ server.ManageUser 这个类的 process 方法中关于 aggressor.authenticate �
 
 nickname 后面带上 TOTP Code 之后：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210803151347.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210803151347.png)
 
 完美~
 
@@ -405,7 +405,7 @@ bountyteam@dbappsecurity.com.cn
 
 END
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210803151348.png)![]()![](https://gitee.com/fuli009/images/raw/master/public/20210803151349.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210803151348.png)![]()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210803151349.png)
 
  **长按识别二维码关注我们**
 

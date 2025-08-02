@@ -15,7 +15,7 @@ ___发表于_
 收录于合集
 
 ##
-**![](https://gitee.com/fuli009/images/raw/master/public/20221110202522.png)**
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202522.png)**
 
 ## **  
 **
@@ -59,7 +59,7 @@ Mangle可以删除基于字符串的入侵威胁指标（IoC），并将其替�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20221110202531.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202531.png)
 
 ###  
 
@@ -77,12 +77,12 @@ Mangle可以删除基于字符串的入侵威胁指标（IoC），并将其替�
 Mangle可以获取研究人员提供的可执行文件并寻找那些安全产品可能会搜索或触发安全警报的已知字符串。这些字符串并不是唯一的检测因素，因为反病毒产品一般会将这些字符串和其他（遥测）数据结合起来检测。而Mangle可以找到这些已知的字符串，并用随机值替换掉字符串的十六进制值，然后移除原始字符串。需要注意的是，这种替换方式并不会改变文件大小，这样可以防止文件报错。  
 字符串修改样例：修改前。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20221110202532.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202532.png)
 
   
 字符串修改样例：修改后。  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20221110202533.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202533.png)
 
 ###  
 
@@ -92,16 +92,16 @@ Mangle可以获取研究人员提供的可执行文件并寻找那些安全产�
 几乎所有EDR都无法扫描磁盘或内存中超过一定大小的文件，因为大文件需要更长的时间来查看、扫描或监视，而EDR不希望通过降低用户的生产率来影响性能。Mangle通过在文件末尾创建空字节（零）填充来增加文件体积，这样可以确保文件内的任何内容都不会受到影响。建议将大小增加95-100
 MB，不建议制作2 GB或以上的文件。  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20221110202534.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202534.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20221110202535.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202535.png)
 
 ###  **证书克隆**
 
   
 Mangle还可以从一个文件中获取合法代码签名证书的完整链和所有属性，并将其复制到另一个文件。其中包括签名日期、反签名和其他可测量的属性：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20221110202537.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202537.png)
 
 ##  **  许可证协议 **
 
@@ -121,7 +121,7 @@ Mangle还可以从一个文件中获取合法代码签名证书的完整链和�
 
 > https://github.com/Tylous/Limelighterhttps://github.com/Binject/debug
 
-![](https://gitee.com/fuli009/images/raw/master/public/20221110202538.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202538.png)  
   
 
 精彩推荐
@@ -133,7 +133,7 @@ Mangle还可以从一个文件中获取合法代码签名证书的完整链和�
   
   
   
-[![](https://gitee.com/fuli009/images/raw/master/public/20221110202539.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489554&idx=1&sn=7dc76862d96516013375f712c9bdfcf1&scene=21#wechat_redirect)[![](https://gitee.com/fuli009/images/raw/master/public/20221110202541.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489510&idx=1&sn=55f589464f2ffbf2817523f3282175ba&scene=21#wechat_redirect)[![](https://gitee.com/fuli009/images/raw/master/public/20221110202542.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489388&idx=1&sn=f0e8fed4afd1dc82ac6af789e5b13626&scene=21#wechat_redirect)![](https://gitee.com/fuli009/images/raw/master/public/20221110202543.png)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202539.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489554&idx=1&sn=7dc76862d96516013375f712c9bdfcf1&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202541.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489510&idx=1&sn=55f589464f2ffbf2817523f3282175ba&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202542.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489388&idx=1&sn=f0e8fed4afd1dc82ac6af789e5b13626&scene=21#wechat_redirect)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110202543.png)
 
 预览时标签不可点
 

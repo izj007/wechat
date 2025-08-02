@@ -31,7 +31,7 @@ Windows认证协议主要有以下两种：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210806182651.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806182651.png)
 
   
 
@@ -45,7 +45,7 @@ Windows认证协议主要有以下两种：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210806182652.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806182652.png)
 
   
 
@@ -53,7 +53,7 @@ Windows认证协议主要有以下两种：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210806182653.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806182653.png)
 
   
 
@@ -61,7 +61,7 @@ Windows认证协议主要有以下两种：
 
       
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210806182654.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806182654.png)
 
   
 
@@ -86,7 +86,7 @@ Windows认证协议主要有以下两种：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210806182655.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806182655.png)
 
   
 

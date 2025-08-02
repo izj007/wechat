@@ -113,7 +113,7 @@ auth•基于文本相似度的页面重复数据删除引擎
 
 根据源码的调用堆栈做了一个程序启动流程图
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182558.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182558.png)
 
 ## 配置文件
 
@@ -231,11 +231,11 @@ crawlergo有两种过滤，fen`simple`和`smart`。
 
 simple过滤方式比较简单，就是将计算请求体的method、url、postdata 结合计算md5
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182603.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182603.png)
 
 判断是否存在
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182604.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182604.png)
 
 ### smart
 
@@ -378,7 +378,7 @@ smart过滤会对每个请求的参数name，参数value，path 进行标记,会
 看了下robots规范:https://baike.baidu.com/item/robots%E5%8D%8F%E8%AE%AE/2483797
 ，应该还可以再优化一下，来处理一些表达式。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182606.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182606.png)
 
 ### DIR FUZZ
 
@@ -391,7 +391,7 @@ smart过滤会对每个请求的参数name，参数value，path 进行标记,会
 
 根据状态码判断
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182608.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182608.png)
 
 ### 爬虫时的url收集
 
@@ -406,7 +406,7 @@ smart过滤会对每个请求的参数name，参数value，path 进行标记,会
     object[data]  
     注释中的url
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182610.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182610.png)
 
 ## 对浏览器环境的hook
 
@@ -414,7 +414,7 @@ smart过滤会对每个请求的参数name，参数value，path 进行标记,会
 
 同时定义了一个js全局函数`addLink`、`Test`，通过这个函数可以与go进行交互。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182611.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182611.png)
 
 ### 调用go函数
 
@@ -455,7 +455,7 @@ js初始化时对这个函数重新包装
 
 go处理逻辑
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182612.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182612.png)
 
 执行完go函数后会再执行一段js
 
@@ -728,7 +728,7 @@ hook 原生ajax并限制最大请求数，可能是怕自动点击造成ajax爆�
 
 ### 表单填充
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210924182613.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182613.png)
 
 ### input处理
 
@@ -988,7 +988,7 @@ css语法获取select第一个元素，设置属性即可
 
 3.对之前hook的事件触发，对于某些节点，可能会存在子节点也响应的事件，为了性能考虑，可以将层数控制到三层，且对兄弟节点随机选择一个触发。简单画图说明：
 
-1.![](https://gitee.com/fuli009/images/raw/master/public/20210924182614.png)
+1.![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210924182614.png)
 
     
     

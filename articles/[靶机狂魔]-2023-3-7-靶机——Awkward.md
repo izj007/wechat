@@ -49,7 +49,7 @@ Nmap
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193040.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193040.png)
 
 目录扫描
 
@@ -63,7 +63,7 @@ Nmap
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193042.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193042.png)
 
 继续扫js目录
 
@@ -77,41 +77,41 @@ Nmap
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193043.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193043.png)
 
 app.js搜href，发现几个可疑目录`/dashboard`、`/leave`、`/hr`，依次打开，发现全部都会跳转到`/hr`，是个登录界面
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193044.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193044.png)
 
 随便试，都会报用户名或密码错误，用Burp抓包发现Cookie字段有`token=guest`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193045.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193045.png)
 
 burp直接修改成`token=admin`或者`token=administrator`，重放请求包，还是不行
 
 用插件Cookie Editor编辑token值为admin，刷新页面，发现页面跳转到`/dashboard`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193046.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193046.png)
 
 或者也可以浏览器`F12`→`Storage`→`Cookies`修改、刷新页面，一样的效果
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193048.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193048.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193049.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193049.png)
 
 打开左侧菜单栏【Leave Requests】页面，留意到所有的离开请求会由Christine审核，猜测Christine应该是个权限不小的账户
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193050.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193050.png)
 
 然后在`F12`→`Network`→`XHR`（XMLHttpRequest[1]）看到有两个api文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193051.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193051.png)
 
 分别访问`http://hat-valley.htb/api/staff-details`和`http://hat-
 valley.htb/api/store-status`，`/api/store-status`页面没什么东西，`/api/staff-
 details`有`jwt malformed`报错信息
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193052.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193052.png)
 
   
 
@@ -126,7 +126,7 @@ details`有`jwt malformed`报错信息
 `jwt
 malformed`报错是因为前端上传token的时候没有进行非空验证，导致token传给了服务端，这样就和服务端生成的token重复了。那么我们用CookieEditor插件或者F12删除cookie的token字段，也就是删除cookie，刷新页面，可以看到有四个用户
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193053.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193053.png)
 
   
 
@@ -140,7 +140,7 @@ malformed`报错是因为前端上传token的时候没有进行非空验证，�
 
 目测是`64*4=256`位Hash，在线解一下
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193054.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193054.png)
 
 解出来一个用户
 
@@ -156,13 +156,13 @@ malformed`报错是因为前端上传token的时候没有进行非空验证，�
 
 那么我们重新回到`http://hat-valley.htb/hr`页面，登录这个账户
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193056.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193056.png)
 
 看到`Staff Details`，果然，前面的判断没错，Christine是CEO，权限不小，还有两个销售和一个系统管理员
 
 并且拿到了JWT token
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193057.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193057.png)
 
 用脚本把这个JWT token转换成john格式，然后用john工具破解
 
@@ -196,7 +196,7 @@ https://github.com/Sjord/jwtcrack/blob/master/jwt2john.py
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193059.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193059.png)
 
 获取到JWT token的secret值为`123beany123`，用`JWT Debugger`尝试，暂时没发现什么
 
@@ -222,7 +222,7 @@ https://github.com/Sjord/jwtcrack/blob/master/jwt2john.py
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193100.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193100.png)
 
 三个端口80、3002、8080
 
@@ -238,11 +238,11 @@ https://github.com/Sjord/jwtcrack/blob/master/jwt2john.py
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193101.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193101.png)
 
 8080页面空白，看源码发现hat-valley不能正常工作，要求开启JavaScript才能正常工作，没什么用
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193102.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193102.png)
 
 ## LFI
 
@@ -250,7 +250,7 @@ https://github.com/Sjord/jwtcrack/blob/master/jwt2john.py
 
 再往前追溯到头，发现是如下图所示的传递链，TOKEN_SECRET前面已经获得，值为`123beany123`，所以我们就可以通过JWT伪造请求头中Cookie字段的token值，从而操纵user值读取文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193104.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193104.png)
 
   
 
@@ -293,12 +293,12 @@ https://github.com/Sjord/jwtcrack/blob/master/jwt2john.py
 
 可以在自己本地测试
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193105.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193105.png)
 
 用JWT Debugger[3]，先将获取到的token复制到Encoded文本框里，然后修改Decoded文本框中username值为`/'
 /etc/passwd '`，然后左侧Encoded文本框就会实时出现伪造后的token值
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193106.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193106.png)
 
   
 
@@ -426,7 +426,7 @@ https://github.com/Sjord/jwtcrack/blob/master/jwt2john.py
 
 unzip不行，直接双击打开，把文件拖出来，依次得到如下图文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193107.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193107.png)
 
 解压bean_backup.tar.gz得到以下文件
 
@@ -453,11 +453,11 @@ EVERYWHERE`，看来这个账户密码会不止一次用到，由此可见，若
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193108.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193108.png)
 
 SSH连上去
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193109.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193109.png)
 
 ## 权限提升
 
@@ -488,7 +488,7 @@ SSH连上去
 
 网站是nginx服务器，nginx服务器的默认用户名密码通常在`/etc/nginx/conf.d/.htaccess`，那么我们尝试访问，但访问不到，发现有`/etc/nginx/conf.d/.htpasswd`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193110.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193110.png)
 
   
 
@@ -503,7 +503,7 @@ SSH连上去
 hash尝试各种爆破无果，想起之前的`MAKE SURE TO USE THIS
 EVERYWHERE`，尝试各种组合之后，发现用户名是admin，密码是bean用户的密码，成功登入
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193111.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193111.png)
 
 经查找，站点源码在`/var/www/store`目录下
 
@@ -591,7 +591,7 @@ EVERYWHERE`，尝试各种组合之后，发现用户名是admin，密码是bean
 
 我们可以添加一个商品到购物车，分析一下过程。如下图点击`ADD TO CART`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193113.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193113.png)
 
 然后到bean用户的ssh窗口查看`/var/www/store/cart`（由上面的`README.md`文件或者`cart_actions.php`可以分析出这个路径），可以看到文件名为`959e-8a52-2e0-fc52`，也就是`$user_id`的值，文件内容里`item_id=1`
 
@@ -658,7 +658,7 @@ EVERYWHERE`，尝试各种组合之后，发现用户名是admin，密码是bean
 
 打开Burpsuite，然后打开如下购物车界面，点击`Remove`的同时截获请求
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193115.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193115.png)
 
 修改请求数据如下
 
@@ -672,33 +672,33 @@ EVERYWHERE`，尝试各种组合之后，发现用户名是admin，密码是bean
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193117.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193117.png)
 
 拿到www-data用户权限
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193118.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193118.png)
 
 本地下一个pspy64[4]，然后开启80服务监听，再然后到bean用户的ssh窗口用wget从本地下载pspy64
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193119.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193119.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193120.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193120.png)
 
 然后在www-
 data用户窗口执行pspy64，看到inotifywait工具在监听`/var/www/private/leave_requests.csv`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193121.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193121.png)
 
 查看`/var/www/private/leave_requests.csv`内容如下，可看到是`Leave Request Database`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193122.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193122.png)
 
 再看到有mail命令在发送邮件，推测是从`Leave Request
 Database`读取，然后发送。mail命令可以执行文件，参考：https://gtfobins.github.io/gtfobins/mail/
 
 我们可以写入反弹shell文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193123.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193123.png)
 
 执行如下命令，将执行反弹shell的命令写入`leave_requests.csv`
 
@@ -714,9 +714,9 @@ Database`读取，然后发送。mail命令可以执行文件，参考：https:/
 
 然后开启监听，稍等片刻就会拿到root权限
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193124.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193124.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230307193125.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307193125.png)
 
 Over！
 

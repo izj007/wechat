@@ -70,7 +70,7 @@ https://github.com/0xthirteen/StayKit
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220228133611.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220228133611.png)
 
   
 

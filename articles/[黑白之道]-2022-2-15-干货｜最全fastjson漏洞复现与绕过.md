@@ -21,7 +21,7 @@ __
 
 HACK学习，专注于互联网安全与黑客精神；渗透测试，社会工程学，Python黑客编程，资源分享，Web渗透培训，电脑技巧，渗透技巧等，为广大网络安全爱好者一个交流分享学习的平台！
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122815.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122815.png)
 
 > **文章来源  ：** **HACK学习呀**
 
@@ -63,7 +63,7 @@ java.io.Serializable 接口，并且客户端的serialVersionUID字段要与服�
 
 在JVM之间通信时，RMI对远程对象和非远程对象的处理方式是不一样的，它并没有直接把远程对象复制一份传递给客户端，而是传递了一个远程对象的Stub，Stub基本上相当于是远程对象的引用或者代理。Stub对开发者是透明的，客户端可以像调用本地方法一样直接通过它来调用远程方法。Stub中包含了远程对象的定位信息，如Socket端口、服务端主机地址等等，并实现了远程调用过程中具体的底层网络通信细节，所以RMI远程调用逻辑是这样的：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122818.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122818.png)
 
 从逻辑上来看，数据是在Client和Server之间横向流动的，但是实际上是从Client到Stub，然后从Skeleton到Server这样纵向流动的。
 
@@ -102,7 +102,7 @@ RMI核心特点之一就是动态类加载，如果当前JVM中没有某个类�
 
 这里涉及到的角色：客户端、RMI注册表、远程对象服务器、托管class文件的Web服务器可以分别位于不同的主机上：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122819.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122819.png)
 
 ## LDAP
 
@@ -118,7 +118,7 @@ JNDI支持多种命名和目录提供程序（Naming and Directory Providers）�
 Service
 Provider）允许通过JNDI应用接口对RMI中注册的远程对象进行访问操作。将RMI服务绑定到JNDI的一个好处是更加透明、统一和松散耦合，RMI客户端直接通过URL来定位一个远程对象，而且该RMI服务可以和包含人员，组织和网络资源等信息的企业目录链接在一起。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122820.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122820.png)
 
 JNDI接口在初始化时，可以将RMI URL作为参数传入，而JNDI注入就出现在客户端的lookup()函数中，如果lookup()的参数可控就可能被攻击。
 
@@ -142,7 +142,7 @@ autoType处理json对象时，没有对@type字段进行完整的安全性验证
 首先进入fastjson 1.2.24的docker环境，使用`java
 -version`查看一下java的版本为1.8.0_102。因为java环境为102，没有`com.sun.jndi.rmi.object.trustURLCodebase`的限制，可以使用`com.sun.rowset.JdbcRowSetImpl`利用链结合JNDI注入执行远程命令
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122821.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122821.png)
 
 安装javac环境，这里直接使用20版本替换102
 
@@ -152,7 +152,7 @@ autoType处理json对象时，没有对@type字段进行完整的安全性验证
 
 执行命令完成之后发现java版本已经变成了20
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122822.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122822.png)
 
 编辑恶意类代码，起名为evilclass.java
 
@@ -162,7 +162,7 @@ autoType处理json对象时，没有对@type字段进行完整的安全性验证
 
 使用javac编译evilclass.java文件生成evilclass.class
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122824.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122824.png)
 
 这里需要搭建RMI服务，首先下载marshalsec
 
@@ -176,11 +176,11 @@ autoType处理json对象时，没有对@type字段进行完整的安全性验证
     
     apt-get install mavenmvn clean package-DskipTests
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122825.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122825.png)
 
 稍微等一下，可以看到已经创建成功
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122827.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122827.png)
 
 我们进入到marshalsec的target目录里面进行查看已经生成了marshalsec-0.0.3.3-SNAPSHOT-
 all.jar，然后使用marshalsec搭建一个RMI服务器，这里的ip就是你攻击机的ip，端口可以随意
@@ -193,11 +193,11 @@ all.jar，然后使用marshalsec搭建一个RMI服务器，这里的ip就是你�
 
 这里我使用RMI，可以看到请求成功
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122828.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122828.png)
 
 bp在靶机的fastjson页面抓包
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122829.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122829.png)
 
 这里需要改的有三个地方，第一个地方需要把GET方法改成POST方法，第二个地方需要添加Content-
 Type:application/json，第三个地方就是写入漏洞利用的poc
@@ -208,11 +208,11 @@ Type:application/json，第三个地方就是写入漏洞利用的poc
 
 发包即可
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122830.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122830.png)
 
 进入docker里查看发现已经创建了test文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122831.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122831.png)
 
 若需要反弹shell只需要把java文件中的`String[] commands`改为bash反弹命令即可，这里不再赘述
 
@@ -235,7 +235,7 @@ Fastjson提供了autotype功能，允许用户在反序列化数据中通过“@
 
 首先进入1.2.47的docker环境
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122832.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122832.png)
 
 这里的jdk版本还是8u102，这个版本没有com.sun.jndi.rmi.object.trustURLCodebase的限制，可以继续利用RMI或者LDAP进行命令执行
 
@@ -255,7 +255,7 @@ LDAP使用的工具为fastjson_tool，首先clone到本地
 
 这里执行命令之后给出了两个payload，我们使用下面这个payload复制一下
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122833.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122833.png)
 
 这里还是跟上面一样需要改GET方法为POST方法，添加Content-Type:application/json，在就是把之前生成的payload复制
 
@@ -265,7 +265,7 @@ LDAP使用的工具为fastjson_tool，首先clone到本地
 
 发包使用nc监听8888端口即可收到反弹shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122834.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122834.png)
 
 # fastjson深入探究
 
@@ -275,11 +275,11 @@ LDAP使用的工具为fastjson_tool，首先clone到本地
 
 这里首先在web页面抓包
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122835.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122835.png)
 
 然后修改GET为POST，添加`Content-Type:application/json`，在发送一个`{"test":"`，即可得到回显
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122836.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122836.png)
 
 第二种方法就是使用dnslog测试，使用如下payload，这里的dnslog使用dnslog获得的网址进行替换即可
 
@@ -313,7 +313,7 @@ LDAP使用的工具为fastjson_tool，首先clone到本地
 
 运行之后就会把test.class文件转换为base64.txt文件，这时候再把base64.txt文件替换到payload中即可在dnslog中回显
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122837.png)image-20210819102057605
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122837.png)image-20210819102057605
 
 ## < 1.2.41
 
@@ -358,11 +358,11 @@ com.sun.rowset.jdbcRowSetlmpl在1.2.25版本被加入了黑名单，fastjson有�
 
  **侵权请私聊公众号删文**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122839.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122839.png)
 
 ![]()  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215122840.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215122840.png)
 
 预览时标签不可点
 

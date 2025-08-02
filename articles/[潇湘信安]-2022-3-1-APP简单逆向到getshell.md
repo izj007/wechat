@@ -42,7 +42,7 @@ jadx一把梭，看看有没有什么敏感信息泄露，审源码的时候发�
 
 大致粗略的看了一下，用的okhttp框架，有反抓包，直接hook绕过即可正常抓包，数据库密码，阿里osskey之类的也没有硬编码在app中，没有什么敏感信息可以利用，登录验证算法都是调用的单点登录，也没有什么突破点。  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220301183206.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183206.png)  
 
  **0x04 突破口**
 
@@ -52,9 +52,9 @@ jadx一把梭，看看有没有什么敏感信息泄露，审源码的时候发�
 
 推荐一款app信息搜集工具，能主动扫描获取app中的url信息，AppInfoScanner
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220301183216.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183216.png)  
  **#2**
-访问链接，页面空白，由图标得知上面搭载的tomcat。![](https://gitee.com/fuli009/images/raw/master/public/20220301183217.png)  
+访问链接，页面空白，由图标得知上面搭载的tomcat。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183217.png)  
  **#3**
 然后全局搜索`http://`关键词，又搜到一个url（这次是域名），类似于`http://xxxxx:8080/web/weixin/xxxxxx`，浏览器打开看了一下，没啥东西，也是空白页面。因为url中出现weixin关键词，推测两种可能，第一种：登陆点，第二种，微信授权接口。  
 所以简单猜了下路径，在weixin后面加了个login，`http://xxxxx:8080/web/weixin/login`，发现登陆点，由于路径跟上面发现的url类似，推测它也是java的后端，直接shiro一把梭，默认key，成功rce，java后端rce一般都是system权限。![]()  
@@ -84,7 +84,7 @@ shell.jsp，shell内容中肯定有特殊字符，用^转义一下就行了，�
 
   
 情况还是一样的，本地测试成功，在服务器上就是解码失败，输出长度为0，箭头指向的本来是0的，我偷懒就随便找了张图
-。![](https://gitee.com/fuli009/images/raw/master/public/20220301183218.png)  
+。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183218.png)  
 除此之外，什么字符拼接啊，base64一段段输入然后解码啊，全试过了，不是报错就是写不进去或者是base解码输出长度为0，大概率是目标服务器的问题，在这里浪费了大量时间。  
 
 #####  **成功写入webshell**
@@ -119,9 +119,9 @@ shell.jsp，shell内容中肯定有特殊字符，用^转义一下就行了，�
     
     echo ^;^}^%^>>2.jsp
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220301183219.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183219.png)  
  **3.
-**最后成功写入docs目录，附上一张连接图![](https://gitee.com/fuli009/images/raw/master/public/20220301183220.png)  
+**最后成功写入docs目录，附上一张连接图![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183220.png)  
 
  **0x07  结尾**
 
@@ -142,8 +142,8 @@ shell.jsp，shell内容中肯定有特殊字符，用^转义一下就行了，�
   
 关注公众号回复“9527”可以免费领取一套HTB靶场文档和视频，“1120”安全参考等杂志电子版，“1208”个人常用高效爆破字典，“0221”2020年酒仙桥文章打包，“2191”潇湘信安文章打包，“1212”在线杀软对比源码+数据源。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220301183226.png)
-还在等什么？赶紧点击下方名片关注学习吧！![](https://gitee.com/fuli009/images/raw/master/public/20220301183226.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183226.png)
+还在等什么？赶紧点击下方名片关注学习吧！![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183226.png)
 
 * * *
 
@@ -152,7 +152,7 @@ shell.jsp，shell内容中肯定有特殊字符，用^转义一下就行了，�
   
   
   
-[![](https://gitee.com/fuli009/images/raw/master/public/20220301183227.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247491360&idx=1&sn=e4c3d356b45d7fe821dc2b645f30a595&chksm=cfa6bb33f8d132259884026238db7b79f33da3f3fff2f90a87e4a447118a1be8c4e948031d8f&scene=21#wechat_redirect)[![](https://gitee.com/fuli009/images/raw/master/public/20220301183228.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486961&idx=1&sn=d02db4cfe2bdf3027415c76d17375f50&chksm=cfa6a9e2f8d120f4c9e4d8f1a7cd50a1121253cb28cc3222595e268bd869effcbb09658221ec&scene=21#wechat_redirect)[![](https://gitee.com/fuli009/images/raw/master/public/20220301183229.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486327&idx=1&sn=71fc57dc96c7e3b1806993ad0a12794a&chksm=cfa6af64f8d1267259efd56edab4ad3cd43331ec53d3e029311bae1da987b2319a3cb9c0970e&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183227.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247491360&idx=1&sn=e4c3d356b45d7fe821dc2b645f30a595&chksm=cfa6bb33f8d132259884026238db7b79f33da3f3fff2f90a87e4a447118a1be8c4e948031d8f&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183228.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486961&idx=1&sn=d02db4cfe2bdf3027415c76d17375f50&chksm=cfa6a9e2f8d120f4c9e4d8f1a7cd50a1121253cb28cc3222595e268bd869effcbb09658221ec&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183229.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486327&idx=1&sn=71fc57dc96c7e3b1806993ad0a12794a&chksm=cfa6af64f8d1267259efd56edab4ad3cd43331ec53d3e029311bae1da987b2319a3cb9c0970e&scene=21#wechat_redirect)
 
 * * *
 
@@ -160,7 +160,7 @@ shell.jsp，shell内容中肯定有特殊字符，用^转义一下就行了，�
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20220301183230.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220301183230.png)
 
 预览时标签不可点
 

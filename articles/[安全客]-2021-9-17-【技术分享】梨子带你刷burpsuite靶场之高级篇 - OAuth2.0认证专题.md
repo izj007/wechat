@@ -20,7 +20,7 @@ __
 
 #OAuth2.0认证漏洞 1 个内容
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210917080317.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080317.png)
 
 高级漏洞篇-OAuth2.0认证漏洞专题
 
@@ -75,7 +75,7 @@ Connect作用域来进行认证
 
 ###  **授权码流**
 
-客户端应用程序和OAuth服务首先通过浏览器的重定向来交换一系列HTTP请求，一启动这个授权流程，此时会询问用户是否同意访问，如果同意则向客户端发放授权码，然后客户端与OAuth服务交换这个码来接收访问令牌，它可以用于调用API来获取相关的用户数据，这个交换过程全程是经过安全的，预置的服务器端到服务器端的通道进行的，所以该过程对于最终用户是透明的，当客户端应用程序首次向OAuth服务注册时就会建立这个安全通道，此时还会生成一个client_secret，用于在发送服务端到服务端请求时用client_secret对客户端应用程序进行认证，因为最敏感的数据不经过浏览器发送，所以这种授权类型某种程度上是最安全的，为了更直观地理解这个过程，burp给出一个序列图![](https://gitee.com/fuli009/images/raw/master/public/20210917080321.png)下面我们具体介绍每一步的内容1.授权请求客户端应用程序向OAuth服务的/authorization端点发送请求以获取指定用户数据的访问权限，该请求通常包含如下查询参数
+客户端应用程序和OAuth服务首先通过浏览器的重定向来交换一系列HTTP请求，一启动这个授权流程，此时会询问用户是否同意访问，如果同意则向客户端发放授权码，然后客户端与OAuth服务交换这个码来接收访问令牌，它可以用于调用API来获取相关的用户数据，这个交换过程全程是经过安全的，预置的服务器端到服务器端的通道进行的，所以该过程对于最终用户是透明的，当客户端应用程序首次向OAuth服务注册时就会建立这个安全通道，此时还会生成一个client_secret，用于在发送服务端到服务端请求时用client_secret对客户端应用程序进行认证，因为最敏感的数据不经过浏览器发送，所以这种授权类型某种程度上是最安全的，为了更直观地理解这个过程，burp给出一个序列图![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080321.png)下面我们具体介绍每一步的内容1.授权请求客户端应用程序向OAuth服务的/authorization端点发送请求以获取指定用户数据的访问权限，该请求通常包含如下查询参数
 
   * client_id(强制参数，包含客户端应用程序的唯一标识符)
 
@@ -137,7 +137,7 @@ Connect作用域来进行认证
 
 ###  **隐式流**
 
-隐式就简单多了，客户端应用程序在用户同意后就能接收到由OAuth服务发放的访问令牌，跳过了用授权码兑换访问令牌的过程，所以相对应的，这种授权类型的安全性会大打折扣，而且全程都是经过浏览器的，风险太大了，所以该授权类型更适合单页应用程序和本机桌面应用程序，同样的burp也提供了一个很直观的序列图![](https://gitee.com/fuli009/images/raw/master/public/20210917080322.png)下面我们详细介绍每一步1.授权请求与授权码流不同的是必须要将参数response_type设置为token，像这样
+隐式就简单多了，客户端应用程序在用户同意后就能接收到由OAuth服务发放的访问令牌，跳过了用授权码兑换访问令牌的过程，所以相对应的，这种授权类型的安全性会大打折扣，而且全程都是经过浏览器的，风险太大了，所以该授权类型更适合单页应用程序和本机桌面应用程序，同样的burp也提供了一个很直观的序列图![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080322.png)下面我们详细介绍每一步1.授权请求与授权码流不同的是必须要将参数response_type设置为token，像这样
 
   *   * 
 
@@ -240,14 +240,14 @@ OAuth认证漏洞的利用
 
 ###  **OAuth客户端应用程序的漏洞**
 
-隐式流实现不当在隐式流中，OAuth服务会将访问令牌以URL查询参数的形式通过浏览器返回给客户端应用程序，但是为了维持会话，客户端应用程序会通过浏览器向OAuth服务发出POST请求提交这个访问令牌，但是OAuth并没有任何验证访问令牌与其标识信息是否匹配的能力，这就是隐式信任由客户端应用程序发送来的身份信息，这就使攻击者可以通过篡改标识信息让指定用户也获得所请求的权限配套靶场：OAuth隐式流中的认证绕过先用预留的用户登录，发现OAuth流程发起的请求包![](https://gitee.com/fuli009/images/raw/master/public/20210917080323.png)
+隐式流实现不当在隐式流中，OAuth服务会将访问令牌以URL查询参数的形式通过浏览器返回给客户端应用程序，但是为了维持会话，客户端应用程序会通过浏览器向OAuth服务发出POST请求提交这个访问令牌，但是OAuth并没有任何验证访问令牌与其标识信息是否匹配的能力，这就是隐式信任由客户端应用程序发送来的身份信息，这就使攻击者可以通过篡改标识信息让指定用户也获得所请求的权限配套靶场：OAuth隐式流中的认证绕过先用预留的用户登录，发现OAuth流程发起的请求包![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080323.png)
 
   
 
 从上图来看会重定向到/oauth-callback调用API，然后我们再看看发向/oauth-
-callback的请求包，我们看看响应中有没有有价值的信息![](https://gitee.com/fuli009/images/raw/master/public/20210917080324.png)从响应来看会请求/me去验证访问权限，所以我们接着跟踪到发向/me的请求包的响应![](https://gitee.com/fuli009/images/raw/master/public/20210917080325.png)我们发现响应中有一个新的字段，从字面意思来看是邮箱验证通过了，所以后续的请求应该都是默认同意的了，所以我们找到POST请求包/authenticate，修改其中的邮箱即可，因为其中的token是通过授权的，重放包以后我们就可以登录目标用户而不需要知道它的密码了![](https://gitee.com/fuli009/images/raw/master/public/20210917080326.png)有缺陷的CSRF防护burp强烈建议非特殊原因不要缺少使用state参数，理想情况下，state参数应包含一个不可预测的值，如开启会话时某些相关信息的hash值，然后这个值以csrf令牌的形式在客户端应用程序和OAuth服务之间来回传递，但是如果整个OAuth流程不包括state参数的话就可以导致类似csrf之类的OAuth的漏洞，例如将用户绑定到属于自己的社交媒体账号上配套靶场：强行链接OAuth配置文件首先我们登录测试用户，然后进入用户中心，连接社交媒体，然后输入测试社交媒体账号，现在HTTP
-History中就有了我们所有的观察样本了，我们来剖析一下，我们找到了发起OAuth流程![](https://gitee.com/fuli009/images/raw/master/public/20210917080327.png)我们看到发起OAuth流程的请求中只有访问令牌这一个查询参数，并没有像state一样的防csrf措施，所以我们只要再截获一个有效的含有访问令牌的请求就可以利用csrf将社交媒体账户与受害者账户连接起来，于是我们重新拦截一个这样的请求![](https://gitee.com/fuli009/images/raw/master/public/20210917080328.png)为了保持访问令牌的有效性，我们在拦截到包以后将访问令牌暂存然后丢掉这个包，然后我们在Eploit
-Server中构造payload![](https://gitee.com/fuli009/images/raw/master/public/20210917080329.png)然后我们将payload分发给受害者以后，我们重新使用社交媒体账户登录发现登录进来的是管理员账号，我们就可以删除指定用户了![](https://gitee.com/fuli009/images/raw/master/public/20210917080330.png)
+callback的请求包，我们看看响应中有没有有价值的信息![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080324.png)从响应来看会请求/me去验证访问权限，所以我们接着跟踪到发向/me的请求包的响应![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080325.png)我们发现响应中有一个新的字段，从字面意思来看是邮箱验证通过了，所以后续的请求应该都是默认同意的了，所以我们找到POST请求包/authenticate，修改其中的邮箱即可，因为其中的token是通过授权的，重放包以后我们就可以登录目标用户而不需要知道它的密码了![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080326.png)有缺陷的CSRF防护burp强烈建议非特殊原因不要缺少使用state参数，理想情况下，state参数应包含一个不可预测的值，如开启会话时某些相关信息的hash值，然后这个值以csrf令牌的形式在客户端应用程序和OAuth服务之间来回传递，但是如果整个OAuth流程不包括state参数的话就可以导致类似csrf之类的OAuth的漏洞，例如将用户绑定到属于自己的社交媒体账号上配套靶场：强行链接OAuth配置文件首先我们登录测试用户，然后进入用户中心，连接社交媒体，然后输入测试社交媒体账号，现在HTTP
+History中就有了我们所有的观察样本了，我们来剖析一下，我们找到了发起OAuth流程![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080327.png)我们看到发起OAuth流程的请求中只有访问令牌这一个查询参数，并没有像state一样的防csrf措施，所以我们只要再截获一个有效的含有访问令牌的请求就可以利用csrf将社交媒体账户与受害者账户连接起来，于是我们重新拦截一个这样的请求![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080328.png)为了保持访问令牌的有效性，我们在拦截到包以后将访问令牌暂存然后丢掉这个包，然后我们在Eploit
+Server中构造payload![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080329.png)然后我们将payload分发给受害者以后，我们重新使用社交媒体账户登录发现登录进来的是管理员账号，我们就可以删除指定用户了![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080330.png)
 
 ###  **缺少授权码和访问令牌**
 
@@ -257,10 +257,10 @@ Server中构造payload![](https://gitee.com/fuli009/images/raw/master/public/202
 
 我们先用测试用户登录，观察HTTP
 History发现开启OAuth请求的查询参数中有一个参数redirect_uri，该请求会将授权码等发往这个参数指定的端点，然后我们把这个请求发到repeater中，将这个参数值试着修改成Exploit
-Server的域名![](https://gitee.com/fuli009/images/raw/master/public/20210917080331.png)我们在Exploit
+Server的域名![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080331.png)我们在Exploit
 Server中接收到了由客户端应用程序发来的授权码，说明我们是可以通过篡改参数redirect_uri值来窃取授权码的，于是我们在Exploit
 Server构造payload![]()然后分发给受害者以后我们就能在日志中接收到窃取的授权码，有了授权码以后，将其附在端点/oauth-
-callback的code参数中，剩下的流程会由客户端应用程序替我们完成的，将响应发到浏览器中，就成功访问目标用户页面，我们就可以删除指定用户了![](https://gitee.com/fuli009/images/raw/master/public/20210917080332.png)有缺陷的redirect_uri验证有的OAuth会通过设置redirect_uri白名单来缓解攻击者篡改redirect_uri值的攻击，但是可以通过不断测试以观察出绕过方法
+callback的code参数中，剩下的流程会由客户端应用程序替我们完成的，将响应发到浏览器中，就成功访问目标用户页面，我们就可以删除指定用户了![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080332.png)有缺陷的redirect_uri验证有的OAuth会通过设置redirect_uri白名单来缓解攻击者篡改redirect_uri值的攻击，但是可以通过不断测试以观察出绕过方法
 
   * 有的缓解方法是通过匹配字符串，所以可以通过对字符串进行删减尝试观察
 
@@ -282,14 +282,14 @@ callback的code参数中，剩下的流程会由客户端应用程序替我们�
 
 配套靶场1：通过开放重定向窃取OAuth访问令牌首先我们登录测试用户，但是我们发现用户中心的API Key是隐藏的，于是我们对HTTP
 History中相关的包都搜索一下，发现发向/me的GET请求的响应中有API
-Key![](https://gitee.com/fuli009/images/raw/master/public/20210917080333.png)我们在窃取到访问令牌以后就可以通过重放这个请求包来获取它的API
+Key![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080333.png)我们在窃取到访问令牌以后就可以通过重放这个请求包来获取它的API
 Key了，于是我们将这个请求发到Repeater中，下面我们探索一下怎么窃取访问令牌，从burp的资料来看，肯定是要寻找开放重定向漏洞点来转发的，我们利用目录穿越以穿越到子域，通过寻找，我们发现Next
-Post存在开放重定向![](https://gitee.com/fuli009/images/raw/master/public/20210917080334.png)我们看到了仅仅通过修改path查询参数的值就能重定向到任意域，于是我们可以把这个构造到发起OAuth流程中，这里要注意一下，我们不能把初次发起OAuth流程的请求包发到Repeater，因为这时候是还没有有效会话的，要先退出再登录进来![](https://gitee.com/fuli009/images/raw/master/public/20210917080336.png)从上图来看拼接到重定向的域名中的符号会被URL编码，所以我们要把这个响应发到浏览器才会正常地跳转，而且我们还发现响应中会包含访问令牌，于是我们在Exploit
-Server构造这样的payload![](https://gitee.com/fuli009/images/raw/master/public/20210917080337.png)分发给受害者以后我们就能接收到受害者的访问令牌了，于是我们修改之前/me的请求中的Authorization中的访问令牌，就能获得administrator的API
-Key了![](https://gitee.com/fuli009/images/raw/master/public/20210917080339.png)![](https://gitee.com/fuli009/images/raw/master/public/20210917080340.png)配套靶场2：通过代理页面窃取OAuth访问令牌通过测试，发现redirect_uri也存在开放重定向漏洞，然后我们发现评论功能有一个/post/comment/comment-
-form，它会用postMessage方法向window.location.href属性值发送到父窗口![](https://gitee.com/fuli009/images/raw/master/public/20210917080341.png)并且允许向任何来源发送，然后我们还发现评论表单会被包含在iframe中![](https://gitee.com/fuli009/images/raw/master/public/20210917080342.png)这样我们就可以将结合开放重定向漏洞把发起OAuth流程的URL想办法拼接到iframe中以将访问令牌发送到指定的域，于是我们在Exploit
-Server中构造这样的paylaod![](https://gitee.com/fuli009/images/raw/master/public/20210917080343.png)分发到受害者以后我们就能在log中看到窃取的访问令牌，然后就能通过之前已知的/me路径查看administrator的API
-Key![]()![](https://gitee.com/fuli009/images/raw/master/public/20210917080344.png)
+Post存在开放重定向![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080334.png)我们看到了仅仅通过修改path查询参数的值就能重定向到任意域，于是我们可以把这个构造到发起OAuth流程中，这里要注意一下，我们不能把初次发起OAuth流程的请求包发到Repeater，因为这时候是还没有有效会话的，要先退出再登录进来![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080336.png)从上图来看拼接到重定向的域名中的符号会被URL编码，所以我们要把这个响应发到浏览器才会正常地跳转，而且我们还发现响应中会包含访问令牌，于是我们在Exploit
+Server构造这样的payload![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080337.png)分发给受害者以后我们就能接收到受害者的访问令牌了，于是我们修改之前/me的请求中的Authorization中的访问令牌，就能获得administrator的API
+Key了![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080339.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080340.png)配套靶场2：通过代理页面窃取OAuth访问令牌通过测试，发现redirect_uri也存在开放重定向漏洞，然后我们发现评论功能有一个/post/comment/comment-
+form，它会用postMessage方法向window.location.href属性值发送到父窗口![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080341.png)并且允许向任何来源发送，然后我们还发现评论表单会被包含在iframe中![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080342.png)这样我们就可以将结合开放重定向漏洞把发起OAuth流程的URL想办法拼接到iframe中以将访问令牌发送到指定的域，于是我们在Exploit
+Server中构造这样的paylaod![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080343.png)分发到受害者以后我们就能在log中看到窃取的访问令牌，然后就能通过之前已知的/me路径查看administrator的API
+Key![]()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080344.png)
 
 ###  **有缺陷的范围验证**
 
@@ -379,7 +379,7 @@ known/openid-configuration访问配置文件
 
 有些OAuth提供程序允许动态客户端注册而无需任何身份验证，攻击者就可以注册自己的恶意客户端应用程序，里面有些属性可以当做URI来控制，可能导致二阶SSRF漏洞配套靶场：通过Open
 ID动态客户端注册的SSRF首先进入OpenID的配置文件/.well-known/openid-
-configuration![](https://gitee.com/fuli009/images/raw/master/public/20210917080345.png)从配置文件我们可以看到很多端点以及支持的授权类型和可使用的签名算法，然后我们得知注册客户端的端点是/reg，于是我们以这样的示例构造请求包
+configuration![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080345.png)从配置文件我们可以看到很多端点以及支持的授权类型和可使用的签名算法，然后我们得知注册客户端的端点是/reg，于是我们以这样的示例构造请求包
 
   *   *   *   *   *   *   *   *   * 
 
@@ -388,7 +388,7 @@ configuration![](https://gitee.com/fuli009/images/raw/master/public/202109170803
     POST /reg HTTP/1.1Host: YOUR-LAB-OAUTH-SERVER.web-security-academy.netContent-Type: application/json  
     {  "redirect_uris" : [    "https://example.com"  ]}
 
-发送以后，发现不需要进行验证就注册成功了，并将相关信息反馈在了响应中，包括我们注册成功以后的客户端ID，经过对所有触发的HTTP请求的观察发现，在请求用户是否同意授权的时候会利用img标签加载一个图片资源![](https://gitee.com/fuli009/images/raw/master/public/20210917080347.png)我们在HTTP
+发送以后，发现不需要进行验证就注册成功了，并将相关信息反馈在了响应中，包括我们注册成功以后的客户端ID，经过对所有触发的HTTP请求的观察发现，在请求用户是否同意授权的时候会利用img标签加载一个图片资源![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080347.png)我们在HTTP
 History会发现加载图片资源的请求，然后给我们可以通过logo_uri指定其加载图片资源的来源，于是我们对/reg请求包进行修改，示例如下
 
   *   *   *   *   *   *   *   *   *   * 
@@ -400,7 +400,7 @@ History会发现加载图片资源的请求，然后给我们可以通过logo_ur
 
 测试的时候推荐使用burp
 collaborator来接收请求，发送请求以后重新注册的客户端的logo地址就会被替换为我们指定的地址，于是我们从响应中复制出新的client_id替换到加载logo的请求URL中![]()我们看到burp
-collaborator是可以接收到请求的，说明这个点可以向任意来源发出请求，于是我们将logo_uri替换为题目中的目标URL重新注册客户端，然后再用新的client_id加载logo资源成功获得目标字符串![](https://gitee.com/fuli009/images/raw/master/public/20210917080348.png)允许通过引用授权请求某些服务器可以有效地验证授权请求中的查询字符串，但可能无法将相同的验证充分应用于JWT中的参数，包括redirect_uri，可以在配置文件和文档中查找request_uri_parameter_supported选项以确定是否支持这个参数，也可以添加request_uri参数观察它是否有效，有时候可能未在文档中提及此功能，但是却支持该功能
+collaborator是可以接收到请求的，说明这个点可以向任意来源发出请求，于是我们将logo_uri替换为题目中的目标URL重新注册客户端，然后再用新的client_id加载logo资源成功获得目标字符串![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080348.png)允许通过引用授权请求某些服务器可以有效地验证授权请求中的查询字符串，但可能无法将相同的验证充分应用于JWT中的参数，包括redirect_uri，可以在配置文件和文档中查找request_uri_parameter_supported选项以确定是否支持这个参数，也可以添加request_uri参数观察它是否有效，有时候可能未在文档中提及此功能，但是却支持该功能
 
 如何缓解OAuth认证漏洞？
 
@@ -428,7 +428,7 @@ OAuth2.0认证漏洞专题的全部内容啦，本专题主要讲了OAuth的关�
 
   
   
-至此，梨子带你刷burpsuite官方网络安全学院靶场(练兵场)系列的三个大篇章，共21个专题内容就全部介绍完毕了。这是梨子第一次写文章，而且就完成了整个系列，还是非常有成就感的呢，希望这个系列可以让初学者了解到Web安全的魅力并能够通俗易懂地熟悉常见的Web安全漏洞。梨子建议大家一定要自己注册一个burp账号亲自去做每一道靶场，看每一个知识点，这样对于大家理解是非常有帮助的。21篇文章，内容很多，干货很多，希望大家能够耐心地阅读。梨子非常喜欢交朋友，所以想和梨子交流的可以私信梨子哦。最后，容我在这炫耀一下，本系列共197道靶场，梨子为全球第80个全通的用户，嘻嘻嘻，废话不多说上截图![](https://gitee.com/fuli009/images/raw/master/public/20210917080349.png)非常感谢大家的耐心阅读，你们的支持让梨子觉得在安全圈很开心，感谢有你们。![](https://gitee.com/fuli009/images/raw/master/public/20210917080350.png)
+至此，梨子带你刷burpsuite官方网络安全学院靶场(练兵场)系列的三个大篇章，共21个专题内容就全部介绍完毕了。这是梨子第一次写文章，而且就完成了整个系列，还是非常有成就感的呢，希望这个系列可以让初学者了解到Web安全的魅力并能够通俗易懂地熟悉常见的Web安全漏洞。梨子建议大家一定要自己注册一个burp账号亲自去做每一道靶场，看每一个知识点，这样对于大家理解是非常有帮助的。21篇文章，内容很多，干货很多，希望大家能够耐心地阅读。梨子非常喜欢交朋友，所以想和梨子交流的可以私信梨子哦。最后，容我在这炫耀一下，本系列共197道靶场，梨子为全球第80个全通的用户，嘻嘻嘻，废话不多说上截图![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080349.png)非常感谢大家的耐心阅读，你们的支持让梨子觉得在安全圈很开心，感谢有你们。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080350.png)
 
     
     
@@ -437,7 +437,7 @@ OAuth2.0认证漏洞专题的全部内容啦，本专题主要讲了OAuth的关�
     精彩推荐[【技术分享】梨子带你刷burpsuite靶场之高级篇 - HTTP请求走私专题](http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649751885&idx=1&sn=d6ee55c39a0000a98acd713ac7eb94a3&chksm=88933122bfe4b8345a50b27c4255533549873b34d1138d52b01f16925313ac54405d77ba3533&scene=21#wechat_redirect)  
     [【技术分享】反制爬虫之Burp Suite RCE](http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649751822&idx=1&sn=2d36443ca50d76244016ecf4a9451a53&chksm=88933161bfe4b8777ec506375b5c1f3195b2f7a520606455ab35a89499a3530f13cf24646dd5&scene=21#wechat_redirect)  
     [【技术分享】Linux内核中利用msg_msg结构实现任意地址读写](http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649751747&idx=1&sn=cbd84a56d46a2a03e4dc619676f2ae19&chksm=889330acbfe4b9ba93ca6536df2031eb246ac68056a895bb999150776861c709765eb72a630c&scene=21#wechat_redirect)  
-    [【技术分享】浅谈angr的缓解状态爆炸策略](http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649751699&idx=1&sn=c674fac8da0e07f0a3780297a8faf0c4&chksm=889330fcbfe4b9eaf54ff0ee5bd3c04eeb7595b0053ef8ff7abf4582846240737dc49da56c59&scene=21#wechat_redirect)![](https://gitee.com/fuli009/images/raw/master/public/20210917080351.png)
+    [【技术分享】浅谈angr的缓解状态爆炸策略](http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649751699&idx=1&sn=c674fac8da0e07f0a3780297a8faf0c4&chksm=889330fcbfe4b9eaf54ff0ee5bd3c04eeb7595b0053ef8ff7abf4582846240737dc49da56c59&scene=21#wechat_redirect)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210917080351.png)
     
     
      **戳“阅读原文”查看更多内容**

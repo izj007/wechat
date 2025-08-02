@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集 #2023漏洞风险提示 16个
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180257.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180257.png)
 
   
 
@@ -65,7 +65,7 @@ POC远程检测工具和牧云本地检测工具，目前已向公众开放下�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180258.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180258.png)
 
   
 
@@ -87,7 +87,7 @@ https://stack.chaitin.com/tool/detail?id=1036
     
     weaver_ecology_sqli_scanner_windows_amd64.exe
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180259.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180259.png)
 
 工具获取方式：
 

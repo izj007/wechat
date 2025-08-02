@@ -26,12 +26,12 @@ ___发表于_
     
     命令行输入:java -jar ByPassBehinder4J.jar
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230222001315.png)2、提示Succussfully后返回当前文件夹，免杀版本的冰蝎Java
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222001315.png)2、提示Succussfully后返回当前文件夹，免杀版本的冰蝎Java
 WebShell即存在。免杀测试(数据更新至2022.03.15 15:00)，原生冰蝎rebeyond的Java
-WebShell免杀效率如下:![](https://gitee.com/fuli009/images/raw/master/public/20230222001316.png)![](https://gitee.com/fuli009/images/raw/master/public/20230222001318.png)3、免杀冰蝎rebeyond的Java
+WebShell免杀效率如下:![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222001316.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222001318.png)3、免杀冰蝎rebeyond的Java
 WebShell免杀效率如下:  
-![](https://gitee.com/fuli009/images/raw/master/public/20230222001319.png)![](https://gitee.com/fuli009/images/raw/master/public/20230222001321.png)4、可用性测试  
-![](https://gitee.com/fuli009/images/raw/master/public/20230222001322.png)0x03
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222001319.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222001321.png)4、可用性测试  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222001322.png)0x03
 下载地址  
   
  **项目地址：https://github.com/Tas9er/ByPassBehinder4J** **  

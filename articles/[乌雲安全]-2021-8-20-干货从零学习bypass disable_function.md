@@ -29,7 +29,7 @@ __
 
 disable_functions是php.ini中的一个设置选项，可以用来设置PHP环境禁止使用某些函数，通常是网站管理员为了安全起见，用来禁用某些危险的命令执行函数等。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102311.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102311.png)
 
   
 
@@ -52,7 +52,7 @@ disable_functions是php.ini中的一个设置选项，可以用来设置PHP环�
 
 查看`com.allow_dcom`是否开启,这个默认是不开启的。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102312.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102312.png)
 
 创建一个COM对象,通过调用COM对象的`exec`替我们执行命令
 
@@ -83,7 +83,7 @@ disable_functions是php.ini中的一个设置选项，可以用来设置PHP环�
 
 ##
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102313.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102313.png)
 
 ## 利用Linux环境变量LD_PRELOAD  
 
@@ -112,13 +112,13 @@ disable_functions是php.ini中的一个设置选项，可以用来设置PHP环�
 
 默认为"sendmail -t -i"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102314.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102314.png)
 
 但是sendmail并不是默认安装的,需要自己下载  
 
 使用命令`readelf -Ws /usr/sbin/sendmail`可以看到sendmail调用了哪些库函数,这里选择`geteuid`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102315.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102315.png)
 
   
 
@@ -168,11 +168,11 @@ disable_functions是php.ini中的一个设置选项，可以用来设置PHP环�
 
 由于拿到的webshell很有可能是`www-data`这种普通权限。整个过程要注意权限问题,要可写的目录下。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102316.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102316.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102317.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102317.png)
 
 web访问页面没有文件写出,可以看看定义的目录是否有权限。
 
@@ -187,7 +187,7 @@ bypass_disablefunc.php,bypass_disablefunc_x64.so或bypass_disablefunc_x86.so,byp
 将 bypass_disablefunc.php 和
 bypass_disablefunc_x64.so传到目标有权限的目录中。这里很有可能无法直接上传到web目录,解决办法就是上传到有权限的目录下,并用include去包含。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102318.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102318.png)
 
   
 
@@ -199,7 +199,7 @@ bypass_disablefunc_x64.so传到目标有权限的目录中。这里很有可能�
 
 注意区分post和get
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102319.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102319.png)
 
 ## 利用PHP7.4 FFI绕过
 
@@ -210,19 +210,19 @@ disable_functions。具体请参考Foreign Function Interface
 
 当前php版本为7.4.3
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102320.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102320.png)
 
   
 
 先看FFI是否开启,并且ffi.enable需要设置为true
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102321.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102321.png)
 
   
 
 使用FFI::cdef创建一个新的FFI对象
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102322.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102322.png)
 
   
 
@@ -243,7 +243,7 @@ disable_functions。具体请参考Foreign Function Interface
 
 ##
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102323.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102323.png)
 
 ## 利用Bash Shellshock(CVE-2014-6271)破壳漏洞  
 
@@ -292,13 +292,13 @@ EXP如下:
 
 选择可上传目录路径,上传exp
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102324.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102324.png)
 
   
 
 包含文件执行
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102325.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102325.png)
 
   
 
@@ -307,7 +307,7 @@ EXP如下:
 利用条件需要安装iamp扩展,命令行输入:`apt-get install php-
 imap`在php.ini中开启imap.enable_insecure_rsh选项为On；重启服务。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102326.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102326.png)
 
   
 
@@ -413,13 +413,13 @@ PNG、PDF以及PhotoCD等格式。众多的网站平台都是用他渲染处理�
 
 访问`phpinfo.php`,发现开启了imagemagick服务
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102327.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102327.png)
 
   
 
 进入容器:`docker run -t -i medicean/vulapps:i_imagemagick_1 "/bin/bash"`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102328.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102328.png)
 
 查看`poc.php`,这其实是已经写好的poc,执行命令就是`ls -la`
 
@@ -429,7 +429,7 @@ PNG、PDF以及PhotoCD等格式。众多的网站平台都是用他渲染处理�
 
 验证poc,在容器外执行`docker exec i_imagemagick_1 convert /poc.png 1.png`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102329.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102329.png)
 
 ## 利用 Apache Mod CGI
 
@@ -451,7 +451,7 @@ rewrite时，我们可以利用.htaccess文件，临时允许一个目录可以�
 
 由于环境搭建困难,使用蚁剑的docker
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102331.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102331.png)
 
   
 
@@ -481,17 +481,17 @@ rewrite时，我们可以利用.htaccess文件，临时允许一个目录可以�
 
 直接访问shell.xxx ,这里报错,是因为没有权限访问
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102332.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102332.png)
 
   
 
 直接使用蚁剑修改权限
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102333.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102333.png)
 
 复现成功
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102334.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102334.png)
 
   
 
@@ -523,26 +523,26 @@ FPM,请看这篇浅析php-fpm的攻击方式
 
 查看phpinfo,发现目标主机配置了`FPM/Fastcgi`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102335.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102335.png)
 
   
 
 使用插件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102336.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102336.png)
 
   
 
 要注意该模式下需要选择 PHP-FPM 的接口地址，需要自行找配置文件查 FPM 接口地址，本例中PHP-FPM 的接口地址，发现是
 127.0.0.1:9000,所以这里改为127.0.0.1：9000
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102337.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102337.png)
 
   
 
 但是这里我死活利用不了
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102338.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102338.png)
 
   
 
@@ -571,13 +571,13 @@ EXP关于原理通过PHP垃圾收集器中堆溢出来绕过 disable_functions �
 
 受到disable_function无法执行命令
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102339.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102339.png)
 
   
 
 使用插件成功执行后弹出一个新的虚拟终端，成功bypass
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102340.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102340.png)
 
   
 
@@ -594,13 +594,13 @@ EXP关于原理通过PHP垃圾收集器中堆溢出来绕过 disable_functions �
 
 上传POC到`/var/tmp`目录下
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102341.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102341.png)
 
   
 
 包含bypass文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102342.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102342.png)
 
   
 
@@ -608,13 +608,13 @@ EXP关于原理通过PHP垃圾收集器中堆溢出来绕过 disable_functions �
 
 ![]()
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102343.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102343.png)
 
   
 
 当然使用插件是最简单的
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102344.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102344.png)
 
   
 
@@ -643,21 +643,21 @@ from-fopen-s-2nd-Argument/
 
 无法执行命令
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102345.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102345.png)
 
   
 
 使用iconv插件bypass
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102346.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102346.png)
 
   
 
 创建副本后,将url改为`/.antproxy.php`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102347.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102347.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820102348.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102348.png)
 
   
 
@@ -677,7 +677,7 @@ CVE-2014-6271.html
 作者：SD，原创投稿。
 
  **觉得不错点个 **“赞”** 、“在看”哦**
-**![](https://gitee.com/fuli009/images/raw/master/public/20210820102349.png)**
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820102349.png)**
 
 预览时标签不可点
 

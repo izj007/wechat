@@ -96,21 +96,21 @@ BurpSuit Professional v2.1.06
 
 项目中需要导入官方的SDK包，但是根据网上的说法，官方目前已经不提供SDK包了，我们可以自行从burpsuit中直接导出(需要选择一个空白目录)：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151145.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151145.png)
 
 导出后会有一个burp文件夹，结构如下：
 
 这些就是官方提供的所有接口了
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151152.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151152.png)
 
 接下来，创建一个空白项目：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151154.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151154.png)
 
  ****然后在src目录下创建一个名为"burp"的package，并将前面下载下来的所有文件拷贝进去：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151155.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151155.png)
 
  ****至此开发前期的准备工作已完成。
 
@@ -130,7 +130,7 @@ BurpSuit Professional v2.1.06
     
      package burp;public class BurpExtender implements IBurpExtender{    @Override    public void registerExtenderCallbacks(final IBurpExtenderCallbacks callbacks){        // TODO here    }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151157.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151157.png)
 
  **IBurpExtenderCallbacks**
 
@@ -141,7 +141,7 @@ callbacks)”，该方法在插件被burpsuit加载后会被调用，这里它�
 
 可以看到例如：输入输出、对其他模块的调用等，这里面都有提供。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151158.png)![](https://gitee.com/fuli009/images/raw/master/public/20210910151200.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151158.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151200.png)
 
  ****通过这个实例“callbacks”我们可以进行一系列操作，例如：
 
@@ -156,7 +156,7 @@ callbacks)”，该方法在插件被burpsuit加载后会被调用，这里它�
 · File - Project Structure - Project Settings - Artifacts - “+” - JAR - From
 modules with dependencies - 在Main Class中输入"BurpExtender" - OK
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151202.png)![](https://gitee.com/fuli009/images/raw/master/public/20210910151203.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151202.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151203.png)
 
 · Build - Build Project  
 
@@ -164,7 +164,7 @@ modules with dependencies - 在Main Class中输入"BurpExtender" - OK
 
 · Build
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151204.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151204.png)
 
 输出默认路径：  
 
@@ -174,7 +174,7 @@ out/artifacts/burpExterder_jar/burpExterder.jar
 
 导入burpsuit效果如下：  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151206.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151206.png)
 
  **IContextMenuFactory**
 
@@ -221,7 +221,7 @@ the menu invocation.”
             List<JMenuItem> listMenuItems = new ArrayList<JMenuItem>();        //子菜单        JMenuItem menuItem;        menuItem = new JMenuItem("子菜单测试");  
             //父级菜单        JMenu jMenu = new JMenu("rebootORZ");        jMenu.add(menuItem);        listMenuItems.add(jMenu);        return listMenuItems;    }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151207.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151207.png)
 
  **IContextMenuInvocation**
 
@@ -229,7 +229,7 @@ the menu invocation.”
 
 其中提供了以下方法：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151208.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151208.png)
 
  ****例如，设置改上下文菜单只允许在Repeater模块中显示，代码如下：
 
@@ -247,17 +247,17 @@ the menu invocation.”
 
  ****此时在其他模块中不会有该菜单：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151210.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151210.png)
 
  ****当在Repeater中就有了：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151211.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151211.png)
 
  **ICookie**
 
  ****这个接口用于获取 cookie 相关的信息，提供了以下方法：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151213.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151213.png)
 
  ****示例代码：
 
@@ -297,7 +297,7 @@ the menu invocation.”
 
 这个接口提供的方法有非常多，对于我们编写插件比较常用的有以下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151214.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151214.png)
 
  **IExtensionStateListener**  
 
@@ -322,7 +322,7 @@ unload这个插件的时候就会调用该方法并执行一些操作，具体�
             callbacks.setExtensionName("rebootORZ");        // 先注册扩展状态监听器        callbacks.registerExtensionStateListener(this);    }  
         // 重写 extensionUnloaded 方法    @Override    public void extensionUnloaded() {        // TODO        this.stdout.println("unload success ...");    }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151215.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151215.png)
 
  **IHttpListener**
 
@@ -333,14 +333,14 @@ unload这个插件的时候就会调用该方法并执行一些操作，具体�
 
 该接口只提供了一个方法：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151216.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151216.png)
 
 参数说明：  
 
 · toolFlag
 指的就是当前在哪个模块，可以根据模块筛选自己要的数据包，这个模块所对应的一个标志符，这个符号的定义在IBurpExtenderCallbacks接口中：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151217.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151217.png)
 
  **·  **messageIsRequest 用来判断该数据包是请求包（True）还是响应包（False）  
 
@@ -360,7 +360,7 @@ unload这个插件的时候就会调用该方法并执行一些操作，具体�
 
 提供的方法中，所有的set方法只能在消息被发送出去之前进行处理，但是在只读的上下文里面是不可以用的，因为set是写操作，而与响应有关的get方法也只能在请求发出后使用。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151218.png)![](https://gitee.com/fuli009/images/raw/master/public/20210910151219.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151218.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151219.png)
 
   
 
@@ -400,7 +400,7 @@ IHttpRequestResponse 对象，可用 IBurpExtenderCallbacks.applyMarkers()
 
 此接口提供了两个分别操作请求和响应的方法：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151220.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151220.png)
 
  ****这两个方法的返回值均为一个整型数组列表，分别表示请求消息/响应消息标记偏移的索引对。列表中的每一项目都是一个长度为 2
 的整型数组，包含标记开始和结束的偏移量。如果没有定义请求/响应标记，返回 null。
@@ -429,13 +429,13 @@ IHttpRequestResponse 对象，可用 IBurpExtenderCallbacks.applyMarkers()
 
  ****发送一个数据包，然后看输出：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151223.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151223.png)
 
  **IIntruderAttack**
 
  ****这个接口用于保存关于爆破的详细信息。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151224.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151224.png)
 
  **IInterceptedProxyMessage**
 
@@ -450,7 +450,7 @@ IHttpRequestResponse 对象，可用 IBurpExtenderCallbacks.applyMarkers()
 IIntruderPayloadGeneratorFactory 工厂并且必须返回此接口的一个新的实例。此接口会将当前插件注册为一个 Intruder
 工具的 payload 生成器。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151225.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151225.png)
 
  ****示例代码：
 
@@ -469,7 +469,7 @@ IIntruderPayloadGeneratorFactory 工厂并且必须返回此接口的一个新�
             @Override        public void reset() {            // TODO here  
             }    }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151226.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151226.png)
 
  **IIntruderPayloadGeneratorFactory**
 
@@ -477,14 +477,14 @@ IIntruderPayloadGeneratorFactory 工厂并且必须返回此接口的一个新�
 IBurpExtenderCallbacks.registerIntruderPayloadGeneratorFactory() 注册一个自定义的
 Intruder 工具的 payload 生成器。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151227.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151227.png)
 
  **IIntruderPayloadProcessor**
 
  ****通过实现该接口，可以调用 IBurpExtenderCallbacks.registerIntruderPayloadProcessor()
 注册一个自定义 Intruder 工具的 payload 的处理器。此接口会将当前插件注册为一个 Intruder 工具的 payload 处理器。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151229.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151229.png)
 
  ****示例代码：
 
@@ -498,21 +498,21 @@ Intruder 工具的 payload 生成器。
         // 此方法由 Burp 调用    @Override    public String getProcessorName() {        // 设置自定义 payload 处理器的名称        return "自定义 payload 处理器";    }  
         // 此方法由 Burp 调用，且会在每次使用一个 payload 发动攻击时都会调用一次此方法    @Override    public byte[] processPayload(byte[] currentPayload, byte[] originalPayload,                                 byte[] baseValue) {        // TODO here        return null;    }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151230.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151230.png)
 
  **IMessageEditor**
 
  ****此接口被用于使用 Burp 的 HTTP 消息编辑框的实例提供扩展功能，以便扩展插件可以在它自己的 UI 中使用消息编辑框，扩展插件可以通过调用
 IBurpExtenderCallbacks.createMessageEditor() 获得此接口的实例。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151231.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151231.png)
 
  **IMessageEditorTab**
 
  ****扩展插件通过注册 IMessageEditorTabFactory 工厂，此工厂的 createNewInstance
 返回一个当前接口的实例，Burp 将会在其 HTTP 消息编辑器中创建自定义的标签页。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151232.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151232.png)
 
  **IMessageEditorController**
 
@@ -521,14 +521,14 @@ IMessageEditorController 接口，当扩展插件需要当前消息的其他信�
 工具中）。 扩展通过 IMessageEditorTabFactory 工厂提供自定义的编辑器标签页，此工厂的 createNewInstance
 方法接受一个由该工厂所生成的每一个标签页的 IMessageEditorController 对象的引用，当标签页需要当前消息的其他信息时，则会调用该对象。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151233.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151233.png)
 
  **IMessageEditorTabFactory**
 
  ****通过实现该接口，可以调用 IBurpExtenderCallbacks.registerMessageEditorTabFactory()
 注册一个自定义的消息编辑器标签页的工厂。扩展插件可以在 Burp 的 HTTP 编辑器中渲染或编辑 HTTP 消息。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151234.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151234.png)
 
 示例代码：
 
@@ -538,13 +538,13 @@ IMessageEditorController 接口，当扩展插件需要当前消息的其他信�
     
     # !javapackage burp; import java.awt.Component;import java.io.PrintWriter; public class BurpExtender implements IBurpExtender, IMessageEditorTabFactory{     public PrintWriter stdout;    public IExtensionHelpers helpers;    private IBurpExtenderCallbacks callbacks;     @Override    public void registerExtenderCallbacks(final IBurpExtenderCallbacks callbacks){         this.stdout = new PrintWriter(callbacks.getStdout(), true);        this.callbacks = callbacks;        this.helpers = callbacks.getHelpers();        callbacks.setExtensionName("rebootORZ");        callbacks.registerMessageEditorTabFactory(this);    }     @Override    public IMessageEditorTab createNewInstance(            IMessageEditorController controller, boolean editable) {        // 返回 IMessageEditorTab 的实例        return new iMessageEditorTab();    }     class iMessageEditorTab implements IMessageEditorTab{         // 创建一个新的文本编辑器        private ITextEditor iTextEditor = callbacks.createTextEditor();         @Override        public String getTabCaption() {            // 设置消息编辑器标签页的标题            return "测试 MessageEditorTab";        }         @Override        public Component getUiComponent() {            // 返回 iTextEditor 的组件信息，当然也可以放置其他的组件            return iTextEditor.getComponent();        }         @Override        public boolean isEnabled(byte[] content, boolean isRequest) {            // 在显示一个新的 HTTP 消息时，启用自定义的标签页            // 通过 content 和 isRequest 也可以对特定的消息进行设置            return true;        }         @Override        public void setMessage(byte[] content, boolean isRequest) {            // 把请求消息里面的 data 参数进行 Base64 编码操作            // 这里并未处理参数中没有 data 时的异常            IParameter parameter = helpers.getRequestParameter(content, "data");            stdout.println("data = " + parameter.getValue());            iTextEditor.setText(helpers.stringToBytes(helpers.base64Encode(parameter.getValue())));        }         @Override        public byte[] getMessage() {            // 获取 iTextEditor 的文本            return iTextEditor.getText();        }         @Override        public boolean isModified() {            // 允许用户修改当前的消息            return true;        }         @Override        public byte[] getSelectedData() {            // 直接返回 iTextEditor 中选中的文本            return iTextEditor.getSelectedText();        }     }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151235.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151235.png)
 
  **IParameter**
 
  ****此接口用于操控 HTTP 请求参数，开发者通过此接口可以灵活的获取请求或响应里的参数。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151236.png)![](https://gitee.com/fuli009/images/raw/master/public/20210910151237.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151236.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151237.png)
 
  ****示例代码：
 
@@ -556,11 +556,11 @@ IMessageEditorController 接口，当扩展插件需要当前消息的其他信�
 
  ****先发送一个包：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151238.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151238.png)
 
  ****查看输出
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151239.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151239.png)
 
  ****获取Cookie:
 
@@ -579,14 +579,14 @@ IMessageEditorController 接口，当扩展插件需要当前消息的其他信�
                 }            stdout.println(cookie);        }  
         }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151240.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151240.png)
 
  **IProxyListener**
 
 扩展可以实现此接口，并且可以通过调用
 IBurpExtenderCallbacks.registerProxyListener()注册一个代理监听器。在代理工具处理了请求或响应后会通知此监听器。扩展插件通过注册这样一个监听器，对这些消息执行自定义的分析或修改操作。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151241.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151241.png)
 
  ****示例代码：
 
@@ -603,18 +603,18 @@ IBurpExtenderCallbacks.registerProxyListener()注册一个代理监听器。在�
 
  ****先抓个包：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151242.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151242.png)
 
  ****再去查看插件的输出：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151243.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151243.png)
 
  **IRequestInfo**
 
  ****此接口被用于获取一个 HTTP 请求的详细信息。扩展插件可以通过调用 IExtensionHelpers.analyzeRequest()
 获得一个 IRequestInfo 对象。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151244.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151244.png)
 
  ****示例代码：
 
@@ -632,22 +632,22 @@ IBurpExtenderCallbacks.registerProxyListener()注册一个代理监听器。在�
 
  ****先发包：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151245.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151245.png)
 
  ****看输出：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151246.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151246.png)
 
  **IResponseInfo**
 
  ****此接口被用于获取一个 HTTP 请求的详细信息。扩展插件可以通过调用 IExtensionHelpers. analyzeResponse()
 获得一个 IResponseInfo 对象。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151247.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151247.png)
 
  ****同理，发包后看输出：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151248.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151248.png)
 
  **IScanIssue**
 
@@ -656,14 +656,14 @@ IScannerListener或者是通过调用IBurpExtenderCallbacks.getScanIssues()
 获取扫描问题的细节。扩展同样可以通过注册 IScannerCheck
 接口或者是调用IBurpExtenderCallbacks.addScanIssue() 方法来自定义扫描问题，此时扩展需要提供它对此接口的实现。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151249.png)![](https://gitee.com/fuli009/images/raw/master/public/20210910151250.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151249.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151250.png)
 
  **IScannerCheck**
 
  ****扩展可以实现此接口，之后可以通过调用 IBurpExtenderCallbacks.registerScannerCheck()注册一个自定义的
 Scanner 工具的检查器。Burp 将会告知检查器执行“主动扫描”或“被动扫描”，并且在确认扫描到问题时给出报告。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151251.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151251.png)
 
  ****示例代码：
 
@@ -683,21 +683,21 @@ Scanner 工具的检查器。Burp 将会告知检查器执行“主动扫描”�
 
  ****对一个数据包进行scan-crawler and audit，当扫描执行到不同阶段时，会按照我们指定的代码输出如下内容：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151255.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151255.png)
 
  **IScannerInsertionPoint**
 
  ****此接口被用于定义一个用于Scanner工具检查器扫描的插入点。扩展可以通过注册 IScannerCheck 获得此接口实例，或者通过注册
 IScannerInsertionPointProvider 创建一个 Burp 所使用的扫描检查器实例。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151256.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151256.png)
 
  **IScannerInsertionPointProvider**
 
  ****通过实现该接口，可以通过调用
 IBurpExtenderCallbacks.registerScannerInsertionPointProvider() 注册自定义扫描插入点的工厂。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151257.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151257.png)
 
  **IScannerListener**
 
@@ -722,21 +722,21 @@ Scanner 工具的监听器。当 Scanner 工具扫描到新的问题时，会通
 
  ****使用scanner进行扫描并查看输出：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151258.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151258.png)
 
  **IScanQueueItem**
 
  ****  此接口被用于获取在 Burp 的 Scanner
 工具中激活的扫描队列里的项目详情。扩展可以通过调用IBurpExtenderCallbacks.doActiveScan() 获得扫描队列项目的引用。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151259.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151259.png)
 
  **IScopeChangeListener**
 
  ****通过实现该接口，可以通过调用 IBurpExtenderCallbacks.registerScopeChangeListener() 注册一个
 Target 工具下的 scope 变化监听器。当 Burp 的 Target 工具下的 scope 发生变化时，将会通知此接口。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151301.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151301.png)
 
  ****示例代码：
 
@@ -754,14 +754,14 @@ Target 工具下的 scope 变化监听器。当 Burp 的 Target 工具下的 sco
 
  ****添加到Scope查看插件输出：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151302.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151302.png)
 
  **ISessionHandlingAction**
 
  ****通过实现该接口，可以通过调用 IBurpExtenderCallbacks.registerSessionHandlingAction()
 注册一个自定义的会话操作动作。每一个已注册的会话操作动作在会话操作规则的UI中都是可用的，并且用户可以选择其中一个作为会话操作行为的规则。用户可以选择直接调用操作，也可以按照宏定义调用操作。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151303.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151303.png)
 
  **ITab**
 
@@ -789,20 +789,20 @@ Target 工具下的 scope 变化监听器。当 Burp 的 Target 工具下的 sco
         @Override    public String getTabCaption() {        // 返回自定义标签页的标题        return "rebootORZ";    }  
         @Override    public Component getUiComponent() {        // 返回自定义标签页中的面板的组件对象        return jPanel1;    }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151304.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151304.png)
 
  **ITempFile**
 
  ****此接口用于操作调用 IBurpExtenderCallbacks.saveToTempFile() 创建的临时文件。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151305.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151305.png)
 
  **ITextEditor**
 
  ****此接口用于扩展 Burp的原始文本编辑器，扩展通过调用 IBurpExtenderCallbacks.createTextEditor()
 获得一个此接口的实例。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151306.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151306.png)
 
   
 
@@ -814,7 +814,7 @@ Target 工具下的 scope 变化监听器。当 Burp 的 Target 工具下的 sco
 
  **常用控件**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151307.png)![](https://gitee.com/fuli009/images/raw/master/public/20210910151308.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151307.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151308.png)
 
  **示例代码**
 
@@ -840,7 +840,7 @@ Target 工具下的 scope 变化监听器。当 Burp 的 Target 工具下的 sco
                     System.out.println("用户名为：" + userText.getText());            }        });    }  
     }
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151309.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151309.png)
 
  **ListSelectionDemo.java**
 
@@ -872,7 +872,7 @@ Target 工具下的 scope 变化监听器。当 Burp 的 Target 工具下的 sco
                 int firstIndex = e.getFirstIndex();            int lastIndex = e.getLastIndex();            boolean isAdjusting = e.getValueIsAdjusting();            output.append("Event for indexes "                    + firstIndex + " - " + lastIndex                    + "; isAdjusting is " + isAdjusting                    + "; selected indexes:");  
                 if (lsm.isSelectionEmpty()) {                output.append(" <none>");            } else {                // Find out which indexes are selected.                int minIndex = lsm.getMinSelectionIndex();                int maxIndex = lsm.getMaxSelectionIndex();                for (int i = minIndex; i <= maxIndex; i++) {                    if (lsm.isSelectedIndex(i)) {                        output.append(" " + i);                    }                }            }            output.append(newline);            output.setCaretPosition(output.getDocument().getLength());        }    }}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151310.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151310.png)
 
  **表格Demo.java**
 
@@ -885,7 +885,7 @@ Target 工具下的 scope 变化监听器。当 Burp 的 Target 工具下的 sco
         public static void main(String[] args) {        表格Demo t = new 表格Demo();    }  
     }
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151311.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151311.png)
 
   
 
@@ -1032,7 +1032,7 @@ ps: 这个字典不能太大，20以内最佳，因为该工具的初衷是用�
  ****PS：UI有点丑，但是不影响使用，建议把swing好好学一下，最简单的就是用IDeaJ的Swing GUI
 进行UI设计,拖拖拽拽最后实现功能即可。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151312.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151312.png)
 
   
 
@@ -1210,7 +1210,7 @@ bountyteam@dbappsecurity.com.cn
 
 END
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210910151313.png)![](https://gitee.com/fuli009/images/raw/master/public/20210910151314.png)![]()
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151313.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910151314.png)![]()
 
  **长按识别二维码关注我们**
 

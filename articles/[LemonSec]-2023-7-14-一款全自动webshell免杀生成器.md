@@ -26,21 +26,21 @@ https://github.com/StarsApt/webshell_bypass
 
 php免杀效果
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181228.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181228.png)
 
   
 
 后台
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181229.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181229.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181231.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181231.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181232.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181232.png)
 
  **侵权请私聊公众号删文** **转自凌日实验室**  
 

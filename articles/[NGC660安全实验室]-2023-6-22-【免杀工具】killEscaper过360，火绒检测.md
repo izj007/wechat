@@ -29,7 +29,7 @@ ___发表于_
 **点击蓝字，关注我们**  
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112617.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112617.png)  
   
 
   
@@ -186,7 +186,7 @@ x32:
   
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112618.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112618.png)  
   
 
   
@@ -201,7 +201,7 @@ python killEscaper.py -a 64 -f shellcode.txt
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112619.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112619.png)  
   
 
   
@@ -212,7 +212,7 @@ python killEscaper.py -a 64 -f shellcode.txt
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112620.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112620.png)  
   
 
   
@@ -235,7 +235,7 @@ python killEscaper.py -a 64 -f shellcode.txt
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112621.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112621.png)  
   
 
   
@@ -251,14 +251,14 @@ python killEscaper.py -a 64 -f shellcode.txt
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112621.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112621.png)  
   
 
   
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112623.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112623.png)  
   
 
   
@@ -279,7 +279,7 @@ output输出C、python都行。
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112619.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112619.png)  
   
 
   
@@ -290,7 +290,7 @@ output输出C、python都行。
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112620.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112620.png)  
   
 
 5.上传到肉鸡运行
@@ -304,7 +304,7 @@ output输出C、python都行。
 
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112625.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112625.png)  
   
 
   
@@ -330,31 +330,31 @@ output输出C、python都行。
   
   
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112626.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112626.png)  
 
 关注公众号，回复  **killEscaper  **获取下载链接
 
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112626.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112626.png)  
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112628.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112628.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112629.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112629.png)  
  **往期推荐**  
-![](https://gitee.com/fuli009/images/raw/master/public/20230622112630.png)[![]()](https://mp.weixin.qq.com/s?__biz=MzkyODMxODUwNQ==&mid=2247492115&idx=1&sn=d2b7d4b9651318c60fc8a7ff03ca2401&chksm=c2183755f56fbe43653aec9b01ff06ffa809e630653cdf76d86e6ab36fa0e3eb9f6474975163&token=344247365&lang=zh_CN&scene=21#wechat_redirect)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112630.png)[![]()](https://mp.weixin.qq.com/s?__biz=MzkyODMxODUwNQ==&mid=2247492115&idx=1&sn=d2b7d4b9651318c60fc8a7ff03ca2401&chksm=c2183755f56fbe43653aec9b01ff06ffa809e630653cdf76d86e6ab36fa0e3eb9f6474975163&token=344247365&lang=zh_CN&scene=21#wechat_redirect)  
 从swagger
-api泄露到进入后台[![](https://gitee.com/fuli009/images/raw/master/public/20230622112631.png)](https://mp.weixin.qq.com/s?__biz=MzkyODMxODUwNQ==&mid=2247492072&idx=1&sn=6d06dbc182c2f33037f5687f11bd8650&chksm=c21834aef56fbdb8e46ea1fb878e692883896c0977245b02e8e4209cf194f386191ae7750565&token=344247365&lang=zh_CN&scene=21#wechat_redirect)  
-看我如何利用熊猫头插件拿下局长..[![](https://gitee.com/fuli009/images/raw/master/public/20230622112632.png)](https://mp.weixin.qq.com/s?__biz=MzkyODMxODUwNQ==&mid=2247492047&idx=1&sn=691a807e5459496a9efa74c118dae238&chksm=c2183489f56fbd9fe73d6120c231462c892c33beed941d679b036b9d913f0dac0a93bfa64a0b&token=344247365&lang=zh_CN&scene=21#wechat_redirect)  
+api泄露到进入后台[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112631.png)](https://mp.weixin.qq.com/s?__biz=MzkyODMxODUwNQ==&mid=2247492072&idx=1&sn=6d06dbc182c2f33037f5687f11bd8650&chksm=c21834aef56fbdb8e46ea1fb878e692883896c0977245b02e8e4209cf194f386191ae7750565&token=344247365&lang=zh_CN&scene=21#wechat_redirect)  
+看我如何利用熊猫头插件拿下局长..[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112632.png)](https://mp.weixin.qq.com/s?__biz=MzkyODMxODUwNQ==&mid=2247492047&idx=1&sn=691a807e5459496a9efa74c118dae238&chksm=c2183489f56fbd9fe73d6120c231462c892c33beed941d679b036b9d913f0dac0a93bfa64a0b&token=344247365&lang=zh_CN&scene=21#wechat_redirect)  
 记一次度某满SRC挖掘之曲线救国 **免责声明**
 
 **由于传播、利用本公众号NGC660安全实验室所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，公众号NGC600安全实验室及作者不为此承担任何责任，一旦造成后果请自行承担！如有侵权烦请告知，我们会立即删除并致歉。谢谢！**
 
-**点点分享**![](https://gitee.com/fuli009/images/raw/master/public/20230622112633.png)
-**点点赞**![](https://gitee.com/fuli009/images/raw/master/public/20230622112634.png)
+**点点分享**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112633.png)
+**点点赞**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112634.png)
 **点点在看**![]()
 
   

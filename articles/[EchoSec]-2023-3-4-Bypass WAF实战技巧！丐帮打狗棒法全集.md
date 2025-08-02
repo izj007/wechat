@@ -51,7 +51,7 @@ ___发表于_
 
 分块传输编码是超文本传输协议（HTTP）中的一种数据传输机制，允许HTTP由应用服务器向客户端发送的数据分成多个部分，在消息头中指定 Transfer-
 Encoding: chunked 就表示整个response将使分块传输编译来传输内容。一个消息块由n块组成，并在最后一个大小为0的块结束。  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135554.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135554.png)
 
 ### 请求头Transfer-encoding：
 
@@ -78,7 +78,7 @@ chunked编码，使用若干个chunk串连接而成，由一个标明长度为0�
     基于长久化持续推送动态内容（不太了解，但是第三感觉有研究内容）  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135615.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135615.png)
 
 ### HTTP持久化连接：
 
@@ -110,17 +110,17 @@ Type来表示请求和响应中的媒体数据格式标签，用于区分数据�
 重点介绍multipart/form-data：  
 当服务器使用multipart/form-data接收POST请求的时候，服务器如何知道开始位置和结束位置的呢？？？  
 其中就是用了boundary边界来进行操作的。  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135616.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135616.png)
 
 # waf绕过的思路：
 
 正常传输的payload都是可以被waf的正则匹配到的，而进行分块传输之后的payload，waf的正则不会进行匹配，而又满足http的规则，所以就能绕过waf。  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135618.png)![](https://gitee.com/fuli009/images/raw/master/public/20230304135619.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135618.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135619.png)
 
 #### 例如：
 
 正常传输过程中是这样的。  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135620.png)那么分块传输之后，就变成了这样。
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135620.png)那么分块传输之后，就变成了这样。
 
     
     
@@ -177,7 +177,7 @@ Type来表示请求和响应中的媒体数据格式标签，用于区分数据�
       
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135621.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135621.png)
 
 说明是可以识别分块传输的东西，那么我们就可以构造payload来看是否可以绕过waf。
 
@@ -189,7 +189,7 @@ Type来表示请求和响应中的媒体数据格式标签，用于区分数据�
 
 在sqli-labs的第十一关，我们发现了可以用post请求。先正常看看过滤哪些字符，这里开门见山，直接把'union select
 (database()),2#。这个东西进行了过滤  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135623.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135623.png)  
 咱们可以尝试使用分块传输的方式来进行绕过。这里在请求头中添加。
 
     
@@ -291,7 +291,7 @@ Type来表示请求和响应中的媒体数据格式标签，用于区分数据�
       
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135624.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135624.png)
 
 #### 读取表名：
 
@@ -498,26 +498,26 @@ Type来表示请求和响应中的媒体数据格式标签，用于区分数据�
       
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135625.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135625.png)
 
 #### 读列名：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135626.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135626.png)
 
 #### 读取数据：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135627.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135627.png)
 
 # 绕过安全狗的文件上传（以pikachu靶场为例
 
 这里上面讲到了分块传输，这里直接先使用分块传输来进行绕过。这里讲下计算方式，因为文件上传不像sql注入那样单行，所以文件上传是会有回车和空格的计算，（一个回车和一个空格占两个字符）。例如下图：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135627.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135627.png)  
 红框中的部分，分别处于不同的行，所以需要传入回车，所以这部分就应该是：  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135629.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135629.png)  
 这块先去上传php文件为例，可以进行分块传输的构造。然后上传。  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135630.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135630.png)  
 发现单单的分块传输已经不能绕过安全狗文件上传的检测了。  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135631.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135631.png)
 
 ## Content-Type中的boundary边界混淆绕过
 
@@ -527,7 +527,7 @@ data必须用boundary边界来进行限制，那么我们这里研究一下bound
 
 ### 深入研究boundary边界问题：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135616.png)这里拿上面的边界来做文章，这里看到了，当上面定义了boundary=----WFJAFAOKAJNFKLAJ的时候我想到了两个问题。
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135616.png)这里拿上面的边界来做文章，这里看到了，当上面定义了boundary=----WFJAFAOKAJNFKLAJ的时候我想到了两个问题。
 
     
     
@@ -542,35 +542,35 @@ data必须用boundary边界来进行限制，那么我们这里研究一下bound
 
 ##### boundary边界一致：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135633.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135633.png)
 
 ##### boundary结束标志不一致：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135634.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135634.png)
 
 ##### boundary开始标志不一致：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135635.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135635.png)  
 上面经过研究可以发现boundary结束标志不影响判断。
 
 ### 多个boundary：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135636.png)  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135637.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135636.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135637.png)
 
 所以当定义两个boundary的时候，只有第一个起作用。经过了上面的测试发现，我们可以通过构造多个boundary和修改boundary结束标志来达到混淆的效果，这里进行测试。
 
 ##### 多个boundary混淆：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135638.png)这里进入uploads/1.php查看
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135638.png)这里进入uploads/1.php查看
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135640.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135640.png)  
 成功绕过waf。
 
 ##### 发现：
 
 这里发现，其他不用非得加boundary混淆，测到boundary后面加分号就直接可以绕过安全狗来上传成功。  
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135641.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135641.png)
 
 ### 对于分块传输的小Tip：
 
@@ -601,11 +601,11 @@ data必须用boundary边界来进行限制，那么我们这里研究一下bound
     
     用户773616194奇安信攻防社区https://forum.butian.net/share/1982
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135642.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135642.png)
 
 点点赞
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230304135643.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230304135643.png)
 
 点在看
 

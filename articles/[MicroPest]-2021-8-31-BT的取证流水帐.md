@@ -36,7 +36,7 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0;
 
 将里面的BOOTPROTO=static修改成dhcp，并屏蔽掉相关的静态IP设置即可；
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134915.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134915.png)
 
   
 
@@ -44,7 +44,7 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0;
 
 4、查看防火墙状态，就用 firewall-cmd --status;
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134935.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134935.png)
 
 关闭防火墙 systemctl stop firewalld；
 
@@ -56,7 +56,7 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0;
 
 systemctl start sshd;
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134936.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134936.png)
 
   
 
@@ -72,19 +72,19 @@ bt default
 
 bt
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134937.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134937.png)
 
   
 
 8、进入bt平台
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134938.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134938.png)
 
   
 
 9、有2个网站  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134939.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134939.png)
 
 并配置了几个同网站的域名；
 
@@ -102,13 +102,13 @@ bt
 
 11、打开网站
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134940.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134940.png)
 
   
 
 12、平台中的数据库
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134941.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134941.png)
 
 知道了帐号密码，用navicat连接；
 
@@ -116,7 +116,7 @@ bt
 
 13、连接数据库
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134942.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134942.png)
 
   
 
@@ -160,7 +160,7 @@ host='%';
 
 14、找到管理员的帐号密码；
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134943.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134943.png)
 
   
 
@@ -174,7 +174,7 @@ host='%';
 
 一般都放在/www/下，宝塔在/www/server下，网站在/www/wwwroot下；如果要修改，可以在代码下；  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210831134944.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210831134944.png)
 
   
 

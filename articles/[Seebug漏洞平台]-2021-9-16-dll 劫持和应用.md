@@ -14,7 +14,7 @@ __
 
 收录于话题
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203323.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203323.png)
 
   
 
@@ -56,7 +56,7 @@ Build Engine)，找到后通过读取 `MsBuild.exe` 的内存，从命令行参�
 随后在项目目录下寻找 Orion 产品的 `InventoryManager.cs` 源码文件，并使用包含有恶意代码的源码文件进行替换，等待
 `MsBuild.exe` 编译完成，最后再还原该文件，完成后门的植入；如下图：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203330.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203330.png)
 
 [1.SUNBURST后门植入的流程]  
 当然这个过程中还需要很多技术细节来保证后门与原始项目代码之间的兼容性，以及植入过程的隐蔽性等等；后续就有安全研究者说到在 APT
@@ -67,7 +67,7 @@ Build Engine)，找到后通过读取 `MsBuild.exe` 的内存，从命令行参�
 安全研究者提出了使用 dll
 劫持来优化后门植入的过程(https://www.a12d404.net/ranting/2021/01/17/msbuild-
 backdoor.html)，其研究过程发现 `MSBuild.exe` 启动过程中会去优先加载指定目录的
-dll，如下：![](https://gitee.com/fuli009/images/raw/master/public/20210916203331.png)[2.MSBuild优先加载的部分dll文件(ref:https://www.a12d404.net/ranting/2021/01/17/msbuild-
+dll，如下：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203331.png)[2.MSBuild优先加载的部分dll文件(ref:https://www.a12d404.net/ranting/2021/01/17/msbuild-
 backdoor.html)]  
 如果我们将恶意 dll 重命名并放置在这些 `"load-not-found-dll"` 的路径下，就可以实现 dll
 劫持，执行我们的恶意代码，原文作者根据这种方式编写代码进行了演示。相比于
@@ -139,14 +139,14 @@ dll函数转发
 1.手动转发  
 当 dll 的导出函数比较少时，我们可以按照正常的 dll 开发流程，逐个定义函数名称，然后在函数内部使用 `LoadLibrary()` 函数调用原
 dll 的对应函数完成功能，如下：  
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203332.png)[3.LoadLibrary转发函数]2.def文件  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203332.png)[3.LoadLibrary转发函数]2.def文件  
 当 dll 的导出函数太多时，我们就不能手动转发了，使用模块定义(.def)文件编写导出函数的信息，由链接器自动实现函数转发，细节可以参考
 https://docs.microsoft.com/en-us/cpp/build/reference/module-definition-dot-
 def-files?view=msvc-160。  
   
 我们尝试生成 `version.dll` 的恶意 dll：在 `test.c` 文件中编写恶意代码插入到 `DllMain` 的执行流程中，并在
 `test.def`
-中编写函数转发规则：![](https://gitee.com/fuli009/images/raw/master/public/20210916203333.png)[4.使用dll模块定义进行函数转发]随后进行编译生成
+中编写函数转发规则：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203333.png)[4.使用dll模块定义进行函数转发]随后进行编译生成
 dll 文件，gcc 编译如下：  
 
     
@@ -164,7 +164,7 @@ dll 文件，gcc 编译如下：
   
 这里我编写了个 Python 脚本可以根据 dll 自动生成模块定义文件dllproxy_def_generate.py，使用如下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203335.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203335.png)
 
 [5.自动生成模块定义文件]  
 
@@ -176,7 +176,7 @@ dll 文件，gcc 编译如下：
 https://docs.microsoft.com/en-us/cpp/preprocessor/comment-c-
 cpp?view=msvc-160，同样以 `version.dll` 为例，函数转发的源码如下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203336.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203336.png)
 
 [6.pragma实现dll函数转发]  
 
@@ -206,7 +206,7 @@ cpp?view=msvc-160，同样以 `version.dll` 为例，函数转发的源码如下
   
 比如下面是我们使用恶意 dll 替换 `msvcrt.dll`，恶意 dll 在加载时输出应用程序路径，重启后可以看到：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203337.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203337.png)
 
 [7.劫持系统dll示例]  
   
@@ -236,7 +236,7 @@ us/windows/win32/dlls/dynamic-link-library-redirection)，当模块名称相同�
 dll重定向默认为关闭状态，我们在注册表中 `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image
 File Execution Options` 添加 `DevOverrideEnable (DWORD)` 字段并设置为 1，来开启该功能，重启后生效。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203339.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203339.png)
 
 [8.注册表开启dll重定向]  
 我们有两种方式来使用 dll 重定向：1\. .local在应用程序同目录下，创建 `AppName.exe.local`
@@ -255,7 +255,7 @@ File Execution Options` 添加 `DevOverrideEnable (DWORD)` 字段并设置为 1�
 
 运行演示如下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203340.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203340.png)
 
 [9.local重定向示例]  
 2.manifest  
@@ -276,7 +276,7 @@ manifests，构建目录结构如下：
   
 其中 manifest 文件内容为：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203341.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203341.png)
 
 [10.manifest内容示例]  
 同样可以加载恶意 dll 文件。
@@ -297,12 +297,12 @@ Tcc(Tiny C Compiler) 是一个相当小的 C 编译器，我们从简单的开�
   
 我们模仿 SUNBURST 后门植入的方法，编写恶意代码 demo 如下(libtcc.c + libtcc.def)：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203342.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203342.png)
 
 [11.Tcc劫持代码demo]  
 编译后使用恶意 dll 替换 `libtcc.dll`，并将原始文件重命名为 `libtcc_origin.dll`，运行演示如下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203343.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203343.png)
 
 [12.Tcc劫持演示]  
 可以看到通过 Tcc 编译的程序，执行时触发了恶意代码 `backdoor`。
@@ -327,12 +327,12 @@ Gcc劫持实现
 使用 Tcc 中的测试代码进行编译，然后在 Gcc 目录下添加 `gcc.exe.local` 文件夹，并将 `msvcrt.dll /
 msvcrt_origin.dll` 放在文件夹下，如下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203344.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203344.png)
 
 [13.Gcc目录下dll重定向文件夹]  
 运行演示如下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203345.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203345.png)
 
 [14.Gcc劫持演示]  
 
@@ -378,7 +378,7 @@ https://github.com/tothi/dll-hijack-by-proxying
 https://stackoverflow.com/questions/37252457/is-there-a-way-to-make-
 windows-7-x64-load-ntdll-dll-from-local-directory-not-sy
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210916203346.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203346.png)
 
  **往  期 热 门**
 
@@ -386,17 +386,17 @@ windows-7-x64-load-ntdll-dll-from-local-directory-not-sy
 
   
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20210916203347.png)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203347.png)
 
 震惊！安全圈某知名大佬竟被人制成表情包！
 
 ](http://mp.weixin.qq.com/s?__biz=MzAxNDY2MTQ2OQ==&mid=2650949797&idx=1&sn=91e5a157b4aa9958a27d0f606bc859c6&chksm=80790a97b70e8381874592d1bbe832f4170ad9680ee0989bf237250ae49356e7e771e345bbfa&scene=21#wechat_redirect)  
-[![](https://gitee.com/fuli009/images/raw/master/public/20210916203348.png)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203348.png)
 
 一个ZoomEye查询搜尽BazarLoader C2
 
 ](http://mp.weixin.qq.com/s?__biz=MzAxNDY2MTQ2OQ==&mid=2650949797&idx=2&sn=2727c913d67a863284da4cce2e1fc9d0&chksm=80790a97b70e838131a4ce6ab65044b72fb171c96802a3605772d44602eb90221e564971094d&scene=21#wechat_redirect)  
-[![](https://gitee.com/fuli009/images/raw/master/public/20210916203349.png)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203349.png)
 
 Golang的字符编码与regexp
 
@@ -409,7 +409,7 @@ Golang的字符编码与regexp
 **
 
  **觉得不错点个“在看”哦**
-**![](https://gitee.com/fuli009/images/raw/master/public/20210916203350.png)**
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916203350.png)**
 
 预览时标签不可点
 

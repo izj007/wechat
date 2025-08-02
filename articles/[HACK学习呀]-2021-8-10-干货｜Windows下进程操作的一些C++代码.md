@@ -69,7 +69,7 @@ Windows)%26rd%3Dtrue
     
     void ListProcess() {    HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);    PROCESSENTRY32 pe32 = { 0 };    pe32.dwSize = sizeof(PROCESSENTRY32);    BOOL bRet = Process32First(hSnap, &pe32);    while (bRet)    {        bRet = Process32Next(hSnap, &pe32);        printf(pe32.szExeFile);        pid = pe32.th32ProcessID;        wprintf(L"\r\n");        printf("pid:%d", pe32.th32ProcessID);        printf("\r\n-----------------------------------------");        wprintf(L"\r\n");    }    ::CloseHandle(hSnap);}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210810104555.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104555.png)
 
 # 0x02 模块遍历
 
@@ -101,7 +101,7 @@ Windows)%26rd%3Dtrue
     
     BOOL ListModule(char* ProcessName) {    Flag = CheckPorcess(ProcessName);    if (Flag) {        pid = GetProcessPid(ProcessName);        HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, pid);        MODULEENTRY32 me32 = { 0 };        me32.dwSize = sizeof(MODULEENTRY32);        BOOL bRet = Module32First(hSnap, &me32);        while (bRet)        {            bRet = Module32Next(hSnap, &me32);            printf(me32.szExePath);            printf("\r\n");        }        CloseHandle(hSnap);        return TRUE;    }        printf("[-]Process not found");    return FALSE;}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210810104603.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104603.png)
 
 # 0x03 遍历线程
 
@@ -148,7 +148,7 @@ dll加载：1.静态调用：通过在我们的程序中添加头文件，以及
     
     #include <Windows.h>__declspec(dllexport) void Test(){    MessageBox(NULL, NULL, NULL, NULL);}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210810104605.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104605.png)
 
 可以看到有一些脏数据。这里可以协商约定来解决 1.__stdcall 标准 栈传参，函数内部（被调用者）平栈 2. __cdecl c
 栈传参，函数外部（调用者）平栈 3. __fastcall 快速 寄存器传参 4. __thiscall
@@ -245,11 +245,11 @@ Demo.exe
 
 运行Demo.exe，然后先遍历模块
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210810104606.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104606.png)
 
 dll注入
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210810104608.png)![](https://gitee.com/fuli009/images/raw/master/public/20210810104609.png)![](https://gitee.com/fuli009/images/raw/master/public/20210810104611.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104608.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104609.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104611.png)
 
 # 0x06 PPID欺骗
 
@@ -272,9 +272,9 @@ PPID欺骗允许使用任意进程启动程序
 
 最后一个参数指定输入时lpAttributeList缓冲区的大小。si.lpAttributeList在堆中分配一块内存，分配的大小为前面的SizeBuff。然后再使用InitializeProcThreadAttributeList初始化进程和线程的属性列表最后使用UpdateProcThreadAttribute函数来更新进程和线程的指定属性，最后创建我们的进程。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210810104612.png)![]()
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104612.png)![]()
 
-**![](https://gitee.com/fuli009/images/raw/master/public/20210810104613.png)**
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104613.png)**
 
   
 
@@ -304,7 +304,7 @@ DLL劫持原理与实践](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2
 本月报名可以参加抽奖送BADUSB的优惠活动  
 
   
-[![](https://gitee.com/fuli009/images/raw/master/public/20210810104614.png)](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247498688&idx=1&sn=d81921a3873e254b0a135d9ffaa00468&chksm=ec1caeffdb6b27e9d129e1b00e92e01d49ccca43bb18f2388c733143557bfaaf62d0efd7f22f&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104614.png)](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247498688&idx=1&sn=d81921a3873e254b0a135d9ffaa00468&chksm=ec1caeffdb6b27e9d129e1b00e92e01d49ccca43bb18f2388c733143557bfaaf62d0efd7f22f&scene=21#wechat_redirect)
 
   
 
@@ -314,7 +314,7 @@ DLL劫持原理与实践](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2
 
 原创投稿作者：11ccaab
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210810104615.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810104615.png)
 
   
 

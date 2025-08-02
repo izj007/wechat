@@ -30,7 +30,7 @@ __
 
 一、软件界面
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220324084947.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220324084947.png)
 
   
 
@@ -119,7 +119,7 @@ exp注册模块：代码动态编辑、代码动态调试、支持资产对象
 
 好书推荐
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220324084958.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220324084958.png)
 
 >
 > 《C++码农日记（全程视频讲解）》共9章。第1章讲述程序员入职前的准备以及C++跨平台开发入门知识，着重介绍求职面试相关知识，以及Qt的安装配置、开发环境搭建、第三方跨平台库基础知识、配套资源等内容；第2~8章通过50多个实际案例讲述命令行程序的开发、DLL（动态链接库）的开发与第三方库的使用、跨平台文件操作、多线程和进程内（多线程间）通信、进程间通信、异步串口通信、数据库访问等常用开发技能；第9章通过一个数据中心的案例介绍C/S模式（Client/Server模式，客户端/服务器模式）软件的综合开发技能。本书提供的案例覆盖了C/S模式软件开发工作的常见场景。
@@ -132,7 +132,7 @@ exp注册模块：代码动态编辑、代码动态调试、支持资产对象
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220324084959.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220324084959.png)
 
   
 

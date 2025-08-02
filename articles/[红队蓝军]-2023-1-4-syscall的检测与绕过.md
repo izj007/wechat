@@ -37,7 +37,7 @@ ___发表于_
     }  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154228.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154228.png)
 
 此时的调用是非常明显的，能看到Ntdll中NtCreateThread的调用。
 
@@ -81,7 +81,7 @@ ___发表于_
 
 通过汇编直接NtCreateThreadEx在函数种通过syscall进入ring0
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154244.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154244.png)
 
     
     
@@ -97,11 +97,11 @@ ___发表于_
     end  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154245.png)![](https://gitee.com/fuli009/images/raw/master/public/20230104154247.png)![](https://gitee.com/fuli009/images/raw/master/public/20230104154248.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154245.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154247.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154248.png)
 
 通过procmon进行监控
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154253.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154253.png)
 
 此时直接通过我们的主程序进入ring0
 
@@ -136,13 +136,13 @@ ntdll中syscall被执行的格式大致
     objdump --disassemble -M intel "D:\C++ Project\bypass\syscall\x64\Release\syscall.exe" | findstr "syscall"  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154254.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154254.png)
 
 syscall也可以不直接写写死在文件种，比如先用垃圾指令写死在文件中，然后在运行的时候对这些垃圾指令进行修改重新为syscall，达到静态绕过的效果。
 
 这也正是SysWhispers3为了规避检测做的升级之一，称为EGG的手段。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154256.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154256.png)
 
 可以像这样编写ntapi
 
@@ -353,13 +353,13 @@ syscall也可以不直接写写死在文件种，比如先用垃圾指令写死�
 
 当你正常的程序使用系统调用的时候。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154301.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154301.png)
 
 此时你的流程是主程序模块->kernel32.dll->ntdll.dll->syscall，这样当0环执行结束返回3环的时候，这个返回地址应该是在ntdll所在的地址范围之内。
 
 那么如果是你自己直接进行系统调用。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154309.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154309.png)
 
 此时当ring0返回的时候，rip将会是你的主程序模块内，而并不是在ntdll所在的范围内，这点是很容易被检测也是比较准确的一种检测方式。
 
@@ -367,7 +367,7 @@ syscall也可以不直接写写死在文件种，比如先用垃圾指令写死�
 
 加下方wx，拉你一起进群学习
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154310.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154310.png)
 
   
 
@@ -406,7 +406,7 @@ PPL攻击详解
 域内持久化后门
 
 ](https://mp.weixin.qq.com/s?__biz=Mzg2NDY2MTQ1OQ==&mid=2247503705&idx=1&sn=7a6039810c41637e376757f306ab6745&chksm=ce6775e5f910fcf3226422091a3858b8064fa353320e48c4a4998ed5b89f51febe82e992309d&scene=21#wechat_redirect)  
-![](https://gitee.com/fuli009/images/raw/master/public/20230104154312.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230104154312.png)
 
 预览时标签不可点
 

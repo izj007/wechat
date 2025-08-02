@@ -100,7 +100,7 @@ __
 
 测试SharpKatz
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210830111919.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830111919.png)
 
 体积有点大。
 
@@ -112,11 +112,11 @@ __
 
 Bingo
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210830111920.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830111920.png)
 
 体积只有800k。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210830111921.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830111921.png)
 
 现在还没法执行自定义参数，源码修改后如下:
 
@@ -150,7 +150,7 @@ Bingo
     var arr = toCLRVariant(cmd, VT_BSTR)  
     assembly.EntryPoint.Invoke(nil, toCLRVariant([arr]))
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210830111922.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830111922.png)
 
   
 
@@ -164,7 +164,7 @@ nim感觉搞懂winim这个库就能写好多小工具了。
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210830111923.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830111923.png)
 
 插播一条广告，使用语雀开了一个红队知识库的空间，免费共享。
 

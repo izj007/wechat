@@ -14,7 +14,7 @@ __
 
 收录于话题
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211022213844.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022213844.png)
 
 Zuthaka是一款开源的应用程序，旨在帮助红队研究人员完成安全分析与管理任务。Zuthaka可以简化很多操作任务，比如说针对不同APT和其他后渗透工具的管理等等。
 
@@ -26,7 +26,7 @@ Zuthaka是一款开源的应用程序，旨在帮助红队研究人员完成安�
 
  **下面给出的是Zuthaka的框架结构：**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211022213849.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022213849.png)
 
 ## Zuthaka组件
 
@@ -90,7 +90,7 @@ Zuthaka由一个前端和一个后端组成。前端负责提供UI界面，其�
 
 https://docs.zuthaka.com/
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211022213850.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022213850.png)  
 
   
 
@@ -102,15 +102,15 @@ https://docs.zuthaka.com/
   
   
  **
-**![](https://gitee.com/fuli009/images/raw/master/public/20211022213851.png)****  
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022213851.png)****  
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20211022213852.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486647&idx=1&sn=13ae89f5104291b30864af54ff28ceda&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022213852.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486647&idx=1&sn=13ae89f5104291b30864af54ff28ceda&scene=21#wechat_redirect)
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20211022213853.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486625&idx=1&sn=b68fcc53d322bb9a2e43d00a112ca40d&chksm=ce1cf63ef96b7f287356248af6a7c190268d07993c30b87488a27f8b1a6cb71f68be08ea4b78&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022213853.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486625&idx=1&sn=b68fcc53d322bb9a2e43d00a112ca40d&chksm=ce1cf63ef96b7f287356248af6a7c190268d07993c30b87488a27f8b1a6cb71f68be08ea4b78&scene=21#wechat_redirect)
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20211022213855.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486586&idx=1&sn=8fb235328402751e06c0578e05f3c905&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022213855.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486586&idx=1&sn=8fb235328402751e06c0578e05f3c905&scene=21#wechat_redirect)
 ** ** ** ** ** **
-**![](https://gitee.com/fuli009/images/raw/master/public/20211022213856.png)**************
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022213856.png)**************
 
 预览时标签不可点
 

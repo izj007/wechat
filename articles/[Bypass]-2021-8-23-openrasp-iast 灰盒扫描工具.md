@@ -42,7 +42,7 @@ openrasp-iast 是一款灰盒扫描工具，能够结合应用内部hook点信�
 
 （2）使用默安账户登录控制台，添加一个新应用。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823082029.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823082029.png)
 
 （3）切换到新的应用test，点击右上角的添加主机，安装agent。
 
@@ -50,7 +50,7 @@ openrasp-iast 是一款灰盒扫描工具，能够结合应用内部hook点信�
 
 PS：遇到重启PHP服务报错，需要查看openrasp.so 路径，如复制不成功，手工复制过去即可。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823082030.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823082030.png)
 
  （4）安装iast扫描器
 
@@ -60,21 +60,21 @@ PS：遇到重启PHP服务报错，需要查看openrasp.so 路径，如复制不
     
     wget https://packages.baidu.com/app/openrasp/openrasp-iast-latest -O /usr/bin/openrasp-iast
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823082031.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823082031.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823082032.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823082032.png)
 
 复制上面的最后一个url，设置为Fuzz 服务器地址。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823082033.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823082033.png)
 
 （5）启动扫描，访问站点触发。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823082034.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823082034.png)
 
 (6) 查看漏洞列表
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210823082035.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823082035.png)
 
 ![]()
 

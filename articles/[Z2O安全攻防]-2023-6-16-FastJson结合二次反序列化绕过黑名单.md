@@ -249,29 +249,29 @@ SignedObject#getObject。**
 
 通过`SingedObject`绕过了黑名单对于`Templates`的校验。触发`BadAttributeValueExpException#readObject`，通过`gf.get`获取`JsonArray`。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191340.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191340.png)
 
 从`JSON#toString`触发`JSON#toJSONString`，并在下图断点处`getter`方法。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191341.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191341.png)
 
 进入到`JSONSerializer#write`方法，首先获取`object`的类名，随后，将触发`ListSerializer`。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191342.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191342.png)
 
 接下来触发`ListSerializer#write`一段很长的方法，主要就是进入到`for`循环把`list`的东西取出来进行后续操作。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191343.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191343.png)
 
 后面比较复杂，总之就是通过`createJavaBeanSerializer`创建`ObjectSerializer`对象。通过`ASM`技术创建目标类（在这里是`SignedObject`）进行后续的处理。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191344.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191344.png)
 
   
 
 进入到了`ASMSerializerFactory#generaterWriteMethod`，可以看到他就是把`SignedObject`重构出来了。获取到该类的三个字段并一个一个触发对应的`getter`方法。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191345.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191345.png)
 
 最终触发了`SignedObject#getObject`进行了二次反序列化。
 
@@ -279,11 +279,11 @@ SignedObject#getObject。**
 
 同样的，通过了`JSONArray#toString`最终通过`ASMSerializerFactory#_get`触发`TemplatesImpl#getOutputProperties`方法实现`RCE`。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191346.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191346.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191347.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191347.png)
 
   
 
@@ -314,13 +314,13 @@ SignedObject#getObject。**
 涉及方向包括Web渗透、免杀绕过、内网攻防、代码审计、应急响应、云安全。星球中已发布 300+
 安全资源，针对网络安全成员的普遍水平，并为星友提供了教程、工具、POC&EXP以及各种学习笔记等等。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191348.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191348.png)
 
 ### 学习圈子
 
 一个引导大家一起成长，系统化学习的圈子。如果看到这里的师傅是基础不够扎实/技术不够全面/入行安全不久/有充足时间的初学者...其中之一，那么欢迎加入我们的圈子。在圈子内会每周规划学习任务，提供资料、技术文档，供大家一起学习、交流，由浅入深、层层递进。（[点我了解详情](http://mp.weixin.qq.com/s?__biz=Mzg2ODYxMzY3OQ==&mid=2247496937&idx=1&sn=5cc9c27f57a18d54246f3d00987fa7e9&chksm=ceab1fa9f9dc96bf75a5c9b52ba7a7e61a4ee0114c3f9b0ad70278d52bb1d1cb06aa346789e4&scene=21#wechat_redirect)）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191349.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191349.png)
 
  ****
 
@@ -329,9 +329,9 @@ SignedObject#getObject。**
 关注公众号回复“ **加群** ”，添加Z2OBot好友，自动拉你加入 **Z2O安全攻防交流群(微信群)** 分享更多好东西。
 **（QQ群可直接扫码添加）**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191350.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191350.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230616191351.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616191351.png)
 
 ### 关注我们
 

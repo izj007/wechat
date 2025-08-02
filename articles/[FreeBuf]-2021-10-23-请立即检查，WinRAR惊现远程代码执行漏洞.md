@@ -25,7 +25,7 @@ Sakovskiy表示，“这个漏洞允许攻击者拦截和修改系统发送给�
 
 安全专家在安装了WinRAR后，发现它存在一个JavaScript 错误，具体表现形式是，在浏览器中弹出下图这样的错误窗口。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211023182336.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211023182336.png)
 
 经过一系列的测试之后，安全专家发现软件试用期满后，软件会开始显示错误消息，基本上是每三次执行一次。这个弹出“错误显示”的窗口是通过系统文件mshtml.dll报错来实现，它和WinRAR一样，都是用
 Borland的 C++语言编写的。
@@ -38,7 +38,7 @@ WinRAR在软件试用期结束后，会通过“notifier.rarlab[.]com”来提�
 
 随后，我们试图拦截、修改WinRAR发送给用户的反馈信息，而不是去拦截和更改默认域，让“notifier.rarlab.com”每次都响应我们的恶意内容。我们进一步发现，如果如果响应代码被更改为“301永久移动”，并重定向缓存到我们的“attacker.com”恶意域，这样所有的请求都会转到“attacker.com”。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20211023182343.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211023182343.png)
 
 最后，安全专家指出，第三方软件中的漏洞会对企业和组织产生严重风险。这些漏洞的存在，可以让攻击者访问系统的任何资源，甚至是访问托管网络中的所有资源。
 
@@ -60,13 +60,13 @@ https://securityaffairs.co/wordpress/123652/hacking/winrar-trial-flaw.html
   
   
  **
-**![](https://gitee.com/fuli009/images/raw/master/public/20211023182344.png)****  
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211023182344.png)****  
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20211023182345.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486647&idx=1&sn=13ae89f5104291b30864af54ff28ceda&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211023182345.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486647&idx=1&sn=13ae89f5104291b30864af54ff28ceda&scene=21#wechat_redirect)
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20211023182346.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486625&idx=1&sn=b68fcc53d322bb9a2e43d00a112ca40d&chksm=ce1cf63ef96b7f287356248af6a7c190268d07993c30b87488a27f8b1a6cb71f68be08ea4b78&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211023182346.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486625&idx=1&sn=b68fcc53d322bb9a2e43d00a112ca40d&chksm=ce1cf63ef96b7f287356248af6a7c190268d07993c30b87488a27f8b1a6cb71f68be08ea4b78&scene=21#wechat_redirect)
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20211023182347.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486586&idx=1&sn=8fb235328402751e06c0578e05f3c905&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211023182347.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486586&idx=1&sn=8fb235328402751e06c0578e05f3c905&scene=21#wechat_redirect)
 ** ** ** ** ** ** **![]()**************
 
 预览时标签不可点

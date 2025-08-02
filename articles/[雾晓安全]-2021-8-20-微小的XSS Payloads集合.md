@@ -119,7 +119,7 @@ __
 
  **演示：**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820084316.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820084316.png)
 
  **Payloads 获取**
 
@@ -133,7 +133,7 @@ ID：61345404
 
 欢迎各位师傅通过微信扫描加入网络安全攻防WiKi，本星球宗旨以免费共享发展为前提，主要以网络安全攻防技术共享交流，覆盖网络安全资料，以及岗位内推。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210820084317.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820084317.png)
 
 ![]()
 
@@ -142,7 +142,7 @@ ID：61345404
 > 内容来源网络，版权归原创者所有，禁止使用本项目的任何形式进行发起网络攻击，阻止一切网络犯罪行为，一切信息禁止用于任何非法用途。除非无法确认，都会标明作者及出处，如有侵权烦请告知，我们会立即删除并致歉。谢谢！
 
 觉得不错点个“ **赞** ”、“ **在看**
-”，支持下小编![](https://gitee.com/fuli009/images/raw/master/public/20210820084318.png)
+”，支持下小编![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820084318.png)
 
 预览时标签不可点
 

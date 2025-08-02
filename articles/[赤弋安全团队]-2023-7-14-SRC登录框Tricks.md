@@ -108,7 +108,7 @@ Jupyter Notebook 未授权访问漏洞
 
 #### 任意密码重置
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714173937.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714173937.png)
 
 此时客户端会发一个验证码包，这是随意输入验证码，发包，返回包  
 返回包错误的回显为{“status”:0}，将返回包的东西换成{“status”:1}，即可重置密码。
@@ -183,7 +183,7 @@ redir后面的可能会进行base64编码
 3、oa历史漏洞  
 4、使用fofa、浏览器插件wappalyzer等收集资产，然后拿漏洞库的poc去尝试  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714173939.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714173939.png)
 
 ### 弱口令
 
@@ -191,7 +191,7 @@ redir后面的可能会进行base64编码
 
 很多设备都有默认密码  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714173940.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714173940.png)
 
 特别是一些厂商设备弱口令很常见。
 
@@ -264,7 +264,7 @@ lihao123等密码进行登录，此方法需要很大耐心，但是十分有效
 
 ### 加微信，进群交流SRC技术
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714173941.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714173941.png)
 
 > 文章来源：https://blog.csdn.net/q20010619  
 >  文章作者：OceanSec

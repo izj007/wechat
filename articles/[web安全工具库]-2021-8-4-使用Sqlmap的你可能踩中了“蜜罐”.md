@@ -121,7 +121,7 @@ data数据中，以达到隐藏自身的目的。
 
 访问该页面，进行查询时，发送到请求为：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805091134.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091134.png)
 
 这时，很多没有经验的安全渗透人员就可能将postdata，复制，粘贴，sqlmap执行之：
 
@@ -193,11 +193,11 @@ Double Kill！
 
 欢迎关注视频号：之乎者也吧
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805091135.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091135.png)
 
 ![]()
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210805091136.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091136.png)
 
 预览时标签不可点
 

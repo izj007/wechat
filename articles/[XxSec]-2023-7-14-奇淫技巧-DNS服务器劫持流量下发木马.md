@@ -16,13 +16,13 @@ ___发表于_
 
 有时候我们在对没域的目标，或者对移动用户进行渗透的时候会很难下手，除了使用u盘感染，或者进行发送钓鱼邮件，好像没其他好的办法了，后面想着要是能把目标机构或者A国的某些知名的dns服务器控制了，使用dns下发木马的方式会不会事半功倍？
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181045.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181045.png)
 
   
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181047.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181047.png)
 
   
 

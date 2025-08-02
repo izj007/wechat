@@ -34,7 +34,7 @@ args就按照mimikatz正常的参数来就好。
 
 ## 配合内存加载
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210809085731.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809085731.png)
 
   
 

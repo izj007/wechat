@@ -18,7 +18,7 @@ __
 
 项目地址：https://github.com/secdev-01/Mimikore
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210830180306.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830180306.png)
 
 dotnet core可以打包成大文件，但是体积太大了  
 
@@ -26,13 +26,13 @@ dotnet core可以打包成大文件，但是体积太大了
     
     dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true --self-contained true
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210830180324.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830180324.png)
 
 一个mimikatz打包下来20M，免杀有点效果，当作学习思路吧。
 
 https://www.virustotal.com/gui/file/2a7a24e81c5672f694d2adc18a5b0c0713910d3711924a218e7cc8229e1464f1/detection
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210830180325.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830180325.png)
 
 
 

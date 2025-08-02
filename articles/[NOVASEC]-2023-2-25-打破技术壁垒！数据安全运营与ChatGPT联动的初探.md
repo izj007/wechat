@@ -38,7 +38,7 @@ A9 Team
 
  **本文章只用于技术交流，若使用本文章提供的技术信息进行非法操作，后果均由使用者本人负责。**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215640.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215640.png)
 
  **前言**  
 
@@ -54,7 +54,7 @@ A9 Team
 
 
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215642.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215642.png)
 
   
 
@@ -66,7 +66,7 @@ A9 Team
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215643.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215643.png)
 
     本文仅讨论数据安全运营的技术问题，作者仅是一个数据安全的运营人员，所学的知识仅仅是运营知识和技术，关于数据安全的体系框架还是一个新手村的菜鸟，难登大雅之堂，就不班门弄斧了，只分享一下作者在日常运营上技术方面跟ChatGPT联动，再畅想一下未来的人工智能，各位看官乐呵乐呵，如有错误，欢迎各位看官指正。
 
@@ -76,7 +76,7 @@ A9 Team
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215645.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215645.png)
 
     对于各种信息的正则表达式，每家的安全设备都有各自的默认规则，在应对公司不一样的场景中，有的规则无法识别或者是识别精确率有待提高，运营人员在运营的过程中需要优化规则，在修改的过程中又可能因缺乏技术、不了解具体正则表达原理，出现优化完后还存在需要提高精确率的问题，在网上寻找修改大同小异，很难去进一步优化。
 
@@ -88,7 +88,7 @@ A9 Team
 
     在优化的过程中不断测试不同场景，提高识别率，精确数据的资产，这个过程非常漫长，除了需要对正则表达式很熟悉之外，还要对场景可能会出现的问题要非常熟悉。在ChatGPT还未出现时，这些问题存在不少困扰，但ChatGPT的出现降低了我们的难题。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215647.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215647.png)
 
   
 
@@ -96,7 +96,7 @@ A9 Team
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215648.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215648.png)
 
 ChatGPT提供的正则表达：
 
@@ -104,7 +104,7 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215649.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215649.png)
 
 第一次优化的正则表达：
 
@@ -112,9 +112,9 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215650.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215650.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215651.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215651.png)
 
 第二次优化来的正则表达：
 
@@ -122,7 +122,7 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215654.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215654.png)
 
 第三次优化的正则表达跟第二次是一样的：
 
@@ -130,7 +130,7 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215655.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215655.png)
 
 第四次优化时与ChatGPT交流可以看到像跟人类一样交流，当发现自己错误时会承认错误，然后纠正自己的错误，第四次正则表达：
 
@@ -138,7 +138,7 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215657.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215657.png)
 
 第五次优化正则表达：
 
@@ -146,13 +146,13 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215659.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215659.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215700.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215700.png)
 
     可以看到与ChatGPT沟通交流时，我们不断在问问题，ChatGPT会根据上下文不断去完善我们所要的答案，真正做到了像人类一样来聊天交流，有来有回的回答，只要你问，它就不断修正自己给你的答案。这个过程比起去网上找答案的时间还短，也更精确。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215647.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215647.png)
 
  ****
 这也是为什么ChatGPT会引爆互联网圈，有人认为是人工智能的转折点，真正的AI时代来临，国内大厂纷纷争着做出另一款ChatGPT，确实，它是真的香。
@@ -163,7 +163,7 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215703.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215703.png)
 
     除了可以拿来实现技术手段外，也能指导如何开展数据安全工作，成为工作中的百科小能手，无所不知的“安全小顾问”。但是在使用时请注意数据的泄露，切记不要将公司内部文件及个人敏感信息放到ChatGPT上提问，毕竟不属于公司内部产品，把公司内部数据放到ChatGPT上因为数据脱离公司内部可控范围内导致存在风险隐患。
 
@@ -199,7 +199,7 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215704.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215704.png)
 
   
 
@@ -217,13 +217,13 @@ ChatGPT提供的正则表达：
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215705.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215705.png)
 
 ✦
 
 ✦  ✦
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230225215706.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230225215706.png)
 
  **公众号｜A9 Team  
 **

@@ -24,7 +24,7 @@ ___发表于_
 
 #vCenter 1 个
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629201609.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201609.png)
 
 ****
 
@@ -65,7 +65,7 @@ vpxuser密文解密的过程如下：
     
     /etc/vmware-vpx/vcdb.propertiesC:\ProgramData\VMware\vCenterServer\cfg\vmware-vps\vcdb.properties
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629201611.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201611.png)
 
 使用数据库凭据登录数据库  
 
@@ -76,7 +76,7 @@ vpxuser密文解密的过程如下：
     /opt/vmware/vpostgres/current/bin/psql -d VCDB -U vc -w <Password>
 
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629201612.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201612.png)
 
 ###  **vpxv_vms表相关信息**
 
@@ -97,7 +97,7 @@ vpxv_vms字段如下
     
     SELECT vmid,name,configfilename,guest_state,is_template FROM vpxv_vms;
 
- **![](https://gitee.com/fuli009/images/raw/master/public/20230629201614.png)  
+ **![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201614.png)  
 **寻找正在运行的虚拟机
 
   * 
@@ -106,7 +106,7 @@ vpxv_vms字段如下
     
      SELECT vmid,name,configfilename,guest_state,is_template FROM vpxv_vms where guest_state='running';
 
- **![](https://gitee.com/fuli009/images/raw/master/public/20230629201615.png)  
+ **![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201615.png)  
 **
 
  **获取vpxuser密文**  
@@ -119,18 +119,18 @@ vpxv_vms字段如下
     
     SELECT user_name, password FROM vc.vpx_host;
 
- **![](https://gitee.com/fuli009/images/raw/master/public/20230629201617.png)  
+ **![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201617.png)  
 **
 
  **0x04 加密算法**  
 
 这里用到的是AES_256_CBC加密算法，还需要获取密钥key和iv初始化向量密钥key是保存在/etc/vmware-
-vpx/ssl/symkey.dat文件中的![](https://gitee.com/fuli009/images/raw/master/public/20230629201618.png)  
+vpx/ssl/symkey.dat文件中的![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201618.png)  
   
 iv是密文base64解密之后的前16位  
 0746243b3b7d8f0c19bfd62d10bac3ea
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629201620.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201620.png)
 
   
 
@@ -138,17 +138,17 @@ key和iv都确定之后 开始解密
 
 需要解密的密文是base64之后去掉前16位之后的剩余部分
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629201621.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201621.png)
 
 成功解密  
   
-![](https://gitee.com/fuli009/images/raw/master/public/20230629201622.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201622.png)
 
   
 
 使用python脚本解密如下
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629201624.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201624.png)
 
   
 
@@ -166,7 +166,7 @@ escalation-in-vmware-vcenter-pentera-labs/
 
 https://mp.weixin.qq.com/s/Q91wk8BIUO5cAp6_7_pt1A  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629201625.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629201625.png)
 
 预览时标签不可点
 

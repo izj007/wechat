@@ -245,13 +245,13 @@ Xerte项目旨在为世界各地的教育工作者提供高质量的免费软件
                   
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175644.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175644.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175645.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175645.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714175646.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175646.png)
 
 后台回复“粉丝群”加入公众号粉丝群
 

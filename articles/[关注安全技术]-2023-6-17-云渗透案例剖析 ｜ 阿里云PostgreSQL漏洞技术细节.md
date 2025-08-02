@@ -46,7 +46,7 @@ private-registry-allowed-potential-r
 >
 > https://blog.csdn.net/f_carey/article/details/109686310
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194531.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194531.png)
 
 > 第一个是虚拟库文件用于和内核交互
 >
@@ -98,13 +98,13 @@ private-registry-allowed-potential-r
     
     gcc -fPIC -c rootshell.cgcc -shared -o librootshell.so rootshell.ocp /bin/bash /bin/dashpatchelf --set-interpreter ./librootshell.so dashcp librootshell.so /u01/adbpg/lib/libgcc_s.so.1最后，等待/usr/bin/tsar被执行
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194532.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194532.png)
 
 这里完成了第一步，通过计划任务提升至root权限
 
 通过调用阿里云门户中的某些操作（例如启用 SSL 加密），我们观察到 SCP 和 SSH 等多个进程的产生。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194533.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194533.png)
 
 启用/禁用 SSL 加密的选项
 
@@ -147,7 +147,7 @@ private-registry-allowed-potential-r
 
 然后我们将 SUID 二进制文件复制到共享主目录，这样我们就可以在第二个容器中以 root 身份执行代码。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194534.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194534.png)
 
 成功地从第一个容器横向移动到第二个容器后，我们能从这个新的位置做些什么呢？
 
@@ -230,7 +230,7 @@ https://docs.docker.com/engine/api/v1.40/
 
 例如我们可以覆盖rds_postgres_*REDACTED*属于另一个服务的图像。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194535.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194535.png)
 
 #### 环境变量问题
 
@@ -273,7 +273,7 @@ PostgreSQL 实例容器的侦察揭示了与 AnalyticDB 不同的环境。因此
 
 然后，我们在阿里云门户中搜索有趣的功能以利用 AnalyticDB，并偶然发现了吊销文件配置。在幕后，它触发了这些日志：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194536.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194536.png)
 
 红色高亮的部分是显示执行命令的日志。虽然这些命令是在第二个容器中执行的，但它们修改了与我们的数据库容器共享的配置文件。sedsed/data/pg_hba.conf
 
@@ -307,13 +307,13 @@ PostgreSQL 实例容器的侦察揭示了与 AnalyticDB 不同的环境。因此
 
 阿里云提供了一项功能，可以在继续进行选定的升级之前验证 PostgreSQL 实例是否可以升级到较新的版本。这是为了避免损坏数据库。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194537.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194537.png)
 
 我们在检索到的代码中审核了此功能，发现了一个命令行注入漏洞，该漏洞允许我们在负责此操作的容器中执行代码。
 
 这是易受攻击的功能：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194538.png)该参数未经任何清理就被格式化为命令行；该命令稍后以root权限执行！但我们能控制吗？是的，它是通过以下查询从我们的数据库中选择的：install_user
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194538.png)该参数未经任何清理就被格式化为命令行；该命令稍后以root权限执行！但我们能控制吗？是的，它是通过以下查询从我们的数据库中选择的：install_user
 install_user
 
     
@@ -402,13 +402,13 @@ pod，并观察到租户的几个数据库位于同一个节点上。就在那�
 
 云渗透课程618活动，原价2700，打折后2399，最后一天。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194539.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194539.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194540.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194540.png)
 
 Vx:
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230617194541.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194541.png)
 
 预览时标签不可点
 

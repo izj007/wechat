@@ -21,7 +21,7 @@ __
 
 #Kerberos协议 4
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210804120610.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210804120610.png)
 
 ## 前言
 
@@ -77,7 +77,7 @@ Server，且该 Ticket 只针对这一个 Server 有效。6.最终 Server 和 Cl
 
 该阶段是 Client 和 AS 的认证，通过认证的客户端将获得 TGT 认购权证。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210804120611.png)image-20210506094949950
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210804120611.png)image-20210506094949950
 
 当域内某个客户端用户 Client 视图访问域内的某个服务，于是输入用户名和密码，此时客户端本机的 Kerberos 服务会向 KDC 的 AS
 认证服务发送一个 `AS_REQ` 认证请求。请求的凭据是 Client 的哈希值 NTLM-Hash 加密的时间戳以及 Client-
@@ -128,7 +128,7 @@ ST。然后 TGS 将这两部分信息回复给 Client，即 `TGS_REP` 。
 
 该阶段是 Client 和 TGS 的认证，通过认证的客户端将与服务器建立连接。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210804120612.png)image-20210506095349321
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210804120612.png)image-20210506095349321
 
 客户端 Client 收到 `TGS_REP` 后，分别获得了 ST 和加密的 Session-Key TGS。它会先使用本地缓存了的 Session-
 key AS 解密出了原始的 Session-key TGS。然后它会在本地缓存此 ST 和原始的 Session-Key
@@ -214,7 +214,7 @@ preauthentication"（该选项默认没有开启）关闭了预身份验证的�
 
 ## Ending......
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210804120613.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210804120613.png)
 
 本节中我们对 Kerberos 协议与 Kerberos 认证原理分模块进行详细的讲解。在下篇文章，我们将详细的讲解 Kerberos
 认证原理的安全问题并演示相关的攻击过程。
@@ -231,7 +231,7 @@ preauthentication"（该选项默认没有开启）关闭了预身份验证的�
 
   
 
-[![](https://gitee.com/fuli009/images/raw/master/public/20210804120614.png)](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247496998&idx=1&sn=da047300e19463fc88fcd3e76fda4203&chksm=ec1ca019db6b290f06c736843c2713464a65e6b6dbeac9699abf0b0a34d5ef442de4654d8308&scene=21#wechat_redirect)
+[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210804120614.png)](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247496998&idx=1&sn=da047300e19463fc88fcd3e76fda4203&chksm=ec1ca019db6b290f06c736843c2713464a65e6b6dbeac9699abf0b0a34d5ef442de4654d8308&scene=21#wechat_redirect)
 
   
 
@@ -243,7 +243,7 @@ preauthentication"（该选项默认没有开启）关闭了预身份验证的�
 
 文章首发在Freebuf
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210804120615.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210804120615.png)
 
   
 

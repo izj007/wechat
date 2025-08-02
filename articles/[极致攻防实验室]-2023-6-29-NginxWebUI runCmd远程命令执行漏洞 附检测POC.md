@@ -34,7 +34,7 @@ nginx.conf文件，同时可控制 nginx使用此文件进行启动与重载，�
 NginxWebUI未对后台功能做有效的身份认证与用户的输入进行安全过滤，导致在权限绕过后可直接访问后台执行任意命令，最终可以达到无条件远程命令执行的效果。  
  **漏洞检测：**  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083212.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083212.png)
 
 nuclei检测：
 
@@ -46,7 +46,7 @@ nuclei检测：
 
 ‍
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083214.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083214.png)
 
 nuclei-templates:https://github.com/UltimateSec/ultimaste-nuclei-
 templates/blob/main/nginxwebui/nginxwebui-runcmd-rce.yaml  

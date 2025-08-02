@@ -38,9 +38,9 @@ __
 
 ####  **5.2 版本报错**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212743.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212743.png)  
  **5.3
-版本报错**![](https://gitee.com/fuli009/images/raw/master/public/20220416212758.png)  
+版本报错**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212758.png)  
 
 ####  **5.4 版本报错**
 
@@ -48,7 +48,7 @@ __
 
 ####  **7.3.4 成功执行命令**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212800.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212800.png)
 
   
 
@@ -64,17 +64,17 @@ __
 
 ####  **5.3 执行命令失败**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212801.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212801.png)
 
   
 
 ####  **7.3 执行命令失败**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212802.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212802.png)  
 
 ####  **5.2 成功执行**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212803.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212803.png)
 
   
 
@@ -92,15 +92,15 @@ __
 
 ####  **7.3 命令执行失败**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212805.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212805.png)  
 
 ####  **5.2 命令执行失败**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212806.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212806.png)  
 
 ###  **5.3 命令执行成功**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212807.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212807.png)  
 除此之外，还有很多种利用版本差异性来bypass一些没有对所有版本进行检测更新的所谓的"先进waf"。  
 当然，对于我们可以结合垃圾数据，变形混淆，以及大量特殊字符和注释的方式来构造更多的payload,毕竟每家的waf规则不同，配置也不同，与一些传输层面的bypass进行结合产生的可能性就会非常多样。  
  **例如：**
@@ -171,7 +171,7 @@ CDATA部分内容会被解析器忽略，此时ameter依旧会与getPar拼接成
     f16le = open('utf-16le.jsp','wb')f16le.write('<jsp:directive.page contentType="charset=utf-16le"/>')f16le.write(data.encode('utf-16le'))  
     fcp037 = open('cp037.jsp','wb')fcp037.write(data.encode('cp037'))fcp037.write('<%@ page contentType="charset=cp037"/>')
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212808.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212808.png)
 
   
 
@@ -204,7 +204,7 @@ aspx免杀的方式相对于PHP和java的较少，这里列出5种方式来bypas
 
 这一步无需多言，一定是会被D盾所查杀的
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212809.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212809.png)  
 
 ####  **1、unicode编码**
 
@@ -269,7 +269,7 @@ aspx免杀的方式相对于PHP和java的较少，这里列出5种方式来bypas
     
     (Context.Session["payload"] == null)(@Context.@Session["payload"] == null)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212810.png)![](https://gitee.com/fuli009/images/raw/master/public/20220416212812.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212810.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212812.png)
 
   
 
@@ -285,9 +285,9 @@ aspx免杀的方式相对于PHP和java的较少，这里列出5种方式来bypas
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212813.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212813.png)  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220416212814.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220416212814.png)
 
 [蓝队应急响应姿势之Linux](http://mp.weixin.qq.com/s?__biz=MzUyMTA0MjQ4NA==&mid=2247523380&idx=1&sn=27acf248b4bbce96e2e40e193b32f0c9&chksm=f9e3f36fce947a79b416e30442009c3de226d98422bd0fb8cbcc54a66c303ab99b4d3f9bbb05&scene=21#wechat_redirect)  
 

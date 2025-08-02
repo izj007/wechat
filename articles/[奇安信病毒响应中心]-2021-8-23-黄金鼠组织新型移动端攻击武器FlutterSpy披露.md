@@ -24,7 +24,7 @@ __
 
 通过奇安信病毒响应中心移动安全团队的内部分析关联系统和奇安信威胁情报平台（https://ti.qianxin.com/）追踪分析，我们发现到黄金鼠组织在今年4月初采用了一个VPN相关的钓鱼网站进行移动端新武器FlutterSpy载荷投递。此次涉及的钓鱼网站及对应载荷可参考下图。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210824191645.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210824191645.png)
 
 图2.1 VPN相关的钓鱼网站截图
 
@@ -35,25 +35,25 @@ __
 通过分析发现，此次黄金鼠组织投入的移动端攻击FlutterSpy，应该是其为了躲避已被多家安全厂商识别的移动端武器Raddex而进行的一种新尝试。这种采用新语言或者新框架开发进行更换攻击武器的方式更多的出现在这几年的windows平台上的高级威胁攻击中，可见攻击者的攻击手法在不同平台上本质是具有一致性的。
 FlutterSpy使用Flutter开发，此次攻击者直接修改了一个VPN开源项目，直接插入窃取设备和通讯录信息恶意功能。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210824191702.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210824191702.png)
 
 图3.1 开源正常VPN与FlutterSpy代码入口对比
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210824191703.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210824191703.png)
 
 图3.2 FlutterSpy窃取设备IMEI
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210824191704.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210824191704.png)
 
 图3.3 FlutterSpy窃取联系人信息
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210824191705.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210824191705.png)
 
 图3.4 通过反射调用方式获取联系人信息
 
@@ -67,7 +67,7 @@ FlutterSpy使用Flutter开发，此次攻击者直接修改了一个VPN开源项
 
 （2）其中的C&C为89.38.149.227，而89.38.149.227 是该组织于去年12月开始投入使用的一个网络资产。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210824191706.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210824191706.png)
 
 （3）今年唯一发现到的一款黄金鼠移动端武器Raddex，也是伪造成VPN相关应用，且其C&C和此次保持一致。
 

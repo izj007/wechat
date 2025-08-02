@@ -21,56 +21,56 @@ __
 
 Tide安全团队以信安技术研究为目标，致力于分享高质量原创文章、开源安全工具、交流安全技术，研究方向覆盖网络攻防、Web安全、移动终端、安全开发、物联网/工控安全/AI安全等多个领域，对安全感兴趣的小伙伴可以关注我们。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101228.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101228.png)  
 逛公众号的时候看到了大佬提供的靶场，闲来无事正好拿来练练手学习一下，
 感谢大佬的无私分享。感兴趣的同学可以去原文章中找一下环境地址，这里就不外放了，尊重作者版权。
 
 ## 目标设定
 
 一台出网主机，三台域内机器，获取域控桌面下的flag即为完成任务  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101240.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101240.png)
 
 ## weblogic反序列化，powershell上线CS
 
   
 
   * 已知服务器地址为192.168.92.137，开放7001端口，扫描发现存在weblogic反序列化漏洞CVE_2020_2551  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101241.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101241.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101242.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101242.png)  
 
   * tasklist无杀软，administrator权限  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101243.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101243.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101244.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101244.png)
 
   
 
   * powershell上线CS  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101245.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101245.png)
 
 ## 内网信息收集
 
   * 内网信息收集，发现为双网卡机器  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101246.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101246.png)  
 
   * 搭frp代理进内网  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101247.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101247.png)  
 
   * fscan扫内网10段，可以看到有一台ms17010以及mssql弱口令sa&sa  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101248.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101248.png)  
 
   * 工具连接mssql，服务器低权限，不出网  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101250.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101250.png)  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101251.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101251.png)  
 ![]()  
 ipconfig /all可以看到是域内机器，ping该域名可获得域控IP地址 10.10.10.8  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101252.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101252.png)  
 
 ## 利用GPP获取域控administrator密码
 
@@ -108,7 +108,7 @@ Freebuf的这篇文章http://www.freebuf.com/vuls/92016.html讲了GPP的应用�
     
     dir /s /a \\redteam.red\SYSVOL\redteam.red\Groups.xml
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101254.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101254.png)  
 获取到groups.xml文件，打开获取到cpassword字段
 
     
@@ -123,7 +123,7 @@ Freebuf的这篇文章http://www.freebuf.com/vuls/92016.html讲了GPP的应用�
     
     administrator/Admin12345
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101255.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101255.png)
 
 ## IPC横向访问域控获取flag
 
@@ -135,14 +135,14 @@ Freebuf的这篇文章http://www.freebuf.com/vuls/92016.html讲了GPP的应用�
     shell net use \\10.10.10.8\ipc$ "Admin12345" /user:redteam.red\administrator
 
   
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101256.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101256.png)
 
   
 
   * 至此可以接管域控，以administrator权限执行命令。
 
   * 访问域控上的资源，获取 flag.txt  
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101257.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101257.png)
 
 ## 总结
 
@@ -177,7 +177,7 @@ Tide安全团队正式成立于2019年1月，是新潮信息旗下以互联网�
 
 团队作为“省级等保关键技术实验室”先后与哈工大、齐鲁银行、聊城大学、交通学院等多个高校名企建立联合技术实验室。团队公众号自创建以来，共发布原创文章370余篇，自研平台达到26个，目有15个平台已开源。此外积极参加各类线上、线下CTF比赛并取得了优异的成绩。如有对安全行业感兴趣的小伙伴可以踊跃加入或关注我们。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220316101259.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220316101259.png)
 
 预览时标签不可点
 

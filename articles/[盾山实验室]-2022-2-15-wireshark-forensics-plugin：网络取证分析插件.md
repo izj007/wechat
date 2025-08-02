@@ -57,7 +57,7 @@ Nessus扫描报告生成漏洞和指标文件。此时，需要将导出的文�
 
 > data/raw_reports/nessus.csv：该文件可以通过Tenable Nessus接口导出；
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215102518.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215102518.png)
 
 接下来，选择“Options->Export as CSV->Select
 All->Submit”，将下载下来的文件重命名为nessus.csv，然后拷贝至“raw_reports/nessus.csv”。
@@ -70,11 +70,11 @@ wtf.py”来安装和更新报告文件。脚本将会自动寻找Wireshark的�
 安装完成之后，打开Wireshark，点击“Edit->Configuration
 Profiles”，选择“wireshark_forensics_toolkit”：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215102526.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215102526.png)
 
 现在，启动Wireshark，打开一个PCAP文件或开启实时数据捕捉：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215102527.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215102527.png)
 
 ## 可用的过滤器列表
 
@@ -99,7 +99,7 @@ Profiles”，选择“wireshark_forensics_toolkit”：
 wireshark-forensics-plugin：https://github.com/rjbhide/wireshark-forensics-
 plugin
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220215102528.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220215102528.png)
 
   
 

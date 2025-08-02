@@ -237,7 +237,7 @@ joomla、WordPress 、magento、drupal 、mambo。
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210906083809.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906083809.png)
 
   * 
 

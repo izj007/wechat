@@ -14,10 +14,10 @@ __
 
 收录于话题
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113438.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113438.png)
 
 **刹客网络科技资讯**
-点击右侧关注，最新科技资讯！[![](https://gitee.com/fuli009/images/raw/master/public/20220419113439.png)](https://mp.weixin.qq.com/s?__biz=MzAxMDgwMTk5OQ==&mid=2247483914&idx=1&sn=6b8235e1009eb7fa65196a058bd9f345&chksm=9b4b842aac3c0d3ca2740bad4dc8e42ae4d29c258962aeca567bd4330a75a96e42ae14adead1&token=276608485&lang=zh_CN&scene=21#wechat_redirect)
+点击右侧关注，最新科技资讯！[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113439.png)](https://mp.weixin.qq.com/s?__biz=MzAxMDgwMTk5OQ==&mid=2247483914&idx=1&sn=6b8235e1009eb7fa65196a058bd9f345&chksm=9b4b842aac3c0d3ca2740bad4dc8e42ae4d29c258962aeca567bd4330a75a96e42ae14adead1&token=276608485&lang=zh_CN&scene=21#wechat_redirect)
 
  **# 前言**
 
@@ -43,7 +43,7 @@ Christian Posta 这样的网红给出过深度介绍。我在这里做一个资�
   
 
 如上图所示：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113440.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113440.png)  
 从功能和职责上说：  
 
   * 位于最底层的是拆分好的原子微服务，以服务的形式提供各种能力；
@@ -61,7 +61,7 @@ Christian Posta 这样的网红给出过深度介绍。我在这里做一个资�
   
 
 在这里引入两个使用非常广泛的术语：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113441.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113441.png)
 
   * 东西向通讯：指服务间的相互访问，其通讯流量在服务间流转，流量都位于系统内部；
   * 南北向通讯：指服务对外部提供访问，通常是通过 API Gateway 提供的 API 对外部暴露，其通讯流量是从系统外部进入系统内部；
@@ -76,12 +76,12 @@ Christian Posta 这样的网红给出过深度介绍。我在这里做一个资�
   
 如下图所示，图中黄色的线条表示的是 API Gateway 访问内部服务：  
   
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113440.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113440.png)  
   
 问题来了，从流量走向看：这是外部流量进入系统后，开始访问对外暴露的服务，应该属于“南北向”通讯，典型如上图的画法。但从另外一个角度，如果我们将 API
 Gateway 逻辑上拆分为两个部分，先忽略对外暴露的部分，单独只看 API Gateway 访问内部服务的部分，这时可以视 API Gateway
 为一个普通的客户端服务，它和内部服务的通讯更像是“东西向”通讯：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113443.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113443.png)  
 所以，API Gateway 作为一个客户端访问内部服务时，到底算南北向还是东西向，就成为一个哲学问题：完全取决于我们如何看待 API Gateway
 ，是作为一个整体，还是逻辑上分拆为对内对外两个部分。  
 这个哲学问题并非无厘头，在 API Gateway 的各种产品中，关于如何实现 “API Gateway 作为一个客户端访问内部服务”
@@ -112,7 +112,7 @@ Spring Cloud 生态下的 Zuul 以及后面开发的 Spring Cloud Gateway，就�
 产品，其想法很直接：如何融合东西向和南北向的通讯方案？  
 其中的一个做法就是基于 Service Mesh 的 Sidecar 来实现 API Gateway，从而在南北向通讯中引入 Service Mesh
 这种东西向通讯的方案。这里我们不展开细节，我这里援引一个图片(鸣谢赵化冰同学)来解释这个方案的思路：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113444.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113444.png)
 
   
 
@@ -126,7 +126,7 @@ Spring Cloud 生态下的 Zuul 以及后面开发的 Spring Cloud Gateway，就�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113446.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113446.png)  
 在这个方案中，原来用于 Service Mesh 的 Sidecar，被用在了 API Gateway 中，替代了 API Gateway
 中原有的客户端访问的各种功能。这个方案让 API Gateway 的实现简化了很多，也实现了东西向和南北向通讯能力的重用和融合，而 API Gateway
 可以更专注于 “API Management” 的核心功能。  
@@ -137,7 +137,7 @@ Spring Cloud 生态下的 Zuul 以及后面开发的 Spring Cloud Gateway，就�
 被质疑多一跳会造成性能开销影响效率一样，API Gateway 使用 Sidecar 也被同样的质疑：多了一跳......  
 解决“多一跳”问题的方法简单而粗暴，基于 Sidecar，将 API Gateway 的功能加进来。这样 API Gateway 本体和 Sidecar
 再次合二为一：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113447.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113447.png)  
 至于走到这一步之后，Service Mesh 和 API Gateway 是什么关系：这到底算是 Service Mesh/Sidecar 融合了 API
 Gateway，还是 API Gateway 融合了 Service Mesh/Sidecar？这个问题就像斑马到底是白底黑纹还是黑底白纹一样，见仁见智。  
 
@@ -147,7 +147,7 @@ Gateway，还是 API Gateway 融合了 Service Mesh/Sidecar？这个问题就像
 BFF(Backend For Frontend) 的引入会让 Service Mesh 和 API Gateway 走到一个更加亲密的地步。  
   
 先来看看常规的 BFF 的玩法：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113448.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113448.png)  
 在这里，多增加了一个 BFF 层，介于 API Gateway 和内部服务（包括组合服务和原子微服务）之间。注意 BFF
 的工作模式和组合服务很类似，都是组合多个服务。但差别在于：  
 
@@ -159,9 +159,9 @@ BFF(Backend For Frontend) 的引入会让 Service Mesh 和 API Gateway 走到一
 
 “BFF 完全收口外部流量”，这一点在 API Gateway 和 Sidecar 融合之后，会变得很有想象空间，我们先看按照前面的融合方式，在有 BFF
 的情况下，API Gateway 和 Sidecar 融合后的情景：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113449.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113449.png)  
 放大一点，单独看 API Gateway 和 BFF：  
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113450.png)注意到，流量从被
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113450.png)注意到，流量从被
 API Gateway 接收，到进入 BFF 在这个流程中，这个请求路径中有两个 Sidecar：  
 
   * 和 BFF 部署在一起的，是没有 API Gateway 功能的普通 Sidecar；
@@ -171,7 +171,7 @@ API Gateway 接收，到进入 BFF 在这个流程中，这个请求路径中有
 
 所以，问题来了：为什么要放两个 Sidecar 在流程中，缩减到一个会怎么样？我们尝试将两个 Sidecar 合二为一，去掉 BFF 自带的
 Sidecar，直接把扮演 API Gateway 的 Sidecar 给 BFF
-用：![](https://gitee.com/fuli009/images/raw/master/public/20220419113451.png)  
+用：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113451.png)  
 此时的场景是这样：  
 
   * 流量直接打到 BFF 上（BFF 前面可能会挂其他的网络组件提供负载均衡等功能）；
@@ -180,7 +180,7 @@ Sidecar，直接把扮演 API Gateway 的 Sidecar 给 BFF
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113452.png)注意这里有一个关键点，在前面时特意注明的：“BFF
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113452.png)注意这里有一个关键点，在前面时特意注明的：“BFF
 完全收口外部流量”。这是前提条件，因为原有的 API Gateway 集群已经不再存在，如果 BFF 没能收口全部流量，则这些未能收口的流量会找不到 API
 Gateway。当然，如果愿意稍微麻烦一点，在部署时清晰的划定需要暴露给外界的服务，直接在这些服务上部署带 API Gateway 功能的
 Sidecar，也是可行的，只是管理上会比 BFF 模式要复杂一些。  
@@ -200,25 +200,25 @@ Sidecar 合二为一。
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113453.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113453.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113454.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113454.png)
 
  **点分享**  
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113455.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113455.png)
 
  **点收藏**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113456.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113456.png)
 
  **点点赞**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220419113457.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220419113457.png)
 
  **点在看**
 

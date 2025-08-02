@@ -39,7 +39,7 @@ ___发表于_
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230401182314.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182314.png)
 
   
 
@@ -49,7 +49,7 @@ ___发表于_
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230401182315.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182315.png)
 
   
 

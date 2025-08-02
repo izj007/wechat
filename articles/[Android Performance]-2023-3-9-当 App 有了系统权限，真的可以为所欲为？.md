@@ -53,7 +53,7 @@ ___发表于_
 
 XXX apk 内嵌提权代码，及动态下发 dex 分析 这个库提供的的 Dex 文件总共有 37 个，不多，也不大，慢慢看
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221844.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221844.png)
 
 由于是 dex 文件，所以直接使用 https://github.com/tp7309/TTDeDroid 这个库的工具打开看即可，比如
 
@@ -61,7 +61,7 @@ XXX apk 内嵌提权代码，及动态下发 dex 分析 这个库提供的的 De
 
 默认是用 jadx 打开，我们重点看内容
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221906.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221906.png)
 
 打开后可以看到具体的功能逻辑，可以看到一个 dex 一般只干一件事，那我们重点看这件事的核心实现部分即可
 
@@ -76,7 +76,7 @@ XXX apk 内嵌提权代码，及动态下发 dex 分析 这个库提供的的 De
 ## 1\. 反射拿到 ServiceManager
 
 一般我们会通过 ServiceManager 的 getService 方法获取系统的
-Service，然后进行远程调用![](https://gitee.com/fuli009/images/raw/master/public/20230309221907.png)
+Service，然后进行远程调用![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221907.png)
 
 ## 2\. 通过 NotificationManagerService 获取通知的详细内容
 
@@ -91,14 +91,14 @@ Service，然后进行远程调用![](https://gitee.com/fuli009/images/raw/maste
 
 可能有人不知道这玩意是啥，下面这个图里面就是一个典型的通知
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221909.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221909.png)
 
-其代码如下![](https://gitee.com/fuli009/images/raw/master/public/20230309221910.png)
+其代码如下![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221910.png)
 
 可以看到 getActiveNotifications 这个方法，是 **System-only** 的，普通的 App 是不能随便读取
 Notification 的，但是这个 App 由于有权限，就可以获取
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221912.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221912.png)
 
 当然微信的防撤回插件使用的一般是另外一种方法，比如辅助服务，这玩意是合规的，但是还是推荐大家能不用就不用，它能帮你防撤回，他就能获取通知的内容，包括你知道的和不知道的
 
@@ -108,15 +108,15 @@ Notification 的，但是这个 App 由于有权限，就可以获取
   2. 功能 ：可能有的时候小米用户会把 App 的通知给关掉，App 想知道这个用户是不是把通知关了，如果关了就偷偷打开
   3. 类名 ：com.google.android.sd.biz_dynamic_dex.xm_permission.XMPermissionExecutor
 
-这么看来这个应该还是蛮实用的，你个调皮的用户，我发通知都是为了你好，你怎么忍心把我关掉呢？让我帮你偷偷打开吧![](https://gitee.com/fuli009/images/raw/master/public/20230309221917.png)
+这么看来这个应该还是蛮实用的，你个调皮的用户，我发通知都是为了你好，你怎么忍心把我关掉呢？让我帮你偷偷打开吧![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221917.png)
 
 App 调用 NotificationManagerService 的 setNotificationsEnabledForPackage
 来设置通知，可以强制打开通知
-frameworks/base/services/core/java/com/android/server/notification/NotificationManagerService.java![](https://gitee.com/fuli009/images/raw/master/public/20230309221926.png)
+frameworks/base/services/core/java/com/android/server/notification/NotificationManagerService.java![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221926.png)
 
 然后查看 NotificationManagerService 的 setNotificationsEnabledForPackage
 这个方法，就是查看用户是不是打开成功了
-frameworks/base/services/core/java/com/android/server/notification/NotificationManagerService.java![](https://gitee.com/fuli009/images/raw/master/public/20230309221927.png)
+frameworks/base/services/core/java/com/android/server/notification/NotificationManagerService.java![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221927.png)
 
 还有针对 leb 的单独处理~ 细 ！
 
@@ -128,7 +128,7 @@ frameworks/base/services/core/java/com/android/server/notification/NotificationM
 
 核心和上面那个是一样的，只不过这个是专门针对 vivo 手机的
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221928.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221928.png)
 
 # 1.4 打开 Oppo 手机的通知权限
 
@@ -137,7 +137,7 @@ frameworks/base/services/core/java/com/android/server/notification/NotificationM
 
 没有反编译出来，看大概的逻辑应该是打开 App 在 oppo 手机上的通知权限
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221929.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221929.png)
 
 # 1.5 Notification 监听
 
@@ -146,9 +146,9 @@ frameworks/base/services/core/java/com/android/server/notification/NotificationM
 
 这个就有点厉害了，在监听 App 的 Notification 的发送，然后进行统计
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221931.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221931.png)
 
-监听的核心代码![](https://gitee.com/fuli009/images/raw/master/public/20230309221932.png)
+监听的核心代码![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221932.png)
 
 这个咱也不是很懂，是时候跟做了多年 SystemUI 和 Launcher 的老婆求助了....@史工
 
@@ -159,26 +159,26 @@ frameworks/base/services/core/java/com/android/server/notification/NotificationM
 
 上面那个是 UdNotificationListenerExecutor ， 这个是 NotificationListenerExecutor，UD 是啥？
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221939.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221939.png)
 
 这个反射调用的 setNotificationListenerAccessGranted 是个
 SystemAPI，获得通知的使用权，果然有权限就可以为所欲为
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221940.png)![](https://gitee.com/fuli009/images/raw/master/public/20230309221941.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221940.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221941.png)
 
 # 1.7 打开华为手机的通知监听权限
 
   1. 文件 ：a3937709-b9cc-48fd-8918-163c9cb7c2df.dex
   2. 类名 ：com.google.android.sd.biz_dynamic_dex.hw_notification_listener.HWNotificationListenerExecutor
 
-华为也无法幸免，哈哈哈![](https://gitee.com/fuli009/images/raw/master/public/20230309221942.png)
+华为也无法幸免，哈哈哈![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221942.png)
 
 # 1.8 打开华为手机通知权限
 
   1. 文件 ：257682c986ab449ab9e7c8ae7682fa61.dex
   2. 类名 ：com.google.android.sd.biz_dynamic_dex.hw_permission.HwPermissionExecutor
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221944.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221944.png)
 
 # 2\. Backup 状态
 
@@ -190,18 +190,18 @@ SystemAPI，获得通知的使用权，果然有权限就可以为所欲为
 这个看了半天，应该是专门针对华为手机的，收到 IBackupSessionCallback 回调后，执行
 PackageManagerEx.startBackupSession 方法
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221945.png)![](https://gitee.com/fuli009/images/raw/master/public/20230309221946.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221945.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221946.png)
 
 查了下这个方法的作用，启动备份或恢复会话
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221947.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221947.png)
 
 # 2.2. Vivo 手机 Backup 状态相关
 
   1. 文件 ：8c34f5dc-f04c-40ba-98d4-7aa7c364b65c.dex
   2. 功能 ：Backup 相关
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221949.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221949.png)
 
 # 3\. 文件相关
 
@@ -212,15 +212,15 @@ PackageManagerEx.startBackupSession 方法
 
 拿这个干嘛呢？拿去做数据分析？
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221950.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221950.png)
 
 获取 SharedPreferences
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221951.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221951.png)
 
 获取 slog
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221952.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221952.png)
 
 # 4\. 用户数据
 
@@ -231,7 +231,7 @@ PackageManagerEx.startBackupSession 方法
   3. 类名 ：com.google.android.sd.biz_dynamic_dex.usage_event_all.UsageEventAllExecutor
 
 看核心逻辑是同 usagestates 服务，来获取用户使用手机的数据，难怪我手机安装了什么 App、用了多久这些，其他 App
-了如指掌![](https://gitee.com/fuli009/images/raw/master/public/20230309221953.png)
+了如指掌![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221953.png)
 
 那么他可以拿到哪些数据呢？应有尽有~，包括但不限于 App 启动、退出、挂起、Service 变化、Configuration
 变化、亮灭屏、开关机等，感兴趣的可以看一下：
@@ -315,7 +315,7 @@ PackageManagerEx.startBackupSession 方法
 上面那个是 UsageEventAllExecutor，这个是 UsageEventExecutor，主要拿用户使用 App
 相关的数据，比如什么时候打开某个 App、什么时候关闭某个 App，6 得很，真毒瘤
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221954.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221954.png)
 
 # 4.3 获取用户使用数据
 
@@ -324,7 +324,7 @@ PackageManagerEx.startBackupSession 方法
 
 看样子是注册了 App Usage 的权限，具体 Code 没有出来，不好分析
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221956.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221956.png)
 
 # 5\. Widget 和 icon 相关
 
@@ -335,7 +335,7 @@ PackageManagerEx.startBackupSession 方法
 
 这个比较好理解，在 Vivo 手机上加个 Widget
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221957.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221957.png)
 
 # 5.2 获取 icon 相关的信息
 
@@ -344,14 +344,14 @@ PackageManagerEx.startBackupSession 方法
 
 这个好理解，获取 icon 相关的信息，比如在 Launcher 的哪一行，哪一列，是否在文件夹里面。问题是获取这玩意干嘛？？？迷
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309221958.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309221958.png)
 
 # 5.3 Oppo 手机添加 Widget
 
   1. 文件：75dcc8ea-d0f9-4222-b8dd-2a83444f9cd6.dex
   2. 类名：com.google.android.sd.biz_dynamic_dex.oppoaddwidget.OppoAddWidgetExecutor
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222000.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222000.png)
 
 # 5.4 Xiaomi 手机更新图标？
 
@@ -360,7 +360,7 @@ PackageManagerEx.startBackupSession 方法
 
 小米手机上的桌面 icon 、shorcut 相关的操作，小米的同学来认领
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222001.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222001.png)
 
 # 6\. 自启动、关联启动、保活相关
 
@@ -371,7 +371,7 @@ PackageManagerEx.startBackupSession 方法
 
 看下面这一堆就知道是和自启动相关的，看来自启动权限是每个 App 都蛋疼的东西啊
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222002.png)![](https://gitee.com/fuli009/images/raw/master/public/20230309222004.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222002.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222004.png)
 
 # 6.2 打开 Vivo 关联启动权限
 
@@ -379,11 +379,11 @@ PackageManagerEx.startBackupSession 方法
   2. 类名：com.google.android.sd.biz_dynamic_dex.vivo_association_start.VivoAssociationStartExecutor
 
 看名字就是和关联启动相关的权限，vivo
-的同学来领了![](https://gitee.com/fuli009/images/raw/master/public/20230309222005.png)
+的同学来领了![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222005.png)
 
 直接写了个节点进去
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222007.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222007.png)
 
 # 6.3 关闭华为耗电精灵
 
@@ -392,7 +392,7 @@ PackageManagerEx.startBackupSession 方法
 
 看名字和实现，应该是和华为的耗电精灵有关系，华为的同学可以来看看
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222008.png)![](https://gitee.com/fuli009/images/raw/master/public/20230309222010.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222008.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222010.png)
 
 # 6.4 Vivo 机型保活相关
 
@@ -401,7 +401,7 @@ PackageManagerEx.startBackupSession 方法
 
 猜测和保活相关，Vivo 的同学可以来认领一下
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222011.png)![](https://gitee.com/fuli009/images/raw/master/public/20230309222012.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222011.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222012.png)
 
 # 7\. 安装卸载相关
 
@@ -411,21 +411,21 @@ PackageManagerEx.startBackupSession 方法
   2. 类名：com.google.android.sd.biz_dynamic_dex.vivo_rollback_uninstall.VivoRollbackUninstallExecutor
 
 这个看上去像是用户卸载 App
-之后，回滚到预置的版本,好吧，这个是常规操作![](https://gitee.com/fuli009/images/raw/master/public/20230309222013.png)
+之后，回滚到预置的版本,好吧，这个是常规操作![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222013.png)
 
 # 7.2 Vivo 手机 App 卸载
 
   1. 文件：be7a2b643d7e8543f49994ffeb0ee0b6.dex
   2. 类名：com.google.android.sd.biz_dynamic_dex.vivo_official_uninstall.OfficialUntiUninstallV3
 
-看名字和实现，也是和卸载回滚相关的![](https://gitee.com/fuli009/images/raw/master/public/20230309222015.png)
+看名字和实现，也是和卸载回滚相关的![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222015.png)
 
 # 7.3 Vivo 手机 App 卸载相关
 
   1. 文件：183bb87aa7d744a195741ce524577dd0.dex
   2. 类名：com.google.android.sd.biz_dynamic_dex.vivo_official_uninstall.VivoOfficialUninstallExecutor
 
-同上![](https://gitee.com/fuli009/images/raw/master/public/20230309222016.png)
+同上![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222016.png)
 
 # 其他
 
@@ -436,7 +436,7 @@ PackageManagerEx.startBackupSession 方法
 
 没看懂是干嘛的，核心应该是 Utils.updateSid ，但是没看到实现的地方
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222017.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222017.png)
 
 # UdParseNotifyMessageExecutor
 
@@ -444,7 +444,7 @@ PackageManagerEx.startBackupSession 方法
   2. 类名：com.google.android.sd.biz_dynamic_dex.ud_parse_nmessage.UdParseNotifyMessageExecutor
 
 看名字应该是解析从远端传来的 Notify
-Message，具体功能未知![](https://gitee.com/fuli009/images/raw/master/public/20230309222018.png)
+Message，具体功能未知![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222018.png)
 
 # 6.3 TDLogcatExecutor
 
@@ -455,7 +455,7 @@ Message，具体功能未知![](https://gitee.com/fuli009/images/raw/master/publ
     1. com.google.android.sd.biz_dynamic_dex.td.logcat.TDLogcatExecutor
     2. com.google.android.sd.biz_dynamic_dex.td.logcat.TDLogcatExecutor
 
-没太看懂这个是干嘛的，像是保活又不像，后面有时间了再慢慢分析![](https://gitee.com/fuli009/images/raw/master/public/20230309222020.png)
+没太看懂这个是干嘛的，像是保活又不像，后面有时间了再慢慢分析![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222020.png)
 
 # 6.4 QueryLBSInfoExecutor
 
@@ -464,7 +464,7 @@ Message，具体功能未知![](https://gitee.com/fuli009/images/raw/master/publ
 
 获取 LBS Info
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222021.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222021.png)
 
 # 6.5 WriteSettingsExecutor
 
@@ -473,7 +473,7 @@ Message，具体功能未知![](https://gitee.com/fuli009/images/raw/master/publ
 
 看名字应该是个工具类，写 Settings 字段的，至于些什么应该是动态下发的
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222022.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222022.png)
 
 # 6.6 OppoSettingExecutor
 
@@ -482,7 +482,7 @@ Message，具体功能未知![](https://gitee.com/fuli009/images/raw/master/publ
 
 Setting 代理？？没看懂干嘛的，Oppo 的同学来认领，难道是另外一种形式的保活？
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222023.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222023.png)
 
 # 6.7 CheckAsterExecutor
 
@@ -491,7 +491,7 @@ Setting 代理？？没看懂干嘛的，Oppo 的同学来认领，难道是另�
 
 Check aster ？不是很懂
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222024.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222024.png)
 
 # 6.8 OppoCommunityIdExecutor
 
@@ -500,7 +500,7 @@ Check aster ？不是很懂
 
 获取 Oppo 用户的 ID？要这玩意干么？
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222025.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222025.png)
 
 # 6.9 GetSettingsUsernameExecutor
 
@@ -509,7 +509,7 @@ Check aster ？不是很懂
 
 获取 Oppo 手机用户的 username，话说你要这个啥用咧？
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222027.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222027.png)
 
 # 6.10 LogcatExecutor
 
@@ -517,7 +517,7 @@ Check aster ？不是很懂
   2. 类名：com.google.android.sd.biz_dynamic_dex.logcat.LogcatExecutor
 
 配置 Log
-的参数![](https://gitee.com/fuli009/images/raw/master/public/20230309222029.png)
+的参数![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222029.png)
 
 # 6.11 VivoBrowserSettingsExecutor
 
@@ -526,7 +526,7 @@ Check aster ？不是很懂
 
 Vivo 浏览器相关的设置，不太懂要干嘛
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230309222030.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309222030.png)
 
   
 

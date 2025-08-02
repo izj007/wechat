@@ -35,7 +35,7 @@ ___发表于_
 最近明月再给几个客户做 CloudFlare 部署的时候经常碰到 CloudFlare 节点出现连接重置或者连接超时的问题，初步分析估计是部分
 CloudFlare 节点 IP 有被封禁的嫌疑。
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180235.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180235.png)
 
 就是这个"ERR_CONNECTION_RESET"（连接重置）错误
 
@@ -47,7 +47,7 @@ CloudFlare 节点 IP 有被封禁的嫌疑。
 这次明月客户碰到的使用 CloudFlare 后出现“连接重置”故障，就是在让客户清理了电脑的 DNS
 缓存后解决的，并且速度上还提升了不少，如果您也碰到这类问题，建议可以试一下哦！
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180236.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180236.png)
 
  ****
 
@@ -57,11 +57,11 @@ CloudFlare 节点 IP 有被封禁的嫌疑。
 
 独立博客站长间交流、学习、互动社群
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180237.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180237.png)
 
 明月登楼的博客 **『www.imydl.com』**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180238.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180238.png)
 
 明月运维服务小栈
 

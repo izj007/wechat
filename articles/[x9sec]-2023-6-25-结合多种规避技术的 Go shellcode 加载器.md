@@ -79,11 +79,11 @@ ___发表于_
 
 具有系统调用 RVA 排序的用户模式挂钩旁路 （ `NtQueueApcThread` 与 弗里达跟踪 和 自定义处理程序 挂钩）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230625200236.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230625200236.png)  
 
 使用间接系统调用的检测回调旁路（注入的 DLL 来自  调用检测  的系统 jackullrich ）
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230625200237.png)  
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230625200237.png)  
 
 ##
 
@@ -183,7 +183,7 @@ shellcode免杀加载器](http://mp.weixin.qq.com/s?__biz=MzU3MDU5ODg1Ng==&mid=2
 
 加入微信群  
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230625200239.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230625200239.png)
 
   
 

@@ -42,7 +42,7 @@ ___发表于_
 
  **漏洞复现**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180548.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180548.png)
 
 payload：  
 
@@ -72,7 +72,7 @@ payload：
       
     
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230714180550.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180550.png)
 
  **修复建议**
 

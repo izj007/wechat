@@ -123,7 +123,7 @@ Reactor。Spring Cloud Gateway旨在为微服务架构提供一种简单、有�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143655.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143655.png)
 
   
 
@@ -132,7 +132,7 @@ Reactor。Spring Cloud Gateway旨在为微服务架构提供一种简单、有�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143707.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143707.png)
 
   
 
@@ -154,7 +154,7 @@ Reactor。Spring Cloud Gateway旨在为微服务架构提供一种简单、有�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143708.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143708.png)
 
   
 
@@ -163,9 +163,9 @@ Reactor。Spring Cloud Gateway旨在为微服务架构提供一种简单、有�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143709.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143709.png)
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143711.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143711.png)
 
   
 
@@ -175,7 +175,7 @@ string去掉了，不然执行不起来，payload我就不贴了大家可以看�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143713.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143713.png)
 
   
 
@@ -184,7 +184,7 @@ string去掉了，不然执行不起来，payload我就不贴了大家可以看�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143715.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143715.png)
 
   
 
@@ -193,14 +193,14 @@ string去掉了，不然执行不起来，payload我就不贴了大家可以看�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143717.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143717.png)
 
  **最后这个数据包可以删除所添加的路由。**  
 ---  
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143719.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143719.png)
 
   
 
@@ -209,7 +209,7 @@ string去掉了，不然执行不起来，payload我就不贴了大家可以看�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143720.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143720.png)
 
   
 
@@ -218,7 +218,7 @@ string去掉了，不然执行不起来，payload我就不贴了大家可以看�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143721.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143721.png)
 
   
 
@@ -227,7 +227,7 @@ string去掉了，不然执行不起来，payload我就不贴了大家可以看�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143722.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143722.png)
 
   
 
@@ -236,7 +236,7 @@ string去掉了，不然执行不起来，payload我就不贴了大家可以看�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143724.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143724.png)
 
   
 
@@ -245,7 +245,7 @@ string去掉了，不然执行不起来，payload我就不贴了大家可以看�
   
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143726.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143726.png)
 
  **7 、参考链接**  
 
@@ -275,7 +275,7 @@ cn.md**
 
  ****
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220303143729.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220303143729.png)
 
   
 

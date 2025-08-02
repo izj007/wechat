@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923200028.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923200028.png)
 
 **  
 **
@@ -144,7 +144,7 @@ Gartner判断，不到1%。
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923200034.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923200034.png)
 
 无处不在的攻击路径
 
@@ -235,7 +235,7 @@ Atlas）**将单点的安全技术融合起来，从攻击者视角出发，通�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923200036.png)汇聚两大内功于一体的云图（Cloud
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923200036.png)汇聚两大内功于一体的云图（Cloud
 Atlas）平台
 
   
@@ -301,7 +301,7 @@ Atlas）攻击面管理运营平台**由长亭科技发布。将攻击面管理�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923200038.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923200038.png)
 
 云图（Cloud Atlas）能力体系
 
@@ -381,7 +381,7 @@ Management）**的概念，旨在以攻击者视角对企业数字资产进行�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923200039.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923200039.png)
 
 云图（Cloud Atlas）核心架构
 
@@ -424,7 +424,7 @@ Forrester提出过一个观点：攻击面管理（ASM）的价值是在融合�
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923200040.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923200040.png)
 
   
 
@@ -440,11 +440,11 @@ Forrester提出过一个观点：攻击面管理（ASM）的价值是在融合�
 
  **解锁更多云图（Cloud  Atlas）安全能力**
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923200042.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923200042.png)
 
   
 
-![](https://gitee.com/fuli009/images/raw/master/public/20220923200044.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923200044.png)
 
   
 

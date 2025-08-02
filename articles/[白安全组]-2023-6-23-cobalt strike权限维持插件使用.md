@@ -24,11 +24,11 @@ https://www.wangan.com/p/11v6c7502802f2aa
 
 安装插件：
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230623102324.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623102324.png)
 
 选择文件夹中cno后缀的文件
 
-![](https://gitee.com/fuli009/images/raw/master/public/20230623102325.png)
+![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623102325.png)
 
 0x01 脚本菜单功能  
 
