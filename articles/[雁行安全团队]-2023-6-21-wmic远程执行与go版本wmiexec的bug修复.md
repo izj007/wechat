@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160013.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160013.png)  
 
 首先，简单介绍一下WMI， WMI是Windows
 2K/XP管理系统的核心；对于其他的Win32操作系统，WMI是一个有用的插件。WMI以CIMOM为基础，CIMOM即公共信息模型对象管理器（Common
@@ -36,7 +36,7 @@ Manager），是一个描述操作系统构成单元的对象数据库，为MMC�
 
 2.如果密码中有逗号“,”，无论是直接在cmd中执行还是写成bat，都会报错：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160015.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160015.png)
 
 3.无法在linux下面执行。
 
@@ -46,9 +46,9 @@ https://github.com/C-Sto/goWMIExec
 
 经过测试，发现一个问题， 当在普通环境中用500用户执行的时候，没有任何问题：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160016.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160016.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160017.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160017.png)
 
 但是我查看它的代码，里面虽然存在domain参数，但是没有设置获取，那么把它修改一下。 修改前：
 
@@ -56,17 +56,17 @@ https://github.com/C-Sto/goWMIExec
 
 修改后：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160019.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160019.png)
 
 但是执行出错，爆拒绝访问错误（也就是错误5）：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160020.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160020.png)
 
 我开始以为是域名输入错误，但是尝试test.com也不行。所以我怀疑是作者有些地方写错了。 拿出Wireshark，抓包看看。
 
 首先用正常的wmic执行一次：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160022.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160022.png)
 
 可以看到ntlmssp是正常地传送了域名和用户名：
 
@@ -74,32 +74,32 @@ https://github.com/C-Sto/goWMIExec
 
 接着用goWMIExec.exe执行一次：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160023.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160023.png)
 
 发现域名无法正常传送，而且域名不为unicode字符：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160024.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160024.png)
 
 那么大概的问题已经知道了，作者在进行ntlm认证的时候，没有将go默认的utf-8编码转换为windows的unicode编码，导致数据包在认证时无法正常识别。
 尝试一下修改作者的代码。
 
 一步一步跟进执行函数：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160025.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160025.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160026.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160026.png)
 
 在NewExecConfig里面domain没有经过变换就返回：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160027.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160027.png)
 
 下一步进入NewExecer函数，我们直接跟进鉴权函数：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160028.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160028.png)
 
 可以看到问题所在了，domain在这里没有转为unicode就直接转成byte[]进入NewSSPAuthenticate:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160029.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160029.png)
 
 那么我们可以在所有调用到NewSSPAuthenticate函数的地方，将domain先转为unicode再传入，就可以把问题解决了。
 有的小伙伴就要问了，为什么不在NewExecConfig里面直接把domain转化呢？这里就说明一下，也顺便说明为什么我们能通过hash就可以登陆smb：
@@ -112,23 +112,23 @@ https://github.com/C-Sto/goWMIExec
 
 好了，回到代码里面，作者写了一个toUnicodeS的代码，顺便拿来一用，给所有调用到NewSSPAuthenticate函数的地方都加上，原代码有两处：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160030.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160030.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160032.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160032.png)
 
 编译之后测试一下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160038.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160038.png)
 
 成功执行命令：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160039.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160039.png)
 
 只用hash也可以：
 
 ![]()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160040.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621160040.png)
 
 预览时标签不可点
 

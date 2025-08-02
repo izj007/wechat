@@ -39,17 +39,17 @@ ___发表于_
 
 ###  第一步 准备接码，打开接码平台 sms-activate.org，注册一个账号
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143001.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143001.png)
 
 注册后选择充值，可以选择支付宝充值，接码OpenAi的一次费用是大概11卢布，人民币来看差不多是1块钱，就先充个1美金吧
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143018.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143018.png)
 
  **2.注册OpenAi账号**
 
 如果挂了代理，还遇到这个页面，注意看你的代理地区
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143020.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143020.png)
 
 ####
 
@@ -67,39 +67,39 @@ ___发表于_
 
  **注意，这里一定要输入javascript:，然后粘贴上面的代码，如下图所示**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143021.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143021.png)
 
 首先是打开ChatGPT的账户注册页面。谷歌注册或者邮箱注册都可以，无所谓，这里用邮箱注册作为例子。
 
  **https://beta.openai.com/signup**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143022.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143022.png)
 
 我是直接选择Google账号登录的，然后下一步
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143023.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143023.png)
 
   
 
 再下一步会让你接收验证码，你选择地区为印度+91  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143024.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143024.png)
 
 然后打开解码平台，选择openai
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143026.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143026.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143028.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143028.png)
 
 然后复制这个91880.....的号码，点击接收验证码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143024.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143024.png)
 
 等一会解码网站会提示验证码，我们复制粘贴验证码即可
 
 填写完验证码后，就会到达最后一步，下面这个页面随便选一项即可  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143030.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143030.png)
 
 至此，就注册完成了  
 
@@ -113,15 +113,15 @@ ___发表于_
     
      https://github.com/wong2/chat-gpt-google-extension
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143031.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143031.png)
 
 点击下载，然后在Chrome浏览器里面选择拓展程序，加载已解压的拓展程序
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143033.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143033.png)
 
 安装后效果，搜索的时候，右边会出现一个ChatGPT  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143034.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143034.png)
 
  **0X02 如何使用**
 
@@ -129,19 +129,19 @@ ___发表于_
 
  **https://chat.openai.com/auth/login**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143036.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143036.png)
 
  **示例：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143037.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143037.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143038.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143038.png)
 
 需要使用英文去输入，然后对话也是英文的，记得右键翻译即可  
 
 对于咒语的选择，可以使用deepl.com，将你的需求翻译成英文，然后再去输入
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143039.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143039.png)
 
  **0X03如何利用OpenAI提供安全从业者的工作效率**
 
@@ -150,9 +150,9 @@ ___发表于_
  **  
 **1.帮我写提高工作效率的小脚本(原文是英文，我右键翻译了)  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143040.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143040.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143043.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143043.png)
 
 复制出来的脚本如下，亲测可用
 
@@ -165,53 +165,53 @@ ___发表于_
 
 2.让Openai给我写一个shellcode加载器，并不断完善，不断PUA OpenAi，哈哈哈  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143044.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143044.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143045.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143045.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143046.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143046.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143048.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143048.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143049.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143049.png)
 
 3.写一份公司成立信息安全委员会的文件和章程
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143050.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143050.png)
 
 4.如果让OpenAi来面试安全岗位，问他会怎么样呢(下面的图来源朋友圈)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143051.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143051.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143052.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143052.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143053.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143053.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143054.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143054.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143055.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143055.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143056.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143056.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143057.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143057.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143058.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143058.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143059.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143059.png)
 
 5.信息安全工程师年度述职PPT
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143100.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143100.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143102.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143102.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143106.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143106.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143108.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143108.png)
 
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143109.png)**
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143109.png)**
 
   
 
@@ -258,7 +258,7 @@ Wordpress网站渗透方法指南](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2M
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143110.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221206143110.png)
 
 预览时标签不可点
 

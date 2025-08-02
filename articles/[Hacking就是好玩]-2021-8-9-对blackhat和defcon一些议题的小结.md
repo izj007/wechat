@@ -29,7 +29,7 @@ language-make-static-analysis-engines-understand-each-other-22797
 
 我在想使用像codeql一样，定义一个通用的识别规则不就好了吗。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809102429.png)image-20210806164212636
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809102429.png)image-20210806164212636
 
 可能作者想的是针对甲方的场景，我想的是针对安全研究员挖洞的场景吧。
 

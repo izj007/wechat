@@ -27,11 +27,11 @@ Hikvision ivms-8700
 
 找到数据库配置文件，如图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180436.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180436.png)
 
 然后java -jar HikvisionDecode-1.0-SNAPSHOT.jar xxxxx  输入加密的账号和密码，如图:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180437.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180437.png)
 
 链接：https://github.com/baogod404/HikvisionDecode
 

@@ -14,7 +14,7 @@ __
 
 收录于话题 #技术文章 5个内容
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084835.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084835.png)
 
 **_背景_**
 
@@ -32,7 +32,7 @@ IAST简介
 
   
 IAST-
-交互式应用安全测试，是指在程序运行时，通过与应用交互的方式，收集程序中运行信息进行安全测试的手段。广义的IAST分为三类：①代理模式；②active插桩；③passive插桩。代理模式可以理解为现在的被动流量黑盒。active插桩通过与黑盒配合，黑盒触发检测流量，通过流量中的POC与插入的探针收集的信息结合，进行安全测试。Passive插桩模式下，不主动触发流量，只通过插桩的探针进程序运行信息收集，流量的触发主要通过开发或测试人员。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084842.png)本文主要针对第三种模式，passive插桩模式的IAST进行调研。  
+交互式应用安全测试，是指在程序运行时，通过与应用交互的方式，收集程序中运行信息进行安全测试的手段。广义的IAST分为三类：①代理模式；②active插桩；③passive插桩。代理模式可以理解为现在的被动流量黑盒。active插桩通过与黑盒配合，黑盒触发检测流量，通过流量中的POC与插入的探针收集的信息结合，进行安全测试。Passive插桩模式下，不主动触发流量，只通过插桩的探针进程序运行信息收集，流量的触发主要通过开发或测试人员。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084842.png)本文主要针对第三种模式，passive插桩模式的IAST进行调研。  
   
   
   
@@ -46,7 +46,7 @@ IAST-
 保证被测程序原有逻辑完整性的基础上在程序中插入一些探针。通过探针的执行并抛出程序运行的特征数据，通过对这些数据的分析，可以获得程序的控制流和数据流信息，进而得到逻辑覆盖等动态信息，从而实现测试目的的方法。  
 总结一下对于探针的需求就是：(1)插入的探针逻辑不能影响原代码的逻辑完整性。(2)能够收集程序运行时的特征，用作测试的分析。  
  **2、JAVA中通过字节码增强插桩**  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084843.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084843.png)  
 在java从源代码，到编译字节码，再到运行时加载到jvm运行这个过程中，在(2)阶段，通过修改类的字节码，不直接修改java源代码，插入不影响源代码逻辑的字节码，来实现插桩的监听逻辑，即不影响源代码的逻辑完整性。  
 如下，有这样一段代码，直观的观察一下字节码增强：
 
@@ -91,7 +91,7 @@ IAST-
 
 火线洞态IAST是一款优秀的IAST开源产品，通过对洞态的调研，梳理出对应的污点分析算法。以下通过一个简单示例进行污点分析的算法的介绍。
 
-如下，有一段需要分析的java代码逻辑，是一段SQL注入的伪代码，通过外界获取参数id的输入，进行sql拼接，最终进行了sql的执行。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084844.png)
+如下，有一段需要分析的java代码逻辑，是一段SQL注入的伪代码，通过外界获取参数id的输入，进行sql拼接，最终进行了sql的执行。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084844.png)
 
 在污点分析的模型中，会有source、propagate、sanitizer、sink四个节点。简化模型，突出算法，没有在代码中体现sanitizer的净化。
 
@@ -125,7 +125,7 @@ IAST-
 对于sink点，判断出入参数是否在TintedPool里，如果存在则上报漏洞。整个算法对source、propagate、sanitizer、sink中各个阶段的函数插入监听逻辑，监听污点source传入，propagate、sanitizer中进行传播或净化，sink监听是否传入受污染函数，如果sink监听到污点对象传入，则上报漏洞。  
  **2、规则抽象**  
 对污点分析的四个阶段，定义source、propagate、sanitizer、sink四类增强类型，然后通过增加函数到各个阶段的规则中，添加各个阶段的的规则。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084846.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084846.png)  
 （1）函数签名: 增强的具体函数。（2）污点输入:
 对于该函数，污点是从哪里传入的，可以是O或pn。pn为该函数的哪个参数传入、O为当前类的base对象(比如
 "x".concat("s")，字符串"x"也有可能是污点传入的位置)。（3）污点输出:
@@ -152,13 +152,13 @@ Skywalking实现IAST调研
   
 Skywalking是apache下开源的APM(Application Performance
 Management)系统，有监控、trace(调用链跟踪)、分布式诊断等功能，支持多种语言实现agent。Skywalking的javaagent也是基于字节码增强技术来实现监控逻辑的嵌入。其重要的trace功能，与污点分析的业务类似。Skywalking的trace功能是基于OpenTracing标准实现的，一个trace就代表着对一个请求的完整跟踪。追踪一个请求在单个或一组应用中的执行顺序，对关键的节点进行切面收集执行响应时间、监听运行时状态(关键函数入参、返回值等)。关键节点可以通过插件指定对应的具体函数，如在应用边界的队列生产、消费函数、数据库的客户端调用、RPC的客户端调用与服务端执行等，也可以是应用内具体的一个内部函数的执行情况。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084847.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084847.png)  
 对于一次请求trace，有一个唯一的traceID会传到执行到的关键节点，且跟随着trace的传播也可以传递上下文信息跟随trace流动，可以把对应的污点分析上下文放入到trace的上下文中，通过添加插件来覆盖对应的source、propagate、sanitizer、sink对应的函数，从而达到污点分析的功能。
 
 原理上可行，能够满足安全检测的需求。是否可以基于skywalking实现IAST，还需要考虑到工程化实现，如trace的业务是否适合污点分析，及兼容的开发成本，还有agent对性能严格的要求等。在编写demo时也遇到了skywalking默认不支持修改Jre的类，如果需要绑定，就可能需要修改插件外的代码等问题。工程化不在此次调研的范围中，对于安全检测能力，以下的技术要点可以给IAST实现带来一些启发:
 
 1、Skywalking的插件，除了通过指定类的全限定名以及函数签名来指定待增强的函数，还可以通过Java注解来指定待增强的类及函数。这个给规则抽象增加了注解的维度。如58内部的RPC服务，就是通过注解来指定服务端逻辑或者客户端逻辑的。2、Skywalking的trace功能，提供了跨线程、跨进程的跟踪，及上下文的传递，跨进程的跟踪，实现了在一组应用中进行污点分析的可能，不只局限于单个应用内的分析。这在内部服务丰富，调用关系复杂的场景下是一个重要的需求，因为source点和sink点可能存在于一组服务中的任意位置。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084848.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084848.png)  
 Skywalking是如何实现跨进程的trace的?比如在一个HTTP的请求过程中，通过对HTTP客户端进行增强，把此次trace上下文等信息封装进自定义的HTTP头中，通过HTTP协议传到服务端，HTTP服务端增强HTTP请求处理逻辑，把trace信息从HTTP请求头中拆出，然后进行后续的逻辑。这样就达到了trace跨应用的的传递。其他的跨进程trace同理。  
   
   
@@ -169,9 +169,9 @@ Skywalking是如何实现跨进程的trace的?比如在一个HTTP的请求过程
 IAST、SAST、DAST能力互补
 
   
-目前58集团已经现有较为成熟的DAST、SAST。增加IAST，是增强了哪些维度的能力。以下是简单的列举了几个维度上的对比。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084849.png)  
+目前58集团已经现有较为成熟的DAST、SAST。增加IAST，是增强了哪些维度的能力。以下是简单的列举了几个维度上的对比。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084849.png)  
 （1）控制流的覆盖：在SAST视角直接面向代码逻辑，可以穷举完所有逻辑分支，拿到控制流。DAST、IAST是运行触发有限的请求输入，不能做到完全的覆盖。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084850.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015084850.png)  
 （2）脏数据: SAST静态分析，不产生脏数据。IAST被动监听运行时状态，不产生脏数据。DAST产生脏数据。（3）动态特性:
 IAST、DAST对于动态特性，优于SAST。比如JAVA反射，或者调用Native code。（4）主动、被动:
 IAST只能做到被动监听，SAST/DAST可以做到主动扫描。（5）应用运行时内部信息收集:

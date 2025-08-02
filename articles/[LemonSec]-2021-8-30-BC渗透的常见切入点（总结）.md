@@ -22,7 +22,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200757.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200757.png)
 
   
 
@@ -45,53 +45,53 @@ Proxifier全局代理
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200758.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200758.png)
 
   
 
 基本上大型的BC盘子都是各种防护+cdn 标配，毕竟别人赚了那么多钱也不在乎这点设备钱。。。。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200800.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200800.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200802.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200802.png)
 
 注册了个号 发现没地方能打XSS的。。。。。作罢  
   
 因为这种大盘子服务一般是挺到位的，牌面这块方方面面给你整的很高大上，什么导航啊，什么积分商城啊。。乱七八糟的应有具有，在他主站一个VIP查询页面确定了一处sql注入，而且是thinkphp的框架
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200803.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200803.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200805.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200805.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200806.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200806.png)
 
 thinkphp3.2.3的 ，因为有CDN不知道真实IP，所以后台是个很麻烦的事情，本想着看看数据库里面的log有没有啥发现
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200807.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200807.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200809.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200809.png)
 
 没啥鸟用。。尝试读取日志文件，没有。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200810.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200810.png)
 
 最后读取配置文件确定了一个很脑残的事情。。。可能通宵了之后人的脑子有点僵。我给忘了这种BC后台肯定都是分离的。。。。嗨。少熬夜。  
   
 于是。。我就以以往的经验手动的在主域名前面加上了一些可能的参数。。admin.XXXX.com   agdw.xxxxx.com
 ag.xxxxx.com   嗯。。。如图：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200812.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200812.png)
 
   
 
 这套程序的盘子大概100多个吧，几乎都是一模一样的，随便找了几个  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200813.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200813.png)
 
 后台有个地方任意上传。结果。。  
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200815.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200815.png)
 
   
 

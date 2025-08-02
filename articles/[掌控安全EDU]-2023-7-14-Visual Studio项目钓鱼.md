@@ -18,8 +18,8 @@ ___发表于_
 
 免费&进群
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175239.png)
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175240.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175239.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175240.png)  
 本文由掌控安全学院-camer投稿，文章灵感来自 apt-38 钓鱼样本。
 
 # 0x01 漏洞成因
@@ -34,25 +34,25 @@ Studio的XML解析器允许在项目文件中包含一些自定义的命令，�
 ![]()  
 通过修改Visual Studio的项目文件（vcxproj)植入恶意命令
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175241.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175241.png)
 
 当项目被下载编译时机会执行命令
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175242.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175242.png)
 
 # 0x03 漏洞利用
 
 可以直接反弹shell，通过hoaxshell直接生成powershell，并开启监听
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175243.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175243.png)
 
 将代码插入Visual Studio的项目文件（vcxproj）的XML标签中
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175246.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175246.png)
 
 直接编译，终端反弹shell
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175247.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175247.png)
 
 漏洞利用脚本：
 
@@ -122,7 +122,7 @@ Studio的XML解析器允许在项目文件中包含一些自定义的命令，�
 
 所有渗透都需获取授权，违者后果自行承担，与本号及作者无关，请谨记守法.
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175248.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175248.png)  
 
  **没看够~？欢迎关注！**
 
@@ -136,7 +136,7 @@ Studio的XML解析器允许在项目文件中包含一些自定义的命令，�
 
 
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175239.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175239.png)
 
  ** ** **分享后扫码 加我！**
 
@@ -160,7 +160,7 @@ Studio的XML解析器允许在项目文件中包含一些自定义的命令，�
 ## [    代理池工具撰写 |
 只有无尽的跳转，没有封禁的IP！](http://mp.weixin.qq.com/s?__biz=MzUyODkwNDIyMg==&mid=2247503462&idx=1&sn=0b696f0cabab0a046385599a1683dfb2&chksm=fa6bb717cd1c3e01afc0d6126ea141bb9a39bf3b4123462528d37fb00f74ea525b83e948bc80&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175248.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175248.png)
 
 点赞+在看支持一下吧~感谢看官老爷~
 

@@ -33,7 +33,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100037.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100037.png)
 
 常规信息收集过后，尝试渗透三天无果... 于是下班前只能祭出我的"大杀器"---缝合怪.py。缝合了一些好用的扫描器，一键 XRAY多线程批量扫 +
 自动添加任务到AWVS + 自动添加任务到arl + ...加入资产后就下班回家了。
@@ -42,21 +42,21 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100048.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100048.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100049.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100049.png)
 
 扫描器里一个洞都没，goby里所有资产显示只开放两个端口80、443。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100050.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100050.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100051.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100051.png)
 
 不慌，问题不大，时间还长，接下来要做的，就是整理思路，重新来过。
 
@@ -75,16 +75,16 @@ NoSuchBucket + BucketaName
 使用测试账号登录自己的云平台尝试进行劫持：  
 1.点击对象存储服务：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100052.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100052.png)  
 2.点击创建桶：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100054.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100054.png)  
 3.桶的名字为BucketName字段:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100055.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100055.png)  
 4.将访问控制权限更改为公共读写:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100056.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100056.png)  
 5.点击对象，创建hack.txt:
 
 ![]()  
@@ -92,22 +92,22 @@ NoSuchBucket + BucketaName
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100057.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100057.png)
 
 发现BucketName字段消失了，原来的NoSuchBucket也变成了NoSuchCustomDomain，说明我们的修改对它造成了影响！  
 7.NoSuchCustomDomain？那我们就来给他设置一个，点击域名管理尝试绑定域名：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100058.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100058.png)  
 8.访问http://321.asd.com/
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100059.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100059.png)  
 9.访问：http://321.asd.com/hack.txt （hack.txt为我们刚才上传的）
 
 (后期尝试上传图片，html等文件均可)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100100.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100100.png)
 
 劫持成功！拿来吧你！
 
@@ -121,7 +121,7 @@ NoSuchBucket + BucketaName
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100102.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210820100102.png)
 
   
 

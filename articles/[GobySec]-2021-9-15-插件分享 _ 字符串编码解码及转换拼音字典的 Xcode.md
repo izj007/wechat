@@ -15,11 +15,11 @@ __
 
 收录于话题 #插件 6个内容
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191223.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191223.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191224.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191224.png)
 
   
 
@@ -41,11 +41,11 @@ Xcode 信息编码工具为例，插件功能非常简单,主要用于学习移�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191225.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191225.png)
 **01**
 
  **  插件使用** **1.1
-插件效果**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191226.png)
+插件效果**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191226.png)
 
  **1.2 使用方法**
 
@@ -53,21 +53,21 @@ Xcode 信息编码工具为例，插件功能非常简单,主要用于学习移�
 
 1\. 通过扫描弹窗页或工具栏打开该插件
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191228.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191228.png)
 
 2\. 输入需要进行转码的字符串，选择相应的功能即可
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191229.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191229.png)
 
 3\. 输入中文姓名，使用中文姓名转拼音功能转换成拼音字典
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191230.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191230.png)
 
   
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191225.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191225.png)
 **02**
 
  **  插件开发**
@@ -79,15 +79,15 @@ Goby 中来。
 
 从零开始编写是比较耗时的，幸好该项目是开源的，因此我们能很容易获取该插件的源代码并将它集成进去，这里以信息编码转换模块为例
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191232.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191232.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191233.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191233.png)
 
 FeHelper 插件有很多模块，因此我们需要提取一下所需要的信息编码转换模块的代码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191234.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191234.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191235.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191235.png)
 
   *   *   *   *   *   * 
 
@@ -112,16 +112,16 @@ FeHelper 插件有很多模块，因此我们需要提取一下所需要的信�
 1\. 首先根据需要补充 package.json 文件信息，填写插件名称、作者、描述信息，根据图示填写即可，这里在 views 中的 command
 字段会在 extension.js 文件中被调用
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191236.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191236.png)
 
 2\. 在 src 目录下创建 index.html、extension.js 两个文件即可，同时创建 assets
 目录，用来存放额外的资源，譬如图标，样式文件，需要调用的 js 库文件等。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191237.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191237.png)
 
 3\. 编辑 extension.js 文件，最基础的文件内容根据图示编写即可，忽略打码的文字，打码的文字仅为中英文翻译所需，根据自己的需求选择是否保留。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191238.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191238.png)
 
 ###  **2.4 复制代码**
 
@@ -131,23 +131,23 @@ js 文件夹，修改好 index.html 中 css 的相对路径，基础工作都这
 
 根据图中指向分别放到不同目录即可，此时可以重启 Goby，查看一下效果。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191239.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191239.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191240.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191240.png)
 
 大致框架已经有了，但是样式好像还有问题，这时候我们打开 Debug 工具，看一下缺少了哪些样式。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191241.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191241.png)
 
 通过 Debug 工具的网络模块，我们发现有几个请求是 404 状态，说明还有几个文件的相对路径有错误，修改一下即可。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191242.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191242.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191243.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191243.png)
 
 修改好其他文件的相对路径之后，重启 Goby 查看一下效果。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191245.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191245.png)
 
 已经没有再继续报错的请求了，测试一下功能都很完整，到这里，插件已经基本完成，只需要进行中英文翻译等工作就可以打包发布插件了。
 
@@ -159,7 +159,7 @@ js 文件夹，修改好 index.html 中 css 的相对路径，基础工作都这
 
 1\. 在 package.json 中加入 language，其他语言同理。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191246.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191246.png)
 
 2\. 修改 extension.js 文件，添加以下代码，然后将 registerCommand 处的 title 换成 let title =
 getTranslate('XcodeTest') 即可。
@@ -171,7 +171,7 @@ getTranslate('XcodeTest') 即可。
       let translate  = require(__dirname+'/assets/js/translate.js');  goby.bindEvent('onChangeLang',()=>{    let iframes = Array.from(document.querySelectorAll('#iframe-dia iframe'));    let iframe = iframes.find((iframe)=>{      return iframe.contentWindow.goby.id == goby.id;    })    iframe && changeLang(iframe);  })  
       function changeLang(iframe){    let title = getTranslate('XcodeTest')    goby.showIframeDia(iframe.getAttribute('src'),title , "666", "500");  }    function getTranslate(key) {    let lang = goby.getLang();    try {      let content = eval("translate[lang][key]");      if(content == undefined){        try {          let content = eval("translate['EN'][key]");          if(content == undefined){            return key;          }else{            return content;          }        } catch (error) {          console.log(error);          return key;        }      }else{        return content;      }    } catch (error) {      try {        let content = eval("translate['EN'][key]");        if(content == undefined){          return key;        }else{          return content;        }      } catch (error) {        console.log(error);        return key;      }    }  }
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191248.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191248.png)
 
 3\. 修改 index.html 文件中的中文提示。
 
@@ -192,29 +192,29 @@ getTranslate('XcodeTest') 即可。
 
 然后修改 index.html 相应位置的中文，为相应的 html 标签添加 data-i18n 属性，按照图示修改即可。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191249.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191249.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191250.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191250.png)
 
 将修改好的中英文提示以 json 的格式分别加入不同语言文件夹的 html.json 中即可。
 
 中文格式：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191251.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191251.png)
 
 英文格式：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191252.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191252.png)
 
 最后重启 Goby 查看效果。
 
 中文效果：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191253.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191253.png)
 
 英文效果：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191254.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191254.png)
 
 ###  **2.6 打包插件**
 
@@ -222,7 +222,7 @@ getTranslate('XcodeTest') 即可。
 
 
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191225.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191225.png)
 **03**
 
  **  总结**
@@ -250,7 +250,7 @@ getTranslate('XcodeTest') 即可。
   
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191256.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191256.png)
 
   
 
@@ -277,13 +277,13 @@ Count](http://mp.weixin.qq.com/s?__biz=MzI4MzcwNTAzOQ==&mid=2247505698&idx=1&sn=
 更多 >>  插件分享  
   
 
-如果表哥/表姐也想把自己上交给社区（获取红队专版）![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191257.png)，戳这里领取一份插件任务？
+如果表哥/表姐也想把自己上交给社区（获取红队专版）![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191257.png)，戳这里领取一份插件任务？
 
 > https://github.com/gobysec/GobyExtension/projects
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191258.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210915191258.png)
 
 预览时标签不可点
 

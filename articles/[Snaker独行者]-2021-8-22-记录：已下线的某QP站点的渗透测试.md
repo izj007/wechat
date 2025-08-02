@@ -20,7 +20,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091614.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091614.png)
 
   
 
@@ -32,7 +32,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091615.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091615.png)
 
   
 
@@ -40,11 +40,11 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091617.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091617.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091618.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091618.png)
 
   
 
@@ -52,7 +52,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091619.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091619.png)
 
   
 
@@ -69,11 +69,11 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091620.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091620.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091621.png)
 
   
 
@@ -87,7 +87,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091622.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091622.png)
 
   
 
@@ -96,7 +96,7 @@ Getshell，在这之前先判断最近用户是否为DBA。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091623.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091623.png)
 
   
 
@@ -110,7 +110,7 @@ Getshell，在这之前先判断最近用户是否为DBA。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091624.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091624.png)
 
   
 
@@ -118,11 +118,11 @@ Getshell，在这之前先判断最近用户是否为DBA。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091625.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091625.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091626.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091626.png)
 
   
 
@@ -130,11 +130,11 @@ Getshell，在这之前先判断最近用户是否为DBA。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091627.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091627.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091628.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091628.png)
 
   
 
@@ -142,7 +142,7 @@ Getshell，在这之前先判断最近用户是否为DBA。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091629.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091629.png)
 
   
 
@@ -156,7 +156,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091630.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091630.png)
 
   
 
@@ -170,7 +170,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091631.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091631.png)
 
   
 
@@ -184,11 +184,11 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091632.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091632.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091633.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091633.png)
 
   
 
@@ -196,7 +196,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091634.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091634.png)
 
   
 
@@ -208,7 +208,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091635.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091635.png)
 
   
 
@@ -216,7 +216,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091636.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091636.png)
 
   
 
@@ -224,11 +224,11 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091637.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091637.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091638.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091638.png)
 
   
 
@@ -238,7 +238,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091639.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091639.png)
 
   
 
@@ -246,7 +246,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091640.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091640.png)
 
   
 
@@ -254,7 +254,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091641.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091641.png)
 
   
 
@@ -270,7 +270,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091642.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091642.png)
 
   
 
@@ -278,7 +278,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091643.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091643.png)
 
   
 
@@ -286,7 +286,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091645.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091645.png)
 
   
 
@@ -294,7 +294,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091646.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091646.png)
 
   
 
@@ -308,7 +308,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091647.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091647.png)
 
   
 
@@ -320,7 +320,7 @@ Windows Server 2008 R2、阿里云服务器、没安装杀软。那么接下来�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091648.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091648.png)
 
   
 

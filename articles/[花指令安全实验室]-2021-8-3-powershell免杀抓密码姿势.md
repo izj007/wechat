@@ -34,13 +34,13 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110810.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110810.png)  
 
   
 
 此时我们利用降维攻击，强制使用PowerShell v2绕过 amsi，因为版本2没有支持AMSI的必要内部挂钩  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110812.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110812.png)  
 
   
 
@@ -53,7 +53,7 @@ __
 Out-EncryptedScript是Powersploit中提供工具的一种，他是用来进行加密处理的脚本，首先我们将Out-
 EncryptedScript.ps1与Invoke-Mimikatz.ps1放到同一目录下  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110813.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110813.png)
 
   
 
@@ -68,13 +68,13 @@ EncryptedScript.ps1与Invoke-Mimikatz.ps1放到同一目录下
   
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110814.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110814.png)  
 
   
 
 目录下便会自动生成evil.ps1文件，上传到目标机器即可  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110813.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110813.png)  
 
   
 
@@ -89,11 +89,11 @@ EncryptedScript.ps1与Invoke-Mimikatz.ps1放到同一目录下
   
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110815.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110815.png)  
 
 如下，便成功绕过了杀软，成功的抓到了密码  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110816.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110816.png)  
 
   
 
@@ -109,7 +109,7 @@ EncryptedScript.ps1与Invoke-Mimikatz.ps1放到同一目录下
 
 若各位师傅有更多姿势，或想与我一起交流学习，可加我VX：  
 
-‍‍‍![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110818.png)  
+‍‍‍![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110818.png)  
 
 分享收藏点赞在看
 

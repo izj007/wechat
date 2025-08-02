@@ -46,33 +46,33 @@ Profiles是CobalStrike流量混淆的基础，当然也会操纵shellcode的一�
 
 ####  **1）无profiles**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141241.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141241.png)
 
 生成的shellcode
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141242.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141242.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141243.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141243.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141244.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141244.png)
 
 嗯，落地就被干碎，挺正常的，毕竟啥也没做处理
 
 ####  **2）加载profiles**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141245.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141245.png)
 
 再生成一个shellcode
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141246.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141246.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141247.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141247.png)
 
 杀不到了
 
 可以看到这里其实已经过了火绒的静态了，关键点在于profiles里面替换了大量的敏感字符，也就是所谓的静态特征，随意截取一段
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141248.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141248.png)
 
 这里主要是对stag的处理，也就是去除被标记的特征。
 
@@ -87,33 +87,33 @@ Profiles是CobalStrike流量混淆的基础，当然也会操纵shellcode的一�
 Arsenal-kit是cs官方出的一个帮助免杀的套件，可以通过简单的配置绕过查杀，而ArtifactKit是在arsenal-
 kit当中的一个处理beacon的套件，通过修改加载方式等，bypass杀毒，主要还是ArtifactKit这个插件，这个插件呢主要针对一阶段马Artifact，二阶段马就没那么好的效果了
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141249.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141249.png)
 
 生成这些东西还是需要做简单配置，随便改下
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141250.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141250.png)
 
 简单编译一下
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141251.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141251.png)
 
 然后加载插件
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141252.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141252.png)
 
 再生成一个shellcode，为了有效的验证这个工具的绕过查杀的效果，我这里先取消了profiles，再做验证
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141253.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141253.png)
 
 确保裸马是被杀的
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141254.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141254.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141255.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141255.png)
 
 现在加载插件生成一个新的shellcode
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141256.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141256.png)
 
  **可以看到没有查杀了，这里放张vt的图，证明效果还是可以的**
 
@@ -132,13 +132,13 @@ kit当中的一个处理beacon的套件，通过修改加载方式等，bypass�
 
 这里使用二阶段生成的shellcode搭配自写的免杀，很轻松就可过Defender
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141257.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141257.png)
 
 最新版本Defender
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141258.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141258.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141259.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141259.png)
 
 denfender一声不吭
 
@@ -146,23 +146,23 @@ denfender一声不吭
 
 火绒如下
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141300.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141300.png)
 
 某擎，一声不吭嗷
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141301.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141301.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141303.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141303.png)
 
 甚至执行个命令也无事发生
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141304.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141304.png)
 
 从前的时候，会告警内存里有cs（吃了好多次亏，麻麻滴），现在告都不告了，笑死
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141305.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141305.png)
 
   
 
@@ -193,7 +193,7 @@ denfender一声不吭
 
   
  **E ND**  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141306.png) **扫
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141306.png) **扫
 码关注了解更多**安全小技巧  
   
 

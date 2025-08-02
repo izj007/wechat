@@ -34,7 +34,7 @@ https://twitter.com/ElliotKillick/status/1449812843772227588?s=20
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022091000.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211022091000.png)
 
   
 

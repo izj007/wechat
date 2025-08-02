@@ -57,9 +57,9 @@ ___发表于_
 
   2. 2. 观察到文件动作，查看stack
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191449.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191449.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191450.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191450.png)
 
 基于上述，可知操作sqlite的行为在wechatwin.dll下
 
@@ -67,29 +67,29 @@ ___发表于_
 
   1. 1. 接着，使用x32dbg附加上去
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191452.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191452.png)
 
   2. 2\. 首次进入x32dbg，需要配置：调试-高级-隐藏调试器
 
   3. 3. 根据前面观察的stack得知在wechatwin.dll, 点击符号表，搜素，双击进入入口，并下断
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191453.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191453.png)
 
   4. 4. 当前位置也是wechatwin.dll内存布局的开始位置，右键-搜索-当前模块-字符串
 
   5. 5. 查找字符串特征，例如sqlite:
 
-  6. ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191454.png)
+  6. ![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191454.png)
 
   7. 6. sqlite3_prepare_v2通过搜索google或者github能得知来自于`github.com/sqlite/sqlite`或`github.com/sqlcipher/sqlcipher`
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191455.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191456.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191456.png)
 
   8. 7\. 那么到底是哪个呢? 最快的方式还是在字符串查找"sqlcipher":
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191457.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191457.png)
 
   9. 8. 很好，到此可以大致得知操作数据库文件使用的依赖库, 接下来不妨更进一步，找到sqlcipher的版本号:
 
@@ -97,15 +97,15 @@ ___发表于_
 
     2. • 首先，利用关键字 "misuse"，在wechatwin.dll内存布局下查找字符串，双击进入:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191458.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191458.png)
 
     3. • 前面应该有时间前缀，跟进一下存储地址，即可看到前面2019的时间:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191459.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191459.png)
 
     4. • 当然，还可以在Ghidra下静态查看：Ghidra基址+(当前地址-wechatwin.dll基址) = `python3 hex(0x10000000+(0x694fa9e8-0x689D0000))` = 0x10b2a9e8
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191501.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191501.png)
 
   10. 9. 通过上述两种方式，成功拿到了特征字符串 `2019-04-16 19:49:53 884b4b7e502b4e991677b53971277adfaf0a04a284f8e483e2553d0f8315alt2`，基于这个时间之后最近的一版本，通过提交的commit可确认为3.28.0版本
 
@@ -119,11 +119,11 @@ ___发表于_
 
   2. 2. 在sqlite3.c下，调用sqlite3MisuseError会进而调用sqlite3_log, 其中会调用sqlite3_sourceid()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191503.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191503.png)
 
   3. 3. 接在看到其定义:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191504.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191504.png)
 
   4. 4\. 即3.28恰好匹配了上面逆向分析出来的特征字符，当然下载3.27或者3.29都是不匹配的！
 
@@ -272,9 +272,9 @@ Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30037\bin\Hostx86\x86`路径到PATH�
 加上`-DSQLITE_HAS_CODEC -DSQLITE_ENABLE_FTS5`
 是因为如下这部分代码需要编译进来，通过xdbg看到有在用，尽量全部覆盖到：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191505.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191505.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191506.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191506.png)  
 
 ## 五、静态分析-尝试通过diff还原符号表
 
@@ -344,32 +344,32 @@ Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30037\bin\Hostx86\x86`路径到PATH�
 
 看到官方demo或者直接询问chatgpt:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191507.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191507.png)
 
 其实不仅是上述，例如sqlite3_key的上层封装或者其下层定义中均会接触到key，接下来看源码，尝试都找出来,
 
 以sqlite3_key为例，找出其上层封装:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191508.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191508.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191509.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191509.png)
 
 在sqlcipher_check_connection和sqlcipher_codec_ctx_migrate下断都能跟踪到密钥，当然可以看出密钥是放在了ctx结构体下，继续查找ctx->pass相关操作，可以找到更多操作了密钥的函数,
 不一一例举:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191510.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191510.png)
 
 接下来找下层定义:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191511.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191511.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191512.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191512.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191514.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191514.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191515.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191515.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191516.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191516.png)
 
 操作结构体ctx的pass属性的调用链上的函数都可以作为关键函数。
 
@@ -383,21 +383,21 @@ Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30037\bin\Hostx86\x86`路径到PATH�
 
   2. 2. 搜索上面的关键函数，有匹配的都可做对应的下断观察，发现并不准确
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191517.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191517.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191519.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191519.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191520.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191520.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191521.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191521.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191522.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191522.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191523.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191523.png)
 
 3. 利用该方式还原的符号未成功找到关键函数, 有几种可能，加壳混淆、魔改，但是有些非关键函数还是非常之准确，这儿可以有的思路是通过先准确还原部分符号后，利用关联关系比如同在某个函数下，即该函数处理过密钥或者ctx结构体，进而慢慢`回溯`到关键的链上去
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191524.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191524.png)
 
   3.   
 
@@ -411,11 +411,11 @@ sqlite3_exec函数是执行SQL语句的关键函数，还原其符号与地址�
 
   1. 1. 查找字符串，找select关键字，下断 (在引用功能下需要多下断，因为无法提前知道会断在哪个查询语句的，多下断的概率就高)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191525.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191525.png)
 
   2. 2. 计算下偏移: Ghidra基址+(当前地址-wechatwin.dll基址) = `python3 hex(0x10000000+(0x69730F64-0x689D0000))` = 0x10d60f64, 进入Ghidra查看：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191526.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191526.png)
 
     1.   
 
@@ -423,7 +423,7 @@ sqlite3_exec函数是执行SQL语句的关键函数，还原其符号与地址�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191527.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191527.png)
 
     2. 可以看到首参是db指针，FUN_10d8b440明显就不像，双击进去看伪C执行流程也不像
 
@@ -431,23 +431,23 @@ sqlite3_exec函数是执行SQL语句的关键函数，还原其符号与地址�
 
   3. 3. 看到图中的特征匹配情况, 确定FUN_11BB0750即sqlite3_exec
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191528.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191528.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191529.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191529.png)
 
 ### 2\. 找到sqlite3_open
 
 看到源码：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191530.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191530.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191531.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191531.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191532.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191532.png)
 
 利用特征字符串`unable to delete/modify collation`, 找到：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191535.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191535.png)
 
 计算偏移：Ghidra基址+(当前地址-wechatwin.dll基址) = `python3
 hex(0x10000000+(0x6A5AD5E3-0x689D0000))` = 0x11bdd5e3
@@ -458,7 +458,7 @@ hex(0x10000000+(0x6A5AD5E3-0x689D0000))` = 0x11bdd5e3
 
 基本确认找到openDatabase函数:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191536.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191536.png)
 
 至此还原`FUN_11bdde90`符号为openDatabase.
 
@@ -470,7 +470,7 @@ wal`文件，代表数据库被打开并执行了未commit的事务，且未执�
 
 看到ChatGPT提供的demo:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191537.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191537.png)
 
 通过`逼近法`，可以知道sqlite3_key会在sqlite3_open之后，在sqlite3_exec之前：
 
@@ -484,17 +484,17 @@ wal`文件，代表数据库被打开并执行了未commit的事务，且未执�
 
   2. 2. 执行到sqlite3_open断下后，点击`调用堆栈`找到上层
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191538.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191538.png)
 
   3. 3. 双击上图中位置，即来到上层函数范围，且对应指令即sqlite3_open执行完后第一条被执行的指令，这儿我们下断
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191540.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191540.png)
 
   4. 4. 接着，点击`跟踪`,右键`启用运行跟踪`, 然后上方菜单栏，跟踪-自动步过
 
   5. 5. 看到中间只执行了一次函数调用
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191541.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191541.png)
 
   1. 6. 重复，在`6B6A5450`断点后，首先点击`步进`, 再次开启跟踪，再次自动步过
 
@@ -502,7 +502,7 @@ wal`文件，代表数据库被打开并执行了未commit的事务，且未执�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191542.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191542.png)
 
   3. 8. 由于技术有限，通过正向的分析vmp没什么突破点，但是断在sqlite3_exec查看上层和sqlite3_open居然是一样的，那么可以推测的是执行这些下层函数的上层函数应该是做了vmp处理的，类似于在一个循环内边执行边还原部分指令
 
@@ -519,7 +519,7 @@ vmp区域
 
   2. 2. 跟进下`setDBKey`, Ghidra基址+(当前地址-wechatwin.dll基址) = `python3 hex(0x10000000+(0x6969DDBD-0x689D0000))` = 0x10ccddbd
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191543.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191543.png)
 
   3. 3. 答案是`FUN_10dbce50`才是真正将密钥赋值到特定指针的操作，原因如下:
 
@@ -529,7 +529,7 @@ vmp区域
 
     2. 原因2: 当动态调试断点在`FUN_10dbce50`时，看到其第一个参数的数据即密钥
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191544.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191544.png)  
 
 很好，我们找到了一个处理密钥的函数
 
@@ -539,7 +539,7 @@ vmp区域
 
   1. 1. 静态分析sqlite3_open( `FUN_11bdde90`), 点击交叉引用
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191546.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191546.png)
 
   2. 2. 我们跟进到`int FUN_11b622f0(void)`, 继续查看交叉引用，只有在`FUN_11b62b90`内被调用过
 
@@ -547,11 +547,11 @@ vmp区域
 
 ``
 
-    1. ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191547.png)
+    1. ![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191547.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191548.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191548.png)
 
   4. 4. 通过sqlcipher_codec_ctx_migrate的交叉引用，可以快速定位上层函数:`FUN_11bab2e0  sqlite3Pragma  
 |v  
@@ -565,19 +565,19 @@ FUN_11b62b90  sqlcipher_codec_ctx_migrate`
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191549.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191549.png)
 
   7.   
 
 静态观察为, 是一个数组的偏移值:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191550.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191550.png)
 
   8.   
 
   9. 为什么不是一个函数呢？我们看下`sqlcipher_codec_ctx_get_pagesize`的定义:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191551.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191551.png)
 
   10. 是的，其只是为了访问结构体成员变量，因此在编译过程中被简化， 因此想要找出其在逆向下的函数定义就不可行
 
@@ -585,7 +585,7 @@ FUN_11b62b90  sqlcipher_codec_ctx_migrate`
 
   11. 7. 接着，尝试找出`sqlite3BtreeSetPageSize`,其在`sqlcipher_codec_ctx_migrate`下被调用，源码表现为:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191552.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191552.png)
 
     1.   
 
@@ -593,7 +593,7 @@ FUN_11b62b90  sqlcipher_codec_ctx_migrate`
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191553.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191553.png)
 
   12. 8. 通过`sqlite3BtreeSetPageSize`的交叉引用找`codec_set_btree_to_codec_pagesize`即`FUN_11b5e830`
 
@@ -601,7 +601,7 @@ FUN_11b62b90  sqlcipher_codec_ctx_migrate`
 
   14. 10. 通过`sqlite3CodecAttach` 理论上应该是能找到sqlite3_key，但申请的是居然又回到了`FUN_11b622f0`
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191554.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191554.png)
 
   15.   
 
@@ -611,7 +611,7 @@ FUN_11b62b90  sqlcipher_codec_ctx_migrate`
 
   16. 11. 无论如何找到`sqlite3CodecAttach`即`sqlite3_key`的核心，看到源码:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191555.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191555.png)
 
   17.   
 
@@ -619,7 +619,7 @@ FUN_11b62b90  sqlcipher_codec_ctx_migrate`
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191557.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191557.png)
 
 PS:
 
@@ -655,13 +655,13 @@ PS:
 
   6. 6. 发现在该线程最上层，即最初执行态，密钥即已经存在于内存
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191558.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191558.png)
 
 该线程最上层可以看到thread等标志，对应的是`call esi`:
 
   
 
-  7. ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191559.png)
+  7. ![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191559.png)
 
   8. 7. 接下来就是要调试多线程，在扫码登录PC微信的过程中，在拉起上述线程之前，有特别多标志性的动作，通过process monitor可以看到有注册表，网络等，可以进入kernelbase符号表，搜索`getcomputername`,`socket`等常见函数下断，发现还是找不到关键线程, 尝试制造异常或者脏数据没有好的切入点
 
@@ -674,7 +674,7 @@ PS:
 
   11. 10. 比较有意思的是当UAC过不了时会通过执行shellExecuteExW拉RPC进程, 如果有执行这个分支条件的，可以下断然后看下完整执行命令
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191600.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191600.png)
 
   12. 11. 调试RPC需要用到这个工具，需要根据当前主机环境编译，参考: https://itm4n.github.io/fuzzing-windows-rpc-rpcview/
 
@@ -686,15 +686,15 @@ PS:
 
   1. 1. 若不想计算偏移而直接用xdbg的地址，可以修改Ghidra的基址为wechatwin.dll基址: (比较耗时且需要多次重启调试时可以暂不设置)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191601.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191601.png)
 
   2. 2. wechatwin.dll基址查看技巧:首先符号表进入dll内存空间, 在内存布局中转到即可找到基址
 
   
 
-  3.      ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191602.png)
+  3.      ![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191602.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191604.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191604.png)
 
   4. 3. 合并DAT展示https://github.com/NationalSecurityAgency/ghidra/issues/5033
 

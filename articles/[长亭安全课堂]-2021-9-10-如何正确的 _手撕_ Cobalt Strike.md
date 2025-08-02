@@ -83,7 +83,7 @@ Config配置信息(主要定义通信目标/通信方式等)，在Cobalt Strike�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200352.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200352.png)
 
   
 
@@ -97,14 +97,14 @@ Config配置信息(主要定义通信目标/通信方式等)，在Cobalt Strike�
 
 Beacon Config的生成在BeaconPayload类的 **exportBeaconStage** 函数中  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200353.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200353.png)
 
   
 这上面指向的Settings结构体就是Beacon Config，比如var1，它代表实际通信的端口
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200354.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200354.png)
 
   
 
@@ -112,7 +112,7 @@ Beacon Config的生成在BeaconPayload类的 **exportBeaconStage** 函数中
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200355.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200355.png)
 
   
 
@@ -136,7 +136,7 @@ Settings的Add系列函数，如AddShort，并不是简单的将Short类型直�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200356.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200356.png)
 
   
 
@@ -158,7 +158,7 @@ Config
  **  
 **
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200357.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200357.png)
 
  ****  
 
@@ -176,7 +176,7 @@ Config
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200358.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200358.png)
 
   
 
@@ -195,7 +195,7 @@ Config。首先是在拿到了Type之后， **直接往堆中分配的内存写�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200359.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200359.png)
 
   
 
@@ -228,7 +228,7 @@ Config。首先是在拿到了Type之后， **直接往堆中分配的内存写�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200400.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200400.png)
 
   
 
@@ -262,11 +262,11 @@ Config。首先是在拿到了Type之后， **直接往堆中分配的内存写�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200401.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200401.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200402.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200402.png)
 
   
 
@@ -330,7 +330,7 @@ BeaconEye中查询内存信息实际调用的是 **NtQueryVirtualMemory** ，我
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200403.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200403.png)
 
   
 
@@ -338,12 +338,12 @@ BeaconEye中查询内存信息实际调用的是 **NtQueryVirtualMemory** ，我
 **MEMORY_INFORMATION_CLASS** ，MEMORY_INFORMATION_CLASS实际包含了一个
 **MEMORY_BASIC_INFORMATION** ，MEMORY_BASIC_INFORMATION结构如下  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200404.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200404.png)
 
   
 
 查看RegionSize的描述  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200405.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200405.png)  
 翻译过来的意思是，RegionSize的计算方式是，从起始地址开始，直到内存页的属性不一致为止，包含的byte数量，就是RegionSize
 
   
@@ -360,7 +360,7 @@ B
 Config没有被释放在第一个堆段中，就会导致BeaconEye检测失败，为了实现这个猜想，笔者将SymInitialize注释掉，
 **转而手动调用HeapAlloc进行堆分配(当堆空间分配的足够多时，就会触发系统自动生成堆段)，如果这个猜想是正确的，那么BeaconEye将同样无法扫描**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200406.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200406.png)
 
   
 
@@ -368,7 +368,7 @@ Config没有被释放在第一个堆段中，就会导致BeaconEye检测失败�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200407.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200407.png)
 
   
 
@@ -384,7 +384,7 @@ C
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200408.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200408.png)
 
   
 
@@ -410,7 +410,7 @@ Config在内存中哪个位置，这里同样使用yara进行确认(扫描完整
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200409.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200409.png)
 
   
 
@@ -431,7 +431,7 @@ E
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200410.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200410.png)
 
   
 
@@ -443,7 +443,7 @@ E
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200411.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200411.png)
 
   
 
@@ -452,7 +452,7 @@ E
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200412.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200412.png)
 
   
 
@@ -473,7 +473,7 @@ F
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200413.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200413.png)
 
   
 
@@ -481,7 +481,7 @@ F
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200414.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200414.png)
 
   
 
@@ -522,10 +522,10 @@ Strike全版本(3.x的yara规则需要修改)，这对攻击方来说提出了�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200415.png)
-**点分享**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200416.png)
-**点收藏**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200417.png)
-**点点赞**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200418.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200415.png)
+**点分享**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200416.png)
+**点收藏**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200417.png)
+**点点赞**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210910200418.png)
 **点在看**
 
 预览时标签不可点

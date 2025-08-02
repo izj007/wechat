@@ -18,12 +18,12 @@ ___发表于_
 
 #内网渗透 2 个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174856.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174856.png)
 
 点击上方蓝字关注我们
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174857.png)\
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174857.png)\
 
 # SysHttpHookSleep
 
@@ -151,23 +151,23 @@ https://www.freebuf.com/articles/system/361161.html
 
  **加密编码工具在release中下载。**
 
-先生成stagerless的raw木马，按顺序分别使用enc.py、AES_Shellcode.exe、rev.py生成b.txt文件，并将其部署在服务器端。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174858.png)
+先生成stagerless的raw木马，按顺序分别使用enc.py、AES_Shellcode.exe、rev.py生成b.txt文件，并将其部署在服务器端。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174858.png)
 
-其次将URL使用URL_XOR.exe进行加密，并分成两段填入str1和str2参数中。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174859.png)
+其次将URL使用URL_XOR.exe进行加密，并分成两段填入str1和str2参数中。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174859.png)
 
-最后生成exe，运行上线。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174900.png)
+最后生成exe，运行上线。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174900.png)
 
 ## 免杀效果
 
 由于在项目中已经投入使用一段时间，可能有些已经不免杀，可以尝试VMP加壳，或者修改代码二次开发，来规避杀软。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174901.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174901.png)
 
   
 
  **——The  End——**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174903.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174903.png)
 
   
 

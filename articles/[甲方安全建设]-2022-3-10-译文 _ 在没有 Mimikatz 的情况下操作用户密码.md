@@ -14,11 +14,11 @@ __
 
 收录于话题 #域安全 21个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170405.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170405.png)
 
 开卷有益 · 不求甚解
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170406.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170406.png)  
 
 ## 前言
 
@@ -33,7 +33,7 @@ __
 
 考虑以下场景：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170407.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170407.png)
 
 BloodHound 攻击路径
 
@@ -57,14 +57,14 @@ BloodHound 攻击路径
 
 首要任务是恢复先前密码的 NT 哈希。最简单的方法是使用 _Mimikatz_ ，尽管我将介绍一些替代方案。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170408.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170408.png)
 
 使用 Mimikatz 恢复密码历史
 
 另一种恢复方法是使用命令行工具恢复 NTDS.dit 数据库以及 SYSTEM 注册表配置单元。有很多方法可以做到这一点，但一种简单的方法是使用内置的
 _ntdsutil_ 和命令。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170409.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170409.png)
 
 使用 ntdsutil 恢复 NTDS.dit
 
@@ -72,19 +72,19 @@ _ntdsutil_ 和命令。
 
 一旦离线， _Mimikatz_ 可以在不被发现的情况下使用，但也可以使用Michael _Grafnetter_ 的 DSInternals 进行恢复。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170410.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170410.png)
 
 使用 DSInternals 恢复密码历史记录
 
 现在原始 NT 哈希已恢复，是时候重置它了。首先，使用 _Mimikatz_ ：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170411.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170411.png)
 
 使用 Mimikatz 设置 NT 哈希
 
 这也可以使用 _DSInternals_ 和 _Set-SamAccountPasswordHash_ 来完成：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170413.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170413.png)
 
 使用 DSInternals 设置 NT 哈希
 
@@ -205,7 +205,7 @@ _Mimikatz_ 所做的那样。这允许绕过密码策略，但需要域管理员
 
 我们是否需要重置 esteban_da 的密码才能控制它？答案实际上是否定的，我们没有。再一次，让我们看一下 _BloodHound_ 图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170407.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170407.png)
 
 BloodHound 攻击路径
 
@@ -219,7 +219,7 @@ BloodHound 攻击路径
 
 如果我们要删除 _GenericWrite_ 并重新运行 _BloodHound_ 集合，我们会看到：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170415.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170415.png)
 
 额外的 BloodHound 边缘
 
@@ -241,11 +241,11 @@ DCSync。我不会详细介绍攻击的工作原理，因为这已经被广泛�
 可以使用Elad Shamir 的 _Whisker从 Windows 执行此攻击。_ 它使用起来非常简单，在添加 Shadow Credentials
 后，它会输出证书和 _Rubeus_ 命令来恢复 Kerberos TGT 和 NT 哈希。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170416.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170416.png)
 
 使用 Whisker 添加影子凭证
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170417.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170417.png)
 
 使用 Rubeus 获取 TGT 和 NT 哈希
 
@@ -316,10 +316,10 @@ DCSync。我不会详细介绍攻击的工作原理，因为这已经被广泛�
 
 >>>
 
->>> ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170418.png)  
+>>> ![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170418.png)  
 >
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170419.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220310170419.png)
 
   
 

@@ -16,7 +16,7 @@ ___发表于_
 
 Epagneul是一个可视化和调查 Windows 事件日志的工具。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180922.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180922.png)
 **部署**
 
 需要安装 docker 和 docker-compose。

@@ -18,7 +18,7 @@ ___发表于_
 
 #漏洞 38 个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180127.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180127.png)
 
 01 漏洞概况 ** **  
 
@@ -135,7 +135,7 @@ PoC未公开
 03 漏洞复现  
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180129.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180129.png)
 
 ###
 
@@ -170,7 +170,7 @@ https://www.weaver.com.cn/cs/securityDownload.asp#
 
 微步在线威胁感知平台TDP通用SQL注入检测规则支持检测该漏洞。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180130.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180130.png)
 
 ###
 

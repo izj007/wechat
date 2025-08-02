@@ -20,12 +20,12 @@ ___发表于_
 
 #网络安全 14 个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174740.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174740.png)
 
 **前言**
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174741.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174741.png)
 在渗透和攻防中，多次遇到用友NC系统。一直以来都是用别人的工具，自己从来没分析研究过用友的源码和利用，遇到一些场景或需要利用漏洞执行命令时踩了很多坑。最近便通过灰盒测试简单分析了下NC6的命令执行，并尝试bypass。
 **测试环境：** win server+NC6.3，win server+NC6.5
 
@@ -40,29 +40,29 @@ ___发表于_
   
 首先是用友NC6.3，无论是bsh.servlet.BshServlet命令执行还是反序列化执行系统命令，都会遇到dir、echo命令执行失败。通过监控进程，发现未调用cmd，猜测是被过滤。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174742.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174742.png)
 
   
 
 当命令执行成功时，会调用系统cmd执行。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174743.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174743.png)
 
   
 
 通过测试，发现加上cmd/c能够成功调用cmd并执行
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174745.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174745.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174746.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174746.png)
 
   
 
 尝试echo命令写入文件，也没有问题，完全正常写入exec("cmd /c echo ccc > nc63.txt");
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174747.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174747.png)
 
   
 
@@ -74,13 +74,13 @@ ___发表于_
 在NC6.5中，发现在NC6.3中的方法已不再适用。增加了转义，特殊符号全部失效。例如通过echo写入需要用到的“>”
 ，会被双引号转义成字符串而非命令。被转义：可以看到 cmd和特殊字符都被添加了双引号包裹
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174748.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174748.png)
 
   
 
 失败尝试：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174749.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174749.png)
 
   
 
@@ -93,40 +93,40 @@ ___发表于_
 
 成功执行方式：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174750.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174750.png)
 
   
 
  **命令执行带参数：** 如果出现命令需要有参数的场景怎么办？win中的系统命令大多都是用斜线“/” 来声明参数名。经过尝试，发现可以直接省去空格连写:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174751.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174751.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174752.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174752.png)
 
   
 
  **写文件：** 但在实战中还是要写入webshell的，就要用到echo 和">"符号。这一步确实让我折腾了一番，后来想到用闭合双引号方式来干扰转义。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174754.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174754.png)
 
   
 
 经过测试,用如下方式写入的缺点是会多出空格和引号：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174755.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174755.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174756.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174756.png)
 
   
 
  **小结**
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174741.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174741.png)
 
 会用利用脚本是一回事，复现了漏洞是一回事，能否在攻防中利用漏洞并拿到权限又是另一回事。
 
@@ -137,14 +137,14 @@ ___发表于_
  **推荐阅读**
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174741.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174741.png)
 
 #
 [·白加黑免杀制作（详细）](https://mp.weixin.qq.com/s?__biz=Mzg5MDg0NzUzMw==&mid=2247483769&idx=1&sn=72470857b2f9eb1f1fee11e901bc9873&scene=21#wechat_redirect)
 
 ·文章预览
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174759.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174759.png)
 
   
 
@@ -164,7 +164,7 @@ ___发表于_
 
 [一个好用的RPC框架](http://mp.weixin.qq.com/s?__biz=MzI5MDE0MjQ1NQ==&mid=2247525440&idx=1&sn=1692dc4c8eab9c541d940d7bb9b7a8be&chksm=ec2645d8db51ccceb2021615db11f7ca120951b0af8039f3c9fa4805c3e2e91060bfcc92302e&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174800.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174800.png)
 
  **雷石安全实验室**
 

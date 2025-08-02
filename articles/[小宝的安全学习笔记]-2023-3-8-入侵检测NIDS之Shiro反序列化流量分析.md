@@ -51,7 +51,7 @@ ___发表于_
 
 ## 工具：shiro_attack-2.2
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191741.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191741.png)
 
 ### 行为：爆破利用链
 
@@ -112,7 +112,7 @@ ___发表于_
   * dnslog
   * 下载并分析恶意字节码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191743.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191743.png)
 
   
 

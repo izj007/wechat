@@ -53,23 +53,23 @@ GitHub地址: https://github.com/StarCrossPortal/dolphin
 
 ## 效果图
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309135937.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309135937.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140000.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140000.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140001.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140001.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140003.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140003.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140005.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140005.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140006.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140006.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140007.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140007.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140009.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140009.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140010.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230309140010.png)
 
 预览时标签不可点
 

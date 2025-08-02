@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集 #安全报告 105个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191039.png)1  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191039.png)1  
   
 
  **            ****什么是PHP-Parser ?**  
@@ -169,7 +169,7 @@ Parser的掌握。
  **3.CTF混淆文件还原实战** 经过上面两个例子，已经掌握了PHP-
 Parser的基础运用，接下来通过还原混淆文件深化一下对于节点的理解，样本是2020年高校战“疫”网络安全分享赛中Hardphp题目的混淆文件，我们将从WriteUP逆向推导出反混淆思路，混淆文件如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191059.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191059.png)
 
 首先观察可以发现，混淆文件通过“unserialize(base64_decode(“的方式将字符串解码结果赋值给”GLOBALS“数组，然后通过数组值进行运算。由于存在部分乱码的变量名，首先将所有的乱码变量批量重命名。思路如下：
 
@@ -187,7 +187,7 @@ Parser的基础运用，接下来通过还原混淆文件深化一下对于节�
         public $Count = 0;    public $NewName = [];  
         public function leaveNode(Node $node){        //判断Variable类型的节点        if ($node instanceof Node\Expr\Variable) {            //匹配不含字母数字的乱码变量            if (!preg_match('/^[a-zA-Z0-9_]+$/', $node->name)) {                //如果这个变量再次出现，使用已经有的替换值进行替换                if (in_array($node->name, array_keys($this->NewName))){                    $new_var_name = str_replace($node->name, 'v_' . $this->NewName[$node->name], $node->name);                    return (new Node\Expr\Variable($new_var_name));                    }else{                    //记录新的变量名到数组                    $this->NewName[$node->name] = $this->Count++;                    $new_var_name = str_replace($node->name, 'v_' . $this->NewName[$node->name], $node->name);                    return (new Node\Expr\Variable($new_var_name));                    }            }            return ;        }    }
 
-执行效果如下：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191101.png)  
+执行效果如下：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191101.png)  
 
 可以看到原本的不可见变量名已经被重命名成了“v_“格式的变量。同时可以观察到“GLOBALS“变量的键名也是乱码字符，借鉴变量名重命名的思路对所有”GLOBALS“数组的键名进行重命名：  
 
@@ -207,15 +207,15 @@ Parser的基础运用，接下来通过还原混淆文件深化一下对于节�
 
 执行之后文件还原如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191103.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191103.png)
 
 接下来就是解`unserialize(base64_decode(`混淆，可以先用在线代码运行工具输出一下解码的结果：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191106.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191106.png)
 
 通过解码结果可以看到还存在`unserialize(base64_decode(`混淆，把密文复制再解一次：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191108.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191108.png)  
 
 结果看起来只剩基本函数了，通过在线的还原可以确定一下解混淆思路：
 
@@ -236,7 +236,7 @@ Parser的基础运用，接下来通过还原混淆文件深化一下对于节�
 
 注意：因为字符是嵌套的”unserialize(base64_decode(“,所以这里需要进行还原两次，效果如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191110.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191110.png)  
 
 接下来我们处理一下字符运算,观察代码发现运算都是“x + (y - z)“格式，所以我们的返回值格式也固定为”$a + $b - $c“。  
 
@@ -247,7 +247,7 @@ Parser的基础运用，接下来通过还原混淆文件深化一下对于节�
     class ExpressionToNumber extends NodeVisitorAbstract  
         public function leaveNode(Node $node)    {        if ($node instanceof Node\Expr\BinaryOp\Plus &&            ($node->left instanceof Node\Scalar\LNumber || $node->left instanceof Node\Scalar\String_ || $node->left instanceof Node\Expr\UnaryMinus) && $node->right instanceof Node\Expr\BinaryOp\Minus && ($node->right->left instanceof Node\Scalar\LNumber || $node->right->left instanceof Node\Scalar\String_) && ($node->right->right instanceof Node\Scalar\LNumber || $node->right->right instanceof Node\Scalar\String_)) {            if ($node->left instanceof Node\Expr\UnaryMinus) {                $a = -($node->left->expr->value);            } else {                    $a = $node->left->value;            }            $b = $node->right->left->value;            $c = $node->right->right->value;            return new Node\Scalar\LNumber($a + $b - $c);        }    }}
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191111.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191111.png)
 
 通过观察发现还剩下`chr`、`str_rot13`以及字符串的连接符`.`三种，可以通过例二延伸出解法。  
 
@@ -262,7 +262,7 @@ Parser的基础运用，接下来通过还原混淆文件深化一下对于节�
 
 最后执行结果如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191112.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308191112.png)
 
 这样一来该文件的可读性已经很好了，短短的几行代码经过混淆后的代码量还是挺多的。  
 4  

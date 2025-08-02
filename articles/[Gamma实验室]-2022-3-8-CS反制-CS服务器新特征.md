@@ -17,13 +17,13 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183838.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183838.png)
 
 点击上方“蓝字”，关注更多精彩
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183849.png) __
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183849.png) __
 
 ## CobaltStrike是一款基于Java编写的全平台多方协同后渗透攻击框架，几乎覆盖了APT攻击链中所需要用到的各个技术环节。
 
@@ -43,17 +43,17 @@ __
 
 ## 测试过程
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183850.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183850.png)
 
 ![]()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183851.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183851.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183852.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183852.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183853.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183853.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183854.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183854.png)
 
 ## 影响范围
 
@@ -69,11 +69,11 @@ HW临近，公众号经常有人留言，希望有培训的机会，最近Gamma�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183855.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183855.png)
 
 END
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183855.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183855.png)
 
   
 
@@ -90,8 +90,8 @@ END
 
   
 关注此公众号，回复"Gamma"关键字免费领取一套网络安全视频以及相关书籍，公众号内还有收集的常用工具！  
-**在看你就赞赞我！**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183857.png)![]()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183858.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183859.png)
-扫码关注我们![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183859.png)
+**在看你就赞赞我！**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183857.png)![]()![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183858.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183859.png)
+扫码关注我们![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183859.png)
 
   
 
@@ -99,7 +99,7 @@ END
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183901.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220308183901.png)
 
 转载是一种动力 分享是一种美德
 

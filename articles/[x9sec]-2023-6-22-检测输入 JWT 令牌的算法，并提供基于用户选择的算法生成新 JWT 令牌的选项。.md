@@ -69,7 +69,7 @@ ___发表于_
 
  **图片**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112436.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112436.png)
 
   
 
@@ -147,7 +147,7 @@ shellcode免杀加载器](http://mp.weixin.qq.com/s?__biz=MzU3MDU5ODg1Ng==&mid=2
 
 加入微信群  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112438.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622112438.png)
 
   
 

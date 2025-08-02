@@ -87,7 +87,7 @@ request-forgery/cloud-ssrf " %}
 
 ### 绕过登录条件
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091332.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091332.png)
 
 如果您拥有一些有效凭据但无法登录，这些是一些可能到位的常见保护措施：
 
@@ -367,12 +367,12 @@ https://github.com/hausec/PowerZure
     # Administrator  
     $ Create-Backdoor, Execute-Backdoor
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091358.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091358.png)  
 
  **
 **[2023零基础白帽+中级进阶渗透学习路线](http://mp.weixin.qq.com/s?__biz=MzI3NTcwNTQ2Mg==&mid=2247486851&idx=1&sn=c0259da9ccb93bf8dbc0ebabec9bdef9&chksm=eb01f69adc767f8c68eff87a81121eebc716058d9c2f654822a2ebaf1ee9d5b9b1e06f8c8076&scene=21#wechat_redirect)****
-**知识星球**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091359.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091358.png)
-想成为凯文·米特尼克一模一样的黑客教父？不存在的想成为透透之神？醒吧看了无数入门视频，依然搞不到Shell不像看《安全帮Live》![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091402.png)
+**知识星球**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091359.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091358.png)
+想成为凯文·米特尼克一模一样的黑客教父？不存在的想成为透透之神？醒吧看了无数入门视频，依然搞不到Shell不像看《安全帮Live》![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320091402.png)
 
 预览时标签不可点
 

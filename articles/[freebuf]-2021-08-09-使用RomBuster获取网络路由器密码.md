@@ -142,7 +142,7 @@ RomBuster还提供了自己的Python API，可以将其导入至你们自己的�
 
  **RomBuster：** 【点击文末阅读原文】
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113636.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113636.png)
 
   
 
@@ -153,13 +153,13 @@ RomBuster还提供了自己的Python API，可以将其导入至你们自己的�
   
   
  **
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113637.png)****  
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113637.png)****  
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113638.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486459&idx=1&sn=74658ddb6cd1bfb2d224bc7c3a236015&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113638.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486459&idx=1&sn=74658ddb6cd1bfb2d224bc7c3a236015&scene=21#wechat_redirect)
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113639.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486404&idx=1&sn=6d434a8d335887fc665287732933091d&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113639.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486404&idx=1&sn=6d434a8d335887fc665287732933091d&scene=21#wechat_redirect)
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113640.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486350&idx=1&sn=ce56524dc187468146dc23a991b0596a&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809113640.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486350&idx=1&sn=ce56524dc187468146dc23a991b0596a&scene=21#wechat_redirect)
 
  ** ** ** ** ** ** **![]()**************
 

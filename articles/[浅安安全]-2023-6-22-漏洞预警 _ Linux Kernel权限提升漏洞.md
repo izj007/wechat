@@ -26,7 +26,7 @@ ___发表于_
 
 Linux是一种开源电脑操作系统内核。它是一个用C语言写成，符合POSIX标准的类Unix操作系统。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622092807.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230622092807.png)
 
  **0x03 漏洞详情**
 

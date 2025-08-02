@@ -61,9 +61,9 @@ OSINT 技术、目录模糊测试、dorking、端口扫描、屏幕截图、对�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218181036.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218181036.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218181039.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218181039.png)
 
   
 

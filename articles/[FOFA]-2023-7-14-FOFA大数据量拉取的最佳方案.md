@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174558.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174558.png)
 
 **▌用户痛点**  
 
@@ -33,7 +33,7 @@ API接口使用的是Elasticsearch的Start/Size机制，这种机制对于深度
 
 1000万条数据时间大约需要1小时40分钟，以压缩包的形式获取。相对而言时间比较久，但更为稳定和简单。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174559.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174559.png)
 
 注：当导出的字段包含banner/header/cert/body/structinfo/icon这种大字段的时候，最多支持单次10万条数据下载。
 
@@ -59,7 +59,7 @@ API接口使用的是Elasticsearch的Start/Size机制，这种机制对于深度
 
 懒得自己改？也没问题，我们已经完成了该接口在官方Python的SDK库的更新，通过命令行进行执行即可。下面是地址和演示：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174600.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174600.png)
 
 我们可以从演示的动图中看到，该SDK不仅支持大数据量导出任务一次性下发，同样也支持实时动态资产调取，比普通的接口更加的稳定。  
 
@@ -97,7 +97,7 @@ FOFA始终秉持着用户至上的理念，深感万千白帽子师傅的支持�
 
 欢迎各位白帽师傅们加入我们的社区大家庭，一起交流技术、生活趣事、奇闻八卦，结交无数白帽好友。也欢迎投稿到
 FOFA，审核通过后可获得F点奖励，快来加入微信群体验吧~~~微信群：扫描下方二维码，加入 FOFA
-社群！获取更多一手信息！![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174601.png)
+社群！获取更多一手信息！![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714174601.png)
 
   
 

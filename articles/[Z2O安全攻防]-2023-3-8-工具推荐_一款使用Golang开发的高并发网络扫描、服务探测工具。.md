@@ -25,7 +25,7 @@ ___发表于_
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202417.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202417.png)
 
 文章正文
 
@@ -78,22 +78,22 @@ Strike联动使用cna脚本文件加载，实现内网信息快速收集，为�
 
     * •  **for PortScan** **Usage：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202418.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202418.png)
 Air_scan_use
 
  **Scanning：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202420.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202420.png)
 Air_scan1
 
     * •  **for Service and Version Detection** **Usage：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202421.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202421.png)
 Air_scan_probes_use
 
  **Scanning：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202422.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202422.png)
 Air_scan_probes
 
   * •
@@ -102,22 +102,22 @@ Air_scan_probes
 
     * •  **for PortScan** **Usage：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202423.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202423.png)
 Pro_scan_use
 
  **Scanning：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202426.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202426.png)
 Pro_scan
 
     * •  **for Service and Version Detection** **Usage：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202427.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202427.png)
 Pro_scan_probes_use
 
  **Scanning：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202428.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202428.png)
 Pro_scan_probes
 
 ### 🎮for Cobalt Strike
@@ -126,33 +126,33 @@ Pro_scan_probes
 
     * •  **for Service and Version Detection** Interact:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202430.png)serverscan_windows![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202431.png)serverscan2_windows
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202430.png)serverscan_windows![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202431.png)serverscan2_windows
 
   * •  **Cobalt Strike跨平台beacon** ServerScan的优势在于跨平台，在Hook师傅的帮（jiān）助（dū）下目前已经基本适配了Cross C2[3]的Linux、Mac OS两大平台，为了提高隐匿性减少文件特征，目前支持内存加载可执行程序和动态链接库调用，您只需在安装了Cross C2的Cobalt Strike中导入对应的.cna脚本，即可实现ServerScan与Cobalt Strike跨平台beacon联动，具体使用参考。
 
     * •  **for PortScan** Interact:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202432.png)portscan_console
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202432.png)portscan_console
 
 Targets结果集自动导入:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202433.png)portscan_targets
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202433.png)portscan_targets
 
 services结果集自动导入:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202434.png)portscan_services
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202434.png)portscan_services
 
     * •  **for Service and Version Detection** Interact:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202435.png)serverscan_console
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202435.png)serverscan_console
 
 Targets结果集自动导入:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202437.png)serverscan_targets
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202437.png)serverscan_targets
 
 services结果集自动导入:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202438.png)serverscan_services
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202438.png)serverscan_services
 
   
 
@@ -161,7 +161,7 @@ services结果集自动导入:
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202417.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202417.png)
 
 技术交流
 
@@ -185,7 +185,7 @@ services结果集自动导入:
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202440.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202440.png)
 
  **  
 **
@@ -199,7 +199,7 @@ services结果集自动导入:
 
 ![]()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202441.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202442.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202441.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230308202442.png)
 
   
 

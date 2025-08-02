@@ -27,7 +27,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210402.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210402.png)
 
   
 
@@ -41,7 +41,7 @@ __
 
 文件名：DumpMinitool.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210415.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210415.png)
 
 参数区分大小写  
 
@@ -55,15 +55,15 @@ __
 
 查看lsass进程ID
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210417.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210417.png)
 
 dump完成后，再使用mimikatz进行离线解密即可  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210418.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210418.png)
 
 mimikatz
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210420.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210420.png)
 
 微软的数字签名
 
@@ -77,15 +77,15 @@ mimikatz
 
 沙箱检测
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210421.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210421.png)
 
 微步在线  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210423.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210423.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210425.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210425.png)  
 
   
 
@@ -105,7 +105,7 @@ mimikatz
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210426.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220412210426.png)
 
 预览时标签不可点
 

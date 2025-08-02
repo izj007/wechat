@@ -18,7 +18,7 @@ __
 
 1个
 
-**基于ProxyPool创建Proxifier代理配置文件**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111621.png)
+**基于ProxyPool创建Proxifier代理配置文件**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111621.png)
 
   
 
@@ -32,7 +32,7 @@ __
 
     刚开始学习安全渗透，想着用御剑去扫后台目录看有没有后台登录入口。扫着扫着我发现不能访问网站，浏览器界面提示访问重定向。问群里的大神才知道是 waf把此IP的请求给拦截，那就弄个代理池。不是单一IP地址进行访问，不会被waf拦截了吧！
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111623.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111623.png)
 
   
 
@@ -89,7 +89,7 @@ docker 安装方法请自行百度或谷歌
 
 RedisDesktopManager截图
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111626.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111626.png)
 
   
 
@@ -105,7 +105,7 @@ Proxifier下载链接
 
 开启HTTP代理服务器设置，因为有一些代理ip是走HTTP协议的。而Proxifier默认只支持HTTPS协议
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111627.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111627.png)
 
   
 
@@ -150,17 +150,17 @@ Proxifier下载链接
 
 创建Proxifier配置文件：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111628.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111628.png)
 
  _redis-to-xml_
 
 Proxifier配置文件导入：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111630.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111630.png)
 
 ## 开始奔放吧
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111631.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111631.png)
 
   
 
@@ -169,7 +169,7 @@ Proxifier配置文件导入：
 
 本公众号 更新安全类文章 欢迎关注和转发  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111632.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816111632.png)
 
   
 

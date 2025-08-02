@@ -20,7 +20,7 @@ ___发表于_
 
 #漏洞知识 12 个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143321.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143321.png)
 
 **简介**  
 
@@ -38,7 +38,7 @@ Jeecg-Boot = v3.5.0
 
 sys/duplicate/check 接口存在SQL注入漏洞，checksql可以被绕过，需要身份认证，判断当前数据库用户：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143323.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143323.png)
 
 ![]()
 
@@ -63,17 +63,17 @@ Poc：
 根据J0hnWalker的分析，漏洞产生的主要原因是jimureport-spring-boot-
 starter-1.5.6.jar中/org/jeecg/modules/jmreport/desreport/a/a.class文件：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143324.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143324.png)
 
 参数 apiSelectId 会从jimu_report_db表中通过id参数查询数据，id参数未过滤：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143325.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143325.png)
 
 jimu_report_db表中id值为1272834687525482497和1290104038414721025等的db_dyn_sql列是sql语句，且引用了id参数，这会导致二次注入：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143326.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143326.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143328.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143328.png)
 
 Poc：
 
@@ -86,7 +86,7 @@ Poc：
 
 获取当前数据库用户：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143329.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143329.png)
 
 来源：  
 
@@ -100,17 +100,17 @@ Poc：
 
 可视化设计-->报表设计器功能处存在SQL注入：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143330.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143330.png)
 
 通过新建报表添加SQL数据集：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143331.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143331.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143332.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143332.png)
 
 在报表SQL中插入SQL语句，在数据预览时触发SQL注入：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143333.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619143333.png)
 
 来源：
 

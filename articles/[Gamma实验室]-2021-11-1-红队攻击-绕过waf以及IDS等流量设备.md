@@ -268,11 +268,11 @@ PATH_INFO（通过 Apache 设置的环境变量）
 
  **8.1 通过burp chrunk插件分块编码传输**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152108.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152108.png)
 
 分包后  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152124.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152124.png)
 
 此方法主要是把一些关键字给拆开，当然你也可以通过手动编码进行调整，编码过程中长度需包括空格的长度，最后用0表示编码结束。
 
@@ -326,15 +326,15 @@ PATH_INFO（通过 Apache 设置的环境变量）
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152125.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152125.png)
 
 END
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152125.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152125.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152126.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152126.png)
 
   
 
@@ -347,12 +347,12 @@ END
 
   
 关注此公众号，回复"Gamma"关键字免费领取一套网络安全视频以及相关书籍，公众号内还有收集的常用工具！  
-**在看你就赞赞我！**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152127.png)
+**在看你就赞赞我！**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152127.png)
 
   
 
-![]()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152128.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152129.png)
-扫码关注我们![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152129.png)
+![]()![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152128.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152129.png)
+扫码关注我们![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211101152129.png)
 
   
 

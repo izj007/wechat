@@ -26,7 +26,7 @@ ___发表于_
 
 环境介绍
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133211.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133212.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133211.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133212.png)
 
 linux tomcat6.0
 
@@ -36,7 +36,7 @@ linux tomcat6.0
 
 过程-上传war包
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133211.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133211.png)  
 
 直接修改后缀,尝试war包上传。
 
@@ -52,7 +52,7 @@ linux tomcat6.0
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133214.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133214.png)
 
   
 
@@ -64,7 +64,7 @@ War包构造 Jar cvf jmc.war ./
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133215.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133215.png)  
 
   
 
@@ -72,7 +72,7 @@ War包构造 Jar cvf jmc.war ./
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133217.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133217.png)  
 
   
 
@@ -82,7 +82,7 @@ War包构造 Jar cvf jmc.war ./
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133218.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133218.png)  
 
   
 
@@ -90,7 +90,7 @@ War包构造 Jar cvf jmc.war ./
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133219.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133219.png)  
 
 那么问题就出在了jsp文件上面。或者是目录问题。
 
@@ -100,13 +100,13 @@ War包构造 Jar cvf jmc.war ./
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133220.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133220.png)  
 
   
 
 成功上传
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133211.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133212.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133211.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133212.png)
 
 在搜索相关文章的时候,发现一位表哥讨论了axis2和tomcat的上传问题,这里引起了注意。
 
@@ -116,7 +116,7 @@ War包构造 Jar cvf jmc.war ./
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133223.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133223.png)  
 
   
 
@@ -124,17 +124,17 @@ War包构造 Jar cvf jmc.war ./
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133224.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133224.png)  
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133225.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133225.png)  
 
 成功获取shell
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133226.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133226.png)  
 
 ### 解决了上次低版本没有拿到shell的问题。
 
@@ -174,7 +174,7 @@ War包构造 Jar cvf jmc.war ./
 
   1. 请点击联系我们->联系官方->客服小助手添加二维码拉群 。    
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133227.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133227.png)
 
   
 
@@ -195,7 +195,7 @@ War包构造 Jar cvf jmc.war ./
 
   2. 如若上述方式不行，请点击联系我们->联系官方->客服小助手添加二维码进入星球 。    
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133227.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133227.png)
 
   
 
@@ -233,7 +233,7 @@ War包构造 Jar cvf jmc.war ./
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133229.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929133229.png)
 
   
 

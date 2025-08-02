@@ -40,7 +40,7 @@ Electron是使用JavaScript，HTML和CSS构建跨平台的桌面应用程序的�
 
 Electron使用Chromium完成UI渲染， 通过内置Node.js提供原生系统的能力，如文件系统和网络的访问。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215726.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215726.png)
 
   
 
@@ -56,7 +56,7 @@ API的能力。主进程的主要目标是使用BrowserWindow模块创建和管�
 
 渲染器进程和主进程直接存在隔离，通过进程IPC进行通信，一般我们通过XSS拿到的JS执行权限处于渲染进程之中。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215727.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215727.png)
 
   
 
@@ -143,13 +143,13 @@ Context Isolation
 在man.js中webPreferences中配置了nodeIntegration为true,
 contextIsolation为false，默认情况下nodeIntegration为true,沙箱就会关闭
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215728.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215728.png)
 
   
 
 script直接执行nodejs代码，即可获取shell
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215730.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215730.png)
 
   
 
@@ -242,7 +242,7 @@ Electron >14
 
 以下为无沙箱直接使用openExternal RCE的例子
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215733.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215733.png)
 
   
 
@@ -271,13 +271,13 @@ iframe下无ipc接口绕过
 
 这个选项是一个实验选项，默认是关闭状态
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215735.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215735.png)
 
   
 
 但是我们可以通过v8 renderer exploit Nday获得的任意内存写的能力，覆盖它为开启
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215736.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215736.png)
 
   
 
@@ -289,14 +289,14 @@ iframe下无ipc接口绕过
 
 如果在渲染进程的contextBridge存在一些限制，导致我们无法直接执行恶意脚本,比如如下渲染进程的contextBridge限制了openPath的协议只能为http等安全协议，导致无法利用
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215738.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215738.png)
 
   
 
 我们可以通过v8 renderer
 exploit关闭CISO选项，然后通过原型链污染直接获取ipc，直接使用进程间通信访问main进程的ipcMain监听的方法，绕过contextBridge的限制
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215739.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215739.png)
 
   
 
@@ -309,7 +309,7 @@ exploit关闭CISO选项，然后通过原型链污染直接获取ipc，直接使
 
 下图是示例的污染方式，获取require函数，引入remote.ts,引入remote模块，执行系统命令
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215741.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215741.png)
 
   
 
@@ -321,7 +321,7 @@ Isolation，Node Integration。以及这些选项的状态组合之下，对Elec
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215744.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215744.png)
 
  **绿盟科技天元实验室** 专注于新型实战化攻防对抗技术研究。
 
@@ -329,7 +329,7 @@ Isolation，Node Integration。以及这些选项的状态组合之下，对Elec
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215745.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215745.png)
 
  **M01N Team公众号**
 
@@ -337,7 +337,7 @@ Isolation，Node Integration。以及这些选项的状态组合之下，对Elec
 
 绿盟科技蓝军技术研究战队
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215746.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221110215746.png)
 
  **官方攻防交流群**
 

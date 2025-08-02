@@ -14,9 +14,9 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230109094956.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230109094956.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230109095001.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230109095001.png)
 
 ### 特征
 
@@ -52,7 +52,7 @@ ___发表于_
 
   * 各种内置的后期开发命令
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230109095003.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230109095003.png)
 
 #### Extensibility
 

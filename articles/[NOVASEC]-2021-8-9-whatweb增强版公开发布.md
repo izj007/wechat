@@ -54,7 +54,7 @@ Whatweb增强版项目地址：
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809163805.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809163805.png)
 
   
 
@@ -75,7 +75,7 @@ END
 
 如您有任何投稿、问题、建议、需求、合作、请后台留言NOVASEC公众号！
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809163811.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809163811.png)
 
 或添加NOVASEC-MOYU 以便于及时回复。  
 

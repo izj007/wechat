@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091255.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091255.png)
 
 ##  
 
@@ -127,7 +127,7 @@ Spoof，如果你想要执行IP地址欺骗（模拟），可以使用该选项.
 ##  **  工具运行截图 **
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091306.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091306.png)
 
 ##  
 
@@ -155,7 +155,7 @@ Spoof，如果你想要执行IP地址欺骗（模拟），可以使用该选项.
 >
 > https://github.com/ORCx41/https://twitter.com/NotMedichttps://twitter.com/NotMedic/status/1561354598744473601https://github.com/3F/DllExport
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091307.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091307.png)  
   
 
 精彩推荐
@@ -167,7 +167,7 @@ Spoof，如果你想要执行IP地址欺骗（模拟），可以使用该选项.
   
   
   
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091308.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489554&idx=1&sn=7dc76862d96516013375f712c9bdfcf1&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091313.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489510&idx=1&sn=55f589464f2ffbf2817523f3282175ba&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091314.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489388&idx=1&sn=f0e8fed4afd1dc82ac6af789e5b13626&scene=21#wechat_redirect)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091315.png)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091308.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489554&idx=1&sn=7dc76862d96516013375f712c9bdfcf1&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091313.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489510&idx=1&sn=55f589464f2ffbf2817523f3282175ba&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091314.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489388&idx=1&sn=f0e8fed4afd1dc82ac6af789e5b13626&scene=21#wechat_redirect)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221112091315.png)
 
 预览时标签不可点
 

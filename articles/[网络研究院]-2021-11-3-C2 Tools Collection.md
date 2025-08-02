@@ -14,7 +14,7 @@ __
 
 收录于话题
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103125918.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103125918.png)
 
 Name| License| Price| GitHub and Official website  
 ---|---|---|---  
@@ -113,7 +113,7 @@ Voodoo| Commercial| $2,000 | https://www.voodooops.com/
 WEASEL| MIT| NA| https://github.com/facebookincubator/WEASEL  
 Zuthaka| BSD3| NA| https://github.com/pucarasec/zuthaka  
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103125926.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103125926.png)
 
 You are THE BEST at being yourself  You have unique gifts and talents that no
 one else in this world has. Sometimes we feel that we need to be someone else
@@ -135,13 +135,13 @@ rather than the ultimate source of happiness and joy. Right now write down 5
 things that make you a rich person and keep this list where you will always
 see it.
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103125931.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103125931.png)
 
  **Reply to get password**  
 
  **20211102**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103125932.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103125932.png)
 
 ![]()
 

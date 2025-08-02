@@ -25,7 +25,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083906.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083906.png)
 
   
 
@@ -38,7 +38,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083907.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083907.png)
 
   
 
@@ -51,7 +51,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083908.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083908.png)
 
   
 
@@ -80,7 +80,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083909.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083909.png)
 
   
 
@@ -88,7 +88,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083911.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083911.png)
 
   
 
@@ -108,7 +108,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083912.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083912.png)
 
   
 
@@ -122,7 +122,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083913.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083913.png)
 
   
 
@@ -138,7 +138,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083914.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211027083914.png)
 
   
 

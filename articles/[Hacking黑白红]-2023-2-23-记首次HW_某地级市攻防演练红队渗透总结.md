@@ -52,7 +52,7 @@ day,Nday,社工钓鱼攻击，从第五天凌晨起进入混打乱斗模式，�
 在未授权用户编辑界面有一个上传头像的功能，此处存在文件上传漏洞，上传图片马，burp抓包将后缀改为asp即可绕过，返回状态码为500，但实际上文件是上传成功了的。
 
 这是怎么知道文件上传成功了的呢？通过目录遍历漏洞找到文件上传路径：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153524.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153524.png)
 
 通过时间比对找到我们上传的木马文件是哪个，接下来就是常规操作，用蚁剑连接成功。又获得200分！
 
@@ -64,7 +64,7 @@ day,Nday,社工钓鱼攻击，从第五天凌晨起进入混打乱斗模式，�
 2012 R2的服务器，打了153个补丁，通过执行tasklist
 /svc查看当前主机上运行的进程，将结果拷贝到在线杀软识别平台进行比对，发现目标主机上装了360。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153525.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153525.png)
 
 感觉有戏，于是我之前花了两天研究的C语言免杀派上用场了，上传了免杀360的马，是shellcode分离免杀的，目标上提示命令执行成功但没反弹回来，但在自己环境中能执行上线。不是被拦截原因，后面有场景会说明（相信有大佬大概知道什么原因了）。反弹失败，还是我菜的原因啊~
 
@@ -72,11 +72,11 @@ day,Nday,社工钓鱼攻击，从第五天凌晨起进入混打乱斗模式，�
 
 通过信息收集，发现了这套程序还搭建在了其他目标上，于是大佬A又用之前的方法拿到了一台主机的webshell，通过比对，发现装了火绒。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153527.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153527.png)
 
 于是再次用我的免杀马尝试CobaltStrike上线，这次成功了!!!
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153528.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153528.png)
 
 接下来提权，拿到的也是一台winserver 2012
 R2的服务器，打了150个补丁，我加载了taowu和Lodan插件(20211024版，应该是开源的最后一版了吧)，试过了里面常用的提权插件都未成功，烂土豆提权失败，因为条件不满足；ms14-058反弹回来的是一样的权限。（这是拿到数据库服务器，演练快结束时的事了:将会话移交给MSF，使用MSF内置的CVE-2020-0787提权未成功，使用post/windows/gather/enum_patches模块来收集补丁信息，显示补丁都是在2021.12.1日打的；使用post/multi/recon/local_exploit_suggester
@@ -86,7 +86,7 @@ R2的服务器，打了150个补丁，我加载了taowu和Lodan插件(20211024�
 获得400分  
 大佬C立马来个xp_cmdshell提权，成功拿到System权限，再获得200分！
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153529.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153529.png)
 
 System权限是在数据库中，为了方便接下来的渗透，思路是将System权限上线到CobaltStrike上，在此处执行了从自己的VPS上下载免杀木马并执行的操作，显示执行成功，但并未上线。猜测这是台阿里云的ECS，对出站端口进行了限制，所以反弹不回来。
 
@@ -97,11 +97,11 @@ Shell反弹不回来，就不能对云服务器做更好的控制，不能算完
 为了探究为什么执行木马的命令提示成功了，但shell却没反弹回来的真正原因，在图形化下的
 cmd窗口执行木马，惊人发现：提示缺少了某140D.dll，这才恍然大悟，这情况去年做python免杀实验时也遇到过，原来这是生成exe文件时的配置问题，当我们生成Release版本的时候，运行库选择MT；当生成Debug版本时，运行库选择MTD。不然的话就会造成在自己电脑上执行没问题，但在其他电脑上执行可能会提示缺少dll文件。于是重新生成了木马，再次在Navicat里执行，它居然上线了！它上线了！上线了！
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153530.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153530.png)
 
 真实作战环境，看到自己的CobaltStrike上线了一台System权限的主机，就感觉很刺激~
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153531.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153531.png)
 
 那之前有360防护的那台，是不是也是这个原因了，于是重新生成了木马，但传上去提示500错误，怎么肥事？后来在自己的虚拟机里用360查杀了下(
 正经人谁会在自己物理机上装360，狗头)，我的马已经不免杀了，因为距离上次传的马，已经过了一天了。
@@ -110,11 +110,11 @@ cmd窗口执行木马，惊人发现：提示缺少了某140D.dll，这才恍然
 
 接下来自然是横向移动了，由于这是台存储数据的服务器(内网地址10.26.179.186)，猜测这应该是个数据库段，要是把内网整个拿下，那分数不得蹭蹭往上涨，在进行了常规的端口扫描之后（扫描中提示可能有防火墙），发现确实存在好几台内网机器，且基本都开放的80,443端口，一两台还开放了21,22端口。咦？不对呀，内网横向常见的135,139,445端口没了？那只能通过内网的web渗透来拿权限了？于是搭建了个代理，在本机上挂上代理通过浏览器去逐个访问网站，不对呀，与HW完全不搭边呐，都是别的地方的东西，还有个个人博客，通过admin/123456进入了后台。我看刑，有判头。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153536.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153536.png)
 
 至此，裁判评分：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153537.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153537.png)
 
 打得这么辛苦，就1000分？
 
@@ -123,7 +123,7 @@ cmd窗口执行木马，惊人发现：提示缺少了某140D.dll，这才恍然
 大佬B再次对拿下的云服务器进行信息收集，远程登录Administrator账户，通过谷歌浏览器收集到了访问某个站点的账号密码，是个单点登录，登录进去看到了这样的字眼：登录成功，您已成功登录中央认证系统。又通过服务器上的向日葵远控到另一台主机，上面还显示着某些运行情况。  
 裁判评分：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153538.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153538.png)
 
 看到这个IOT整个团队一开始都有点懵的，后面想明白了，这个数据库服务器是很多个系统的数据存放地，可以说是个集群数据库了，有20多个G，而向日葵又远程着另一台服务器，上面监控着运行情况。
 
@@ -131,15 +131,15 @@ cmd窗口执行木马，惊人发现：提示缺少了某140D.dll，这才恍然
 
 当我在复盘此次HW攻击过程时，在与大佬B交流过程中，他说他当时通过netstat发现了一个与美国的连接，还将连接情况本地保存了一下，我瞬间感觉有点不太妙，查了下这个ip:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153539.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153539.png)
 
 通过威胁情报中心查询到的结果：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153540.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153540.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153541.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153541.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153542.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153542.png)
 
 立即将情况上报给警官  
 维护国家网络安全，人人有责！
@@ -181,7 +181,7 @@ https://blog.csdn.net/qq_44881113/article/details/120315448
 ### 小tip:
 
 在进行远程桌面时，为了能够将我们本地的程序或文件拷贝到远程的主机上，应在本地资源中勾选上驱动器：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153543.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153543.png)
 
 ## 4.木马文件执行时提示缺少某个dll文件
 
@@ -266,7 +266,7 @@ Server是降权运行的。这里的问题是同样都是本地，为什么osql,
 
 【Hacking黑白红】，一线渗透攻防实战交流公众号
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153544.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153544.png)
 
     
     
@@ -317,7 +317,7 @@ Server是降权运行的。这里的问题是同样都是本地，为什么osql,
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153545.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153545.png)
 
   
 
@@ -325,7 +325,7 @@ Server是降权运行的。这里的问题是同样都是本地，为什么osql,
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153547.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153547.png)
 
   
 
@@ -452,23 +452,23 @@ BC杀猪盘渗透一条龙](http://mp.weixin.qq.com/s?__biz=Mzg2NDYwMDA1NA==&mid
 
 ▶[【渗透实战系列】|1一次对跨境赌博类APP的渗透实战（getshell并获得全部数据）](http://mp.weixin.qq.com/s?__biz=Mzg2NDYwMDA1NA==&mid=2247485589&idx=1&sn=f4f64ea923675c425f1de9e4e287fb07&chksm=ce67a20cf9102b1a1a171041745bd7c243156eaee575b444acc62d325e2cd2d9f72b2779cf01&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153552.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153552.png)  
 
     
 
  **长按-识别-关注**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153553.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153553.png)
 
  **Hacking黑白红**
 
 一个专注信息安全技术的学习平台
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153554.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153554.png)
 
 点分享
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153556.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153556.png)
 
 点收藏
 
@@ -476,7 +476,7 @@ BC杀猪盘渗透一条龙](http://mp.weixin.qq.com/s?__biz=Mzg2NDYwMDA1NA==&mid
 
 点点赞
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153557.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223153557.png)
 
 点在看
 

@@ -33,13 +33,13 @@ OneDrive 是 SharePoint 的一部分。它专为个人文件存储而设计，�
 Microsoft 服务（如 Excel 或 Word）时，都会激活 OneDrive，并创建包含用户电子邮件地址的个人 URL。更准确地说，个人 URL
 实际上是帐户的 UPN 或用户主体名称。如下所示：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182322.png)image.png
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182322.png)image.png
 
 由于个人 URL 直接绑定到用户帐户，因此只需查找特定格式的 Web 目录即可枚举用户，类似于使用 DirBuster/dirb。
 
 下面的图表显示了各种服务以及每个服务是否激活 OneDrive。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182323.png)image.png
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182323.png)image.png
 
 实际上，由于 OneDrive URL 创建的触发器数量众多，几乎任何实际使用 Azure/M365 帐户的人都将拥有 OneDrive URL。激活
 OneDrive 后，将创建一个与该用户关联的唯一 URL。URL 采用以下格式：
@@ -51,7 +51,7 @@ OneDrive 后，将创建一个与该用户关联的唯一 URL。URL 采用以下
 如下图所示，可以在图中看到 tenant
 的名称为“36vqny”，用户主体名称为“rowteam@36vqny.onmicrosoft.com“的变体，点号（"."）会替换为下划线（“_”） 。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182324.png)image.png
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182324.png)image.png
 
 因此，可以通过这种方式，对该 URL 发出一个 HEAD 请求，就可以确定用户是否有效，判断依据也很简单：
 
@@ -179,7 +179,7 @@ OneDrive 后，将创建一个与该用户关联的唯一 URL。URL 采用以下
 然后从 `Domains`标签的域名列表中，找出以 `.onmicrosoft.com`结尾的域名。这样就可以获取到一个租户列表。下图中，显示租户只有一个
 `36vqny`。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182325.png)image.png
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182325.png)image.png
 
 对 OneDrive Hosts 简单发起一个请求，如果返回 404，那么表示域名存在。
 
@@ -203,7 +203,7 @@ OneDrive 后，将创建一个与该用户关联的唯一 URL。URL 采用以下
 
 那么按照 RowTeam 的编写习惯，输入的格式应该是 `36vqny\rowteam`。 效果如下所示：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182326.png)image.png
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182326.png)image.png
 
 ## 0x04 其他情况
 
@@ -221,7 +221,7 @@ acmeAPC| rowteam@rowteam.me| acmeAPC-my.sharepoint.com
   
 以上这些情况，你需要对 rowteam 用户使用不同的 OneDrive Host 进行测试，哪个成功就是哪个。很简单，拿 Microsoft 来举个例子
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182327.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182327.png)
 
 成功找到 4 个 OneDrive Host，那么你在枚举用户的时候，就需要枚举 4
 次，如果运气好，第一个就出来结果了，但当前工具的编写并非那么智能，需要自己手动输入租户名称。
@@ -235,15 +235,15 @@ my.sharepoint.com”）时，如果收到“403”或“401”错误响应。 �
 
   * • 不需要新式身份验证的租户示例
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182328.png)image.png
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182328.png)image.png
 
   * • 需要新式身份验证的租户示例
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182329.png)image.png
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182329.png)image.png
 
 可在此处找到 SharePoint 中新式身份验证的相关设置：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182330.png)image.png
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714182330.png)image.png
 
 当然，这对于我们的枚举并没有任何的影响。
 

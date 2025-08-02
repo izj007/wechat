@@ -28,7 +28,7 @@ __
 
 当下WAF对shiro的防护，确实比较严格。对rememberMe的长度进行限制，甚至解密payload检查反序列化class。本周我遇到一个场景，就是这种情况。使用之前的方法rememberMe=加密payload+==垃圾数据也失败了，[这个方法](https://mp.weixin.qq.com/s?__biz=MzkyMDIxMjE5MA==&mid=2247484124&idx=1&sn=c258b2b5ee70b70b5464f47a975edc52&scene=21#wechat_redirect)之前有大佬分享过，我就不再赘述了。我最终使用未知HTTP请求方法解决战斗。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120625.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120625.png)
 
   
 
@@ -50,15 +50,15 @@ __
 
 我把被拦截的包发送的repeater模块,尝试切换http版本，添加垃圾header头等等方法均没绕过。在修改GET方法为XXX这样的未知HTTP请求方法时,发现WAF不在拦截，但是后端报错了。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120627.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120627.png)
 
 接下来验证下后端是否真正处理了rememberMe。我先请求去掉rememberMe，response对应的rememberMe消失了
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120629.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120629.png)  
 
 然后再加上rememberMe,repseone的remeberMe又回来了。这说明后端正常处理rememberMe，这么绕WAF没问题！
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120632.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120632.png)
 
 最后将之前注入内存webshell的payload修改下请求方法，成功拿下Web权限。
 
@@ -76,15 +76,15 @@ __
 
 于是我在本地代码org.apache.shiro.web.mgt.CookieRememberMeManager#getRememberedSerializedIdentity处下了断点。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120633.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120633.png)
 
 通过XXX方法发送数据包，调试发现request.getCookies可以获取到rememberMe值，而且如下方法均可正常使用。说明未知HTTP请求方法不影响各类参数的读取。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120636.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120636.png)
 
 那对三大组件的调用是否有影响呢？继续翻阅Tomcat源码，我发现Listener被调用是受行为事件影响，Filter是受请求路径影响，而Servlet是受请求路径和HTTP请求方法影响。一旦遇到未知方法，Servlet不再进入业务代码，直接返回一个http.method_not_implemented报错。具体代码如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120637.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830120637.png)
 
 所以得到一个结论就是 **未知Http方法名绕WAF这个姿势，可以使用在Filter和Listener层出现的漏洞，同时WAF不解析的情况** 。  
 

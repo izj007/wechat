@@ -25,7 +25,7 @@ ___发表于_
 
 大家好， 今天的文章将非常有趣，因为我们将讨论一种方法，我们可以使用这种方法通过欺骗受害者来轻松绕过“ Google 双因素身份验证”。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093742.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093742.png)
 
 # 首先获取凭证
 
@@ -35,7 +35,7 @@ ___发表于_
 
 你就可以 通过使用假的 WhatsApp 号码轻松获取受害者的帐户用户名、密码甚至 OTP 。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093806.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093806.png)
 
 # 我们会做什么 ？
 
@@ -53,13 +53,13 @@ ___发表于_
 
 一旦受害者点击您提供的链接，您就可以轻松获得有关其设备的所有深层信息。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093810.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093810.png)
 
 # 输入找到的凭据
 
 让我们转到 Google 帐户并输入凭据，但输入密码后不要提交。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093811.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093811.png)
 
 # 使用Burpsuite 工具
 
@@ -68,15 +68,15 @@ kali linux操作系统预装的Web应用渗透测试顶级工具，你需要打�
 一切都完成后， “打开”拦截模式，然后转到谷歌帐户并单击 “下一步”。设备信息始终存储在“ User-
 Agent”参数中，我们需要将其替换为从足迹中找到的受害设备信息。让我们改变它。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093812.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093812.png)
 
 好的 ，我们已经更改了从足迹中获得的所有信息。更改后，转发请求。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093814.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093814.png)
 
 我们必须再次遵循我们在上一步中完成的相同过程。更改后转发请求并“关闭”拦截模式。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093816.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093816.png)
 
 注意 您必须在很快的时间内完成这两个步骤。
 
@@ -84,11 +84,11 @@ Agent”参数中，我们需要将其替换为从足迹中找到的受害设备
 
 绕过
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093818.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093818.png)
 
 So Easy！我们使用社会工程学技术接管了google帐户是多么容易。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093820.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093820.png)
 
   
 
@@ -134,7 +134,7 @@ Wordpress网站渗透方法指南](http://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2M
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093822.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301093822.png)
 
 预览时标签不可点
 

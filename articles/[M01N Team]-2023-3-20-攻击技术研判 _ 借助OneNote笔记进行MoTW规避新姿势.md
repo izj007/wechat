@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集 #攻击技术研判 79个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183207.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183207.png)
 
 **情报背景**
 
@@ -57,19 +57,19 @@ in-microsoft-onenote-files-to-evade-defenses/
 
 在安装了CVE-2022-41091的安全补丁后，Windows会将Web标记从ISO传播到其内容文件上：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183210.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183210.png)
 
   
 
 为了规避步步紧逼的WEB标记防御策略，攻击者转向OneNote笔记文件的恶意利用。OneNote笔记文件后缀为.one，微软允许用户创建包含嵌入文件的OneNote文档。但当嵌入文件所在的位置被双击时，即使其上被图片覆盖仍会启动对应文件。恶意OneNote文件以钓鱼邮件的形式分发，受害者会被攻击者引导双击图片上的某一特定位置以查看被模糊化的内容，导致潜藏在图片之下的格式为.wsf的VBScript文件被执行：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183212.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183212.png)
 
   
 
 VBScript附件的执行会触发微软安全警告：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183214.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183214.png)
 
   
 
@@ -85,7 +85,7 @@ VBScript附件的执行会触发微软安全警告：
 
  **1.禁止所有嵌入式OneNote附件**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183216.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183216.png)
 
   
 
@@ -143,7 +143,7 @@ office-applications-from-creating-executable-content
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183217.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183217.png)
 
  **绿盟科技天元实验室** 专注于新型实战化攻防对抗技术研究。
 
@@ -151,7 +151,7 @@ office-applications-from-creating-executable-content
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183219.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183219.png)
 
  **M01N Team公众号**
 
@@ -159,7 +159,7 @@ office-applications-from-creating-executable-content
 
 绿盟科技蓝军技术研究战队
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183220.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183220.png)
 
  **官方攻防交流群**
 
@@ -176,17 +176,17 @@ office-applications-from-creating-executable-content
 [攻击技术研判 |
 使用蜂鸣器对抗沙箱检测技术](http://mp.weixin.qq.com/s?__biz=MzkyMTI0NjA3OA==&mid=2247490989&idx=1&sn=22346fc6a4586c666c2eb23478d3cd83&chksm=c187ddbcf6f054aa17b85b2d007c2949b5a606a19423365c3992e302e44ef40a4de28196a447&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183222.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183222.png)
 
 [攻击技术研判 | Earth
 Kitsune滥用vcruntime140.dll和Chrome扩展等实现持久化](http://mp.weixin.qq.com/s?__biz=MzkyMTI0NjA3OA==&mid=2247490905&idx=1&sn=2c1426495bfdc73b5ca85a0dfba899c6&chksm=c187dd48f6f0545e04c5a10a2a04126f7ff9671068053f09eb8cf50e9401c5fc30597b6f86a3&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183222.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183222.png)
 
 [攻击技术研判 |
 曝光一周年，向日葵RCE漏洞在野利用再现](http://mp.weixin.qq.com/s?__biz=MzkyMTI0NjA3OA==&mid=2247490787&idx=1&sn=a87fa18a4b7e8e4b01b67abd9a8c0c51&chksm=c187dcf2f6f055e41de2982d637ae09a257cacf3e7bf2b23fcfcded679911d1682d49a5485ba&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183222.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230320183222.png)
 
 预览时标签不可点
 

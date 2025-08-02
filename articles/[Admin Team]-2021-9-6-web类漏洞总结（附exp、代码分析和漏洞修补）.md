@@ -237,7 +237,7 @@ joomla、WordPress 、magento、drupal 、mambo。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906083809.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210906083809.png)
 
   * 
 

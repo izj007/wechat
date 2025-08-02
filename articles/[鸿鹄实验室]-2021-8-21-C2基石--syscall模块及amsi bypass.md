@@ -104,7 +104,7 @@ https://twitter.com/TihanyiNorbert/status/1278078606737096704/photo/1：
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091059.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091059.png)
 
   
 
@@ -123,7 +123,7 @@ https://twitter.com/TihanyiNorbert/status/1278078606737096704/photo/1：
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091100.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822091100.png)
 
   
 

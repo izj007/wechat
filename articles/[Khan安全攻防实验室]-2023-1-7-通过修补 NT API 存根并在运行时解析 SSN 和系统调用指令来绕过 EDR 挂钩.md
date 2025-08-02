@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230107091056.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230107091056.png)
 
 https://github.com/D1rkMtr/UnhookingPatch/tree/main/UnhookingPatch
 

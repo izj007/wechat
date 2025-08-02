@@ -16,7 +16,7 @@ __
 
 本文作者 图南
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222739.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222739.png)
 
  **引言** **：** 从2019年关注的第一个容器逃逸类型的漏洞写出[CVE-2019-5736
 runc容器逃逸漏洞分析](https://mp.weixin.qq.com/s?__biz=MzU5NDgxODU1MQ==&mid=2247483740&idx=1&sn=2b3e3396cdace8ca0e27ed502f51ad3c&scene=21#wechat_redirect)后，我对容器类漏洞的敏感度一直没有降低，并且非常碎片的学习容器和云原生相关的各种原理性知识，笔记记了一大堆，乱七八糟，不成体系。
@@ -25,7 +25,7 @@ runc容器逃逸漏洞分析](https://mp.weixin.qq.com/s?__biz=MzU5NDgxODU1MQ==&
 feature原理总结、写一个简单的容器、几枚容器逃逸漏洞的分析和对比、容器逃逸的特点和共性，到云原生相关的概念和知识，服务网格、K8S相关的安全研究以及各种弱点分析等，其实选题有些过于广泛了，以至于每一个小点我都想挖得很深（不知道这样是不是适得其反总之我有这样的毛病，大家也可以告诉我最想先看到哪个），系列文章被我拖成大概每月几百字的更新速度，不知何时能写完。恰巧近期有一枚和容器逃逸相关的漏洞：CVE-2022-0492
 Linux内核权限提升漏洞可导致容器（namespace）意外逃逸。我想以这篇水文为起点引出一些粗浅的知识或许是个好的开始？如果你恰好有兴趣了解一二，就可以继续读一些段落。因为我也是以自己的知识体系学习新的知识，如有纰漏还望指教。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222739.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222739.png)
 
   
 
@@ -98,7 +98,7 @@ cgroups是Linux内核提供的一种可以限制单个进程或多个进程所�
 
   9. ns 子系统，可以使不同cgroups下面的进程使用不同的 namespace cgroup控制器以树状的 **层级结构** 所组织。他们以虚拟文件系统的形式出现， **权限足够的用户** 可以创建、删除、重命名他们，每一层的控制器中都定义了资源的相关限制和控制等属性。
 
-下图为cgroup虚拟文件系统：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222756.png)2022-03-13-16-10-35.png以下例子可以简单阐明cgroups的主要概念和结构：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222757.png)2022-03-13-19-40-36.png假设某个高校的服务器要为专家、学生等类型的用户提供服务，为了保证服务质量可将资源分配如上图。其中左侧是cgroups提供的各个子系统，右侧为树状的层级结构。
+下图为cgroup虚拟文件系统：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222756.png)2022-03-13-16-10-35.png以下例子可以简单阐明cgroups的主要概念和结构：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222757.png)2022-03-13-19-40-36.png假设某个高校的服务器要为专家、学生等类型的用户提供服务，为了保证服务质量可将资源分配如上图。其中左侧是cgroups提供的各个子系统，右侧为树状的层级结构。
 **>** **>**
 
  **cgroups的使用**
@@ -117,7 +117,7 @@ cgroups是Linux内核提供的一种可以限制单个进程或多个进程所�
 **大多数Linux已经自动在系统启动时候将cgroup虚拟文件系统挂载到了**` /sys/fs/cgroup` **目录中**
 ，这个操作是由systemd[2]完成的。
 **但是这个自动挂载目录的操作权限较高，用户也可以自行将cgroups虚拟文件系统挂载到用户权限可及的目录下。**
-我们大致看下每个子系统包含的内容：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222758.png)2022-03-13-20-24-40.png捡几个重要的讲一下：
+我们大致看下每个子系统包含的内容：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222758.png)2022-03-13-20-24-40.png捡几个重要的讲一下：
 
   *  tasks：加入到此cgroup子系统中的进程，以PID列表的形式存储
 
@@ -130,7 +130,7 @@ cgroups是Linux内核提供的一种可以限制单个进程或多个进程所�
   
 下面是我以特权容器配置(`docker run --privileged --name test-nginx-privileged -d
 nginx`)启动的Nginx
-Docker容器中的CPU子系统包含的内容和部分配置值：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222759.png)2022-03-13-21-39-22.png至此，我们对Linux
+Docker容器中的CPU子系统包含的内容和部分配置值：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222759.png)2022-03-13-21-39-22.png至此，我们对Linux
 cgroup了解大概了，开始看漏洞。 **0x03 漏洞分析**
 回到CVE-2022-0492这个漏洞，粗看国外Researcher写的漏洞分析除了照做能复现成功以外，会产生很多疑问，比如：如何想到的这么做？为什么这样算漏洞？为啥要新建Namespace，为啥要使用一次unshare？不使用会怎样？直到把文章中引用的另一篇文章：Understanding
 Docker container escapes[3]阅读并理解后，才懂得是怎么回事儿。我按照时间线来重新分析下这个容器逃逸姿势如何变成漏洞的。 **>**
@@ -155,21 +155,21 @@ Docker container escapes[3]阅读并理解后，才懂得是怎么回事儿。�
 
 逃逸效果如图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222801.png)2022-03-13-23-34-45.png有点云里雾里？不怕，我分步骤解析一下上面的PoC，这个姿势最终就是这枚漏洞的关键。第一步：`cgroup_dir=/sys/fs/cgroup/rdma`
-，找到一个包含`release_agent`的目录，由前面的cgroups知识得知，notify_on_release的触发条件需要同时满足子系统下notify_on_release文件值为1并且他的最顶层子系统有可执行的`release_agent`文件。notify_on_release文件在每一个层级的子系统中都有，但是`release_agent`文件不是每个顶层子系统都有的。直接创建release_agent文件会提示权限不足：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222802.png)2022-03-14-00-52-13.png默认符合条件的只有rdma子系统，也可以使用cgroup_dir=`dirname
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222801.png)2022-03-13-23-34-45.png有点云里雾里？不怕，我分步骤解析一下上面的PoC，这个姿势最终就是这枚漏洞的关键。第一步：`cgroup_dir=/sys/fs/cgroup/rdma`
+，找到一个包含`release_agent`的目录，由前面的cgroups知识得知，notify_on_release的触发条件需要同时满足子系统下notify_on_release文件值为1并且他的最顶层子系统有可执行的`release_agent`文件。notify_on_release文件在每一个层级的子系统中都有，但是`release_agent`文件不是每个顶层子系统都有的。直接创建release_agent文件会提示权限不足：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222802.png)2022-03-14-00-52-13.png默认符合条件的只有rdma子系统，也可以使用cgroup_dir=`dirname
 $(ls -x /s*/fs/c*/*/r* |head -n1)`进行查找和定位。第二步：`mkdir -p
 $cgroup_dir/test_subsystem`
-，在刚刚找到的子系统下创建一个自定义的子系统，名字随意。这里我们能观察到当执行mkdir的时候并不像平时那样创建一个新的空文件目录，而是把此子系统需要的属性虚拟文件全都自动创建了：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222803.png)2022-03-14-01-02-29.png第三步：`echo
+，在刚刚找到的子系统下创建一个自定义的子系统，名字随意。这里我们能观察到当执行mkdir的时候并不像平时那样创建一个新的空文件目录，而是把此子系统需要的属性虚拟文件全都自动创建了：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222803.png)2022-03-14-01-02-29.png第三步：`echo
 1
 ``>$cgroup_dir/test_subsystem/notify_on_release`，将刚刚创建的test_subsystem子系统中的`notify_on_release`文件配置为1用来在
 **全部进程都退出该cgroup子系统后触发内核调用release_agent** 。这个比较好理解，不做过多解释了。在进行第四步前，再补一个小知识：
 **Docker存储**
-。我们都知道Docker镜像是分层存储的，实际上整个Docker容器在运行中默认使用的存储方式为OverlayFS文件系统，默认使用的驱动是overlay2。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222804.png)2022-03-14-01-18-08.pngOverlayFS
+。我们都知道Docker镜像是分层存储的，实际上整个Docker容器在运行中默认使用的存储方式为OverlayFS文件系统，默认使用的驱动是overlay2。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222804.png)2022-03-14-01-18-08.pngOverlayFS
 在Linux
-宿主机上分层为两个目录，在容器中它们显示为一个目录。这些目录被称为“层”，OverlayFS将下层目录称为`lowerdir`，上层目录称为`upperdir`。合并后的称为`merged`。OverlayFS文件系统的结构图大致如下(图片引用自Docker官方文档)：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222805.png)2022-03-14-01-34-46.jpg`lowerdir`
+宿主机上分层为两个目录，在容器中它们显示为一个目录。这些目录被称为“层”，OverlayFS将下层目录称为`lowerdir`，上层目录称为`upperdir`。合并后的称为`merged`。OverlayFS文件系统的结构图大致如下(图片引用自Docker官方文档)：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222805.png)2022-03-14-01-34-46.jpg`lowerdir`
 **一般存储的是镜像相关的层**
-，**`upperdir`一般存储的是运行中的未提交容器层**，他们都被挂载到了宿主机的文件系统中：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222806.png)2022-03-14-01-41-19.png在容器内部，可以通过查看`/etc/mtab`文件来找到此容器对应的`lowerdir`和`upperdir`。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222808.png)2022-03-14-01-39-04.png通常情况下，`upperdir`中映射了容器运行时变动的内容
-：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222810.png)2022-03-14-02-02-02.png
+，**`upperdir`一般存储的是运行中的未提交容器层**，他们都被挂载到了宿主机的文件系统中：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222806.png)2022-03-14-01-41-19.png在容器内部，可以通过查看`/etc/mtab`文件来找到此容器对应的`lowerdir`和`upperdir`。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222808.png)2022-03-14-01-39-04.png通常情况下，`upperdir`中映射了容器运行时变动的内容
+：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222810.png)2022-03-14-02-02-02.png
 **但是容器内部有Namespace隔离，我们无法直接在容器内部运行宿主机的文件和代码，更无法以宿主机的root权限运行。那么若想逃逸，我们需要“借刀杀人”。这个逃逸姿势中，刀就是cgroup的notify_on_release功能**
 。cgroup和notify_on_release都是Linux内核的功能，Docker容器是共用宿主机的Linux内核的，
 **所以我们通过在容器内部控制cgroup来在宿主机以很高的权限运行代码。** 继续看PoC：第四步：`host_overlay2_fs_dir=`sed
@@ -180,13 +180,13 @@ $cgroup_dir/test_subsystem`
 $cgroup_dir/release_agent`，把Payload目录路径写入`release_agent`。第七步：`chmod a+x
 /script `添加执行权限。第八步：`sh -c "echo \$\$
 ``>$cgroup_dir/test_subsystem/cgroup.procs"` 添加一个 **执行后就退出的进程**
-到新创建的cgroup子系统中来触发notify_on_release。到目前为止，这个逃逸姿势已经讲完了，虽说需要特权容器，但是整个思路还是很妙的。再梳理一下整个流程如下图：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222812.png)2022-03-14-15-29-18.png
+到新创建的cgroup子系统中来触发notify_on_release。到目前为止，这个逃逸姿势已经讲完了，虽说需要特权容器，但是整个思路还是很妙的。再梳理一下整个流程如下图：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222812.png)2022-03-14-15-29-18.png
 ** **>** **>  **SYS_ADMIN下的容器逃逸姿势(此时还不是漏洞)[4]**Felix的Twitter发完几天后，一名叫Dominik
 'disconnect3d' Czarnota（大概吧）的研究员发表了一篇文章：Understanding Docker container
 escapes[5]称我可以不用特权容器就能逃逸，我“只需要”给容器SYS_ADMIN的能力就可以(`docker run --cap-
 add=SYS_ADMIN --security-opt apparmor=unconfined --name test-nginx-sys-admin
 -d
-nginx`)。此时的容器和刚才有什么区别呢？我们发现没有权限新建cgroup子系统了也没有权限修改cgroup子系统中的文件了：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222813.png)2022-03-14-16-00-44.png![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222815.png)2022-03-14-02-40-01.png
+nginx`)。此时的容器和刚才有什么区别呢？我们发现没有权限新建cgroup子系统了也没有权限修改cgroup子系统中的文件了：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222813.png)2022-03-14-16-00-44.png![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222815.png)2022-03-14-02-40-01.png
 **如何绕？**
 在前置知识中有提到，如果用户想操作cgroups可以使用mount挂载cgroup虚拟文件系统，cgroup虚拟文件系统默认挂载到`/sys/fs/cgroup`目录下，
 **这个自动挂载目录的操作权限较高** ，用户也可以自行将cgroups虚拟文件系统挂载到用户权限可及的目录下。于是PoC修改如下：
@@ -199,7 +199,7 @@ nginx`)。此时的容器和刚才有什么区别呢？我们发现没有权限�
     sh -c "echo \$\$ > $cgroup_dir/test_subsystem_1/cgroup.procs"
 
   
-逃逸效果如图：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222816.png)2022-03-14-03-02-14.png这个利用姿势的条件还是过于苛刻了，只是通过挂载cgroup虚拟文件系统操作绕过了权限不足的问题，整个流程如下图：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222817.png)2022-03-14-16-13-51.png
+逃逸效果如图：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222816.png)2022-03-14-03-02-14.png这个利用姿势的条件还是过于苛刻了，只是通过挂载cgroup虚拟文件系统操作绕过了权限不足的问题，整个流程如下图：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222817.png)2022-03-14-16-13-51.png
 **>** **>**
 
  **关闭两大安全特性的逃逸姿势（此时是漏洞了）**
@@ -207,9 +207,9 @@ nginx`)。此时的容器和刚才有什么区别呢？我们发现没有权限�
 时隔3年，这个姿势又玩出了新花样，不需要特权容器，也不需要SYS_ADMIN，“只需要”关闭Docker默认开启的两大安全特性：AppArmor和Seccomp就可以成功利用了。关于这两大安全特性在这篇文章中不详细展开了，只需要知道这两大特性通过屏蔽一些动作、文件路径、系统调用来达到安全的目的，本质上是一种黑名单机制（有黑名单是不是就有可能绕过？）。启动一个无安全特性的Docker容器命令如下：docker
 run  \--security-opt apparmor=unconfined --security-opt seccomp=unconfined
 --name test-nginx-nosec  -d
-nginx在此环境下，系统不允许将内核相关的虚拟文件系统mount到用户目录下：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222819.png)2022-03-14-03-22-29.png
+nginx在此环境下，系统不允许将内核相关的虚拟文件系统mount到用户目录下：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222819.png)2022-03-14-03-22-29.png
 **如何绕？** 没有条件就创造条件 **，新建个Namespace** 来个Namespace嵌套Namespace， **并且重新定义一些资源隔离**
-，让新建的Namespace又误以为是一个新的环境。创建Namespace有三种方式，`clone`、`setns`、`unshare`，这三个方式的区别如下图：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222820.png)2022-02-23-16-04-58.jpg![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222821.png)2022-02-23-16-05-08.jpg![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222822.png)2022-02-23-16-05-16.jpg这部分的详细讲解也可以期待下我开头提到的系列文章，目前只需要了解就行了。此场景中更适合使用unshare去创建Namespace，因此PoC修改如下：
+，让新建的Namespace又误以为是一个新的环境。创建Namespace有三种方式，`clone`、`setns`、`unshare`，这三个方式的区别如下图：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222820.png)2022-02-23-16-04-58.jpg![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222821.png)2022-02-23-16-05-08.jpg![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222822.png)2022-02-23-16-05-16.jpg这部分的详细讲解也可以期待下我开头提到的系列文章，目前只需要了解就行了。此场景中更适合使用unshare去创建Namespace，因此PoC修改如下：
 
   *   *   *   *   *   *   *   *   *   *   *   * 
 
@@ -218,12 +218,12 @@ nginx在此环境下，系统不允许将内核相关的虚拟文件系统mount�
     unshare -UrmC bash  # 通过unshare创建新的Namespace，隔离用户、映射root用户、隔离mount和cgroup并运行bash。mkdir /tmp/cgroup && mount -t cgroup -o rdma cgroup /tmp/cgroup  # 增加挂载cgroups文件系统操作cgroup_dir=/tmp/cgroup  # 修改cgroup_dir对应目录路径mkdir -p $cgroup_dir/test_subsystem_2echo 1 >$cgroup_dir/test_subsystem_2/notify_on_releasehost_overlay2_fs_dir=`sed -n 's/.*\upperdir=\([^,]*\).*/\1/p' /etc/mtab`echo '#!/bin/sh' > /scriptecho "touch /hacked_by_tunan_use_cg_notify_on_release_and_no_sec_containter" >> /scriptecho "$host_overlay2_fs_dir/script" > $cgroup_dir/release_agentchmod a+x /script  
     sh -c "echo \$\$ > $cgroup_dir/test_subsystem_2/cgroup.procs"
 
-这次效果如下图：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222823.png)2022-03-14-03-53-01.png可能确实有一些场景需要关闭AppArmor和Seccomp两大安全特性，我也相信在某些时候开发者想做某些操作不方便发现是被某个特性拦截的时候，第一想法就是关闭。可能这是分配CVE编号的原因。但这个漏洞的利用条件还是苛刻的。再看流程图：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222824.png)2022-03-14-16-14-36.png
+这次效果如下图：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222823.png)2022-03-14-03-53-01.png可能确实有一些场景需要关闭AppArmor和Seccomp两大安全特性，我也相信在某些时候开发者想做某些操作不方便发现是被某个特性拦截的时候，第一想法就是关闭。可能这是分配CVE编号的原因。但这个漏洞的利用条件还是苛刻的。再看流程图：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222824.png)2022-03-14-16-14-36.png
 **>** **>**
 
  **补丁分析[6]**
 
-简单看一下补丁：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222826.png)2022-03-14-12-00-19.png补丁位置在Linux内核中的`kernel/cgroup/cgroup-v1.c`文件中，也验证了这个漏洞是Linux内核漏洞而不是Docker和容器本身的漏洞。补丁限制了配置release_agaent的权限。
+简单看一下补丁：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220320222826.png)2022-03-14-12-00-19.png补丁位置在Linux内核中的`kernel/cgroup/cgroup-v1.c`文件中，也验证了这个漏洞是Linux内核漏洞而不是Docker和容器本身的漏洞。补丁限制了配置release_agaent的权限。
 **0x04 总结一下** 如果真的能读到这里，你已经阅读了将近5000字了，虽然是一篇漏洞分析文章，但是这个漏洞本身并不那么重要也不算严重。 **引申**
 **出来的知识和思考才是我写出来这篇文的动力所在。** 我大概分析了三枚容器逃逸类漏洞，从最开始写成文章的[CVE-2019-5736
 runc容器逃逸漏洞](https://mp.weixin.qq.com/s?__biz=MzU5NDgxODU1MQ==&mid=2247483740&idx=1&sn=2b3e3396cdace8ca0e27ed502f51ad3c&scene=21#wechat_redirect)，到我只复现没分析的CVE-2021-30465

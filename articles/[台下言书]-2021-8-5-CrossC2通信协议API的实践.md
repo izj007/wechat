@@ -64,18 +64,18 @@ CrossC2-GitHub地址
 
 将TeamServer上的`.cobaltstrike.beacon_keys`文件下回到本地，之后会用上(我这里将文件名前边的点去掉了)。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100030.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100030.png)
 
 启动你的TeamServer， **这里先不要带上C2-Profile去启动。  
 **
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100031.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100031.png)
 
  ****  
 
 将`CrossC2.cna`文件加载到CobaltStrike中，之后创建`Https`监听器。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100032.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100032.png)
 
 生成Beacon，命令如下(如果你是Windows那就是genCrossC2.Win.exe)。
 
@@ -90,7 +90,7 @@ CrossC2-GitHub地址
 
 将生成的Beacon放到目标机器上去执行即可
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100033.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100033.png)
 
   
 
@@ -102,7 +102,7 @@ CrossC2-GitHub地址
 
 上述操作是未带C2-Profile，实战里相信没有师傅会不带C2-Profile就直接冲吧！
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100034.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100034.png)
 
 直接带上C2-Profile，CrossC2所生成的Beacon可能无法上线也可能是上线了执行不了命令（这里可以自己尝试一下）。因此CrossC2提供通信协议API的方式来解决该问题。
 
@@ -116,9 +116,9 @@ CrossC2-GitHub地址
 
 下图是Beacon向TeamServer发送请求，TeamServer做回应。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100035.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100035.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100036.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100036.png)
 
 C2-Profile
 
@@ -127,11 +127,11 @@ C2-Profile文件决定了你对元数据使用哪些编码、哪种顺序、拼�
 以`jquery-c2.4.0.profile`默认配置为例，当Beacon要发送一个POST请求给TeamServer时会以`http-post
 {...}`的配置为准，Beacon发送GET请求给TeamServer时以`http-get {...}`的配置为准。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100037.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100037.png)
 
 下图为对配置的含义粗略的解释
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100038.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100038.png)
 
   
 
@@ -154,7 +154,7 @@ C2-Profile文件决定了你对元数据使用哪些编码、哪种顺序、拼�
 过程是从上往下，对应的伪代码为: `prepend + prepend + baseurl(mask(metadata)) + append`
 处理完后进行响应(`print`)。对应的`http-get {...}`也是一样的逻辑。所以上述处理完后就对应下图中的数据包
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100039.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100039.png)
 
 ## 元数据  
 
@@ -162,7 +162,7 @@ C2-Profile文件决定了你对元数据使用哪些编码、哪种顺序、拼�
 
 这里的元数据指的是还未进行处理的数据(明文)，就是CobaltStrike的官方文档中所描述的metadata，但是metadata实际应该是经过`AES`处理后的一个值，本质上和下图的是同一个，当然metadata中可能还封装了一些其他数据。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100041.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100041.png)
 
 ## 元数据处理流程  
 
@@ -172,7 +172,7 @@ C2-Profile文件决定了你对元数据使用哪些编码、哪种顺序、拼�
 
 数据的流向可以是TeamServer流向Beacon，也可以是Beacon流向TeamServer，不同方向传输使用协议不一样，但是处理元数据的流程是一致的。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100042.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100042.png)
 
 # CrossC2通信协议API  
 
@@ -214,24 +214,24 @@ CrossC2提供了一个c2profile.c文件，在该文件内编写相应的c代码�
 
 prepend + prepend + `baseurl(mask(metadata))` \+ append 对应下图红框部分
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100043.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100043.png)
 
 它的使用很简单，只需要标记要切割部分数据的开始和结尾即可。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100045.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100045.png)
 
 ## 编码解码梳理
 
 C2-Profile的`server { ... output { ... } }`中描述了TeamServer响应的数据是如何编码的
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100046.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100046.png)
 
 那么这里就需要在c2profile.c文件的`cc2_rebind_http_post_recv`函数中实现`base64_encode(decode_mask(base64_decode(find_payload(data))))`(这里是伪代码)，这样即可拿到被AES加密的元数据，随后将元数据再进行base64编码后向下传递。  
 
 同样的`client
 {...}`中描述了Beacon发送给TeamServer的数据是如何编码的，那么在发送给TeamServer之前就需要按Profile中的配置进行编码，那么意味着我们需要在`cc2_rebind_http_post_send`中实现`base64_encode(mask_encode(base64_decode(x)))`的操作。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100047.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100047.png)
 
 同样的`http-get { ... }`配置处的实现思路也是一样的  
 
@@ -341,7 +341,7 @@ TeamServer会根据Profile中配置的这个顺序从下往上进行解密拿到
 
 运行上线，此时在带C2-Profile的情况下能正常上线CrossC2的Beacon。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100048.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100048.png)
 
 ## 实现方式2  
 
@@ -677,7 +677,7 @@ TeamServer会根据Profile中配置的这个顺序从下往上进行解密拿到
 
 同样的编译成so文件，在生成Beacon时指定so文件。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100049.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100049.png)
 
 # 难点和疑问  
 
@@ -689,15 +689,15 @@ TeamServer会根据Profile中配置的这个顺序从下往上进行解密拿到
 
 查阅CobaltStrike文档会发现，对这些编码有进行相关描述，当时文档中是没有给出具体细节的。所以这里需要借助https://github.com/mai1zhi2/CobaltstrikeSource来查看具体的函数实现。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100050.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100050.png)
 
 只需要在CobaltStrike的源码中找到对应的函数实现，然后C代码照猫画虎的方式，最后再调试调试就可以实现了。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100051.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100051.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100052.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100052.png)
 
 同样可以参照该思路实现netbios的编码解码，嫌麻烦不想折腾可以只使用实现方式1。
 
@@ -705,7 +705,7 @@ TeamServer会根据Profile中配置的这个顺序从下往上进行解密拿到
 
 https://github.com/gloxec/CrossC2/issues/89，作者也提供了回答。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100053.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805100053.png)
 
 其实也可以在c2profile.c中通过printf函数打印参数值，就会发现传递进来的函数值是base64编码，那么正常你在使用CrossC2提供的demo文件时会发现，他在c2profile.c中没有对参数进行编码解码操作，意味着往下传递的参数就是base64形式的参数值。所以我们在处理完结果后应该已base64方式进行向下传递  
 

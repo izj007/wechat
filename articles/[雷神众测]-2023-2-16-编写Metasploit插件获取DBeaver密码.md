@@ -14,13 +14,13 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150604.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150604.png)
 
 由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，雷神众测及文章作者不为此承担任何责任。
 
 雷神众测拥有对此文章的修改和解释权。如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经雷神众测允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
 
 前言
 
@@ -28,17 +28,17 @@ https://github.com/dbeaver/dbeaver是一个开源社区版免费数据库管理�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
 
 凭证存放的路径
 
 版本6.1.3及以上
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150622.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150622.png)
 
 版本6.1.3以下
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150624.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150624.png)
 
 在目录下面有两个文件：credentials-config.json，data-
 sources.json，前面的保存加密过后的密码，后面的保存连接名称，主机名，端口，数据库等等信息。
@@ -101,18 +101,18 @@ data-sources.json里面没有密码，mysql8-1849e7eaca6-1d233a585c8f4388，为�
     	<filters/>  
     </data-sources>
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
 
 版本配置合并
 
 当你从低版本更新到最新版本，软件会提示你是否迁移，但是迁移过后还是一个旧版的XML文件，而且算法也没有更新，所以不能单凭路径判断解密版本，直接按照文件后缀名判断就可以了，xml为旧版，json为新版。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150626.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150626.png)
 
 这个迁移操作就是把整个文件夹拷贝过去，就算你在之前的那个文件有其他文件也会被拷贝过去的。导致就算是新版的配置文也是.dbeaver-data-
 sources.xml，只不过路径变成了C:\Users\FireEye\AppData\Roaming\DBeaverData\workspace6\General。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
 
 数据提取
 
@@ -180,13 +180,13 @@ sources.xml，只不过路径变成了C:\Users\FireEye\AppData\Roaming\DBeaverDa
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
 
 解密算法
 
 dbeaver有两个算法，分别在版本 **6.1.3** ，做为分界线
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150631.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150631.png)
 
 JSON解密算法
 
@@ -209,7 +209,7 @@ JSON解密算法
       return plaintext[plaintext.index('{"')..]  
     end
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150633.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150633.png)
 
 XML文件的解密算法，非常的简单，硬编码了异或密钥，将XML文件的password字段的值base64解码后回去数据长度，以数据长度为range索引，数据每位与异或密钥的索引与密钥长度取余得到单个字符，但是最后面两个字符不能异或，所以要删除掉，最后把字符拼接一起就是明文密码了。  
 
@@ -234,7 +234,7 @@ XML文件的解密算法，非常的简单，硬编码了异或密钥，将XML�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
 
 效果
 
@@ -263,7 +263,7 @@ XML文件的解密算法，非常的简单，硬编码了异或密钥，将XML�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150621.png)
 
 参考
 
@@ -294,11 +294,11 @@ dbeaver-connection
 
 重大活动网络安保支撑单位
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150637.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150637.png)
 
 END
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150639.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150640.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150641.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150639.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150640.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216150641.png)
 
  **长按识别二维码关注我们**
 

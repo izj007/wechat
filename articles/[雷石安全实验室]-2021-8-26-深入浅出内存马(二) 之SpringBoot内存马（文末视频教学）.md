@@ -50,27 +50,27 @@ __
 
 我们用IDEA来搭建一个SpingBoot2 的环境
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121801.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121801.png)
 
 访问地址：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121802.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121802.png)
 
 我们还是把断点打在`org.apache.catalina.core.ApplicationFilterChain`中的
 `internalDoFilter`方法中
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121803.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121803.png)
 
 可以看到整个执行流程
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121804.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121804.png)
 
 这部分在上一篇文章中已经详细描述过，这里不在赘述。
 
 但是这里不同的是在经过 Filter 层面处理后，就会进入熟悉的 `spring-webmvc` 组件
 `org.springframework.web.servlet.DispatcherServlet` 类的 `doDispatch` 方法中。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121805.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121805.png)
 
 跟进去这个方法
 
@@ -83,11 +83,11 @@ __
 `getHandler` 方法，并通过 `getHandlerExecutionChain(handler, request)` 方法返回
 `HandlerExecutionChain` 类的实例。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121806.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121806.png)
 
 继续跟进`getHandlerExecutionChain` 方法，
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121807.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121807.png)
 
     
     
@@ -123,7 +123,7 @@ __
 跟进之后发现`interceptor.preHandle(request, response, this.handler)`
 会遍历拦截器，并执行其`preHandle`方法。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121808.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121808.png)
 
 如果程序提前在调用的 `Controller` 上设置了 `Aspect`（切面），那么在正式调用 `Controller`
 前实际上会先调用切面的代码，一定程度上也起到了 "拦截" 的效果。
@@ -376,11 +376,11 @@ WebMvcConfigurer，覆盖其addInterceptors(InterceptorRegistry registry)方法
 
 启动JNDIServer，端口启动在了1099
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121809.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121809.png)
 
 在TouchFile的编译后的类路径下，开启web服务，提供恶意类文件的http下载服务，这个端口必须和上面的JNDIServer中配置的一致。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121810.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121810.png)
 
 我们使用FastJson的Payload进行攻击
 
@@ -401,7 +401,7 @@ WebMvcConfigurer，覆盖其addInterceptors(InterceptorRegistry registry)方法
 
 用postman请求，攻击成功的话，就会弹出计算器，表示可以执行任意命令。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121811.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826121811.png)
 
 好的，上述已经搭建起一个Fastjson的漏洞环境。
 

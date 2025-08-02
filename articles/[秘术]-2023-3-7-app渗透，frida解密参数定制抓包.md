@@ -21,13 +21,13 @@ paras参数值是被加密了的
 
 需要解密后才能进行正常抓包  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082000.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082000.png)
 
   
 
 通过mt对apk进行反编译发现是360加固，这是使用万能脱壳法  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082022.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082022.png)
 
 通过对dex代码反编译进行分析，然后使用瞎几把搜索乱下段定位法  
 
@@ -41,7 +41,7 @@ paras参数值是被加密了的
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082023.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082023.png)
 
 通过分析发现所有接口都是先定义了hashmap  
 
@@ -50,7 +50,7 @@ paras参数值是被加密了的
 然后调用mapToJsonStrObjEncryption  
 通过函数定义的命名就能知道是将对象加密 然后返回一段json  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082024.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082024.png)
 
 这里接着往下跟
 
@@ -58,9 +58,9 @@ paras参数值是被加密了的
 
 此时的hashmap已经是json字符串了
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082025.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082025.png)  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082026.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082026.png)
 
 同类下发现decryptData
 
@@ -91,7 +91,7 @@ paras参数值是被加密了的
     
     frida -U -F 包名 -l hook.js
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082028.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082028.png)
 
 此时，便明文了，可以进行抓包了
 
@@ -101,17 +101,17 @@ paras参数值是被加密了的
     
     var LoginActivity= Java.use("com.xxxxxx.utils.DecryptUtils");LoginActivity.encryptionData.implementation=function(str){            console.log("待加密的数据:" + str);            if (str.indexOf("被改的内容") > -1)            {                str = str.replace("被改的内容","待改的内容");                console.log("改改改改改包:" + str);            }            return this.encryptionData(str);        }
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082029.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082029.png)
 
 通过抓管理员userid，然后到个人页面刷新，将自己的userid改成管理员的便越权了，可以进行改包了  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082031.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082031.png)
 
   
 
 发现阿里云oss  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082034.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230307082034.png)
 
 成功接管！！！  
 

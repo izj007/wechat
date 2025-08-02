@@ -42,9 +42,9 @@ ___发表于_
   
 白文件是我们最常用的办法，但是它这个文件并不白，就算有了微软的签名认证，国内某个无良厂商，也会在运行的时候给予提示，导致我们的攻击失败，并且被防守方发觉。（下载链接：https://learn.microsoft.com/zh-
 cn/sysinternals/downloads/procdump）  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195123.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195123.png)  
 与之相对应的还有SQLDumper.exe；createdump.exe这两款工具，只要一旦运行起来了，某不良厂商，就会进行弹窗警告，导致有暴露的风险，所以，这两款工具都不推荐大家使用，或者阅读源码，了解攻击方法，进行二次创作。不过，虽然被查杀的很紧，但是由于这类工具操作方便，而且在复杂环境下的泛用性极强，所以下面这种方法就是吸收了，技巧二的精髓的延伸。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195128.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195128.png)  
 小提示：需要管理员权限！！！
 
 ###  
@@ -59,9 +59,9 @@ exit-read-lsass-memo），个人觉得更适用于攻防演练）：
 > 方案一：利用"蓝屏"的攻击手段，导致Lsass.exe程序中断，然后对程序进行拷贝复制（dump操作）（但是，我们无法保证蓝屏后防守方不会发觉，并且进行应急响应，导致攻击失败）方案二：调用API函数，做到不kill进程，进行转存储操作（也有风险），但是可能需要修改目标主机注册表的键值，导致EDR平台的报警
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195136.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195136.png)  
 小提示：需要管理员提示，并且可以过火绒，但是转存储的地址是固定的（保存路径地址：）。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195142.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195142.png)  
 小提示：方案一的参考链接：文章1：https://www.deepinstinct.com/blog/lsass-memory-dumps-are-
 stealthier-than-ever-before；  
 文章2：https://borncity.com/win/2020/10/31/windows-10-20h2-abstrze-von-lsass-
@@ -85,7 +85,7 @@ exe/。
   
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195148.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195148.png)  
 小提示：都是使用API的方法MiniDumpWriteDump；通过comsvcs.dll的导出函数MiniDump实现dump内存，与下面的方法不谋而和！
 
 ###  
@@ -94,7 +94,7 @@ exe/。
 
   
 构造技巧：在dump指定进程内存文件时，需要开启SeDebugPrivilege权限。管理员权限的cmd下，默认支持SeDebugPrivilege权限，但是状态为Disabled禁用状态。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195153.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195153.png)  
 解决方案：因为管理员权限的powershell下，默认支持SeDebugPrivilege权限，并且状态为Enabled；所以可以通过powershell执行rundll32的命令实现。
 
 > 首先查看lsass.exe进程PID:命令格式：`rundll32.exe comsvcs.dll MiniDump <lsass PID> <out
@@ -122,7 +122,7 @@ exe/。
   
 这个是GitHub上开源的一款工具，但是无法绕过免杀，一上就被杀。但是我们可以借鉴一下源码，可以通过Go语言编译修改特征码或者替换敏感函数...操作。达到一个比较好的一个免杀效果（GitHub项目的开源地址：https://github.com/Hackndo/lsassy）。  
 而且Lsassy可以当做Python库，它可以搭配其他库，编写出python版本的Mimikatz。Lsassy不仅使用了impacket从Lsass.exe导出数据中远程读取所需的敏感内容，还使用了pypykatz来提取用户凭证（而且携带的内容丰富，包括上面介绍的一种方法）。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195157.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195157.png)  
 小提示：这个只适用于我们的域环境，毕竟批量操作是真的香啊！
 
 ###  
@@ -181,7 +181,7 @@ exe/。
  _（向右滑动，查看更多）_
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195159.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195159.png)
 
 ###  
 
@@ -193,7 +193,7 @@ exe/。
 SAM一般存储在`%SystemRoot%\system32\config\sam`中，我们需要高权限直接转存储。但是要求较高，一般攻击Lsass.exe,所以不常见！
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195206.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195206.png)
 
 ##  
 
@@ -202,7 +202,7 @@ SAM一般存储在`%SystemRoot%\system32\config\sam`中，我们需要高权限�
   
 这些大概是比较全面的的技巧了，最核心的思想还是利用Lsass.exe进程的退出/终止的阶段，对文本的内容进行一个转存储的一个dump操作，进而获取到我们想要的lsass.dmp文件和找到SAM拷贝的权限，进而获取到它们的dump文件，最后利用Mimikatz分析。以后遇见其他思路我会补上，今天的学习就到这里了。  
  **参考链接：**
-https://www.freebuf.com/vuls/329351.htmlhttps://www.freebuf.com/sectool/226170.htmlhttps://xz.aliyun.com/t/9725https://www.anquanke.com/post/id/252552![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195211.png)  
+https://www.freebuf.com/vuls/329351.htmlhttps://www.freebuf.com/sectool/226170.htmlhttps://xz.aliyun.com/t/9725https://www.anquanke.com/post/id/252552![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195211.png)  
   
 
 精彩推荐
@@ -214,7 +214,7 @@ https://www.freebuf.com/vuls/329351.htmlhttps://www.freebuf.com/sectool/226170.h
   
  ** ******  
   
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195221.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489274&idx=1&sn=253d4f55931e09104da3149793a79541&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195245.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489179&idx=1&sn=cec2150b339afcf1fb7a11a3a1c0331c&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195247.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489160&idx=1&sn=b08a52dcf6b99d10feac771004971aff&scene=21#wechat_redirect)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195250.png)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195221.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489274&idx=1&sn=253d4f55931e09104da3149793a79541&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195245.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489179&idx=1&sn=cec2150b339afcf1fb7a11a3a1c0331c&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195247.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247489160&idx=1&sn=b08a52dcf6b99d10feac771004971aff&scene=21#wechat_redirect)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221009195250.png)
 
 预览时标签不可点
 

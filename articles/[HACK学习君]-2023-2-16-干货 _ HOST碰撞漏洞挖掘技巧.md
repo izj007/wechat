@@ -169,32 +169,32 @@ ___发表于_
         里面会保存碰撞成功的结果  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182933.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182933.png)
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182935.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182935.png)  
  **0x06.3 方法二 - 使用 burp  
 ** 但是这个方法,只能一个 ip 一个 ip 的测试,无法批量 host 爆破  
 第一步: 找一个你认为有漏洞 ip 我拿的测试数据的 42.xxx.xxx.xxx  
 第二步: 将找到的 host 保存成一个 hostList.txt 分别填写进对应的数据(一行一个)  
 第三步: 构造数据包如下图  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182937.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182937.png)  
 有了这个包以后,发送到测试器里面进行 host 爆破
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182938.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182938.png)
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182940.png)  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182941.png)  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182943.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182940.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182941.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182943.png)  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182944.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182944.png)  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182945.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182945.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182947.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182947.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182949.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182949.png)
 
   
  **0x06.4 浏览器访问的方法**
@@ -212,18 +212,18 @@ ___发表于_
     
 
 打开文件: C:\Windows\System32\Drivers\etc\hosts  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182950.png)  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182952.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182950.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182952.png)  
  **0x06.4.1 方法二 - 使用 burp**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182953.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182953.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182955.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182955.png)
 
   
 如果还看不明白,这里也有中文版的可以看一眼
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182957.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216182957.png)
 
   
  **0x07 总结**
@@ -247,7 +247,7 @@ ___发表于_
 
 要是前面的文章还看不是很懂的话,可以看看这张网站访问流程的图会更加清晰  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183000.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183000.png)
 
 多试试总会成功的 :)
 
@@ -255,7 +255,7 @@ ___发表于_
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183001.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183001.png)  
 
   
 
@@ -294,19 +294,19 @@ ___发表于_
  **  
 **
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183002.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183002.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183003.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183003.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183005.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183005.png)
 
 其他更多精彩内容，欢迎加入我们的星球  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183006.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230216183006.png)
 
 预览时标签不可点
 

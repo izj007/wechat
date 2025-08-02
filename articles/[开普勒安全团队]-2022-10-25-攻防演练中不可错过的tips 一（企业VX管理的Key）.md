@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181419.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181419.png)  
 
 **  声明**
 
@@ -24,7 +24,7 @@ ___发表于_
 
     开普勒安全团队拥有对此文章的修改和解释权。如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经开普勒安全团队允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
  **简介**
 
@@ -32,7 +32,7 @@ ___发表于_
 
 在某些集成类软件中，存在一些调用接口的功能，比如某微云桥、在线交互办公平台等，在里面包含了一些不可错过的敏感信息，今天就来说一下其中的企业VX管理员的Key。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
 官方帮助 一
 
@@ -41,7 +41,7 @@ ___发表于_
 获取通讯录管理secret的方法如下：  
 1、进入企业微信管理后台，在“管理工具” -- “通讯录同步”开启“API接口同步”
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181431.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181431.png)  
 
   
 
@@ -85,7 +85,7 @@ ___发表于_
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181432.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181432.png)  
 
   
 
@@ -107,7 +107,7 @@ ___发表于_
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
  **官方帮助 二**
 
@@ -130,7 +130,7 @@ https://qyapi.weixin.qq.com/cgi-bin/user/create?access_token=ACCESS_TOKEN
 
 ![]()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
  **官方帮助 三**
 
@@ -153,7 +153,7 @@ bin/user/get?access_token=ACCESS_TOKEN&userid=USERID
       
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
  **名词解释**
 
@@ -173,7 +173,7 @@ external_userid:企业外部联系人的id，可能是微信用户，也可能�
 
 agentid:每个应用都有唯一的agentid.
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
  **检查权限**
 
@@ -183,13 +183,13 @@ access_token 权限，通讯录范围 - 部门，应用权限
 
 https://open.work.weixin.qq.com/devtool/query
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181437.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181437.png)
 
   
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
  **使用方法**
 
@@ -197,13 +197,13 @@ https://open.work.weixin.qq.com/devtool/query
 
 当我们通过某微云桥、在线交互办公平台等方式获取到了企业的Key：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181439.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181439.png)
 
 ![]()  
 
 我们就可以利用以上的这些官方帮助，实现添加企业员工的操作，比如说创建成员，获取成员列表。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
  **举例**
 
@@ -213,21 +213,21 @@ https://open.work.weixin.qq.com/devtool/query
 
 https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=access_token
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181441.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181441.png)  
 
 ### 获取部门成员
 
 https://qyapi.weixin.qq.com/cgi-
 bin/user/simplelist?access_token=access_token&department_id=1&&fetch_child=1
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181443.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181443.png)  
 
 ### 获取部门成员详情
 
 https://qyapi.weixin.qq.com/cgi-
 bin/user/list?access_token=access_token&department_id=1&fetch_child=1
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181444.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181444.png)  
 
 ### 创建成员
 
@@ -243,7 +243,7 @@ https://qyapi.weixin.qq.com/cgi-bin/user/create?access_token=ACCESS_TOKEN
 
 https://developer.work.weixin.qq.com/document/path/90195
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181429.png)
 
  **案例场景**
 
@@ -251,7 +251,7 @@ https://developer.work.weixin.qq.com/document/path/90195
 
 通过某集成平台，获取到企业VX的管理Key，然后利用此管理员的Key值，创建企业VX员工用户，伪造身份，进行内部钓鱼。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181446.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181446.png)
 
 企业VX的工作台中包含VPN，直接使用VPN功能连接目标内网。
 
@@ -261,7 +261,7 @@ https://developer.work.weixin.qq.com/document/path/90195
   
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181447.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221025181447.png)
 
 预览时标签不可点
 

@@ -56,7 +56,7 @@ Defender`
     [*] Running screenshot without injection  
     ...
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194309.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194309.png)
 
 项目地址：  
 
@@ -68,7 +68,7 @@ Defender`
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194310.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194310.png)  
 
   
 
@@ -76,7 +76,7 @@ Defender`
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194311.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194311.png)
 
   
 
@@ -116,7 +116,7 @@ BlackHat 2023 PPT打包
 
 文章号，欢迎关注
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194312.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194312.png)
 
   
 

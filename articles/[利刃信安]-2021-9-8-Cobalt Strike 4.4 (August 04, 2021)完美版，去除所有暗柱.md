@@ -57,31 +57,31 @@ Cobalt Strike 4.4 (August 04, 2021)完美版，去除所有暗柱
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121040.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121040.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121046.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121046.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121047.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121047.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121049.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121049.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121050.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121050.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121051.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121051.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121053.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121053.png)
 
   
 
@@ -91,7 +91,7 @@ Cobalt Strike 4.4 (August 04, 2021)完美版，去除所有暗柱
 
 在 4.4 版本之后，您可能在启动团队服务器时注意到一条警告消息：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121054.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121054.png)
 
 丢失的文件是可选的，它的缺失不会破坏团队服务器。它包含许多可选参数，可用于自定义用于验证屏幕截图和键盘日志回调数据的设置，从而允许您调整“HotCobalt”漏洞的修复程序。您可以通过创建一个名为
 TeamServer.prop 的空文件并将其保存在 Cobalt Strike 目录中来抑制警告。
@@ -210,11 +210,11 @@ Cobalt Strike 武器库下载。
 给你一个重新连接按钮。如果您的 Cobalt Strike
 客户端检测到团队服务器已断开连接，它将尝试自动重新连接。自动重新连接尝试将重复进行，直到重新建立连接，或者您选择停止该过程。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121055.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121055.png)
 
 如果断开连接是用户通过菜单、工具栏或切换栏服务器按钮启动的，则会出现重新连接按钮，这允许您手动重新连接到团队服务器。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121056.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121056.png)
 
 ### 功能请求
 
@@ -225,12 +225,12 @@ Cobalt Strike 武器库下载。
 Cobalt Strike 主 UI
 的切换栏上看到的内容。同样，如果您在切换栏上重命名团队服务器，这将更新该连接的别名。此更改将反映在“新建连接”对话框中。您可以选择在“新建连接”对话框中的别名和连接视图之间切换。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121057.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121057.png)
 
 我们用户要求的另一项更改是添加一种方法，可以在 Cobalt Strike UI 中查看您的团队服务器正在使用的 Malleable C2
 配置文件。这个新选项可以在帮助菜单（Help -> Malleable C2 Profile）中找到。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121058.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210908121058.png)
 
 最后要提及的一个功能请求是，我们已更新 c2lint 以在完成时返回结果代码，可在编写脚本时对其进行解析。返回代码为：
 如果发现任何错误和警告，也会显示检测到的错误和警告的数量。  

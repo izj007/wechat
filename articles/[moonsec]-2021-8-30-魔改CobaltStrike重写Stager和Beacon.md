@@ -18,7 +18,7 @@ __
 
   
 
-**魔改CobaltStrike重写Stager和Beacon**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125945.png)
+**魔改CobaltStrike重写Stager和Beacon**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125945.png)
 ** _ **1**_** **一、概述**
 
 这次我们一起用C#来重写stager及其Beacon中的大部分常用功能，帖子主要介绍该项目的运行原理（LolBinsStagerBeacon）及相应的功能介绍及展示。LolBins部分是由GadgetToJs使Stager转换为js、vba、hta文件后，再结合相应的csript、mshta等程序来运行；Stager功能包括从网络中拉取Beacon的程序集并在内存中加载及AMSIBypass；Beacon部分主要有包括正常上线、文件管理、进程管理、令牌管理、结合SysCall进行注入、原生端口转发、关ETW等一系列功能。
@@ -41,16 +41,16 @@ LOLBins，全称“Living-Off-the-LandBinaries”，直白翻译为“生活在�
 
 LolBins的程序除了正常的功能外，还可以做其他意想不到的行为。在APT或红队渗透常用，常见于海莲花等APT组织所使用。下图是较常见的LolBins，还有很多就不一一列出了：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125946.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125946.png)
 
 而GadgetToJS项目则可以把源码cs文件动态编译再base64编码后，保存在js、vba、vbs、hta文件，而在其相关文件中文件利用了当BinaryFormatter属性在进行反序列化时，可以触发对Activator.CreateInstance()
 的调用，，从而实现.NET 程序集加载/执行。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125947.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125947.png)
 
 但这需要在.net程序集中把相应的功能写在默认/公共构造函数，这样才能触发.NET 程序集执行。下面以实例程序为例：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125948.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125948.png)
 
 在相应文件夹下执行如下命令：
 
@@ -71,19 +71,19 @@ gg
 
 生成js、hta、vbs等文件后默认是会被杀的：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125949.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125949.png)
 
 而我们只需要简单修改下单引号为/就行了:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125950.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125950.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125951.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125951.png)
 
 最后执行所生成的js或hta：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125952.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125952.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125953.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125953.png)
 
   
 
@@ -93,23 +93,23 @@ gg
 
 Stager部分的功能可以包括下图几项：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125954.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125954.png)
 
 我主要实现了从网络中拉取Beacon的程序集并在内存中加载及AMSIBypass，沙箱及虚拟机检测的方式有挺多方式的，师傅可以自行添加。
 
 拉取程序集及内存加载这个较为简单，就不细说了：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125955.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125955.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125956.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125956.png)
 
 下面说说bypassAMSI，这里一开始找的不是AmsiScanBuffer，而是找DllCanUnloadNow的地址：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125957.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125957.png)
 
 然后再通过相关的硬编码找到AmsiScanBuffer后，再进行相应的patch：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125958.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125958.png)
 
   
 
@@ -119,7 +119,7 @@ Stager部分的功能可以包括下图几项：
 
 Beacon部分主要有包括正常上线、文件管理、进程管理、令牌管理、结合SysCall进行注入、原生端口转发、关ETW等一系列功能。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125959.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830125959.png)
 
   
 
@@ -129,35 +129,35 @@ Beacon部分主要有包括正常上线、文件管理、进程管理、令牌�
 
 Cp:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130000.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130000.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130001.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130001.png)
 
 Mv:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130002.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130002.png)
 
 Upload:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130004.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130004.png)
 
 Download:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130005.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130005.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130006.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130006.png)
 
 Filebrowse:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130007.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130007.png)
 
 rm:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130008.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130008.png)
 
 mkdir
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130009.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130009.png)
 
   
 
@@ -167,27 +167,27 @@ mkdir
 
 Run:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130010.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130010.png)
 
 shell:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130011.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130011.png)
 
 execute:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130012.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130012.png)
 
 runas:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130013.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130013.png)
 
 ps:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130014.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130014.png)
 
 kill:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130015.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130015.png)
 
 ##  **4.3 令牌权限**
 
@@ -195,23 +195,23 @@ kill:
 
 Getprivs:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130016.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130016.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130017.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130017.png)
 
 make_token：测试时在make_token后执行了
 
  **cmd.exe /C dir \\\10.10.10.165\C$**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130018.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130018.png)
 
 steal_token：测试时在steal_token后执行了whoami
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130020.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130020.png)
 
 rev2self：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130021.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130021.png)
 
 ##  **4.4 端口转发**
 
@@ -221,46 +221,46 @@ Rportfwd，注意这里端口转发teamserver只返回了本地需要绑定的�
 
 在192.168.202.180:22222上新建msf监听：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130022.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130022.png)
 
 在本机地址192.168.202.1的23456端口转发到上述msf的监听
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130023.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130023.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130024.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130024.png)
 
 本地访问23456端口：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130025.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130025.png)
 
 另一个网段访问23456端口：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130026.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130026.png)
 
 rportfwd stop：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130027.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130027.png)
 
 ## 4.5注入部分
 
 注入部分，cs的shinject、dllinject、inject都用来远程线程注入，我个人机器是win10x64
 1909,shellcode是用cs的64位c#shellcode，被注入的程序是64位的calc.exe，程序返回的NTSTSTUS均为SUCCESS，且shellcode均已注入在相应的程序中，并新建出线程进行执行，但最后calc.exe都崩了，有点奇怪呀：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130029.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130029.png)
 
 申请rwx内存空间存放shellcode后并在所执行shellcode下断:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130030.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130030.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130031.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130031.png)
 
 执行NtCreateThreadEx(),被注入的calc.exe新建线程执行此shellcode：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130033.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130033.png)
 
 最后跑起来报的c05，但分配的内存属性是rwx的：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130034.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130034.png)
 
 ##  **4.6 杂项部分**
 
@@ -268,11 +268,11 @@ rportfwd stop：
 
 Sleep：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130035.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130035.png)
 
 exit：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130036.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130036.png)
 
 setenv：
 
@@ -282,15 +282,15 @@ setenv：
 
 drives：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130037.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130037.png)
 
 Pwd：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130038.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130038.png)
 
 cd：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130039.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130039.png)
 
   
 
@@ -319,7 +319,7 @@ cd：
 
  **欢迎前来关注**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130040.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210830130040.png)
 
   
 

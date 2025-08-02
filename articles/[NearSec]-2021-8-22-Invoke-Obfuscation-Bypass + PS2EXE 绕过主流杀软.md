@@ -36,7 +36,7 @@ https://github.com/AdminTest0/Invoke-Obfuscation-Bypass
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075252.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075252.png)
 
   
 
@@ -44,7 +44,7 @@ https://github.com/AdminTest0/Invoke-Obfuscation-Bypass
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075253.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075253.png)
 
   
 
@@ -62,7 +62,7 @@ https://github.com/AdminTest0/Invoke-Obfuscation-Bypass
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075254.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075254.png)
 
   
 
@@ -82,7 +82,7 @@ https://github.com/AdminTest0/Invoke-Obfuscation-Bypass
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075255.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075255.png)
 
   
 
@@ -91,7 +91,7 @@ Obfuscation
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075256.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075256.png)
 
   
 
@@ -105,7 +105,7 @@ Obfuscation
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075257.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075257.png)
 
   
 
@@ -119,7 +119,7 @@ Obfuscation
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075258.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075258.png)
 
   
 
@@ -133,7 +133,7 @@ Obfuscation
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075259.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075259.png)
 
   
 
@@ -141,7 +141,7 @@ Obfuscation
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075300.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075300.png)
 
   
 
@@ -161,7 +161,7 @@ https://github.com/cseroad/bypassAV
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075302.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075302.png)
 
 ![]()
 

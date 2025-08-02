@@ -39,7 +39,7 @@ ___发表于_
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182314.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182314.png)
 
   
 
@@ -49,7 +49,7 @@ ___发表于_
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182315.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182315.png)
 
   
 

@@ -26,7 +26,7 @@ Bypass Windows Defender的方式，今天继续介绍剩下的5种。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
 
  **06 利用** **Donut进行shellcode加载**
 
@@ -74,14 +74,14 @@ shellcode。请注意，这可能不是最新的代码，因为该文件的最�
 月，但它很好地说明了它的工作原理。  
 最后，进入本节的概念证明，我将通过将 shellcode 注入本地 poweshell 进程来执行直接从 gentilkiwi 存储库获取的默认
 Mimikatz。为此，我们需要先生成 PI 代码。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095456.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095456.png)  
 生成 shellcode
 后，我们现在可以使用我们喜欢的任何注入器来达到此目的。幸运的是，最新版本已经带有一个本地（用于执行它的进程）和一个远程（用于另一个进程）注入器，Microsoft尚未检测到特征，因此我将使用它。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095457.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095457.png)  
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
 
  **07  定制工具**
 
@@ -101,7 +101,7 @@ sekurlsa::logonpasswords 函数的整个 Mimikatz 项目，但我们也可以以
     https://github.com/Cracked5pider/LsaParser
 
 LsaParser
-执行![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095459.png)  
+执行![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095459.png)  
 不幸的是，它不是为 Windows Server 开发的，所以我不得不在本地 Windows 10
 上使用它，但你应该能明白这张图要表达的意思，它没有被检测到。  
 对于第二个示例，假设我们的目标是枚举整个 AD 域中的共享。为此，我们可以使用 PowerView 的 Find-
@@ -132,14 +132,14 @@ SHARE_INFO_1，它仅显示资源名称但任何非特权用户都可以枚举�
     https://github.com/florylsk/RemoteShareEnum
 
 现在，我们可以像下面这样使用它：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095501.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095501.png)  
 当然，定制工具可能是一项非常耗时的任务，并且需要有非常深入的 Windows
 内部知识，但它有可能击败本文中介绍的所有其他方法。因此，如果其他一切方法都失败了，应该考虑到这一点。也就是说，我仍然认为它更适合 EDR
 规避，因为您可以控制并包括您自己选择的 API 调用、断点、顺序、垃圾数据/指令、混淆等。  
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
 
  **08  Payload 分段（Staging）**
 
@@ -229,12 +229,12 @@ Expression（IEX 的别名）调用。
 在我们的受害者中执行Stage 0  
 ![]()  
 受害者从我们的 C2 下载stages  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095503.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095503.png)  
 在我们的攻击者服务器中获取反向 shell。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095505.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095505.png)  
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
 
  **09  反射加载**
 
@@ -281,12 +281,12 @@ System.Reflection.Assembly .NET 类调用 Load
 
 对于这个 PoC，我将执行 Mimikatz，但你可以随意使用任何其他工具。  
 反射加载 Mimikatz。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095508.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095508.png)  
 请注意，如前所述，某些二进制文件可能不需要绕过 AMSI，具体取决于您在脚本中应用的二进制文件的字符串表示形式。但由于 Invoke-Mimikatz
 广为人知，因此我需要在本示例中执行此操作。  
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
 
  **10  P/Invoke C#程序集**
 
@@ -333,9 +333,9 @@ MiniDumpWriteDump.ps
 执行 LSASS 转储  
 ![]()  
 使用 impacket-smbclient 下载转储  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095511.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095511.png)  
 使用 pypykatz 在本地解析 MiniDump 文件  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095512.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095512.png)  
 请注意，最后我使用了一个稍微修改过的脚本，该脚本在将转储写入文件之前将其加密为 base64，因为 Defender 会将文件检测为 LSASS
 转储并将其删除。  
   
@@ -361,7 +361,7 @@ https://www.fo-sec.com/articles/10-defender-bypass-methods
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230621095455.png)
 
  ****
 

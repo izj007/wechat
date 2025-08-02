@@ -55,7 +55,7 @@ Attack漏洞，可以得到一个存在反序列化数据的AES加密密文，�
 
 本地搭建一个环境，勾选网页的Remember Me选项，首先burpsuite抓到一个登陆后的Cookie。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082353.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082353.png)
 
 使用ysoserial反序列化工具包生成一个URLDNS的payload java -jar ysoserial-9-echo-all.jar URLDNS
 http://www.ddd.com > payload.ser  
@@ -69,17 +69,17 @@ TsXEGDoadwH9nWC3g7WmdN1Ntzbw0kqQMx3ZEaPqL3+++wXZW7jsgImQp8tJi/SDMWjlsWAljJ1bwbyh
 
 配置好后，开始攻击过程：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082403.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082403.png)
 
 大约过了1个小时，工具会返回一个rememberMe Cookies值  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082404.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082404.png)
 
 使用burpsuite发包后，dns出现记录，证明漏洞利用成功。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082408.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082408.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082410.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082410.png)
 
 虚拟机下测试，基本上按照上述步骤一步步操作，就能攻击成功，但是在生产环境中实战，各种各样的奇葩问题都出来了，主要遇到了4个坑：  
   
@@ -93,17 +93,17 @@ Oracle工具，找到了longofo这个作者写的工具，看起来不错。于�
 
 如下图所示：一旦发包失败，程序会重新发包，可以重试不超过20次，一旦发包成功，就跳出循环，进行下一次发包。待会儿讲讲为啥要重试20次，哎，太难了。。。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082412.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082412.png)
 
 为了便于实时查看攻击过程中出现了哪些问题，我在异常处理流程中，加了几行代码，一旦发包失败，输出错误提示。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082414.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082414.png)
 
   * ##  **第2个坑：GET请求变HEAD**
 
 网络超时问题解决了，后续我发现工具速度还可以提升，作者的工具发的是GET请求，于是果断把GET请求换成了HEAD请求，速度提升不少。。。如下图所示：我把HttpGet方法，换成了自己写的HttpHead方法。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082415.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082415.png)
 
   * ##  **第3个坑：封IP及代理池问题**
 
@@ -119,7 +119,7 @@ oracle攻击。尤其是JRMPClient这个payload，如果目标系统能出网，
 
 最终，攻击成功了，我虚拟机下花了不到1小时共计完成，但是在真实生产环境测试，攻击成功一次DNS或者JRMPClient攻击，程序需要跑大约4个小时左右，2次攻击加起来近9个小时。所以，真是太难了。。。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082416.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082416.png)
 
 #  **  Part3  总结 **
 
@@ -131,13 +131,13 @@ oracle攻击。尤其是JRMPClient这个payload，如果目标系统能出网，
 CB链的payload长度过长，想要攻击成功，需要好几天的时间，那基本上是很难的。
 
  **4.   **Shiro Padding
-Oracle最好是在下班点之后进行测试，避开业务高峰期，减少对生产环境的业务影响。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082417.png)
+Oracle最好是在下班点之后进行测试，避开业务高峰期，减少对生产环境的业务影响。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082417.png)
 
 专注于红队、蓝队技术分享
 
 每周一篇，敬请关注
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082418.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221008082418.png)
 
 预览时标签不可点
 

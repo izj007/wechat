@@ -20,7 +20,7 @@ ___发表于_
 
 ## Pre
 
-很神奇对吧，当然这不是终点,接下来我们就来一探究竟。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172258.png)
+很神奇对吧，当然这不是终点,接下来我们就来一探究竟。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172258.png)
 
 ##  
 
@@ -28,8 +28,8 @@ ___发表于_
 
 这里简单说一下师傅的思路部署与处理上传war的servlet是
 `org.apache.catalina.manager.HTMLManagerServlet`在文件上传时最终会通过处理
-`org.apache.catalina.manager.HTMLManagerServlet#upload`![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172302.png)  
-调用的是其子类实现类`org.apache.catalina.core.ApplicationPart#getSubmittedFileName`这里获取filename的时候的处理很有趣![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172304.png)  
+`org.apache.catalina.manager.HTMLManagerServlet#upload`![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172302.png)  
+调用的是其子类实现类`org.apache.catalina.core.ApplicationPart#getSubmittedFileName`这里获取filename的时候的处理很有趣![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172304.png)  
 看到这段注释，发现在RFC 6266文档当中也提出这点  
 
     
@@ -58,16 +58,16 @@ ___发表于_
 ---|---  
 简单做个总结。如果首位是`"`(前提条件是里面有`\`字符)，那么就会去掉跳过从第二个字符开始，并且末尾也会往前移动一位，同时会忽略字符`\`，师傅只提到了类似`test.\war`这样的例子。但其实根据这个我们还可以进一步构造一些看着比较恶心的比如
 `filename=""y\4.\w\arK"
-。`![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172306.png)
+。`![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172306.png)
 
 ##  
 
 ## 深入
 
 还是在
-`org.apache.catalina.core.ApplicationPart#getSubmittedFileName`当中，一看到这个将字符串转换成map的操作总觉得里面会有更骚的东西(这里先是解析传入的参数再获取，如果解析过程有利用点那么也会影响到后面参数获取)，不扯远继续回到正题![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172307.png)  
+`org.apache.catalina.core.ApplicationPart#getSubmittedFileName`当中，一看到这个将字符串转换成map的操作总觉得里面会有更骚的东西(这里先是解析传入的参数再获取，如果解析过程有利用点那么也会影响到后面参数获取)，不扯远继续回到正题![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172307.png)  
 首先它会获取header参数`Content-Disposition`当中的值，如果以`form-
-data`或者`attachment`开头就会进行我们的解析操作，跟进去一看果不其然，看到`RFC2231Utility`瞬间不困了![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172310.png)  
+data`或者`attachment`开头就会进行我们的解析操作，跟进去一看果不其然，看到`RFC2231Utility`瞬间不困了![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172310.png)  
 后面这一坨就不必多说了，相信大家已经很熟悉啦支持QP编码，忘了的可以考古看看我之前写的文章Java文件上传大杀器-绕waf(针对commons-
 fileupload组件)，这里就不再重复这个啦，我们重点看三元运算符前面的这段既然如此，我们先来看看这个hasEncodedValue判断标准是什么，字符串末尾是否带`*`
 
@@ -109,7 +109,7 @@ fileupload组件)，这里就不再重复这个啦，我们重点看三元运算
   3. @code<charset>'<language>'<encoded_value> 中间这位language可以随便写，代码里没有用到这个的处理
 
   
-既然如此那么我们首先就可以排出掉utf-8，毕竟这个解码后就直接是明文，从Java标准库当中的charsets.jar可以看出，支持的编码有很多![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172313.png)  
+既然如此那么我们首先就可以排出掉utf-8，毕竟这个解码后就直接是明文，从Java标准库当中的charsets.jar可以看出，支持的编码有很多![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172313.png)  
 同时通过简单的代码也可以输出
 
     
@@ -134,8 +134,8 @@ fileupload组件)，这里就不再重复这个啦，我们重点看三元运算
     
     //res{"Big5","Big5-HKSCS","CESU-8","EUC-JP","EUC-KR","GB18030","GB2312","GBK","IBM-Thai","IBM00858","IBM01140","IBM01141","IBM01142","IBM01143","IBM01144","IBM01145","IBM01146","IBM01147","IBM01148","IBM01149","IBM037","IBM1026","IBM1047","IBM273","IBM277","IBM278","IBM280","IBM284","IBM285","IBM290","IBM297","IBM420","IBM424","IBM437","IBM500","IBM775","IBM850","IBM852","IBM855","IBM857","IBM860","IBM861","IBM862","IBM863","IBM864","IBM865","IBM866","IBM868","IBM869","IBM870","IBM871","IBM918","ISO-2022-CN","ISO-2022-JP","ISO-2022-JP-2","ISO-2022-KR","ISO-8859-1","ISO-8859-13","ISO-8859-15","ISO-8859-2","ISO-8859-3","ISO-8859-4","ISO-8859-5","ISO-8859-6","ISO-8859-7","ISO-8859-8","ISO-8859-9","JIS_X0201","JIS_X0212-1990","KOI8-R","KOI8-U","Shift_JIS","TIS-620","US-ASCII","UTF-16","UTF-16BE","UTF-16LE","UTF-32","UTF-32BE","UTF-32LE","UTF-8","windows-1250","windows-1251","windows-1252","windows-1253","windows-1254","windows-1255","windows-1256","windows-1257","windows-1258","windows-31j","x-Big5-HKSCS-2001","x-Big5-Solaris","x-COMPOUND_TEXT","x-euc-jp-linux","x-EUC-TW","x-eucJP-Open","x-IBM1006","x-IBM1025","x-IBM1046","x-IBM1097","x-IBM1098","x-IBM1112","x-IBM1122","x-IBM1123","x-IBM1124","x-IBM1166","x-IBM1364","x-IBM1381","x-IBM1383","x-IBM300","x-IBM33722","x-IBM737","x-IBM833","x-IBM834","x-IBM856","x-IBM874","x-IBM875","x-IBM921","x-IBM922","x-IBM930","x-IBM933","x-IBM935","x-IBM937","x-IBM939","x-IBM942","x-IBM942C","x-IBM943","x-IBM943C","x-IBM948","x-IBM949","x-IBM949C","x-IBM950","x-IBM964","x-IBM970","x-ISCII91","x-ISO-2022-CN-CNS","x-ISO-2022-CN-GB","x-iso-8859-11","x-JIS0208","x-JISAutoDetect","x-Johab","x-MacArabic","x-MacCentralEurope","x-MacCroatian","x-MacCyrillic","x-MacDingbat","x-MacGreek","x-MacHebrew","x-MacIceland","x-MacRoman","x-MacRomania","x-MacSymbol","x-MacThai","x-MacTurkish","x-MacUkraine","x-MS932_0213","x-MS950-HKSCS","x-MS950-HKSCS-XP","x-mswin-936","x-PCK","x-SJIS_0213","x-UTF-16LE-BOM","X-UTF-32BE-BOM","X-UTF-32LE-BOM","x-windows-50220","x-windows-50221","x-windows-874","x-windows-949","x-windows-950","x-windows-iso2022jp"}
 
-这里作为掩饰我就随便选一个了`UTF-16BE`![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172315.png)  
-同样的我们也可以进行套娃结合上面的`filename=""y\4.\w\arK"`改成`filename="UTF-16BE'Y4tacker'%00%22%00y%00%5C%004%00.%00%5C%00w%00%5C%00a%00r%00K"`接下来处理点小加强，可以看到在这里分隔符无限加，而且加了🌟号的字符之后也会去除一个🌟号![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172317.png)  
+这里作为掩饰我就随便选一个了`UTF-16BE`![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172315.png)  
+同样的我们也可以进行套娃结合上面的`filename=""y\4.\w\arK"`改成`filename="UTF-16BE'Y4tacker'%00%22%00y%00%5C%004%00.%00%5C%00w%00%5C%00a%00r%00K"`接下来处理点小加强，可以看到在这里分隔符无限加，而且加了🌟号的字符之后也会去除一个🌟号![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172317.png)  
 因此我们最终可以得到如下payload，此时仅仅基于正则的waf规则就很有可能会失效
 
   *   *   *   *   *   *   * 
@@ -146,7 +146,7 @@ fileupload组件)，这里就不再重复这个啦，我们重点看三元运算
     123  
     ------WebKitFormBoundaryQKTY1MomsixvN8vX--
 
-可以看见成功上传![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172319.png)
+可以看见成功上传![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172319.png)
 
 ## 变形 更新2022-06-20
 
@@ -162,7 +162,7 @@ getToken(true);`，这个函数也很简单就不必多解释
     
     private String getToken(final boolean quoted) {        // Trim leading white spaces        while ((i1 < i2) && (Character.isWhitespace(chars[i1]))) {            i1++;        }        // Trim trailing white spaces        while ((i2 > i1) && (Character.isWhitespace(chars[i2 - 1]))) {            i2--;        }        // Strip away quotation marks if necessary        if (quoted            && ((i2 - i1) >= 2)            && (chars[i1] == '"')            && (chars[i2 - 1] == '"')) {            i1++;            i2--;        }        String result = null;        if (i2 > i1) {            result = new String(chars, i1, i2 - i1);        }        return result;    }
 
-可以看到这里也是成功识别的![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172327.png)既然调用`parse`解析参数时可以不被包裹，结合getToken函数我们可以知道在最后一个参数其实就不必要加`;`了，并且解析完通过`params.get("filename")`获取到参数后还会调用到`org.apache.tomcat.util.http.parser.HttpParser#unquote`那也可以基于此再次变形为了直观这里就直接明文了，是不是也很神奇![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172329.png)
+可以看到这里也是成功识别的![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172327.png)既然调用`parse`解析参数时可以不被包裹，结合getToken函数我们可以知道在最后一个参数其实就不必要加`;`了，并且解析完通过`params.get("filename")`获取到参数后还会调用到`org.apache.tomcat.util.http.parser.HttpParser#unquote`那也可以基于此再次变形为了直观这里就直接明文了，是不是也很神奇![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172329.png)
 
 ## 扩大利用面
 
@@ -193,7 +193,7 @@ getToken(true);`，这个函数也很简单就不必多解释
   
 ## 更新Spring 2022-06-20
 
-早上起床想着昨晚和陈师的碰撞，起床后又看了下陈师的星球，看到这个不妨再试试Spring是否也按照了RFC的实现呢（毕竟Spring内置了Tomcat，可能会有类似的呢）![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172330.png)  
+早上起床想着昨晚和陈师的碰撞，起床后又看了下陈师的星球，看到这个不妨再试试Spring是否也按照了RFC的实现呢（毕竟Spring内置了Tomcat，可能会有类似的呢）![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172330.png)  
 Spring为我们提供了处理文件上传MultipartFile的接口
 
   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   * 
@@ -217,7 +217,7 @@ Spring为我们提供了处理文件上传MultipartFile的接口
                 if (filename != null) {                files.add(part.getName(), new StandardMultipartHttpServletRequest.StandardMultipartFile(part, filename));            } else {                this.multipartParameterNames.add(part.getName());            }        }  
             this.setMultipartFiles(files);    } catch (Throwable var8) {        throw new MultipartException("Could not parse multipart servlet request", var8);    }}
 
-简单看了下和tomcat之前的分析很像，这里Spring4当中同时也是支持`filename*`格式的![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172334.png)  
+简单看了下和tomcat之前的分析很像，这里Spring4当中同时也是支持`filename*`格式的![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172334.png)  
 看看具体逻辑
 
   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   * 
@@ -227,9 +227,9 @@ Spring为我们提供了处理文件上传MultipartFile的接口
     private String extractFilename(String contentDisposition, String key) {        if (contentDisposition == null) {            return null;        } else {            int startIndex = contentDisposition.indexOf(key);            if (startIndex == -1) {                return null;            } else {                //截取filename=后面的内容                String filename = contentDisposition.substring(startIndex + key.length());                int endIndex;                //如果后面开头是“则截取”“之间的内容                if (filename.startsWith("\"")) {                    endIndex = filename.indexOf("\"", 1);                    if (endIndex != -1) {                        return filename.substring(1, endIndex);                    }                } else {                  //可以看到如果没有“”包裹其实也可以，这和当时陈师分享的其中一个trick是符合的                    endIndex = filename.indexOf(";");                    if (endIndex != -1) {                        return filename.substring(0, endIndex);                    }                }  
                     return filename;            }        }    }
 
-简单测试一波，与心中结果一致![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172335.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172337.png)同时由于indexof默认取第一位，因此我们还可以加一些干扰字符尝试突破waf逻辑  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172339.png)如果filename*开头但是spring4当中没有关于url解码的部分![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172341.png)  
-没有这部分会出现什么呢？我们只能自己发包前解码，这样的话如果出现00字节就会报错，报错后![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172345.png)看起来是spring框架解析header的原因，但是这里报错信息也很有趣将项目地址的绝对路径抛出了，感觉不失为信息收集的一种方式
+简单测试一波，与心中结果一致![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172335.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172337.png)同时由于indexof默认取第一位，因此我们还可以加一些干扰字符尝试突破waf逻辑  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172339.png)如果filename*开头但是spring4当中没有关于url解码的部分![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172341.png)  
+没有这部分会出现什么呢？我们只能自己发包前解码，这样的话如果出现00字节就会报错，报错后![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172345.png)看起来是spring框架解析header的原因，但是这里报错信息也很有趣将项目地址的绝对路径抛出了，感觉不失为信息收集的一种方式
 
 ### Spring5
 
@@ -246,7 +246,7 @@ Spring为我们提供了处理文件上传MultipartFile的接口
         }
 
 很明显可以看到这一行`filename.startsWith("=?") &&
-filename.endsWith("?=")`，可以看出Spring对文件名也是支持QP编码在上面能看到还调用了一个解析的方法`org.springframework.http.ContentDisposition#parse`，多半就是这里了,那么继续深入下可以看到一方面是QP编码，另一方面也是支持`filename*`,同样获取值是截取`"`之间的或者没找到就直接截取`=`后面的部分![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172347.png)  
+filename.endsWith("?=")`，可以看出Spring对文件名也是支持QP编码在上面能看到还调用了一个解析的方法`org.springframework.http.ContentDisposition#parse`，多半就是这里了,那么继续深入下可以看到一方面是QP编码，另一方面也是支持`filename*`,同样获取值是截取`"`之间的或者没找到就直接截取`=`后面的部分![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172347.png)  
 如果是`filename*`后面的处理逻辑就是else分之，可以看出和我们上面分析spring4还是有点区别就是这里只支持`UTF-8/ISO-8859-1/US_ASCII`，编码受限制
 
   *   *   *   *   *   *   *   *   * 
@@ -255,8 +255,8 @@ filename.endsWith("?=")`，可以看出Spring对文件名也是支持QP编码在
     
     int idx1 = value.indexOf(39);int idx2 = value.indexOf(39, idx1 + 1);if (idx1 != -1 && idx2 != -1) {  charset = Charset.forName(value.substring(0, idx1).trim());  Assert.isTrue(StandardCharsets.UTF_8.equals(charset) || StandardCharsets.ISO_8859_1.equals(charset), "Charset should be UTF-8 or ISO-8859-1");  filename = decodeFilename(value.substring(idx2 + 1), charset);} else {  filename = decodeFilename(value, StandardCharsets.US_ASCII);}
 
-但其实仔细想这个结果是符合RFC文档要求的![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172350.png)  
-接着我们继续后面会继续执行`decodeFilename`![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172352.png)  
+但其实仔细想这个结果是符合RFC文档要求的![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172350.png)  
+接着我们继续后面会继续执行`decodeFilename`![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172352.png)  
 代码逻辑很清晰字符串的解码,如果字符串是否在`RFC 5987`文档规定的Header字符就直接调用baos.write写入
 
     
@@ -273,7 +273,7 @@ filename.endsWith("?=")`，可以看出Spring对文件名也是支持QP编码在
     attr-char     = ALPHA / DIGIT                  / "!" / "#" / "$" / "&" / "+" / "-" / "."                  / "^" / "_" / "`" / "|" / "~"                  ; token except ( "*" / "'" / "%" )  
   
 ---|---  
-如果不在要求这一位必须是`%`然后16进制解码后两位，其实就是url解码，简单测试即可![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172355.png)
+如果不在要求这一位必须是`%`然后16进制解码后两位，其实就是url解码，简单测试即可![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221207172355.png)
 
 ## 参考文章
 

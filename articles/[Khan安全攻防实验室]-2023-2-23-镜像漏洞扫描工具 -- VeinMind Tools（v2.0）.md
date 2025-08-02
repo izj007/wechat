@@ -69,9 +69,9 @@ veinmind-vuln 插件是由 veinmind-asset 插件升级而来，在资产信息�
 
   * 支持 JSON/CLI/HTML 等多种报告格式输出
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091124.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091124.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091125.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091125.png)
 
 ## 3veinmind-escalate
 
@@ -83,9 +83,9 @@ veinmind-escalate 插件支持对指定容器或镜像进行逃逸风险检测�
 
   * 支持 JSON/CLI/HTML 等多种报告格式输出
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091127.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091127.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091128.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091128.png)
 
 ## 4IaC 支持扫描 Kubernetes 集群
 
@@ -99,9 +99,9 @@ veinmind-iac 用于扫描 IaC(Infrastructure as Code) 文件内的风险问题�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091129.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091129.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091130.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091130.png)
 
 ## 5插件报告输出优化
 
@@ -121,13 +121,13 @@ veinmind-iac 用于扫描 IaC(Infrastructure as Code) 文件内的风险问题�
 
 ## VeinMind Tools
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091131.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091131.png)
 
   
 
 ##  **😎 扫码添加小助手加入用户交流群，不错过每一次干货分享噢  ❗❗**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091134.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223091134.png)
 
 ##  **👇 点击阅读原文使用 VeinMind  Tools**
 

@@ -14,8 +14,8 @@ __
 
 收录于话题 #高级攻防 5个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190811.png)  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190829.png)本文约7000字，阅读约需12分钟。  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190811.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190829.png)本文约7000字，阅读约需12分钟。  
 
 # 前几天注意到了Istio官方公告，有一个利用kubernetes gateway
 api仅有CREATE权限来完成特权提升的漏洞(CVE-2022-21701)。  
@@ -33,7 +33,7 @@ Istio可以通过用namespace打label的方法，自动给对应的namespace中�
 当然还可以借助istioctl kube-
 inject，对yaml手动进行注入。前两个功能都要归功于kubernetes动态准入控制的设计，它允许用户在不同的阶段，对提交上来的资源进行修改和审查。  
 动态准入控制流程:  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190830.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190830.png)  
 Istiod创建了MutatingWebhook，并且一般对namespace label为istio-injection:
 enabled及sidecar.istio.io/inject != flase的pod资源创建请求做Mutaing webhook。  
 
@@ -58,7 +58,7 @@ webhook将会收到来自k8s动态准入控制器的请求，请求包含了Admi
 这个函数对pod是否符合非hostNetwork、是否在默认忽略的namespace列表中、是否在annotation/label中带有sidecar.istio.io/inject注解进行判断。  
 如果sidecar.istio.io/inject为true，则注入sidecar。另外一提，namepsace
 label也能注入，是因为InjectionPolicy默认为Enabled：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190833.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190833.png)  
 了解完上面的条件后，接着分析注入sidecar具体操作的代码。具体实现位于：  
 
   * 
@@ -71,7 +71,7 @@ label也能注入，是因为InjectionPolicy默认为Enabled：
 前面的一些操作是合并config、做一些检查确保注解的规范及精简pod struct，注意力放到位于templatePod后的代码。  
   
 利用selectTemplates函数，提取出需要渲染的templateNames，再经过parseTemplate进行渲染，详细的函数代码请看下方：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190835.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190835.png)  
 获取注解inject.istio.io/templates中的值作为templateName，params.pod.Annotations数据类型是map[string]string
 ，一般常见值为sidecar或者gateway。  
 
@@ -107,7 +107,7 @@ label也能注入，是因为InjectionPolicy默认为Enabled：
 
   
 来获取模版文件。sidecar的模版有一些点非常值得注意，很多敏感值都是取自annotation：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190836.png)![]()  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190836.png)![]()  
 有经验的研究者看到下面userVolume就可以猜到，大概通过什么操作来完成攻击了。  
 
   *   *   * 
@@ -138,7 +138,7 @@ label也能注入，是因为InjectionPolicy默认为Enabled：
 
   
 所以大概率上，漏洞和创建gateways资源有关。翻了翻官方手册，注意到了这句话如下图所示：gateway资源的注解将会传递到Service及Deployment资源上。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190837.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190837.png)  
 有了传递这个细节，我们就能对得上漏洞利用的条件了。需要具备：  
 
   * 
@@ -254,7 +254,7 @@ token就可以提权完成，接管整个集群。当然你也可以挂载docker
 
   
 创建完gateway后，Istiod inject webhook也按照我们的要求创建了pod。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190839.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190840.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190839.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190840.png)  
 Deployments最终被渲染如下:  
 
   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   * 
@@ -265,7 +265,7 @@ Deployments最终被渲染如下:
 
   
 成功在/tmp/test目录下挂载kubernetes目录，可以看到apiserver的凭据。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190841.png)
 
 ##  
 
@@ -289,20 +289,20 @@ Deployments最终被渲染如下:
 \- END -  
   
 往期推荐  
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190844.png)](http://mp.weixin.qq.com/s?__biz=MzAwMzYxNzc1OA==&mid=2247498468&idx=1&sn=1470091d2324f57ac96b2e3700fb44cb&chksm=9b3adc55ac4d5543bd24c441c82a17e9a4659c7db2382ba7d702adcf017ce6f4236a4b588ba3&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190844.png)](http://mp.weixin.qq.com/s?__biz=MzAwMzYxNzc1OA==&mid=2247498468&idx=1&sn=1470091d2324f57ac96b2e3700fb44cb&chksm=9b3adc55ac4d5543bd24c441c82a17e9a4659c7db2382ba7d702adcf017ce6f4236a4b588ba3&scene=21#wechat_redirect)
 
 Fake dnSpy - 这鸡汤里下了毒！
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190845.png)](http://mp.weixin.qq.com/s?__biz=MzAwMzYxNzc1OA==&mid=2247496937&idx=1&sn=606c737a7e587a1503bf67aeb5b850f2&chksm=9b3ad258ac4d5b4eb45e47ad062b60febe725c7aa1f7c9ac13b8d4d570539169e5c5ab66f2af&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190845.png)](http://mp.weixin.qq.com/s?__biz=MzAwMzYxNzc1OA==&mid=2247496937&idx=1&sn=606c737a7e587a1503bf67aeb5b850f2&chksm=9b3ad258ac4d5b4eb45e47ad062b60febe725c7aa1f7c9ac13b8d4d570539169e5c5ab66f2af&scene=21#wechat_redirect)
 
 ADCS攻击面挖掘与利用
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190846.png)](http://mp.weixin.qq.com/s?__biz=MzAwMzYxNzc1OA==&mid=2247496171&idx=1&sn=5f903d0266a75ddaa04e4f4a1f3f8c4e&chksm=9b3ad75aac4d5e4c6cd0a9da7688345901d1a65518974927e23077aa9085db4572666e5c97d2&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190846.png)](http://mp.weixin.qq.com/s?__biz=MzAwMzYxNzc1OA==&mid=2247496171&idx=1&sn=5f903d0266a75ddaa04e4f4a1f3f8c4e&chksm=9b3ad75aac4d5e4c6cd0a9da7688345901d1a65518974927e23077aa9085db4572666e5c97d2&scene=21#wechat_redirect)
 
 安全认证相关漏洞挖掘
 
 长按下方图片即可
-**关注**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190847.png)  
+**关注**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220413190847.png)  
  **点击下方阅读原文，加入社群，读者作者无障碍交流** **读完有话想说？点击留言按钮，让上万读者听到你的声音！**
 
 预览时标签不可点

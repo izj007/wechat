@@ -18,7 +18,7 @@ __
 
 #安全周刊 74
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809144259.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210809144259.png)
 
 > 本期关键字：计划任务、攻击活动目录、快速扫描器、充电桩漏洞挖掘、恶意软件家族归类、程序分析、隐私风险分析、fuzzing
 > check、组件漏洞、绕过getshell等。2021/08/02-2021/08/08

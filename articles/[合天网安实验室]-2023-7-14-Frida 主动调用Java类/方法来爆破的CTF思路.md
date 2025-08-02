@@ -435,7 +435,7 @@ java static 区别_Java 静态与动态的区别_
 
 [更多详情，点我查看！](http://mp.weixin.qq.com/s?__biz=MjM5MTYxNjQxOA==&mid=2652885477&idx=1&sn=39e97a60d7b68d19569284654e74ffa1&chksm=bd59ad288a2e243e4d89b7c456fbd44a93d241c881075b342af22431d93dca56e52076ed75ce&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180401.png)靶场实操，戳“阅读原文
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180401.png)靶场实操，戳“阅读原文
 **“**
 
 预览时标签不可点

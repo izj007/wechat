@@ -47,7 +47,7 @@ Query Language。因为Neo4j是一款非关系型数据库，所以，要想在�
 2.安装neo4j数据库可以在https://neo4j.com/download-
 center/#community地址中下载.exe文件进行安装（PS：建议下载.exe文件进行安装，如果使用源码文件进行安装对java版本要求很严格，很容易跑不起来）  
 3.安装好neo4j数据库后，使用地址https://github.com/BloodHoundAD/BloodHound/releases/tag/4.1.1下载BloodHound工具，填入默认用户名密码neo4j/neo4j。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141402.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141402.png)  
 如果neo4j数据库安装失败，登录页面会提示数据库未安装。
 
 ##  
@@ -56,16 +56,16 @@ center/#community地址中下载.exe文件进行安装（PS：建议下载.exe�
 
   
 1\. 正常安装neo4j数据库和BloodHound后，BloodHound即可通过用户密码进行登录。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141403.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141403.png)  
 首次登录该页面会是空白的。  
 2\. 需用使用https://github.com/BloodHoundAD/BloodHound工具对域信息进行收集。  
 使用命令SharpHound.exe -c all对域信息进行收集并打包成zip文件。  
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141405.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141405.png)  
 3\. 将打包的域信息导入进BloodHound软件中去，导入后就可以看到域相关的信息了。  
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141407.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141407.png)
 
 ##  **  
 **
@@ -92,16 +92,16 @@ BloodHound软件的一些核心功能。
   
 1.举例Find all Domain Admins说明。  
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141409.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141409.png)  
 即可获取到所有域管理员，也可以点击图形中的域管理员，对其进行详细信息查看。  
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141410.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141410.png)  
 2.举例Shortest Paths to High Value Targets，该功能比较常用，在日常渗透过程中可以更好的辅助进行横向渗透。  
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141413.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141413.png)  
 该功能将域环境中的所有节点，所有用户、域控制器等信息都表示出来了。我们也可以将鼠标移到到任意一台机器或者一个节点上，它会出现红色的流信息，流向的节点就表示该机器可去往的节点。  
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141415.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141415.png)  
 更好的辅助我们进行横向渗透。
 
   
@@ -111,7 +111,7 @@ BloodHound软件的一些核心功能。
 
 银河实验室
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141416.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141416.png)
 
 银河实验室（GalaxyLab）是平安集团信息安全部下一个相对独立的安全实验室，主要从事安全技术研究和安全测试工作。团队内现在覆盖逆向、物联网、Web、Android、iOS、云平台区块链安全等多个安全方向。官网：http://galaxylab.pingan.com.cn/
 
@@ -142,7 +142,7 @@ JWT弱点的利用方式](http://mp.weixin.qq.com/s?__biz=MzIzODAwMTYxNQ==&mid=2
 
   
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141417.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141417.png)
 
  **活动专区**
 
@@ -154,7 +154,7 @@ JWT弱点的利用方式](http://mp.weixin.qq.com/s?__biz=MzIzODAwMTYxNQ==&mid=2
 
 奖品：PSRC中秋月饼礼盒1个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141418.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220923141418.png)
 
   
 

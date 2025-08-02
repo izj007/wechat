@@ -59,11 +59,11 @@ rtty 由客户端和服务端组成。客户端采用纯C实现，服务端采�
 
 # 演示
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715091707.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715091707.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715091710.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715091710.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715091713.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715091713.png)
 
 # 部署服务端
 

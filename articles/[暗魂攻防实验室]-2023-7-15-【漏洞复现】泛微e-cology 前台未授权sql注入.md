@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集 #漏洞复现 10个
 
-**点击蓝字**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093502.png)
+**点击蓝字**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093502.png)
 **关注我们**
 
 ![]()
@@ -22,9 +22,9 @@ ___发表于_
   
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093503.png)  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093504.png)
-**微信搜一搜**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093505.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093503.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093504.png)
+**微信搜一搜**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093505.png)
 暗魂攻防实验室
 
 ## 漏洞介绍
@@ -52,7 +52,7 @@ app="泛微-协同商务系统"
 
 1.访问泛微OA业务系统
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093506.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093506.png)
 
 2.检测payload
 
@@ -86,7 +86,7 @@ Protection（运行时应用自我保护）的缩写，是一种用于保护应�
       
     def tamper(payload, **kwargs):  res = ""  ran = random.randint(1,2**20)  res = str(ran)+payload  return res
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093508.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093508.png)
 
 ## 修复建议
 
@@ -96,8 +96,8 @@ https://www.weaver.com.cn/cs/securityDownload.asp#
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093509.png)  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093510.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093509.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093510.png)
 
 ●[浅谈两种复现方式实现PDF_XSS](http://mp.weixin.qq.com/s?__biz=MzkyMjE1NzQ2MA==&mid=2247487941&idx=1&sn=3ae42f268164ca46de5eb5c5d3f841bb&chksm=c1f9f93ef68e702824548e6882a335a946fbfcd84f8e697744ff1b21da4d86c53178129140bd&scene=21#wechat_redirect)
 
@@ -108,7 +108,7 @@ https://www.weaver.com.cn/cs/securityDownload.asp#
 
 ●[记一次小程序渗透测试](http://mp.weixin.qq.com/s?__biz=MzkyMjE1NzQ2MA==&mid=2247487893&idx=1&sn=2ab5b85f426c11767045e54d193157f8&chksm=c1f9f96ef68e70781bce82144f65db363f28507add488da1b0c34c4c3581094ecfad51933e38&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093511.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093512.png)微信搜一搜![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093513.png)暗魂攻防实验室
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093511.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093512.png)微信搜一搜![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230715093513.png)暗魂攻防实验室
 
   
 

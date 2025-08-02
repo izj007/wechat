@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121451.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121451.png)
 
 ## 前置知识
 
@@ -272,7 +272,7 @@ winhttpsetstatuscallback
     //因为设置了WINHTTP_CALLBACK_FLAG_HANDLES，所以当我们调用WinHttpCloseHandle关闭句柄的时候会执行我们的shellcode  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121452.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121452.png)  
 以下两个api是加载mimikatz的时候用的
 
   1. WinHttpQueryDataAvailable  
@@ -357,9 +357,9 @@ winhttpreaddata
 ## shellcode免杀上线
 
 效果如下  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121453.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121453.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121454.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121454.png)
 
 shellcode加密解密：  
 这里依然是沿用我上一篇文章加密解密方式，师傅们可以去看看我上一篇文章,地址https://forum.butian.net/share/1848  
@@ -481,7 +481,7 @@ encode.py
     
 
 成功上线  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121455.png)
 
 ## 免杀加载mimikatz
 
@@ -489,12 +489,12 @@ mimikatz本身是我是没有做任何免杀的
 
 效果如下
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121456.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121456.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121458.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121458.png)  
 不过因为存在杀软的原因，所以还是无法读取密码,不过至少达到我们加载mimikatz的目的了
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121459.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121459.png)
 
 实现如下 ：
 
@@ -569,7 +569,7 @@ mimikatz本身是我是没有做任何免杀的
 
 这里我把杀软关了，所以可以正常读取密码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121500.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121500.png)
 
 同理，使用这种方法，应该可以免杀一些exe文件了，这个师傅们可以自己试一下，毕竟mimikatz本身没有做任何处理都能绕过360加载了
 
@@ -626,18 +626,18 @@ Strike免杀脚本生成器|cna脚本|bypassAV](http://mp.weixin.qq.com/s?__biz=
 
 获得更多精彩
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121501.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121501.png)
 
   
 
  **坚持学习与分享！走过路过点个"** _ **在看**_
-**"，不会错过**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121502.png)
+**"，不会错过**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121502.png)
 
  ** _仅用于学习交流，不得用于非法用途_**
 
  _ **如侵权请私聊公众号删文**_
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121503.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221005121503.png)
 
  **EchoSec**
 

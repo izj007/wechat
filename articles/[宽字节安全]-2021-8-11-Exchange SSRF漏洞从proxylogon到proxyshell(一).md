@@ -18,21 +18,21 @@ __
 
 ## 一. 调试环境
 
-C#语言类似与Java，同样可以很轻松的反编译。在我的Java线上课程中第一节课就是讲解Java调试的原理，方法以及环境。如图![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181054.png)
+C#语言类似与Java，同样可以很轻松的反编译。在我的Java线上课程中第一节课就是讲解Java调试的原理，方法以及环境。如图![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181054.png)
 
 对于分析Exchange漏洞来讲，与java没有什么不同，同样搭建调试环境。Exchange类似于OA应用，只不过运行在IIS中。
 
 首先下载dnspy，找到Exchange安装目录下的Dll文件，类似于Java的jar包。拖入dnspy中，并附加到Exchange相关的IIS进程中。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181055.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181055.png)
 
-通过附加进程，即可通过dnspy调试IIS服务器中相关的应用。在Exchange中其实存在很多应用，例如AutoDiscover，ecp等，在IIS目录中是这样的。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181056.png)
+通过附加进程，即可通过dnspy调试IIS服务器中相关的应用。在Exchange中其实存在很多应用，例如AutoDiscover，ecp等，在IIS目录中是这样的。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181056.png)
 
-那么我们应该附加到哪个进程呢，可以看图![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181057.png)
+那么我们应该附加到哪个进程呢，可以看图![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181057.png)
 
 找到应用程序名，在附加到进程的进程参数中，可以看到应用程序名，点击附加即可调试该web应用。
 
-再运行一下proxylogon的exp，即可成功触发断点。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181059.png)
+再运行一下proxylogon的exp，即可成功触发断点。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181059.png)
 
 ## 二. proxylogon ssrf分析
 
@@ -45,31 +45,31 @@ Exchange对于每一个请求，都会调用`Microsoft.Exchange.FrontEndHttpProx
 微软可能是这样想的，对于某些请求的资源，比如说js,png等资源文件，没有必要通过认证才可以访问。所以微软默认对于这类资源文件的请求是不做认证的。在`ProxyModule.SelectHandlerForUnauthenticatedRequest`中，会通过大量的if-
 else去询问各个Handle能否处理。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181100.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181100.png)
 
 在`Microsoft.Exchange.HttpProxy.BEResourceRequestHandler`中，通过后缀名来判断本次请求是否为请求静态资源，并且请求中是否存在
 Cookie的key为X-
-BEResource，代码如图。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181101.png)
+BEResource，代码如图。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181101.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181102.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181102.png)
 
 最终通过多态，调用ProxyRequestHandler的run方法。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181103.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181103.png)
 
 在`proxyRequestHandle.InternalBeginCalculateTargetBackEnd`中，通过多态，实际调用`BEResourceRequestHandler.
 ResolveAnchorMailbox` 方法，获取Cookie值为X-X-
-BEResource![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181104.png)
+BEResource![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181104.png)
 
-通过`BackEndServer.FromString`方法，将Cookie通过`~`分割，分为FQDN与版本。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181105.png)
+通过`BackEndServer.FromString`方法，将Cookie通过`~`分割，分为FQDN与版本。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181105.png)
 
-在`proxyRequestHandle.BeginProxyRequest`方法中，首先调用`GetTargetBackEndServerUrl`获取需要请求的地址。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181106.png)
+在`proxyRequestHandle.BeginProxyRequest`方法中，首先调用`GetTargetBackEndServerUrl`获取需要请求的地址。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181106.png)
 
 可以看到，其实通过上面的那一步获取到的fqdn地址作为请求的url。
 
 在`proxyRequestHandle.BeginProxyRequest`方法中，随后会调用`CreateServerRequest`向上一步获取到的url对象发起请求。
 
-在`CreateServerRequest`方法中，调用`PrepareServerRequest`创建请求。`PrepareServerRequest`方法中，调用`proxyRequestHandle.ShouldBlockCurrentOAuthRequest`判断是否有权限发起该请求。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181107.png)
+在`CreateServerRequest`方法中，调用`PrepareServerRequest`创建请求。`PrepareServerRequest`方法中，调用`proxyRequestHandle.ShouldBlockCurrentOAuthRequest`判断是否有权限发起该请求。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181107.png)
 
 而`proxyRequestHandle.ShouldBlockCurrentOAuthRequest`判断比较糙，只是简单返回ProxyToDownLevel的值。
 
@@ -83,13 +83,13 @@ BEResource![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuch
 
 在微软的通告中，提到在autodiscover服务中存在一处ssrf漏洞。原理很有可能与proxyshell的原理相类似。同样我们寻找ProxyRequestHandler的子类。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181108.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181108.png)
 
-回到最开始的`Microsoft.Exchange.FrontEndHttpProxy.dll!Microsoft.Exchange.HttpProxy.ProxyModule.SelectHandlerForUnauthenticatedRequest`中，这里同样也支持调用`AutodiscoverProxyRequestHandler`![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181109.png)
+回到最开始的`Microsoft.Exchange.FrontEndHttpProxy.dll!Microsoft.Exchange.HttpProxy.ProxyModule.SelectHandlerForUnauthenticatedRequest`中，这里同样也支持调用`AutodiscoverProxyRequestHandler`![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181109.png)
 
 在ProxyRequestHandler.GetTargetBackEndServerUrl中，已经修复了proxylogon的漏洞。但是，可以通过GetClientUrlForProxy方法，同样可以获取SSRF的请求地址。
 
-在GetClientUrlForProxy中，如果我们的请求符合IsAutodiscoverV2Request函数的请求，那么将会`UrlHelper.RemoveExplicitLogonFromUrlAbsoluteUri`函数移除多余的部分，并与localhost拼接为ssrf的请求地址。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181110.png)
+在GetClientUrlForProxy中，如果我们的请求符合IsAutodiscoverV2Request函数的请求，那么将会`UrlHelper.RemoveExplicitLogonFromUrlAbsoluteUri`函数移除多余的部分，并与localhost拼接为ssrf的请求地址。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181110.png)
 
 ![]()
 
@@ -97,11 +97,11 @@ BEResource![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuch
 
 explicitLogonAddress值在`EwsAutodiscoverProxyRequestHandler.ResolveAnchorMailbox`中复制，从请求参数的Email中获取
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181111.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181111.png)
 
 最终payload
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181112.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181112.png)
 
 如果服务器存在漏洞，则返回当前权限。
 
@@ -170,9 +170,9 @@ T3协议如何与IIOP协议配合绕过Nat 如何应急响应weblogic服务器�
 
 期待你的加入！  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181113.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181113.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181114.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811181114.png)
 
   
 

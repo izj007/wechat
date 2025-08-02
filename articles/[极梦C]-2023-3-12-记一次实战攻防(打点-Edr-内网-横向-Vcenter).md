@@ -31,50 +31,50 @@ Tide安全团队以信安技术研究为目标，致力于分享高质量原创�
 
 目标分配后，面对大范围的目标，首先要做的就是寻找一些容易获取权限的站点，比如shiro、weblogic以及各类反序列化漏洞。之后再将目标锁定到管理后台，使用爆破等手段寻找一些能进后台的账号密码，然后再去找上传点拿shell。  
 本次渗透在某站注册页面发现了上传身份证的地方，但是上传后发现无返回路径。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224825.png)后通过目录扫描，发现了存在目录遍历漏洞，可以看到不同日期上传的文件
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224825.png)后通过目录扫描，发现了存在目录遍历漏洞，可以看到不同日期上传的文件
 
     
     
     http://IP/upload/Attachment/
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224847.png)然后在对上传点测试时发现存在waf，拦截了非法后缀名、文件内容等。对此进行一些常规的修改和测试例如修改Content-
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224847.png)然后在对上传点测试时发现存在waf，拦截了非法后缀名、文件内容等。对此进行一些常规的修改和测试例如修改Content-
 Type、修改boundary前加减空格、多个Content-Disposition字段、分块传输、脏字符最终上传成功。
 
 ## 获取webshell
 
-找到上传后的木马获取webshell![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224849.png)拿到webshell发现是IIS权限，通过查看进程发现装有杀软和edr![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224850.png)对木马进行免杀上线CS，然后利用CS插件进行提权时发现失败。  
+找到上传后的木马获取webshell![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224849.png)拿到webshell发现是IIS权限，通过查看进程发现装有杀软和edr![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224850.png)对木马进行免杀上线CS，然后利用CS插件进行提权时发现失败。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224852.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224852.png)
 
 然后通过搜集本机的服务发现开放了1433端口，通过查找配置文件发现了数据库连接地址  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224853.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224853.png)
 
 ## 提权system
 
-利用CS开启代理后，登录连接MSSQL数据库，执行命令为system权限![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224854.png)最终利用数据库权限执行CS木马上线获取system权限。  
+利用CS开启代理后，登录连接MSSQL数据库，执行命令为system权限![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224854.png)最终利用数据库权限执行CS木马上线获取system权限。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224855.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224855.png)
 
 ## 绕过edr
 
 通过query
-user查看管理员用户不在线，利用mimikatz获取管理员密码和hash，搭建socks隧道进入目标机远程桌面，发现存在某edr二次验证![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224856.png)查询网上资料后发现将该文件删除或重命名即可绕过，成功登录服务器  
+user查看管理员用户不在线，利用mimikatz获取管理员密码和hash，搭建socks隧道进入目标机远程桌面，发现存在某edr二次验证![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224856.png)查询网上资料后发现将该文件删除或重命名即可绕过，成功登录服务器  
 
     
     
     C:Program Files/Sangfor/EDR/agent/bin/sfrdpverify.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224857.png)登录该管理员主机后，发现阿里云盘，通过搜索阿里云盘文件发现大部分为备份文件，在某一最近更新的项目中发现服务器密码本txt，其中记录的账号密码一台服务器为本机服务器，一台为其它服务器![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224859.png)连接密码本中记录的第二台服务器，同时上线CS，有了第二台跳板机后，上传内网扫描工具使用第一台跳板机进行扫描（主要是怕在只有一台跳板机情况下直接扫描容易触发设备告警，造成权限丢失）。同时继续搜集信息，扩大攻击面。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224900.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224857.png)登录该管理员主机后，发现阿里云盘，通过搜索阿里云盘文件发现大部分为备份文件，在某一最近更新的项目中发现服务器密码本txt，其中记录的账号密码一台服务器为本机服务器，一台为其它服务器![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224859.png)连接密码本中记录的第二台服务器，同时上线CS，有了第二台跳板机后，上传内网扫描工具使用第一台跳板机进行扫描（主要是怕在只有一台跳板机情况下直接扫描容易触发设备告警，造成权限丢失）。同时继续搜集信息，扩大攻击面。  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224900.png)
 
 ## 突破隔离内网横向
 
-最后发现查看本机记录的mstsc发现可连接新网段机器，同时测试发现只有该服务器可访问![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224901.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224902.png)连接该服务器后，继续发现存在套娃服务器xx.xx.xx.7![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224904.png)测试发现均不出网，使用CS的中转功能进行中转跳板机上线![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224905.png)并上传扫描工具对该网段进行扫描，扫描发现该网段存在vcenter管理控制台![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224906.png)
+最后发现查看本机记录的mstsc发现可连接新网段机器，同时测试发现只有该服务器可访问![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224901.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224902.png)连接该服务器后，继续发现存在套娃服务器xx.xx.xx.7![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224904.png)测试发现均不出网，使用CS的中转功能进行中转跳板机上线![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224905.png)并上传扫描工具对该网段进行扫描，扫描发现该网段存在vcenter管理控制台![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224906.png)
 
 ## 获取vcenter管理控制权
 
-使用常用的漏洞如CVE-2021-21972、CVE-2021-21985等漏洞进行测试无果后，将目标锁定在该服务器其它端口上，通过全端口扫描发现该服务器还开放41433端口存在MSSQL服务。使用top100弱口令爆破失败后，打算通过搜集拿到的所有服务器、数据库、浏览器等密码进行碰撞。最终运气好碰撞成功，拿到该vcenter服务器权限。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224907.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224908.png)成功登录该vcenter服务器![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224909.png)最终拿下该目标单位约70余台服务器，20台数据存储等。至此，目标单位出局。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224910.png)
+使用常用的漏洞如CVE-2021-21972、CVE-2021-21985等漏洞进行测试无果后，将目标锁定在该服务器其它端口上，通过全端口扫描发现该服务器还开放41433端口存在MSSQL服务。使用top100弱口令爆破失败后，打算通过搜集拿到的所有服务器、数据库、浏览器等密码进行碰撞。最终运气好碰撞成功，拿到该vcenter服务器权限。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224907.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224908.png)成功登录该vcenter服务器![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224909.png)最终拿下该目标单位约70余台服务器，20台数据存储等。至此，目标单位出局。  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224910.png)
 
 ## 总结
 
@@ -95,32 +95,32 @@ user查看管理员用户不在线，利用mimikatz获取管理员密码和hash�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224911.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224911.png)
 
   
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224912.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224912.png)
 
   
 
   
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224913.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224913.png)
 
   
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224914.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224914.png)
 
   
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224915.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224915.png)
 
   
   
@@ -235,7 +235,7 @@ user查看管理员用户不在线，利用mimikatz获取管理员密码和hash�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224917.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230312224917.png)
 
   
 

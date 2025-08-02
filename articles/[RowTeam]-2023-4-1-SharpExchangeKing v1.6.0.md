@@ -44,7 +44,7 @@ v1.6.0 版本主要是新增一个 Persistence 选项卡，其余内容均是优
 
 共计 8 个功能选项
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182142.png)总览
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182142.png)总览
 
 使用说明：
 
@@ -90,11 +90,11 @@ v1.6.0 版本主要是新增一个 Persistence 选项卡，其余内容均是优
 
   * • EASDate
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182143.png)EASDate
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182143.png)EASDate
 
   * • 密码爆破
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182144.png)密码爆破
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182144.png)密码爆破
 
 ## 0x04 免责声明
 

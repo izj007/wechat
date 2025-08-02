@@ -14,7 +14,7 @@ __
 
 收录于话题 #攻击技术研判 ,13个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085913.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085913.png)
 
 **情报背景**
 
@@ -58,19 +58,19 @@ CLFS
 
 攻击者通过clfsw32.dll中的API函数CreateLogFile()打开用户配置文件目录下查找注册表事务日志文件，然后通过CloseAndResetLogFile()函数重置日志文件。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085915.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085915.png)
 
   
 
 之后再次打开日志文件，利用ReserveAndAppendLog()函数将内容写入CLFS日志的第一个容器文件。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085916.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085916.png)
 
   
 
 最终存储到文件中的数据如下所示：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085917.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085917.png)
 
   
 
@@ -119,14 +119,14 @@ Microsoft签名DLL。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085918.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085918.png)
 
  **绿盟科技M01N战队** 专注于Red
 Team、APT等高级攻击技术、战术及威胁研究，涉及Web安全、终端安全、AD安全、云安全等相关领域。通过研判现网攻击技术发展方向，以攻促防，为风险识别及威胁对抗提供决策支撑，全面提升安全防护能力。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085919.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907085919.png)
 
  **M01N Team**
 

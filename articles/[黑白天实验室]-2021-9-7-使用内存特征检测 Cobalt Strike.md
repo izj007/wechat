@@ -29,53 +29,53 @@ Beacon 可以配置各种内存中混淆选项以隐藏其有效负载。例如�
 
 那么我们先使用默认的关闭Obfuscate and Sleep来查看CobaltStrike进行进程注入会的具体情况。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205440.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205440.png)
 
   
 
 然后我们把进程注入到微信中。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205443.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205443.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205444.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205444.png)
 
   
 
 注入微信进程
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205445.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205445.png)
 
   
 
 正常执行命令
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205446.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205446.png)
 
   
 
 然后我们在目标主机中使用Process Hacker 2进行检测查看：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205447.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205447.png)
 
 查找调用 SleepEx 的线程来定位内存中的 Beacon，一般在比较活跃的之中。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205448.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205448.png)
 
   
 
 然后，我们可以将关联的内存区域进行分析，转到Memory查看分析这个偏移量。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205449.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205449.png)
 
   
 
 我们可以对比看一下Beacon的情况：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205450.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205450.png)
 
 转到Memory查看分析这个偏移量并对比一下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205451.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205451.png)
 
 可以看到我们可以看到我们的整个beacon在内存中未加密。
 
@@ -83,7 +83,7 @@ Beacon 可以配置各种内存中混淆选项以隐藏其有效负载。例如�
 
 检测这样没有加密的beacon不难，我们在最简单的做法是，从这个区域挑选一些独特的字符串并将它们用作我们的检测的特征就行。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205453.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205453.png)
 
   *   *   *   *   *   *   *   *   *   * 
 
@@ -117,37 +117,37 @@ Beacon 可以配置各种内存中混淆选项以隐藏其有效负载。例如�
 
 ``  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205454.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205454.png)
 
   
 
 Set sleep_mask “true”; 设置使beacon在睡眠之前混淆内存中的代码,睡眠后对自己进行混淆处理
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205455.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205455.png)
 
   
 
 可以看到在混淆内存中的代码，然后我们使用前面的规则并不能检测到了beacon
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205457.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205457.png)
 
   
 
 其实如果你刷新几次也可以发现解密的beacon,因为在每次使用beacon，都会重新加密数据和字符串。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205458.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205458.png)
 
   
 
 那么我们也可以多检测几次也可以检测到：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205459.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205459.png)
 
   
 
 因为我现在使用的4.3的Cobalt Strike，使用 13 字节的 XOR 密钥，
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205500.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210907205500.png)
 
   
 

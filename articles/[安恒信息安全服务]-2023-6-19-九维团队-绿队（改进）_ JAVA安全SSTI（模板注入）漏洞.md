@@ -18,7 +18,7 @@ ___发表于_
 
 #绿队 47 个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163526.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163526.png)
 
 前言
 
@@ -74,7 +74,7 @@ Freemarker模板示例代码：
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163528.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163528.png)
 
   
 
@@ -133,13 +133,13 @@ Freemarker模板示例代码：
 
 构造post请求加上之前构造的payload：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163529.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163529.png)  
   
 ---  
   
 可以看到恶意代码已被执行：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163530.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163530.png)
 
   
 
@@ -155,29 +155,29 @@ Freemarker模板示例代码：
 
 我们来分析下执行过程，模板是通过process方法被加载的：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163531.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163531.png)
 
   
 
 跟进process方法：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163532.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163532.png)
 
   
 跳转到createProcessingEnvironment方法：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163533.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163533.png)
 
   
 经过判断处理后最终返回了一个Environment对象，并将我们的Template对象（包含恶意payload）传入。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163534.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163534.png)
 
   
 
 回到process，又调用返回Environment对象的process方法，跟进：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163535.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163535.png)
 
   
 又调用了visit方法将模板（payload）传入，跟进visit方法：
@@ -189,52 +189,52 @@ Freemarker模板示例代码：
 这里遍历读取模板的节点，读取为对象list，<#assign
 value="freemarker.template.utility.Execute"?new()>为Assignment对象，进入了Assignment对象accept方法：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163536.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163536.png)
 
   
 跟进 eval() 方法：  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163537.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163537.png)
 
   
 再跟进到_eval方法：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163538.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163538.png)
 
   
 
 跟进到exec方法，通过freemarker.core.NewBI实例化了我们传入的freemarker.template.utility.Execute类：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163539.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163539.png)
 
   
 
 回到freemarker.core.Environment，遍历到${value("cmd /c calc.exe")：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163540.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163540.png)
 
   
 
 继续调用了DollarVariable的accept方法：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163542.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163542.png)
 
   
 跟进calculateInterpolatedStringOrMarkup方法：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163543.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163543.png)
 
   
 
 进入了和上个循环一样的流程,eval——>-_eval。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163544.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163544.png)
 
   
 
 然后调用了Execute对象的exec方法：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163545.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163545.png)
 
   
 
@@ -301,7 +301,7 @@ JythonRuntime。
 
 再次发送payload可以看到模板已禁止实例化Execute类：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163546.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163546.png)
 
   
 
@@ -363,28 +363,28 @@ Freemarker解析模板过程中可以内置函数创建对象，因此在存在�
 
  **往期回顾**
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163559.png)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247503784&idx=2&sn=bc990c6259149fdf93ba39e2bbd0f898&chksm=9ae18e90ad960786ff7b082ba3d2afcfe716606214a3c6ad6929bdd2f8d437e14383a619f490&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163559.png)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247503784&idx=2&sn=bc990c6259149fdf93ba39e2bbd0f898&chksm=9ae18e90ad960786ff7b082ba3d2afcfe716606214a3c6ad6929bdd2f8d437e14383a619f490&scene=21#wechat_redirect)
 
 [![]()](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247519863&idx=1&sn=9495648b103e724983ad338384c57208&chksm=9ae1cf4fad96465927d4b7934653823ddfc71c8902a9abef8cdb33a681072b790c4c334511da&scene=21#wechat_redirect)
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163600.png)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247519826&idx=1&sn=37a4b9f93f337b294a2e249a44417d1d&chksm=9ae1cf6aad96467c624fdfb771634a36c49d379d7e638d37d36ae22705a768cb5e3f842ba73d&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163600.png)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247519826&idx=1&sn=37a4b9f93f337b294a2e249a44417d1d&chksm=9ae1cf6aad96467c624fdfb771634a36c49d379d7e638d37d36ae22705a768cb5e3f842ba73d&scene=21#wechat_redirect)
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163601.png)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247518401&idx=1&sn=af2f81c299b3e6720df3274ddf8239d1&chksm=9ae1c9f9ad9640ef67da5b58cdacf0affb1dbd0d0e673852081e39e13c1191c3054d541d6826&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163601.png)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247518401&idx=1&sn=af2f81c299b3e6720df3274ddf8239d1&chksm=9ae1c9f9ad9640ef67da5b58cdacf0affb1dbd0d0e673852081e39e13c1191c3054d541d6826&scene=21#wechat_redirect)
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163602.png)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247518134&idx=1&sn=38629736d9e1cbf411826680c4a20bd5&chksm=9ae1c68ead964f98fca82d803096a9c5d401bb0019fdd15dbde8cd801e73abf14db8309009f8&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163602.png)](http://mp.weixin.qq.com/s?__biz=MzAwMDgyNTQzMQ==&mid=2247518134&idx=1&sn=38629736d9e1cbf411826680c4a20bd5&chksm=9ae1c68ead964f98fca82d803096a9c5d401bb0019fdd15dbde8cd801e73abf14db8309009f8&scene=21#wechat_redirect)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163603.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163603.png)
 
   
  **关于安恒信息安全服务团队**
 **安恒信息安全服务团队由九维安全能力专家构成，其职责分别为：红队持续突破、橙队擅于赋能、黄队致力建设、绿队跟踪改进、青队快速处置、蓝队实时防御，紫队不断优化、暗队专注情报和研究、白队运营管理，以体系化的安全人才及技术为客户赋能。**
 ****
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163605.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163605.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163606.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163606.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163607.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619163607.png)
 
 预览时标签不可点
 

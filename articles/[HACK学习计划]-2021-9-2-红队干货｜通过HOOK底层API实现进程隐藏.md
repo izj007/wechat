@@ -48,7 +48,7 @@ PE文件隐藏可以通过
     
     0xe9 xx xx xx xx
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012024.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012026.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012024.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012026.png)
 
 64位下: 需要修改12个字节的硬编码
 
@@ -56,7 +56,7 @@ PE文件隐藏可以通过
     
     0x48 0xb8, xx xx xx xx xx xx xx xx0xFF 0xE0
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012027.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012028.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012027.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012028.png)
 
 64位下该函数的名称已经改为`RtlGetNativeSystemInformation`。将`hookZwQuerySystemInformation`函数写在dll中,这样方便注入到任何进程中。
 
@@ -92,15 +92,15 @@ unhook函数
 
 要注意的是dll的位数。找到任务管理器pid:
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012029.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012029.png)
 
 这里选择隐藏QQ程序
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012030.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012030.png)
 
 注入程序后
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012032.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012033.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012032.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012033.png)
 
 可以看到QQ进程信息已经剔除
 
@@ -108,7 +108,7 @@ unhook函数
 
 如何将所有进程钩住? 使用全局钩子,这里我认为是两个知识点,就不继续展开说了。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012034.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012034.png)
 
 由于大号被封禁，暂时先用这个号发文章
 
@@ -123,7 +123,7 @@ unhook函数
  **  
 **
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012035.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210902012035.png)
 
 预览时标签不可点
 

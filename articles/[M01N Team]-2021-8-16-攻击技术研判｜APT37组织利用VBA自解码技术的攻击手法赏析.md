@@ -18,7 +18,7 @@ __
 
 10个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183855.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183855.png)
 
 **情报背景**
 
@@ -74,7 +74,7 @@ VBA自解码动态执行技术是在Office文档的宏中进行宏代码的动�
 
 在该攻击时间中，攻击者使用VBA自解码技术在文档中嵌入了混淆后的用于注入恶意shellcode的宏代码。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183906.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183906.png)
 
   
 
@@ -83,7 +83,7 @@ VBA自解码动态执行技术是在Office文档的宏中进行宏代码的动�
 VBOM（VB object
 model，VB对象模型）为Office软件中可用于操作Office应用文档中的宏的抽象模型。通过对VBOM的操作，可以对文档中的宏进行操作，例如增删宏模组与代码，执行宏代码。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183907.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183907.png)
 
   
 
@@ -188,14 +188,14 @@ VBA代码的自解码与动态执行大大增加了代码混淆与隐蔽的灵�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183908.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183908.png)
 
  **绿盟科技M01N战队** 专注于Red
 Team、APT等高级攻击技术、战术及威胁研究，涉及Web安全、终端安全、AD安全、云安全等相关领域。通过研判现网攻击技术发展方向，以攻促防，为风险识别及威胁对抗提供决策支撑，全面提升安全防护能力。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183910.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816183910.png)
 
  **M01N Team**
 

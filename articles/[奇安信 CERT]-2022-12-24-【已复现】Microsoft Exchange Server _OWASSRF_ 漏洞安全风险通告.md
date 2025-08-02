@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集 #安全风险通告 386个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221224002824.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221224002824.png)
 
 奇安信CERT
 
@@ -186,11 +186,11 @@ Microsoft Exchange Server 2016 Cumulative Update 23
 
 目前，奇安信CERT已成功复现 **Microsoft Exchange Server "OWASSRF"漏洞** ，截图如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221224002839.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221224002839.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221224002841.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20221224002841.png)
 
   
 

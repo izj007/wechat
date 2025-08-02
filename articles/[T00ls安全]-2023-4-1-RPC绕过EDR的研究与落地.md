@@ -29,7 +29,7 @@ ___发表于_
 提供对接口、管理器入口点向量或客户端对象等对象的唯一指定。ACF：(ACF) 的应用程序配置文件有两个部分： 接口标头，类似于 IDL
 文件中的接口标头，以及一个 正文，其中包含适用于 IDL
 文件的接口正文中定义的类型和函数的配置属性。2、调用过程RpcStringBindingCompose：需要先创建一个绑定句柄字符串。。RpcBindingFromStringBinding：通过绑定句柄字符串返回绑定句柄。3、存根分配和释放内存在编写RPC调用的时候，必须将函数MIDL_user_allocate和MIDL_user_free在项目的中定义。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130630.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130630.png)
 
 ## 3、相关攻击面
 
@@ -37,7 +37,7 @@ ___发表于_
 
 ### 1、IOXID Resolver探测内网多网卡主机
 
-我们发送一个IOXID的传输包，这个发送方式有很多种，我这里用的K8师傅的工具，用Wireshark抓包。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130637.png)上图中TCP的三个包就不用看了，就是很常见的TCP的三次握手，后四个包中可以如图看，主要关注的是最后一个包，前三个都是固定的，就是交互中用来协商版本之类的参数。1、先来构造第一个数据包，由于这个包是固定的可以直接Copy
+我们发送一个IOXID的传输包，这个发送方式有很多种，我这里用的K8师傅的工具，用Wireshark抓包。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130637.png)上图中TCP的三个包就不用看了，就是很常见的TCP的三次握手，后四个包中可以如图看，主要关注的是最后一个包，前三个都是固定的，就是交互中用来协商版本之类的参数。1、先来构造第一个数据包，由于这个包是固定的可以直接Copy
 Wireshark中的，如下图
 
     
@@ -45,14 +45,14 @@ Wireshark中的，如下图
     05000b03100000004800000001000000b810b810000000000100000000000100c4fefc9960521b10bbcb00aa0021347a00000000045d888aeb1cc9119fe808002b10486002000000
 
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130639.png)2、后续第二个是接收的数据包，直接将第三个包复制就可以
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130639.png)2、后续第二个是接收的数据包，直接将第三个包复制就可以
 
     
     
     050000031000000018000000010000000000000000000500
 
   
-3、主要就是看我们如何剖析最后一个包，将他接收过来并且进行一个分割输出，首先我们是想要枚举他的多网卡信息，和主机信息。我们对数据包进行一个分割。是从/0x07/0x00/进行分割。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130640.png)结束的是在0x09/0x00/0xff这一块结束的,把我们接受的数据进行一个分割。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130642.png)相关代码：https://github.com/M0nster3/RpcsDemo/blob/main/OXIDINterka_network_card/OXID.go效果图![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130644.png)
+3、主要就是看我们如何剖析最后一个包，将他接收过来并且进行一个分割输出，首先我们是想要枚举他的多网卡信息，和主机信息。我们对数据包进行一个分割。是从/0x07/0x00/进行分割。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130640.png)结束的是在0x09/0x00/0xff这一块结束的,把我们接受的数据进行一个分割。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130642.png)相关代码：https://github.com/M0nster3/RpcsDemo/blob/main/OXIDINterka_network_card/OXID.go效果图![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130644.png)
 
 ### 2、RPC SMB
 
@@ -84,7 +84,7 @@ RPC.md中，大家有需要可以去提取。
   
 在创建用户的时候通过分档来看，不能直接创建到内置域（Builtin）中，需要先创建到账户域（账户）中，如下图。关于内置域和账户域的相关内容可以参考官方链接.其实简单来说就是，账户域内的用户只能访问该账户所在计算机的资源，而内置域中的账户可以访问域的资源。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130645.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130645.png)
 
 由于使用SamrCreateUser2InDomain创建的账户存在禁用标识位，我们先需要为它Set一个属性，来清除禁用标识位。然后才可以将其加入到所在的内置域中。使用SamrSetInformationUser()
 这个API为它设置。
@@ -102,15 +102,15 @@ RPC.md中，大家有需要可以去提取。
 编写脚本有两种方式一种是直接调用MS-
 SAMR协议去直接创建一个用户，微软官方给了IDL，将其编译，然后构造，这种方式调用起来比较麻烦，另一种是使用神器mimikatz打包好的包，samlib来进行调用，调用的时候将前面的samr改成sam就可以.参考微软给的官方例子.可以按照这个例子依次构造
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130647.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130647.png)
 
 首先先求出来账户域Account和内置域的Builts的SID为后续添加账户以及加入到内置域中做准备。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130648.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130648.png)
 
 然后获取域对象的句柄，然后为域对象添加用户,并且清除禁用标识位，关键代码。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130649.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130649.png)
 
 到这里创建用户的准备工作就结束了，接下来，就是将用户添加到组里面，用到SamAddMemberToAlias.
 
@@ -125,7 +125,7 @@ SAMR协议去直接创建一个用户，微软官方给了IDL，将其编译，�
 相应的Demo：https://github.com/M0nster3/RpcsDemo/blob/main/MS-
 SAMR/AddUser/AddUser/main.c
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130650.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130650.png)
 
 #### 2) Change Ntlm
 
@@ -150,14 +150,14 @@ SAMR/AddUser/AddUser/main.c
   
 这这里遇到了一个坑，就是只用旧的Ntlm就行修改而不对LmCrossEncryptionPresent和NewLmEncryptedWithNewNt进行传参，则会输出一个C000017F的错误，如下图。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130651.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130651.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130652.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130652.png)
 
 我去查看一下这个错误发现是客户端使用当前密码LM hash作为加密密钥请求返回，不清楚为什么不能用当前的密码LM hash，就改了一个其他的LM
 hash,关键代码。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130653.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130653.png)
 
 接下来就是编写POC，我在这里使用微软官方的提供的IDL进行编译，提供了我们需要的所有包，在我们编译好，生成exe的时候会有很多错误，直接将其都注释就好。根据RPC的调用过程首先需要进行RPC的绑定
 
@@ -175,7 +175,7 @@ hash,关键代码。
   
 其中的ObjUuid可以直接在提供的IDL中找到，如下图，但是发现这个例子有没有这个都可以，最主要的必须定义一个命名管道端点 \PIPE\samr。关键代码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130654.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130654.png)
 
 绑定了之后接下来就是构造SamrChangePasswordUser,如果我们不熟悉MS-SAMR我们可以倒着堆整个调用流程。
 
@@ -212,7 +212,7 @@ SamrOpenUser()如下，可以为我们提供我们需要的Userhandle，这个AP
   
 继续查看这个API需要什么参数，需要一个域的句柄，所需要的访问权限查看文档，如下图，由于我们是要实现修改密码，所以我们需要一个指定修改用户密码的能力USER_CHANGE_PASSWORD，最后还需要一个RID。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130656.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130656.png)
 
 通过上面的分析，我们现在需要两个参数，一个参数是DomainHandle，另一个就是UserId.继续翻看文档发现这样一个API
 SamrLookupNamesInDomainSamrLookupNamesInDomain如下就是将我们输入的用户名转化为RID，输出一个RID号，到这里我们上面所需要的两个参数中的UserId就找到了。这里需要的两个参数就是我们输入的用户名，还有和上面SamrOpenUser通向需要的的
@@ -279,7 +279,7 @@ Hash调用SamrChangePasswordUser修改密码。想要修改的Nt hash 可以使�
 
 效果图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130657.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130657.png)
 
 完整的Demo：https://github.com/M0nster3/RpcsDemo/blob/main/MS-
 SAMR/ChangeNTLM/ChangePass/main.c
@@ -309,7 +309,7 @@ SchRpcRegisterTask直接向服务器注册一个任务，关键的两个参数�
   
 奇怪的是我们在编写的时候总是提示我们缺少参数，如下图,我们缺少一个句柄，这个句柄就是我们写RPC时候的一个绑定句柄，这个Demo写起来就简单多了，不需要之前那么多要求，只要配置一个RPC绑定就可以了。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130658.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130658.png)
 
 本来以为很简单直接写一个绑定就可以，没想到调用之前的绑定，发现总是失败，后来查找github别人的源码发现需要多一步验证，需要实现RpcBindingSetAuthInfoExA,真是吐了。
 
@@ -328,13 +328,13 @@ SchRpcRegisterTask直接向服务器注册一个任务，关键的两个参数�
   
 关键代码
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130659.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130659.png)
 
 效果图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130700.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130700.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130701.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130701.png)
 
 相关代码：https://github.com/M0nster3/RpcsDemo/blob/main/MS-
 TSCH_DESK/RPCDESK/RPCDESK/main.c
@@ -405,15 +405,15 @@ RStartServiceA,准备好了所有的东西，就可以开始编写Demo。相关D
   
 效果图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130702.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130702.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130703.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130703.png)
 
 这里我们将我们的shellcode执行一下,添加注册表的时候需要将servicesname改为你添加任务的名字。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130705.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130705.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130706.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130706.png)
 
 而且这里还是system权限。
 
@@ -422,7 +422,7 @@ RStartServiceA,准备好了所有的东西，就可以开始编写Demo。相关D
 这个是splinter_code
 这个师傅发现的.它的原理主要是，不直接调用OpenProcess去打开进程对象，而是利用已经打开的Lsass进程句柄，从而绕过检测，然后利用RpcImpersonateClient尝试使用PID做一个调用者的伪造。关键细节可以看这个师傅的博客说的很详细了：效果图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130707.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401130707.png)
 
 需要将我们的第一步-t 1的提取出来，不然直接使用-t 2解密之后会被杀软杀了。
 

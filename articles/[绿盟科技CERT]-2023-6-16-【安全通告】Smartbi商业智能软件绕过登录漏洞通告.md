@@ -73,18 +73,18 @@ https://www.smartbi.com.cn/patchinfo
 
  **END**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180823.png)
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180825.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180823.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180825.png)
 **声明**
 
 本安全公告仅用来描述可能存在的安全问题，绿盟科技不为此安全公告提供任何保证或承诺。由于传播、利用此安全公告所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，绿盟科技以及安全公告作者不为此承担任何责任。  
 
 绿盟科技拥有对此安全公告的修改和解释权。如欲转载或传播此安全公告，必须保证此安全公告的完整性，包括版权声明等全部内容。未经绿盟科技允许，不得任意修改或者增减此安全公告内容，不得以任何方式将其用于商业目的。  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180825.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180825.png)
 
  **绿盟科技CERT** ****
-∣微信公众号![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180828.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180829.png)长按识别二维码，关注网络安全威胁信息
+∣微信公众号![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180828.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230616180829.png)长按识别二维码，关注网络安全威胁信息
 
   
 

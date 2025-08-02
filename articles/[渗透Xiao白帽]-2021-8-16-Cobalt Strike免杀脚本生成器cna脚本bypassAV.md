@@ -47,25 +47,25 @@ __
 
  _注意：均是两个斜杠_
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082823.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082823.png)
 
 选择Cobalt Strike生成BIN文件。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082833.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082833.png)
 
 启用该cna脚本，选择指定的bin文件，点击生成恶意的ps1文件、exe可执行文件，
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082834.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082835.png)![]()
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082834.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082835.png)![]()
 
 点击即可上线。
 
 使用powershell 4.0上线server 2012
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082836.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082836.png)
 
 使用powershell 2.0上线server 2008
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082837.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082837.png)
 
 如果在webshell触发该可执行文件，需要start命令
 
@@ -73,7 +73,7 @@ __
 
 更新日志2021/7/18
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082838.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082838.png)
 
 ## 参考文章
 
@@ -95,16 +95,16 @@ bypassAV_www.ddosi.org.rar
 
 生成木马以及运行木马全程火绒无反应.
 
-![]()静态查杀未检测到病毒![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082839.png)运行上线火绒未报毒![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082840.png)读取文件火绒未报毒
+![]()静态查杀未检测到病毒![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082839.png)运行上线火绒未报毒![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082840.png)读取文件火绒未报毒
 
 ### ② bypass 卡巴斯基效果
 
-![]()静态查杀卡巴斯基未检测到病毒![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082841.png)成功上线-
+![]()静态查杀卡巴斯基未检测到病毒![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082841.png)成功上线-
 卡巴斯基未拦截
 
 读取文件-卡巴斯基未拦截
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082842.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082842.png)
 
 执行命令,卡巴斯基拦截并清除木马,同时锁定所有软件,进行木马扫描.
 
@@ -114,19 +114,19 @@ bypassAV_www.ddosi.org.rar
 
 ①导入脚本前请务必修改路径,否则无法生成木马.
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082843.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082843.png)
 
 ②ico图标必填,否则无法生成木马(报错)
 
 这里选择的ico图标为卡巴斯基臭狗熊头像.
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082844.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082844.png)
 
 ③乱码问题
 
 这个影响不大
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082845.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082845.png)
 
  _ ** **BY：雨苁  
 ****_
@@ -184,11 +184,11 @@ BeanShell远程代码执行漏洞复现](http://mp.weixin.qq.com/s?__biz=MzI1NTM
  _ **走过路过的大佬们留个关注再走呗**_![]()
 
  **往期文章有彩蛋哦**
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082846.png)**  
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082846.png)**  
 
 ![]()
 
-一如既往的学习，一如既往的整理，一如即往的分享。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082847.png)  
+一如既往的学习，一如既往的整理，一如即往的分享。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210816082847.png)  
 
 “ **如侵权请私聊公众号删文** ”
 

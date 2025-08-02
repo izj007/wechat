@@ -102,13 +102,13 @@ ___发表于_
     4、ntdll中取出RtlReportSilentProcessExit()函数；  
     5、调用RtlReportSilentProcessExit()函数，传入第3步获取到的Lsass句柄。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221552.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221552.png)
 获取debug权限、设置注册表、通过进程名获取Lsass进程pid等函数的具体实现，可以参考文末的完整代码。其中SavePath这个宏设置的是dmp文件存储路径，C:\temp。
-编译之后，执行程序，成功写入注册表并获取到Lsass进程的dmp文件。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221553.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221554.png)
-以进程名及其pid号命名的文件夹里保存了Lsass进程的dmp文件，除此之外，还会有dump进程本身的dmp文件，这是由于RtlReportSilentProcessExit()函数执行时，虽然传了Lsass的句柄，但是归根结底dump程序自身也调用了。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221555.png)
+编译之后，执行程序，成功写入注册表并获取到Lsass进程的dmp文件。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221553.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221554.png)
+以进程名及其pid号命名的文件夹里保存了Lsass进程的dmp文件，除此之外，还会有dump进程本身的dmp文件，这是由于RtlReportSilentProcessExit()函数执行时，虽然传了Lsass的句柄，但是归根结底dump程序自身也调用了。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221555.png)
 开源工具Nanodump中也集成了这种手法:       nanodump --werfault C:\Windows\Temp\
-(dmp文件存放目录)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221556.png)
-可以看到dump出的文件保存在了设置的路径中：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221557.png)
+(dmp文件存放目录)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221556.png)
+可以看到dump出的文件保存在了设置的路径中：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230628221557.png)
 这个方法其实很早就有了，虽然能过很多国内杀软，但是经过测试过不了Defender，如果有大佬有更好的利用思路欢迎私信交流。  
 
 ##  **0x05 检测方法** ****

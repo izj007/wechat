@@ -20,11 +20,11 @@ __
 
 #红队 7 个
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094445.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094445.png)
 
 开卷有益 · 不求甚解
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094449.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094449.png)  
 
 ## 前言
 
@@ -42,7 +42,7 @@ YARA 规则，该规则将检测使用此技术所做的大多数修改。
 
 如果像这样的屏幕截图让您兴奋，请继续阅读。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094454.png)图像1
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094454.png)图像1
 
  **技术 TL;DR**
 
@@ -63,14 +63,14 @@ API 哈希是恶意软件经常使用的一种技术，用于在检测分析师�
 传统上，如果某个软件需要调用 Windows API 的函数（例如，如果它想使用CreateFileW创建文件），则该软件需要在代码中“直接”引用 API
 名称。这通常看起来像下面的屏幕截图。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094456.png)图像11
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094456.png)图像11
 
 通过“直接”使用 API，API 的名称会保留在代码中。这使分析师能够轻松识别可疑代码可能在做什么。在这种情况下，该可疑操作是创建或打开文件。
 
 当使用“直接”API 调用时，它还会将 API 保留在文件的导入表中。可以在 PeStudio
 或任何其他分析工具中轻松查看此导入表，如下面的屏幕截图所示。请注意，我们还可以看到恶意软件正在使用的其他 API。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094459.png)图像24
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094459.png)图像24
 
 如果您是试图隐藏恶意文件创建的攻击者，那么这两种情况都不理想。如果您可以将您的 API
 使用情况隐藏在可能会看到`CreateFileW`然后去搜索可疑文件的分析师那里，那就更好了。
@@ -84,7 +84,7 @@ API，正如我们在上面在 PeStudio 中看到的那样。
 
 使用放置良好的断点，分析人员可以查看传递给GetProcAddress函数的参数并找出正在加载的内容。运行可疑代码后，调试器会显示类似这样的内容，揭示CreateFileW的用法并向分析师指示他们应该去寻找可能已经创建的可疑文件。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094509.png)图像23
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094509.png)图像23
 
 避免这两种情况的常用方法是使用一种称为 API 散列的技术。
 
@@ -106,7 +106,7 @@ API，正如我们在上面在 PeStudio 中看到的那样。
 通常，此调用类似于call rbp，但从技术上讲，寄存器可以是任何值。下面是从使用 API 哈希的一些 Cobalt Strike shellcode
 截取的屏幕截图。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094515.png)图像18
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094515.png)图像18
 
 在屏幕截图中，我们可以看到在调用 rbp之前将两个十六进制值推送到寄存器。这些哈希值将被解析并用于加载恶意软件使用的可疑函数。
 
@@ -116,12 +116,12 @@ API，正如我们在上面在 PeStudio 中看到的那样。
 
 在高层次上，哈希解析逻辑类似于下面的伪代码。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094521.png)图4
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094521.png)图4
 
 此外，您会发现主要基于 ror13 散列算法的 Calculatehash Logic 与此类似。0xd (13)
 的值在这里很重要，因为稍后我们将更改此值以生成可以绕过检测的新哈希。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094522.png)图8
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094522.png)图8
 
 这是一种简化，实际逻辑稍微复杂一些。如果您有兴趣更详细地了解逻辑，Nviso [1]和Avast [2]有一些关于该主题的精彩文章。
 
@@ -145,7 +145,7 @@ API，正如我们在上面在 PeStudio 中看到的那样。
 如果我们用谷歌搜索0x726774c ( LoadLibraryA ) 的值，我们会立即获得 Metasploit 框架（与 Cobalt Strike
 共享代码）的点击率。如果我们用谷歌搜索0xa779563a ( InternetOpenA ) 的哈希值，我们会看到相同的结果。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094525.png)图像21
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094525.png)图像21
 
 从这些框架生成我们自己的 shellcode 样本，我们观察到我们的有效载荷中存在的哈希值始终可以识别为 Metasploit 和 Cobalt
 Strike 使用的那些。
@@ -167,7 +167,7 @@ YARA 规则呢？
 Metasploit shellcode。下面我们可以看到来自 Avast 的 YARA 规则，它主要依赖于我们之前确定的哈希值（以及 HTTP
 stager 所需的其他哈希值）。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094527.png)图像22
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094527.png)图像22
 
 针对我们的原始 Cobalt Strike 和 Metasploit shellcode（未启用任何编码器）测试这些 YARA 规则，我们确认Avast
 YARA [4]规则集可靠地检测并识别了我们生成的所有有效负载。蓝队的好消息——以及来自 Avast 的威胁英特尔团队的出色工作。
@@ -186,12 +186,12 @@ shellcode，因为哈希将不再解析——但它可以让我们检查在不�
 
 我们的新 shellcode 将包含这样的哈希值来代替之前看到的实际哈希值。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094530.png)图片15
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094530.png)图片15
 
 然后，我们使用 Virustotal 对 Cobalt Strike HTTP 有效负载进行了前后检查，发现 **在进行这些更改后，有 15
 家供应商未能检测到 shellcode** 。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094531.png)图像26
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094531.png)图像26
 
 作为概念验证，这非常有趣。但作为攻击者，这在很大程度上是无用的。在当前的修改状态下，shellcode 将不再解析哈希，也无法找到执行所需的 API —
 将我们的 shellcode 变成了一个不错的数字镇纸。
@@ -214,40 +214,40 @@ shellcode，因为哈希将不再解析——但它可以让我们检查在不�
 
 从理论上讲，这将产生全新的散列，同时保持基本相同的逻辑和散列结构。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094534.png)图像10
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094534.png)图像10
 
 然后我们创建了一个脚本来根据我们的新旋转值 0xf 生成新的哈希值。这个逻辑可以在这篇文章中包含的最终脚本中找到。
 
 在生成新的哈希值之后，我们更新了我们的 shellcode 以对应于我们的新哈希，以及我们的新 ror 值0xf。请注意，我们的 shellcode
 结构在很大程度上仍然完好无损，唯一改变的是散列和旋转 (ror) 值。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094537.png)图像25
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094537.png)图像25
 
 然后我们确认我们的代码仍然能够按预期运行。使用FireEye的 Speakeasy 工具大大加快了这个过程。[5]
 
 下面我们可以看到在我们新修改的 shellcode 中仍然成功解析的 API 屏幕截图。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094538.png)图3
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094538.png)图3
 
 [结合使用来自 OAlabs 6]的 netcat 和B lo bRunner 工具，我们进行了额外的检查，以确认我们的 shellcode
 仍然有效并且会按预期“调用”。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094539.png)图像19
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094539.png)图像19
 
 在确认我们的代码确实仍然有效后，我们将其上传到 VirusTotal。并且发现我们还剩下两个供应商，这两个供应商在我们之前的虚拟值测试中是相同的。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094545.png)图2
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094545.png)图2
 
 这很有趣，因为它现在可以运行 Cobalt Strike shellcode——检测次数比修改前少 15 次。
 
 为了进行完整性检查，我们使用来自 Metasploit 的 TCP 绑定 shell（未启用编码器）重新运行相同的过程。在确认代码仍然有效后，我们将其提交给
 VirusTotal，发现有 26 家供应商未能检测到修改后的有效载荷。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094547.png)图像17![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094552.png)图像16
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094547.png)图像17![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094552.png)图像16
 
 在我们的分析过程中，有趣的是，剩下的两个供应商在修改后的有效载荷之间存在差异。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094554.png)图6
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094554.png)图6
 
 此时，我们还检查了原始 YARA 规则是否不再检测我们的有效负载。并确认他们不再被检测到。
 
@@ -279,17 +279,17 @@ Metasploit。这使我们相信他们正在检测通用的 shellcode 指标，�
 
 下面，我们有一个修改后的shellcode的前后。请注意从“wininet”（全小写）到“wIninet”（一个大写 I）的细微变化。以及现在位于我们的
 **pop rbp** 之后的 CLD
-指令。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094557.png)
+指令。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094557.png)
 
 然后我们确认我们的 shellcode 仍然有效，然后将其重新提交给 VirusTotal。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094600.png)图 9
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094600.png)图 9
 
 最后，我们在不破坏代码的情况下达到了 0/55 检测。
 
 然后我们用 Antiscan 进行了检查，发现我们的 Cobalt Strike shellcode 的检测也为零——而未修改的副本有 13 次检测。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094602.png)图像20
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094602.png)图像20
 
  **TL;DR 要点**
 
@@ -316,11 +316,11 @@ Metasploit。这使我们相信他们正在检测通用的 shellcode 指标，�
 
 如何使用 msfvenom 生成简单的反向 shell 有效负载的示例。注意使用“--format raw”来避免使用编码器。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094608.png)图像13
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094608.png)图像13
 
 以下是如何使用脚本修改 shellcode 文件的示例。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094613.png)图5
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094613.png)图5
 
 ### 此脚本的注意事项和限制
 
@@ -463,10 +463,10 @@ Metasploit shellcode 进行更稳健的检测。
 
 >>>
 
->>> ![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094615.png)  
+>>> ![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094615.png)  
 >
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094617.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218094617.png)
 
   
 

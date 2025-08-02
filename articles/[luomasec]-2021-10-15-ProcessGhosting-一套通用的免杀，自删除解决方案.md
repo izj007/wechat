@@ -61,7 +61,7 @@ DeleteFile 字段设置为 TRUE。
 
 下面是整个代码的思维导图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015102214.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015102214.png)
 
 其中主要涉及到三个函数分别是buffer_payload、process_ghost、make_section_from_delete_pending_file。
 

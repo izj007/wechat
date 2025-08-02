@@ -20,7 +20,7 @@ __
 
   
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182715.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182715.png)
 
 **概述**
 
@@ -79,7 +79,7 @@ Lambda，国内阿里云函数计算FC、腾讯云云函数等。云函数是一
 
 基于以上所述的一些问题，我们尝试利用CDN结合函数计算搭建攻击前置，希望能有1+1>>2的效果，基本结构如下。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182716.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182716.png)
 
   
 
@@ -89,13 +89,13 @@ Lambda，国内阿里云函数计算FC、腾讯云云函数等。云函数是一
 
 首先创建服务和函数
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182717.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182717.png)
 
   
 
 修改触发器
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182718.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182718.png)
 
   
 
@@ -198,25 +198,25 @@ Lambda，国内阿里云函数计算FC、腾讯云云函数等。云函数是一
 
 invoke执行测试
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182719.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182719.png)
 
   
 
 或者使用vscode插件进行远程部署
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182720.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182720.png)
 
   
 
 访问返回的服务url即可重定向到我们的C2服务，云函数具备多出口IP，但URL特征极为明显，这里再通过自定义域名加上CDN服务做域前置进行优化
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182721.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182721.png)
 
   
 
 请求测试，功能正常，但是返回头中含有云函数的一些特定内容，继续优化，可以在阿里云CDN中设置缓存配置过滤返回头无关内容
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182722.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182723.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182722.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182723.png)
 
   
 
@@ -252,13 +252,13 @@ WEBServer中不存在的资源的访问，中转请求肯定会报404，但阿�
 
 C2使用自定义的C2 Profile还可以用CDN的UA控制进行访问控制
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182724.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182724.png)
 
   
 
 最后效果
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182725.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182725.png)
 
   
 
@@ -294,14 +294,14 @@ https://blog.xpnsec.com/aws-lambda-redirector/
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182726.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182726.png)
 
  **绿盟科技M01N战队** 专注于Red
 Team、APT等高级攻击技术、战术及威胁研究，涉及Web安全、终端安全、AD安全、云安全等相关领域。通过研判现网攻击技术发展方向，以攻促防，为风险识别及威胁对抗提供决策支撑，全面提升安全防护能力。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182727.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811182727.png)
 
  **M01N Team**
 

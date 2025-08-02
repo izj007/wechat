@@ -21,7 +21,7 @@ __
 
 #内网渗透 20
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091341.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091341.png)
 
 ## 前言
 
@@ -39,7 +39,7 @@ SocksOverRDP 可以将 SOCKS 代理的功能添加到远程桌面服务，它使
 
 该工具可以分为两个部分：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091342.png)image-20210805164336410
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091342.png)image-20210805164336410
 
 •第一部分是一个 `.dll` 文件，需要在 RDP 连接的客户端上进行注册，并在每次运行时将其加载到远程桌面客户端 mstsc
 的上下文运行环境中。•第二部分是一个 `.exe` 可执行文件，它是服务端组件，需要上传到 RDP 连接的服务器并执行。
@@ -83,7 +83,7 @@ RDP 协议来建立通讯隧道。
     
     regsvr32.exe SocksOverRDP-Plugin.dll    # 注册# regsvr32.exe /u SocksOverRDP-Plugin.dll    取消注册
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091343.png)image-20210805171250365
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091343.png)image-20210805171250365
 
 如上图所示，注册成功。但是由于 SocksOverRDP 建立的 SOCKS5 代理是默认监听在 127.0.0.1:1080
 上的，所以只能从攻击机本地使用，为了让攻击者的 Kali 也能使用搭建在攻击机 Windows 10 上的 SOCKS5 代理，我们需要修改其注册表，将
@@ -93,11 +93,11 @@ IP 从 127.0.0.1 改为 0.0.0.0。注册表的位置为：
     
     HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client\Default\AddIns\SocksOverRDP-Plugin
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091344.png)image-20210805183835850
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091344.png)image-20210805183835850
 
 然后启动远程桌面客户端 mstsc.exe 连接目标 Web 服务器 Windows Server 2012：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091345.png)image-20210805184009799
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091345.png)image-20210805184009799
 
 如上图所示，弹出了一个提示说 SocksOverRDP 成功启动，当服务端的可执行文件运行后即可在攻击机的 1080 端口上启动 SOCKS5 代理服务。
 
@@ -105,15 +105,15 @@ IP 从 127.0.0.1 改为 0.0.0.0。注册表的位置为：
 
 远程桌面连接成功后，将服务端组件 SocksOverRDP-Server.exe 上传到 Windows Server 2012 上：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091346.png)image-20210805172727184
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091346.png)image-20210805172727184
 
 直接运行 SocksOverRDP-Server.exe 即可：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091347.png)image-20210805172901544
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091347.png)image-20210805172901544
 
 此时便成功搭建了一个 SOCKS5 代理隧道，查看攻击机 Windows 10 的端口连接状态发现已经建立连接：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091348.png)image-20210805173743464
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091348.png)image-20210805173743464
 
 然后在攻击机 Kali 上配置好 proxychains：
 
@@ -125,7 +125,7 @@ IP 从 127.0.0.1 改为 0.0.0.0。注册表的位置为：
     
     proxychains4 rdesktop 192.168.93.30
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091350.png)image-20210805184342519
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091350.png)image-20210805184342519
 
 探测内网主机 DC 的端口开放情况：
 
@@ -133,7 +133,7 @@ IP 从 127.0.0.1 改为 0.0.0.0。注册表的位置为：
     
     proxychains4 nmap -sT -Pn 192.168.93.30 -p 445
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091352.png)image-20210805185347989
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091352.png)image-20210805185347989
 
 先该主机开启了 445 端口，我们可以直接用 smbexec.py 连接：
 
@@ -141,7 +141,7 @@ IP 从 127.0.0.1 改为 0.0.0.0。注册表的位置为：
     
     proxychains4 python3 smbexec.py whoamianony/administrator:Whoami2021@192.168.93.30
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091353.png)image-20210805190126459
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091353.png)image-20210805190126459
 
 如上图所示，成功拿下内网主机 DC。
 
@@ -155,7 +155,7 @@ IP 从 127.0.0.1 改为 0.0.0.0。注册表的位置为：
 
   
 
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091354.png)**
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091354.png)**
 
   
 
@@ -186,7 +186,7 @@ IP 从 127.0.0.1 改为 0.0.0.0。注册表的位置为：
 
 文章首发Freebuf
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091356.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210826091356.png)
 
 预览时标签不可点
 

@@ -49,11 +49,11 @@ poc: /setup/setup-/../../log.jsp,nuclei检测：
 
 ‍
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194346.png)nuclei-
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194346.png)nuclei-
 templates:https://github.com/UltimateSec/ultimaste-nuclei-
 templates/blob/main/openfire/CVE-2023-32315.yaml **后利用思路：** 利用plugin-
 admin.jsp路径上传恶意插件反弹shell即可，这里提供一个思路，直接魔改一下msf
-cve-2008-6508的exp直接使用：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194347.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194348.png)  
+cve-2008-6508的exp直接使用：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194347.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194348.png)  
  **修复方式：** 收敛系统访问网络 **参考：** https://learningsomecti.medium.com/path-traversal-
 to-rce-openfire-
 cve-2023-32315-6a8bf0285fcchttps://github.com/porthunter/gosploit/blob/3b1370488af9de826f0be4d7df92029c30434fd6/modules/exploits/multi/http/openfire_auth_bypass.rb#L183

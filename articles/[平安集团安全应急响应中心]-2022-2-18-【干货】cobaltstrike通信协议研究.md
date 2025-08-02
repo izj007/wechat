@@ -42,7 +42,7 @@ task返回数据                 3.2.1 验证解析数据                 3.2.2 
 
   
  **第一部分** **HTTP/HTTPS Beacon通信过程**  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134442.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134442.png)  
 
 #
 
@@ -227,14 +227,14 @@ Beacon并不是直接发送AES key和HMAC key而是发送Global key，然后cs�
   
  **验证解析 ****  
 **我们使用cobaltstrike新建一个http的监听，执行上线，然后使用wareshark抓取返回的数据。
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134443.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134443.png)  
 解析后的结果如下：  
   
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134445.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134445.png)  
 其中的AES key用来加解密后续此beacon的task任务，HAMC用来验证task任务返回数据的正确性。  
  **封包 ****  
 **根据cobaltstrike的解析源数据的过程，我们得到metadata源数据的格式如下：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134446.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134446.png)  
 我们用golang来实现的对应的封装源数据的过程，如下：
 
   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   * 
@@ -300,14 +300,14 @@ Beacon并不是直接发送AES key和HMAC key而是发送Global key，然后cs�
 
   
 测试结果，成功上线：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134447.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134447.png)  
   
 
  **1.2 下发Beacon的task数据**
 
   
 上面介绍了beacon上线的通信数据，现在我们来看ts给beacon下发命令和执行结果返回的详细情况。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134448.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134448.png)  
 如上图是一次task下发到返回执行结果的过程：  
 1\. beacon使用http get请求向ts发送上线数据的同时，获取ts返回的http get response即为封包的task任务数据。  
 2\. 根据配置的profile信息，删除prepend data和append data得到AES加密的task数据。  
@@ -351,7 +351,7 @@ Beacon并不是直接发送AES key和HMAC key而是发送Global key，然后cs�
   
  **1.2.2 task** **任务的数据格式 ****  
 **根据上述过程，我们可以分析出task任务数据格式如下：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134449.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134449.png)  
 注意：task_buffer中包含：4字节的cmdbuffer_lenght和实际的cmdbuffer数据  
  **1.2.3** **使用** **python** **脚本测试解包 ****  
 **这里我们先使用python脚本来验证，代码如下：
@@ -386,9 +386,9 @@ Beacon并不是直接发送AES key和HMAC key而是发送Global key，然后cs�
 
   
 我们在cs中向beacon发送任务：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134450.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134450.png)  
 然后在beacon的机器上抓包获得封包的task数据。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134451.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134451.png)  
 然后根据profile，删除prepend和append。
 
   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   * 
@@ -409,7 +409,7 @@ Beacon并不是直接发送AES key和HMAC key而是发送Global key，然后cs�
 
   
 然后使用python脚本解密。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134452.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134452.png)  
 如上可以看出taskType为：0x27，taskBuffer为空。  
  **1.2.4** **使用** **golang** **完成解包 ****  
 **在使用Go语言开发跨平台的beacon时，在beacon返回源数据之后，就会进入循环定时获取task任务的过程，如下：
@@ -491,7 +491,7 @@ src/dns/BaseSecurity.java
   
  **1.3.2 task** **任务返回数据的格式 ****  
 **根据上述解析过程，我们可以获取task任务返回的数据包的格式如下：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134453.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134453.png)  
  **1.3.3** **使用** **python** **解析** **task** **任务返回的数据**
 
   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   * 
@@ -521,9 +521,9 @@ src/dns/BaseSecurity.java
 
   
 使用上面测试task任务下发解包的过程一样，我们使用cs下发任务  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134454.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134454.png)  
 在beacon所在的机器上抓包  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134455.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134455.png)  
 然后根据profile，去除http post数据中的prepend和append数据
 
   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   * 
@@ -547,7 +547,7 @@ src/dns/BaseSecurity.java
 
   
 然后使用python脚本解析返回的数据  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134456.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134456.png)  
  **1.3.4** **使用** **golang** **封包** **task** **返回的任务数据 ****  
 **以执行pwd为例：  
 
@@ -608,7 +608,7 @@ beacon的整个通信过程的研究，完全能自己编写一个跨平台的be
 
 3\. 实现golang项目的交叉编译。具体的流程图设计如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134457.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134457.png)
 
   
 
@@ -644,7 +644,7 @@ beacon的整个通信过程的研究，完全能自己编写一个跨平台的be
 
 了解了cs回连的http/https beacon的回连以及控制过程，我们再来看内网横向的Bind tcp beacon。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134458.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134458.png)
 
   
 
@@ -669,7 +669,7 @@ beacon解析源数据的过程一样。所以我们可以知道bindtcp beacon �
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134459.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134459.png)
 
   
 
@@ -685,7 +685,7 @@ http beacon：172.16.247.2，bindtcp beacon：172.16.247.10
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134500.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134500.png)
 
   
 
@@ -693,7 +693,7 @@ http beacon：172.16.247.2，bindtcp beacon：172.16.247.10
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134501.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134501.png)
 
   
 
@@ -706,7 +706,7 @@ http beacon：172.16.247.2，bindtcp beacon：172.16.247.10
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134505.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134505.png)
 
   * 
 
@@ -728,7 +728,7 @@ http beacon：172.16.247.2，bindtcp beacon：172.16.247.10
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134507.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134507.png)
 
   
 
@@ -736,7 +736,7 @@ http beacon：172.16.247.2，bindtcp beacon：172.16.247.10
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134508.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134508.png)
 
   
 
@@ -760,7 +760,7 @@ http beacon：172.16.247.2，bindtcp beacon：172.16.247.10
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134509.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134509.png)
 
   
 
@@ -811,7 +811,7 @@ http beacon：172.16.247.2，bindtcp beacon：172.16.247.10
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134510.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134510.png)
 
   
 
@@ -819,7 +819,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134512.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134512.png)
 
   
 
@@ -847,7 +847,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134513.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134513.png)
 
   
 
@@ -859,7 +859,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134514.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134514.png)
 
   
 
@@ -867,7 +867,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134515.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134515.png)
 
   
 
@@ -875,7 +875,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134516.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134516.png)
 
   
 
@@ -885,9 +885,9 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
 第二个包和第三个包是任务返回数据：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134517.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134517.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134518.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134518.png)
 
   
 
@@ -905,7 +905,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134519.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134519.png)
 
   
 
@@ -933,7 +933,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134520.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134520.png)
 
   
 
@@ -951,7 +951,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134521.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134521.png)
 
   
 
@@ -980,7 +980,7 @@ hint的第3位的最后一个bit为1，表示它是一个tcp的数据包。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134523.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134523.png)
 
   
 
@@ -1047,7 +1047,7 @@ ID获取对应的socket，最后使用对应的socket将数据发送到子beacon
 
 银河实验室
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134524.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134524.png)
 
 银河实验室（GalaxyLab）是平安集团信息安全部下一个相对独立的安全实验室，主要从事安全技术研究和安全测试工作。团队内现在覆盖逆向、物联网、Web、Android、iOS、云平台区块链安全等多个安全方向。官网：http://galaxylab.pingan.com.cn/
 
@@ -1086,7 +1086,7 @@ DIR-81漏洞挖掘实例分析](http://mp.weixin.qq.com/s?__biz=MzIzODAwMTYxNQ==
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134525.png)![]()![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134526.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134525.png)![]()![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134526.png)
 
  **长按识别二维码关注我们**
 
@@ -1096,15 +1096,15 @@ DIR-81漏洞挖掘实例分析](http://mp.weixin.qq.com/s?__biz=MzIzODAwMTYxNQ==
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134527.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134527.png)
 
  **球分享**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134527.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134527.png)
 
  **球点赞**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134527.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218134527.png)
 
  **球在看**
 

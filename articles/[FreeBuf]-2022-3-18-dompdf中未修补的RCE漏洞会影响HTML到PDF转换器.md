@@ -14,7 +14,7 @@ __
 
 收录于话题
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193528.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193528.png)
 
 研究人员在“dompdf”（一种基于php的HTML到PDF的转换器）中发现了一个未修补的安全漏洞，如果该漏洞被成功利用，可能会导致某些配置中的远程代码被执行。
 
@@ -23,7 +23,7 @@ security的研究人员Maximilian Kirchmeier 和Fabian Bräunlein在其发布的
 
 换而言之，该漏洞允许恶意方将扩展名为.php的字段文件上传到web服务器，然后利用XSS漏洞将HTML注入到web页面中，最后将其呈现为PDF。这就意味着攻击者可能会导航到上传的php脚本，从而有效地使得远程代码在服务器上执行。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193540.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193540.png)
 
 对于那些需要根据用户提供的数据（如票务购买和其他收据）在服务器端生成pdf的网站来说，这可能会导致 **严重后果**
 ，特别是当输入接口没有充分扫描杀毒以减少XSS缺陷的时候，或者是当程序库安装在公共可访问的目录中的时候。
@@ -40,7 +40,7 @@ security的研究人员Maximilian Kirchmeier 和Fabian Bräunlein在其发布的
 
 https://thehackernews.com/2022/03/unpatched-rce-bug-in-dompdf-project.html
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193541.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193541.png)  
   
 
 精彩推荐
@@ -52,10 +52,10 @@ https://thehackernews.com/2022/03/unpatched-rce-bug-in-dompdf-project.html
   
  ** **![]()****  
   
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193542.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247487250&idx=1&sn=ba8fd6364620305f829b909d8465b7b2&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193543.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247487226&idx=1&sn=ae9abde9c0e9ebb6ec8f1cd74fc71a86&scene=21#wechat_redirect)  
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193544.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247487156&idx=1&sn=f4346a01c147c034245d3d29ba003696&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193542.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247487250&idx=1&sn=ba8fd6364620305f829b909d8465b7b2&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193543.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247487226&idx=1&sn=ae9abde9c0e9ebb6ec8f1cd74fc71a86&scene=21#wechat_redirect)  
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193544.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247487156&idx=1&sn=f4346a01c147c034245d3d29ba003696&scene=21#wechat_redirect)
 ** ** ** ** ** **
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193545.png)**************
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220318193545.png)**************
 
 预览时标签不可点
 

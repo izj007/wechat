@@ -72,11 +72,11 @@ framework是一款高危漏洞综合利用框架，目的是可以狙击高危�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165707.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165707.png)
 
 顺便值得一提的是，我们探测t3/iiop协议的时候，还需要探测它们是否被设置为禁止连接，不然探测出open也是无法利用的。如上图的t3开启了但是配置了如下过滤。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165714.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165714.png)
 
  **这些信息有什么用呢？** 当然是让我们知道面前这个weblogic的薄弱点在哪里，后续攻击的计划应该是:t3和iiop系列漏洞不用测试了，wls-
 wsat组件的xmldecoder反序列化漏洞可以看看。  
@@ -121,7 +121,7 @@ wsat组件的xmldecoder反序列化漏洞可以看看。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165715.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165715.png)
 
 这里我细说下3,5和7这三个方案，其他方案顾名思义。
 
@@ -140,13 +140,13 @@ key的检测由开始的通过回显，dnslog之类的直接检测变成了现�
 
 触发补丁检测就是提交可触发补丁的payload，然后看是否拦截来确定漏洞是否修复。比如CVE-2019-2725我们就可以发送带<class>标签的payload，若如下提示非法标签说明漏洞修复了。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165716.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165716.png)
 
 特定特征检测就是通过respone的某些特征可以知道漏洞是否修复，比如CVE-2020-14882/3漏洞修复后的响应如下,那咱们就可以通过repsoen状态码为500,返回包中存在The
 server encountered an unexpected condition which prevented it from fulfilling
 the request.提示来判断。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165718.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165718.png)
 
   
 
@@ -173,7 +173,7 @@ the request.提示来判断。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165720.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165720.png)
 
   
 
@@ -191,7 +191,7 @@ the request.提示来判断。
 自动化并不能解决所有问题，当遇到奇葩环境时就需要人工介入。比如当shiro漏洞遇到未知中间件时，可能无法回显也无法注入内存马，这时就需要人工构造payload了。但是每次都要先生成序列化数据，设置key，选择加密模式，非常浪费时间。而woodpecker
 shiro漏洞插件的荷载生成模块可以一键生成。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165724.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165724.png)
 
   
 
@@ -215,7 +215,7 @@ shiro漏洞插件的荷载生成模块可以一键生成。
 
 https://github.com/woodpecker-appstore/runtime-exec-encoder
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165725.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165725.png)
 
 同时如果想通过命令执行漏洞写一个shell的话，往往需要转义下，这个过程也是比较繁琐的。可以使用EchoToFileConverter插件来解决。
 
@@ -223,7 +223,7 @@ https://github.com/woodpecker-appstore/runtime-exec-encoder
 
 https://github.com/woodpecker-appstore/EchoToFileConverter
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165726.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210810165726.png)
 
   
 

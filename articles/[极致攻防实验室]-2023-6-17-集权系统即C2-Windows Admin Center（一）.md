@@ -34,14 +34,14 @@ ___发表于_
 
  **一、什么是Windows Admin Center：**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194400.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194400.png)  
  **二、如何安装 **Windows Admin
-Center：****![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194401.png)
+Center：****![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194401.png)
 WindowsAdminCenter2211.msi：https://go.microsoft.com/fwlink/?linkid=2220149&clcid=0x804&culture=zh-
 cn&country=cn  
  **静默安装：**  
 但是很多场景是只有一个webshell command
-line或者远程命令执行，无交互式shell时这些安装步骤就显得很鸡肋了，所以：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194403.png)  
+line或者远程命令执行，无交互式shell时这些安装步骤就显得很鸡肋了，所以：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194403.png)  
 有时chatgpt还是喜欢说胡话的，测试一下，发现确实能够静默安装，只不过闪了几个黑框：  
 
   * 
@@ -50,7 +50,7 @@ line或者远程命令执行，无交互式shell时这些安装步骤就显得�
     
     msiexec /i WindowsAdminCenter2211.msi /qn
 
-‍![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194405.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194406.png)安装完成后貌似进程不会自己启动，手动起一下进程：
+‍![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194405.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194406.png)安装完成后貌似进程不会自己启动，手动起一下进程：
 
   * 
 
@@ -60,8 +60,8 @@ line或者远程命令执行，无交互式shell时这些安装步骤就显得�
 
   
 三、如何使用 **Windows Admin Center：** **如何连接：** 安装Windows Admin
-Center后，默认连接端口为6516（静默安装可指定），但是连接需要安装时的证书，这里提供一个思路，使用powershell导出到某路径，然后使用webshell进行下载，再将端口映射或者socks5进行连接。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194407.png)  
-问问chatgpt如何导出证书：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194409.png)有些错误，修改一下：
+Center后，默认连接端口为6516（静默安装可指定），但是连接需要安装时的证书，这里提供一个思路，使用powershell导出到某路径，然后使用webshell进行下载，再将端口映射或者socks5进行连接。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194407.png)  
+问问chatgpt如何导出证书：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194409.png)有些错误，修改一下：
 
   *   *   *   * 
 
@@ -69,11 +69,11 @@ Center后，默认连接端口为6516（静默安装可指定），但是连接�
     
     $cert = Get-ChildItem -Path cert:\LocalMachine\My | Where-Object {$_.FriendlyName -eq "Windows Admin Center"}$certPath = "C:\WAC_Certificate.pfx"$certPassword = "123456"Export-PfxCertificate -Cert $cert -FilePath $certPath -Password (ConvertTo-SecureString -String $certPassword -AsPlainText -Force)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194410.png)命令太多？甚至你还可以继续问chatgpt：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194412.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194410.png)命令太多？甚至你还可以继续问chatgpt：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194412.png)  
  **如何使用：** 使用导出到证书导入到我们的攻击主机，然后连接到目标主机Windows Admin
 Center服务，选择刚刚导入的证书，即可成功登录Windows Admin
-Center集权系统：![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194413.png)主机信息、用户管理、文件管理、计划任务、甚至主机开关等功能应有尽有，这不就是一个windows官方的c2么？（某数字杀软在角落静静看着）：  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194414.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194416.png)
+Center集权系统：![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194413.png)主机信息、用户管理、文件管理、计划任务、甚至主机开关等功能应有尽有，这不就是一个windows官方的c2么？（某数字杀软在角落静静看着）：  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194414.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230617194416.png)
 **四、局限**
 
   * 需要管理员权限进行安装和证书导出

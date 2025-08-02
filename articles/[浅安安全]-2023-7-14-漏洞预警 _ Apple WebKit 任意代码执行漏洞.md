@@ -26,7 +26,7 @@ ___发表于_
 
 WebKit是一个开源的Web浏览器引擎，它被用于苹果的Safari浏览器，以及macOS、iOS和Linux上的许多其他应用程序。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180957.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230714180957.png)
 
  **0x03 漏洞详情**
 

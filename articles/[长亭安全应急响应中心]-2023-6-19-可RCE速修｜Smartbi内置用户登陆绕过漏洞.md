@@ -14,7 +14,7 @@ ___发表于_
 
 收录于合集
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619183129.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619183129.png)
 
   
 
@@ -59,7 +59,7 @@ Smartbi在安装时会内置几个用户，在使用特定接口时，可绕过�
     
     xpoc -r 105 -t 目标URL
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619183130.png)工具获取方式：
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619183130.png)工具获取方式：
 
 https://github.com/chaitin/xpoc
 
@@ -81,7 +81,7 @@ https://stack.chaitin.com/tool/detail?id=1036
     
     smartbi_internal_user_login_bypass_scanner_windows_amd64.exe scan --output result.json
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619183131.png)工具获取方式：
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230619183131.png)工具获取方式：
 
 https://stack.chaitin.com/tool/detail?id=1187
 

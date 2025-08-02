@@ -35,7 +35,7 @@ __
 
 百度了一下，发现是企业微信的开发密钥
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210407.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210407.png)
 
 阿里云的密钥大家都知道，拿到了密钥基本上等于拿到了阿里云账号的控制权限，直接可以执行命令的。
 
@@ -48,7 +48,7 @@ bin/gettoken?corpid=id&corpsecret=secrect`
 
 传入获取到的id和secrect即可获取AccessToken
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210411.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210411.png)
 
 ## 第二步：获取部门ID
 
@@ -56,11 +56,11 @@ bin/gettoken?corpid=id&corpsecret=secrect`
 
 在`https://open.work.weixin.qq.com/devtool/query?e=301002`中查询上一部获取到的ak权限就能，查询到部门名称，以及部门ID
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210412.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210412.png)
 
 ## 第三步：添加企微成员
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210413.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210413.png)
 
 往`https://qyapi.weixin.qq.com/cgi-bin/user/create?access_token=ACCESS_TOKEN`
 
@@ -76,11 +76,11 @@ bin/gettoken?corpid=id&corpsecret=secrect`
 
 当使用手机号登录成功以后，可通过修改成员API来修改姓名进行伪装，并且可以将手机号修改为空来防溯源。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210414.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210414.png)
 
 最后，删除成员以绝后患
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210415.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823210415.png)
 
 > 企业微信API文档地址
 >

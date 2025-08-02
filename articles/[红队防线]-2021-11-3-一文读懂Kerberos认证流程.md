@@ -79,7 +79,7 @@ Kerberos协议意义在于，需要A 和 B
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221101.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221101.png)
 
  ** ******  
 
@@ -94,7 +94,7 @@ Kerberos协议意义在于，需要A 和 B
 其中User hash（timestamp）是因为默认KDC为每一个认证都开启了Pre-
 Authentication，使用当前时间戳和用户Hash加密，以防任何人都过来请求TGT。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221108.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221108.png)
 
   
 
@@ -117,7 +117,7 @@ key，TGT过期时间，以及PAC特权。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221109.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221109.png)
 
 PAC除了包含用户，RID，用户信息，密码情况，登录时间等基础之外，还有两个签名KDC签名和服务签名。  
 
@@ -129,7 +129,7 @@ PAC除了包含用户，RID，用户信息，密码情况，登录时间等基�
 
 当前User请求的服务对象是都是KDC，则两个签名都是有krbtgt签发。但加密算法不同  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221111.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221111.png)
 
   
 
@@ -149,7 +149,7 @@ PAC除了包含用户，RID，用户信息，密码情况，登录时间等基�
 用户解开数据包确认TGT过期时间以及随机数等信息正常后，想要去访问某一个服务（在域环境中，某个服务需要以Kerberos身份进行认证，需要注册一个SPN）需要指定该服务SPN，这一次请求需要指定SPN，用户随机数，TGT（用krbtgt加密），以及使用Session
 key加密的用户名以及时间戳。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221112.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221112.png)
 
   
 
@@ -182,7 +182,7 @@ key等相关内容
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221113.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221113.png)
 
   
 
@@ -207,7 +207,7 @@ key解密上述用户的username以及timestamp（时间戳），同时验证PAC
 与此同时AP（application
 server）会把PAC缓存到本地操作系统中，解析PAC中的信息然后对比ALC来决定用户是否可以访问某些资源，同时也方便下一次该此用户来访问服务时，重新请求TGT。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221114.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221114.png)
 
   
 
@@ -220,11 +220,11 @@ AP（application
 server）是不会主动把PAC整个数据包发送给KDC做认证，如果有场景需要仅仅也会发送PAC中的签名，也就是KERB_VERIFY_PAC
 结构字段。如下图所示
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221116.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221116.png)
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221117.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211103221117.png)
 
   
 

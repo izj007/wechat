@@ -32,7 +32,7 @@ https://media.defcon.org/DEF%20CON%2029/DEF%20CON%2029%20presentations/Tianze%20
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133402.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133402.png)
 
   
 
@@ -58,7 +58,7 @@ exchange的研究意义这里就不多说了，用户多、权限高，全球设
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133403.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133403.png)
 
   
 
@@ -66,7 +66,7 @@ exchange的研究意义这里就不多说了，用户多、权限高，全球设
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133404.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133404.png)
 
   
 
@@ -74,7 +74,7 @@ exchange的架构如下
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133405.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133405.png)
 
   
 
@@ -82,7 +82,7 @@ exchange的架构如下
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133406.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133406.png)
 
   
 
@@ -94,7 +94,7 @@ exchange的架构如下
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133407.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133407.png)
 
   
 
@@ -102,7 +102,7 @@ exchange的架构如下
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133408.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133408.png)
 
   
 
@@ -110,15 +110,15 @@ exchange的架构如下
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133410.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133410.png)
 
   
 
 ![]()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133411.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133411.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133412.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133412.png)
 
   
 
@@ -126,7 +126,7 @@ exchange的架构如下
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133413.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133413.png)
 
   
 
@@ -134,7 +134,7 @@ exchange的架构如下
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133414.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133414.png)
 
   
 
@@ -142,13 +142,13 @@ exchange的架构如下
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133415.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133415.png)
 
 然后配合打印机漏洞便可进行攻击，攻击链如下：
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133416.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133416.png)
 
   
 
@@ -176,7 +176,7 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/exchanger.py
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133417.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133417.png)
 
   
 
@@ -192,7 +192,7 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/exchanger.py
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133418.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133418.png)
 
   
 
@@ -200,7 +200,7 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/exchanger.py
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133419.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133419.png)
 
   
 
@@ -208,7 +208,7 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/exchanger.py
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133420.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133420.png)
 
 选中的DCOM对象为
 
@@ -226,7 +226,7 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/exchanger.py
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133421.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133421.png)
 
   
 
@@ -262,7 +262,7 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/ntlmrelayx.py
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133422.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133422.png)
 
 工具：
 
@@ -294,7 +294,7 @@ https://github.com/FSecureLABS/SharpGPOAbuse
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133423.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133423.png)
 
   
 
@@ -347,7 +347,7 @@ https://github.com/FSecureLABS/SharpGPOAbuse
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133424.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210815133424.png)
 
   
 

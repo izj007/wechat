@@ -33,11 +33,11 @@ Java的instrument是Java内存攻击常用的一种机制，instrument通过atta
 
 编写一个demo尝试attach自身PID，提示Can not attach to current VM，如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085852.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085852.png)
 
 经过分析attch API的执行流程，定位到如下代码：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085904.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085904.png)
 
 由上图可见，attach的时候会创建一个HotSpotVirtualMachine的父类，这个类在初始化的时候会去获取VM的启动参数，并把这个参数保存至HotSpotVirtualMachine的ALLOW_ATTACH_SELF属性中，恰好这个属性是个静态属性，所以我们可以通过反射动态修改这个属性的值。构造如下POC：
 
@@ -49,9 +49,9 @@ Java的instrument是Java内存攻击常用的一种机制，instrument通过atta
 
 由于ALLOW_ATTACH_SELF字段有final修饰符，所以在修改ALLOW_ATTACH_SELF值的同时，也需要把它的final修饰符给去掉（修改的时候，会有告警产提示，不影响最终效果，可以忽略）。修改后，可以成功attach到自身进程，如下图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085905.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085905.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085906.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085906.png)
 
 这样，我们就成功绕过了allowAttachSelf的限制。
 
@@ -83,7 +83,7 @@ IDE等，当然近几年比较流行的RASP也是基于此类技术。
 
 首先，我们先分析一下instrument的工作流程，如下图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085907.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085907.png)
 
 1.检测工具作为Client，根据指定的PID，向目标JVM发起attach请求；2.JVM收到请求后，做一些校验（比如上文提到的jdk.attach.allowAttachSelf的校验），校验通过后，会打开一个IPC通道。3.接下来Client会封装一个名为AttachOperation的C++对象，发送给Server端；4.Server端会把Client发过来的AttachOperation对象放入一个队列；5.Server端另外一个线程会从队列中取出AttachOperation对象并解析，然后执行对应的操作，并把执行结果通过IPC通道返回Client。
 
@@ -93,14 +93,14 @@ IDE等，当然近几年比较流行的RASP也是基于此类技术。
 
 通过分析定位到如下关键代码：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085908.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085908.png)
 
 可以看到当var5不等于0的时候，attach会报错，而var5是从var4中读取的，var4是execute的返回值，跟入execute，如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085910.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085910.png)
 
 可以看到，execute方法又把核心工作交给了方法enqueue，这个方法是一个native方法，如下图：
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085911.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085911.png)  
 继续跟入enqueue方法：
 
 ![]()
@@ -115,7 +115,7 @@ IDE等，当然近几年比较流行的RASP也是基于此类技术。
 
 以上操作都发生在Client侧，接下来我们转到Server侧，定位到如下代码：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085912.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085912.png)
 
 这段代码是把Client发过来的对象进行解包，然后解析里面的指令。经常写Windows
 shellcode的人应该会看到两个特别熟悉的API：GetModuleHandle、GetProcAddress，这是动态定位DLL中导出函数的常用API。这里的操作就是动态从jvm.dll中动态定位名称为JVM_EnqueueOperation和_JVM_EnqueueOperation@20的两个导出函数，这两个函数就是上文流程图中将AttachOperation对象放入队列的执行函数。
@@ -124,11 +124,11 @@ shellcode的人应该会看到两个特别熟悉的API：GetModuleHandle、GetPr
 
 静态分析结束了，接下来动态调试Server侧，定位到如下位置：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085913.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085913.png)
 
 图中RIP所指即为JVM_EnqueueOperation函数的入口，我们只要让RIP执行到这里直接返回即可：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085915.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085915.png)
 
 怎么修改呢？当然是用JNI，核心代码如下：
 
@@ -142,7 +142,7 @@ shellcode的人应该会看到两个特别熟悉的API：GetModuleHandle、GetPr
 注意这里要考虑32位和64位的区别，同时要注意堆栈平衡，否则可能会导致进程crash。到此，我们就实现了Windows平台上的内存马防检测（Anti-
 Attach）功能，我们尝试用JProfiler连接试一下，可见已经无法attach到目标进程了：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085916.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085916.png)
 
 以上即是Windows平台上的内存马防检测功能原理。
 
@@ -156,7 +156,7 @@ Attach）功能，我们尝试用JProfiler连接试一下，可见已经无法at
 attach流程还是比较简单的，只要把对应的UNIX Domain
 Socket文件删掉就可以了。删掉后，我们尝试对目标JVM进行attach，便会提示无法attach：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085918.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085918.png)
 
 到此，我们就实现了Linux平台上的内存马防检测（Anti-Attach）功能，当然其他*nix-like的操作系统平台也同样适用于此方法。
 
@@ -166,11 +166,11 @@ Socket文件删掉就可以了。删掉后，我们尝试对目标JVM进行attac
 
 在Windows平台上，进程代码注入有很多种方法，最经典的方法要属CreateRemoteThread，但是这些方法大都被防护系统盯得死死的，比如我写了如下一个最简单的远程注入shellcode的demo：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085919.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085919.png)
 
 往当前进程里植入一个弹计算器的shellcode，编译，运行，然后意料之中出现如下这种情况：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085920.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085920.png)
 
 但是经过分析JVM的源码我发现，在Windows平台上，Java在实现instrument的时候，出现了一个比较怪异的操作。
 
@@ -178,7 +178,7 @@ Socket文件删掉就可以了。删掉后，我们尝试对目标JVM进行attac
 
 但是在Windows平台，客户端也是首先和服务端协商了一个IPC通道（用的是命名管道），但是在Java层的enqueue函数中，同时还使用了CreateRemoteThread在服务端启动了一个stub线程，让这个线程去在服务端进程空间里执行enqueue操作：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085921.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085921.png)
 
 这个stub执行体pCode是在客户端的native层生成的，生成之后作为thread_func传给服务端。但是，虽然stub是在native生成的，这个stub却又在Java层周转了一圈，最终在Java层以字节数组的方式作为Java层enqueue函数的一个参数传进Native。
 
@@ -196,7 +196,7 @@ Socket文件删掉就可以了。删掉后，我们尝试对目标JVM进行attac
 
 编译，执行：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085922.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085922.png)
 
 成功执行shellcode，而且Windows Defender没有告警，天然免杀。毕竟，谁能想到有着合法签名安全可靠的Java.exe会作恶呢：）
 
@@ -204,7 +204,7 @@ Socket文件删掉就可以了。删掉后，我们尝试对目标JVM进行attac
 
 冰蝎3.0中提供了一键cs上线功能，采用的是JNI机制，中间需要上传一个临时库文件才能实现上线。现在利用这个技术，可以实现一个JSP文件或者一个反序列化Payload即可上线CS：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085923.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085923.png)
 
 ### 自定义类调用系统Native库函数
 
@@ -259,20 +259,20 @@ JRE默认自带的，但是这个sun.tools.attach.VirtualMachineImpl类所在的
 
 首先，我们先看一下通过Agent动态修改类的流程：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085924.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085924.png)
 
 1.在客户端和目标JVM建立IPC连接以后，客户端会封装一个用来加载agent.jar的AttachOperation对象，这个对象里面有三个关键数据：actioName、libName和agentPath；2.服务端收到AttachOperation后，调用enqueue压入AttachOperation队列等待处理；3.服务端处理线程调用dequeue方法取出AttachOperation；4.服务端解析AttachOperation，提取步骤1中提到的3个参数，调用actionName为load的对应处理分支，然后加载libinstrument.so（在windows平台为instrument.dll），执行AttachOperation的On_Attach函数（由此可以看到，Java层的instrument机制，底层都是通过Native层的Instrument来封装的）；5.libinstrument.so中的On_Attach会解析agentPath中指定的jar文件，该jar中调用了redefineClass的功能；6.执行流转到Java层，JVM会实例化一个InstrumentationImpl类，这个类在构造的时候，有个非常重要的参数mNativeAgent：
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085925.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085925.png)  
 这个参数是long型，其值是一个Native层的指针，指向的是一个C++对象JPLISAgent。7.InstrumentationImpl实例化之后，再继续调用InstrumentationImpl类的redefineClasses方法，做稍许校验之后继续调用InstrumentationImpl的Native方法redefineClasses08.执行流继续走入Native层：
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085926.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085926.png)
 
 继续跟入：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085927.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085927.png)
 
 做了一系列判断之后，最终调用jvmtienv的redefineClasses方法执行类redefine操作：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085928.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085928.png)
 
 接下来理一下思路，在上面的8个步骤中，我们只要能跳过前面5个步骤，直接从步骤6开始执行，即可实现我们的目标。那么问题来了，步骤6中在实例化InstrumentationImpl的时候需要的非常重要的mNativeAgent参数值，这个值是一个指向JPLISAgent对象的指针，这个值我们不知道。只有一个办法，我们需要自己在Native层组装一个JPLISAgent对象，然后把这个对象的地址传给Java层InstrumentationImpl的构造器，就可以顺利完成后面的步骤。
 
@@ -299,15 +299,15 @@ JRE默认自带的，但是这个sun.tools.attach.VirtualMachineImpl类所在的
 
 ![]()  
 JPLISAgent是一个复杂的数据结构。由上文中redefineClasses代码可知，最终实现redefineClasses操作的是*jvmtienv的redefineClasses函数。但是这个jvmtienv的指针，是通过jvmti(JPLISAgent)推导出来的，如下：
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085929.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085929.png)
 
 而jvmti是一个宏：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085930.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085930.png)
 
 而在执行到*jvmtienv的redefineClasses之前，还有多处如下调用都用到了jvmtienv：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085931.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085931.png)  
 因此，我们至少要保证我们自己组装的JPLISAgent对象需要成功推导出jvmtienv的指针，也就是JPLISAgent的mNormalEnvironment成员，其结构如下：
 ![]()  
 可以看到这个结构里存在一个回环指针mAgent，又指向了JPLISAgent对象，另外，还有个最重要的指针mJVMTIEnv，这个指针是指向内存中的JVMTIEnv对象的，这是JVMTI机制的核心对象。另外，经过分析，JPLISAgent对象中还有个mRedefineAvailable成员，必须要设置成true。
@@ -317,10 +317,10 @@ JPLISAgent是一个复杂的数据结构。由上文中redefineClasses代码可�
 ### 定位JVMTIEnv
 
 通过动态分析可知，0x000002E62D8EE950为JPLISAgent的地址，0x000002E62D8EE950+0x8（0x000002E62D8EEB60）为mJVMTIEnv,即指向JVMTIEnv指针的指针：
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085932.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085932.png)  
 转到该指针：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085933.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085933.png)
 
 可以看到0x6F78A220即为JVMTIEnv对象的真实地址，通过分析发现，该对象存在于jvm模块的地址空间中，而且偏移量是固定的，那只要找到jvm模块的加载基址，加加上固定的偏移量即是JVMTIEnv对象的真实地址。但是，现代操作系统默认都开启了ASLR，因此jvm模块的基址并不可知。
 
@@ -336,7 +336,7 @@ JPLISAgent是一个复杂的数据结构。由上文中redefineClasses代码可�
 
 输出如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085934.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085934.png)
 
 定位到地址0x2e61a1b67d0：
 
@@ -344,7 +344,7 @@ JPLISAgent是一个复杂的数据结构。由上文中redefineClasses代码可�
 
 可见前后有很多指针，绿色的那些指针，都指向jvm的地址空间：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085935.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085935.png)
 
 但是，这部分指针并不可复现，也就是说这些指针相对于allocateMemory的偏移量和指针值都不是固定的，也就是说我们根本无法从这些动态的指针里去推导出一个固定的jvm模块基址。当对一个事物的内部运作机制不了解时，最高效的方法就是利用统计学去解决问题。于是我通过开发辅助程序，多次运行程序，收集大量的前后指针列表，这些指针中有大量是重复出现的，然后根据指针末尾两个字节，做了一个字典，当然只做2个字节的匹配，很容易出错，于是我又根据这些大量指针指向的指针，取末尾两个字节，又做了一个和前面一一对应的字典。这样我们就制作了一个二维字典，并根据指针重复出现的频次排序。POC运行的时候，会以allocateMemory开始，往前往后进行字典匹配，可以准确的确定jvm模块的基址。部分字典结构如下："'3920':'a5b0':'633920','fe00':'a650':'60fe00','99f0':'cccc':'5199f0','8250':'a650':'638250','d200':'fdd0':'63d200','da70':'b7e0':'67da70'
 每个条目含有3个元素，第一个为指针末尾2字节，第二个元素为指针指向的指针末尾两个字节，第三个元素为指针与baseAddress的偏移量。基址确定了，jvmtienv的具体地址就确定了。当然拿到了jvm的地址，加上JavaVM的偏移量便可以直接获得JavaVM的地址。
@@ -412,7 +412,7 @@ Bird.java
     public class Bird {    public void sayHello()    {        System.out.println("hello!");    }}
 
 编译，运行：
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085936.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085936.png)
 
 上述环境是win10+Jdk1.8.0_301_x64，注释中内置了linux+jdk1.8.0_301_x64和win10+Jdk1.8.0_271_x64指纹，如果是其他OS或者JDK版本，指纹库需要对应更新。
 
@@ -428,7 +428,7 @@ Bird.java
 
 上一小节我们在伪造JPLISAgent对象的时候，留意到redefineClasses函数里面有这种代码：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085931.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085931.png)  
 allocate函数的第一个参数是jvmtienv指针，我们跟进allocate函数：
 
   *   *   *   *   *   *   *   *   *   *   *   *   *   * 
@@ -439,7 +439,7 @@ allocate函数的第一个参数是jvmtienv指针，我们跟进allocate函数�
         error = (*jvmtienv)->Allocate(jvmtienv,                                bytecount,                                (unsigned char**) &resultBuffer);    /* may be called from any phase */    jplis_assert(error == JVMTI_ERROR_NONE);    if ( error != JVMTI_ERROR_NONE ) {        resultBuffer = NULL;    }    return resultBuffer;}
 
 可以看到最终是调用的jvmtienv对象的一个成员函数，先看一下真实的jvmtienv是什么样子：
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085938.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085938.png)
 
 对象里是很多函数指针，看到这里，如果你经常分析二进制漏洞的话，可能会马上想到这里jvmtienv是我们完全可控的，我们只要在伪造的jvmtienv对象指定的偏移位置覆盖这个函数指针即可实现任意代码执行。
 
@@ -453,7 +453,7 @@ allocate函数的第一个参数是jvmtienv指针，我们跟进allocate函数�
 
 编译，运行：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085939.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085939.png)
 
 进程crash了，报的异常是意料之中，仔细看下报的异常：
 
@@ -465,13 +465,13 @@ allocate函数的第一个参数是jvmtienv指针，我们跟进allocate函数�
 
 内存访问异常，但是pc的值是0x00000219d1b1a990，这就是我们shellcode的首地址。说明我们的payload布置是正确的，只不过系统开启了NX（DEP），导致我们没办法去执行shellcode，下图是异常的现场，可见RIP已经到了shellcode：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085940.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085940.png)
 
 ### 绕过NX(DEP)
 
 上文的POC中我们已经可以劫持RIP,但是我们的shellcode部署在堆上，不方便通过ROP关闭DEP。那能不能找一块rwx的内存呢？熟悉浏览器漏洞挖掘的朋友都知道JIT区域天生RWE，而Java也是有JIT特性的，通过分析进程内存布局，可以看到Java进程确实也存在这样一个区域，如下图：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085941.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085941.png)
 
 我们只要通过unsafe把shellcode写入这个区域即可。但是，还有ASLR，需要绕过ASLR才能获取到这块JIT区域。
 
@@ -514,7 +514,7 @@ allocate函数的第一个参数是jvmtienv指针，我们跟进allocate函数�
 
 编译，运行，成功执行了shellcode，弹出计算器。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085943.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210818085943.png)
 
 到此，我们通过纯Java代码实现了跨平台的任意Native代码执行，从而可以解锁很多新玩法，比如绕过RASP实现命令执行、文件读写、数据库连接等等。
 

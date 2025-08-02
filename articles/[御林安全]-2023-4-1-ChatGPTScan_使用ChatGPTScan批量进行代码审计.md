@@ -87,7 +87,7 @@ ___发表于_
     
     https://platform.openai.com/account/api-keys
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401181954.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401181954.png)
 
 openai 也有官方文档提供了 API key 的使用教程。
 
@@ -106,7 +106,7 @@ openai 也有官方文档提供了 API key 的使用教程。
     
     curl https://api.openai.com/v1/models \  -H "Authorization: Bearer $OPENAI_API_KEY"
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401181956.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401181956.png)
 
 响应报文会列出可以使用的模型。
 
@@ -151,15 +151,15 @@ chatgpt 后续的回答具有指示作用。assistant 代表 chatgpt 的回答�
 
 首先发送一条请求，让 chatgpt 扮演一个安全专家
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401181957.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401181957.png)
 
 然后将准备好的漏洞代码片段发送给 chatgpt，并且提出让它分析代码，找出漏洞然后根据严重程度分级
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401181958.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401181958.png)
 
 chatgpt输出如下
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182000.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182000.png)
 
 可以看到 chatgpt 比较清晰地输出了漏洞存在的位置，漏洞描述，以及给漏洞标注的危害等级
 
@@ -191,24 +191,24 @@ chatgpt输出如下
 
 运行管理：这里可以监控扫描器运行状态，启动和停止扫描器。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182001.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182001.png)
 
 项目列表: 这里可以查看添加的项目信息，支持多种搜索条件。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182002.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182002.png)
 
 扫描结果：这里可以查看所有扫描结果，支持多种搜索条件，ChatGPT 生成的扫描报告会以 markdown 的形式渲染出来，方便查看。这里也在指令中要求
 ChatGPT 明确地用 VulnRh3r3 关键字标注出大概率存在漏洞的报告，方便定位搜索有效漏洞报告。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182003.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182003.png)
 
 用户管理：可以查看用户状态，修改密码。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182004.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182004.png)
 
 密钥管理：可以动态添加和删除密钥, 并且查看余额。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182005.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182005.png)
 
   
 
@@ -236,7 +236,7 @@ token。
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182009.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230401182009.png)
 **扫码关注我们** 御 梦 而 生   如 鹿 归 林  
 
 预览时标签不可点

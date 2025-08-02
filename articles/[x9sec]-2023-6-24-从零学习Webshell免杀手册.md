@@ -160,7 +160,7 @@ ___发表于_
 
 特别是 `xor` 异或运算符，在一些场合需要用到
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181152.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181152.png)
 
 ###
 
@@ -636,7 +636,7 @@ Demo：使用 `FILE_APPEND` 标记，可以在文件末尾追加内容
 
 ## 7# PHP过滤器
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181154.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181154.png)
 
 #
 
@@ -652,33 +652,33 @@ Demo：使用 `FILE_APPEND` 标记，可以在文件末尾追加内容
 
 #### 牧云Webshell检测引擎：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181155.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181155.png)
 
 ####
 
 #### 微步在线云沙箱：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181156.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181156.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181157.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181157.png)
 
 ####
 
 #### 河马WebShell在线查杀：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181158.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181158.png)
 
 ####
 
 #### 百度WEBDIR+在线查杀：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181159.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181159.png)
 
 ####
 
 #### 大名鼎鼎的VirusTotal：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181200.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181200.png)
 
 ##
 
@@ -706,7 +706,7 @@ Demo：使用 `FILE_APPEND` 标记，可以在文件末尾追加内容
 
 而对于最常见也是最简单的WebShell，即一句话木马，都是以下形式存在的：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181201.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181201.png)
 
  **而我们要做的是：通过PHP语言的动态特性，灵活利用各种PHP函数和特性，混淆和变形中间两部分内容，从而达到免杀**
 
@@ -1230,7 +1230,7 @@ eval），不能再作为函数名动态执行代码，所以利用起来稍微�
 
 直接用 Godzilla 哥斯拉来连接，如下：
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181202.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181202.png)
 
 当然这里使用到 `assert` 高危函数，只能用于 `php` 在 `5.*` 的版本，相关姿势读者不妨自行拓展一下哈哈~
 
@@ -1312,7 +1312,7 @@ shellcode免杀加载器](http://mp.weixin.qq.com/s?__biz=MzU3MDU5ODg1Ng==&mid=2
 
 加入微信群  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181203.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230624181203.png)
 
   
 

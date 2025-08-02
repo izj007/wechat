@@ -23,7 +23,7 @@ Timeline Sec专属内推通道
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185254.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185254.png)
 
   
 
@@ -43,7 +43,7 @@ Timeline Sec专属内推通道
 
  _覆盖各大知名互联网公司招聘信息等着你来看！_
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185255.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185255.png)
 
   
 
@@ -51,7 +51,7 @@ Timeline Sec专属内推通道
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185256.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185256.png)
 
   
 
@@ -71,7 +71,7 @@ Timeline Sec专属内推通道
 
 tls内推官等着你噢～
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185301.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185301.png)  
 凑字数系列富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善，传承着中国优秀传统文化的基因，寄托着近代以来中国人民上下求索、历经千辛万苦确立的理想和信念，也承载着我们每个人的美好愿景。我们要在全社会牢固树立社会主义核心价值观，全体人民一起努力，通过持之以恒的奋斗，把我们的国家建设得更加富强、更加民主、更加文明、更加和谐、更加美丽，让中华民族以更加自信、更加自强的姿态屹立于世界民族之林。
 
   
@@ -80,7 +80,7 @@ tls内推官等着你噢～
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185302.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220218185302.png)
 
 20
 

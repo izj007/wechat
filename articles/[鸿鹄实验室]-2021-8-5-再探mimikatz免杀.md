@@ -50,7 +50,7 @@ Stealth、Chimera等等，但此类工具在混淆mimikatz时，或多或少会�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091251.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091251.png)
 
   
 
@@ -105,7 +105,7 @@ Stealth、Chimera等等，但此类工具在混淆mimikatz时，或多或少会�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091253.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091253.png)
 
   
 
@@ -113,7 +113,7 @@ Stealth、Chimera等等，但此类工具在混淆mimikatz时，或多或少会�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091254.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091254.png)
 
   
 
@@ -121,7 +121,7 @@ Stealth、Chimera等等，但此类工具在混淆mimikatz时，或多或少会�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091255.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091255.png)
 
   
   
@@ -136,7 +136,7 @@ Stealth、Chimera等等，但此类工具在混淆mimikatz时，或多或少会�
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091256.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210805091256.png)
 
   
 

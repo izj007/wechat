@@ -25,7 +25,7 @@ __
 
 前言  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)  
 
   
 
@@ -44,7 +44,7 @@ __
 
 项目地址  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)
 
   
 
@@ -66,7 +66,7 @@ __
 
 工具使用方法  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)
 
   
 
@@ -93,7 +93,7 @@ __
 
 使用场景  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)  
 
   
 
@@ -115,7 +115,7 @@ python2 HGather.py -i 192.168.0.1/24
 
 部分使用截图  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)
 
   
 
@@ -128,13 +128,13 @@ python2 HGather.py -i 192.168.0.1/24
 
  **资产发现**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180353.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180353.png)
 
   
 
  **资产整理**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180354.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180354.png)
 
   
 
@@ -149,7 +149,7 @@ python2 HGather.py -i 192.168.0.1/24
 
 结束语  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180350.png)
 
   
 
@@ -204,11 +204,11 @@ BeanShell远程代码执行漏洞复现](http://mp.weixin.qq.com/s?__biz=MzI1NTM
 [【超详细】Fastjson1.2.24反序列化漏洞复现](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247484991&idx=1&sn=1178e571dcb60adb67f00e3837da69a3&chksm=ea37f965dd4070732b9bbfa2fe51a5fe9030e116983a84cd10657aec7a310b01090512439079&scene=21#wechat_redirect)
 
  _
-**走过路过的大佬们留个关注再走呗**_![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180357.png)
+**走过路过的大佬们留个关注再走呗**_![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180357.png)
 
  **往期文章有彩蛋哦** **![]()**  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180358.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210806180358.png)
 
 一如既往的学习，一如既往的整理，一如即往的分享。![]()  
 

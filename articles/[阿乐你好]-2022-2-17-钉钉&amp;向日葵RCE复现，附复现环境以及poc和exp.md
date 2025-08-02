@@ -16,11 +16,11 @@ __
 
 钉钉RCE
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104949.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104949.png)
 
 随便打开一个会话窗口，发送payload，然后点击payload
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104951.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104951.png)
 
 弹窗
 
@@ -44,9 +44,9 @@ https://github.com/crazy0x70/dingtalk-RCE
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104954.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104954.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104957.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104957.png)
 
   
 
@@ -56,13 +56,13 @@ https://github.com/TRYblog/sunlogin_rce_
 
 附件截图
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104959.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217104959.png)
 
 后台回复20220217获取下载链接
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217105001.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220217105001.png)
 
   
 

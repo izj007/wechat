@@ -35,7 +35,7 @@ Qube等开源工具以及商业的Fortify和其他国产工具分别进行了测
 
 在这里特别强调一下，我们采用的是异步调用的方式，这么做的目的是由于项目代码本身是比较大的，如果进入等待状态会造成整个业务线的时间延长，这种方案相对于研发来说速度更快一些。同时在项目若干个分支进行合并的时候，也会触发引擎的检测，这么做的目的是单一分支的代码远没有项目整体的代码检测准确度更高，同时代码进行分支合并也是要触发安全质量评估，防止将存在威胁的代码引入到稳定版本中。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115524.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115524.png)
 
 图（1）SAST触发流程
 
@@ -45,7 +45,7 @@ SAST只是解决了自研代码的安全问题，但是现在大部分的业务�
 
 通过对供应链安全的整理我们不难发现，高危的框架或者中间件有Struts2、Weblogic以及Jboss等，同时第三方常用的组件有fastjson、shiro、Jackson等。所以我们部署了SCA服务，SCA服务作为一个原子，在项目的构建阶段，会对项目的使用的第三方组件进行依赖分析，发现组件潜在的安全威胁，包含发现已知的CVE漏洞或者冒充的恶意组件。
 
-但是我们也经常遇到研发总说有些jar包或者说是组件虽然引入了项目里，但是并未使用，所以我们也会对第三方组件进行动态探测，在UAT环境中，会对第三方开源组件运行时监测分析，在本阶段发现的漏洞对项目产生的价值更大。![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115526.png)
+但是我们也经常遇到研发总说有些jar包或者说是组件虽然引入了项目里，但是并未使用，所以我们也会对第三方组件进行动态探测，在UAT环境中，会对第三方开源组件运行时监测分析，在本阶段发现的漏洞对项目产生的价值更大。![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115526.png)
 
 图（2）SCA检测流程
 
@@ -70,14 +70,14 @@ DevSecOps核心目标是构建研发运维一体化的安全作业环境，使�
   
   
  **
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115527.png)****  
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115527.png)****  
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115528.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486547&idx=1&sn=a00edc620c7544082211e20fccd8d85c&scene=21#wechat_redirect)[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115529.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486526&idx=1&sn=eed63efee990d4a02bc4b372b6091a6b&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115528.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486547&idx=1&sn=a00edc620c7544082211e20fccd8d85c&scene=21#wechat_redirect)[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115529.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486526&idx=1&sn=eed63efee990d4a02bc4b372b6091a6b&scene=21#wechat_redirect)
 
-[![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115530.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486511&idx=1&sn=6c1acd17753d6be1014d10579a1902b4&scene=21#wechat_redirect)
+[![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115530.png)](https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247486511&idx=1&sn=6c1acd17753d6be1014d10579a1902b4&scene=21#wechat_redirect)
 
  ** ** ** ** ** **
-**![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115531.png)**************
+**![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210913115531.png)**************
 
 预览时标签不可点
 

@@ -33,7 +33,7 @@ BinaryAI闪亮登场
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811141428.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811141428.png)
 
   
 
@@ -105,7 +105,7 @@ Matching》**](http://mp.weixin.qq.com/s?__biz=MzU1MjgwNzc4Ng==&mid=2247484584&i
 
 发送“ **BinaryAI交流群** ”获得入群链接
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811141435.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210811141435.png)
 
   
 

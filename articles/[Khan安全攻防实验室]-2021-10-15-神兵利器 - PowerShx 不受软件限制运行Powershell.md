@@ -20,7 +20,7 @@ __
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015090901.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20211015090901.png)
 
   
 

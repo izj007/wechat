@@ -26,7 +26,7 @@ https://res.mdpi.com/d_attachment/jcp/jcp-01-00021/article_deploy/jcp-01-00021.p
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075055.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075055.png)
 
   
 
@@ -34,7 +34,7 @@ https://res.mdpi.com/d_attachment/jcp/jcp-01-00021/article_deploy/jcp-01-00021.p
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075109.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075109.png)
 
   
 
@@ -61,7 +61,7 @@ campaign/?__cf_chl_jschl_tk__=pmd_VKrHUzdleNocPJnRemvxCVGmjY8gkMwlsZM361GthcI-16
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075110.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075110.png)
 
 即中间经过转发来加载恶意dll。
 
@@ -120,7 +120,7 @@ https://github.com/SkiddieTech/DLLSideloader
 
   
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075111.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210823075111.png)
 
   
 

@@ -22,7 +22,7 @@ __
     
     dingtalk://dingtalkclient/page/link?url=127.0.0.1/test.html&pc_slide=true
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216213016.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220216213016.png)
 
 相关POC已在GitHub上披露：  
 

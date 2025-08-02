@@ -35,7 +35,7 @@ webshell就是以asp、php、jsp或者cgi等网页文件形式存在的一种代
     
     <?php   @eval($_POST['shell']);?><?php system($_REQUEST['cmd']);>
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173019.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173019.png)
 
 ## 中国菜刀
 
@@ -47,7 +47,7 @@ github项目地址：https://github.com/raddyfiy/caidao-official-version
 
 由于菜刀官方网站已关闭，现存的可能存在后门最好在虚拟机运行，上面项目已经进行了md5对比没有问题。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173031.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173031.png)
 
 ### 菜刀webshell的静态特征
 
@@ -76,9 +76,9 @@ ua头为百度爬虫
 
 请求体中执行结果响应为明文，格式为X@Y    结果   X@Y之中
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173032.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173032.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173033.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173033.png)
 
 ## 蚁剑
 
@@ -86,7 +86,7 @@ AntSword（蚁剑）是一个开放源代码，跨平台的网站管理工具，
 
 github项目地址：https://github.com/AntSwordProject/antSword  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173034.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173034.png)
 
 ### 蚁剑webshell静态特征
 
@@ -107,7 +107,7 @@ Php中使用assert，eval执行, asp 使用eval
 
 响应包的结果返回格式为  随机数 结果  随机数
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173036.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173036.png)
 
 使用base64编码器和解码器时
 
@@ -117,9 +117,9 @@ Php中使用assert，eval执行, asp 使用eval
 
 响应包的结果返回格式为  随机数 编码后的结果  随机数
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173037.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173037.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173038.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173038.png)
 
 ## 冰蝎
 
@@ -127,7 +127,7 @@ Php中使用assert，eval执行, asp 使用eval
 
 github地址：https://github.com/rebeyond/Behinder
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173039.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173039.png)
 
 冰蝎文件夹中，server 文件中存放了各种类型的木马文件
 
@@ -141,15 +141,15 @@ github地址：https://github.com/rebeyond/Behinder
 
 在PHP中会判断是否开启openssl采用不同的加密算法，在代码中同样会存在eval或assert等字符特征
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173040.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173040.png)
 
 在aps中会在for循环进行一段异或处理
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173041.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173041.png)
 
 在jsp中则利用java的反射，所以会存在ClassLoader，getClass().getClassLoader()等字符特征
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173042.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173042.png)
 
 ### 冰蝎2.0 webshell木马动态特征
 
@@ -158,7 +158,7 @@ github地址：https://github.com/rebeyond/Behinder
 2.0中采用协商密钥机制。第一阶段请求中返回包状态码为200，返回内容必定是16位的密钥
 
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*;
-q=.2![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173043.png)
+q=.2![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173043.png)
 
 建立连接后 所有请求 Cookie的格式都为: Cookie: PHPSESSID=; path=/；
 
@@ -176,7 +176,7 @@ Accept:
 text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-
 exchange;v=b3;q=0.9
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173044.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173044.png)
 
 ## 哥斯拉
 
@@ -184,7 +184,7 @@ exchange;v=b3;q=0.9
 
 github地址：https://github.com/BeichenDream/Godzilla  
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173045.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173045.png)
 
 哥斯拉的webshell需要动态生成，可以根据需求选择各种不同的加密方式
 
@@ -194,11 +194,11 @@ github地址：https://github.com/BeichenDream/Godzilla
 
 选择默认脚本编码生成的情况下，jsp会出现xc,pass字符和Java反射（ClassLoader，getClass().getClassLoader()），base64加解码等特征
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173046.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173046.png)
 
 php，asp则为普通的一句话木马
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173047.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173047.png)
 
 ### 哥斯拉webshell动态特征
 
@@ -211,7 +211,7 @@ text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 
 同时在所有请求中Cookie中后面都存在；特征
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173048.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173048.png)
 
 ## 不足
 
@@ -265,11 +265,11 @@ text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
     
     走过路过的大佬们留个关注再走呗![]()
     
-    往期文章有彩蛋哦![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173049.png)
+    往期文章有彩蛋哦![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173049.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173050.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173050.png)  
 
-一如既往的学习，一如既往的整理，一如即往的分享![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173051.png)  
+一如既往的学习，一如既往的整理，一如即往的分享![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20220405173051.png)  
 
 “如侵权请私聊公众号删文”
 

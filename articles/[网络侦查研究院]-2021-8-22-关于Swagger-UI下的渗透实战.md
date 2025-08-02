@@ -14,7 +14,7 @@ __
 
 收录于话题
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090925.png)![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090926.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090925.png)![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090926.png)
 
   
 
@@ -31,7 +31,7 @@ __
 另外Spring站点的默认logo是片小绿叶，可以观察下报错页的logo有没有小绿叶，或者拼接favicon.ico访问，如果出现以下图标，则有很大可能是Swagger
 UI的站
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090927.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090927.png)
 
 如果这些都无法实现，则可用字典去遍历Swagger UI路径，当一级目录不存在时，可尝试拼接二级目录进行访问
 
@@ -71,12 +71,12 @@ UI的站
 
 扫目录建议使用burp，通过返回包可看到完整的数据
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090928.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090928.png)
 
 某些时候，swagger-ui.html会被禁止访问，这时候可以尝试拼接/v2/api-
 docs进行访问，如果一级目录404，可以尝试拼接二级目录访问，以此类推。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090929.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090929.png)
 
 ![]()
 
@@ -91,9 +91,9 @@ ui.html页面构造参数发包，如果该接口没有权限验证，则会造�
 
 先点击try is out，然后构造参数，excute可直接发包
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090930.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090930.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090931.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090931.png)
 
 由于Swagger UI的安全性问题，延伸出了几个常见的漏洞
 
@@ -102,7 +102,7 @@ ui.html页面构造参数发包，如果该接口没有权限验证，则会造�
 类似于Swagger
 UI这种上传接口，如果在部署时没做限制，一般都是任意文件上传的，当然，我们可以找一些temp、test这类上传接口，因为此类接口多数是开发过程中用作测试的，这种接口几乎都是无限上传文件类型的。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090932.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090932.png)
 
 ![]()
 
@@ -113,12 +113,12 @@ UI这种上传接口，如果在部署时没做限制，一般都是任意文件
 
 某次测试的时候在Swagger
 UI发现了一个api接口存在未授权访问，只要知道手机号就可得到用户身份证、真实姓名等信息，且此处存在用户名枚举漏洞，因为后台登录功能采用了手机号+身份证+密码登录的形式，所以我们可针对该api编写脚本进行利用，提取身份证号，和手机号，为后续爆破后台做准备。  
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090933.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090933.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090934.png)  
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090934.png)  
 ![]()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090935.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090935.png)
 
 然后利用提取出来的api信息构造爆破字典成功登录后台  
 ![]()  
@@ -129,9 +129,9 @@ UI接口，很多时候其api都是裸奔的，而不少的api往往都包含着
 
 关于注入遇到的比较少，我去fofa找了几个Swagger UI复现了下，发现跟普通注入都大同小异，只要得到注入点就能利用了
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090936.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090936.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090937.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090937.png)
 
 ## 任意文件下载
 
@@ -140,7 +140,7 @@ UI里也是非常常见的，可直接在API文档里搜索关键字，如：dow
 
 ![]()
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090938.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090938.png)
 
 ## 实战举例
 
@@ -148,17 +148,17 @@ UI里也是非常常见的，可直接在API文档里搜索关键字，如：dow
 
 这是个复测的站点，站点存在waf，仅有一个登录页，验证码有效，且有多因子认证，同事在第一次测试的时候是无漏洞情况。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090939.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090939.png)
 
 ![]()
 
 接手了这个项目，简单的信息收集一番后便开搞了，因为时间关系，便迅速展开测试了。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090940.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090940.png)
 
 站点只有一个登陆页，存在waf，且验证码有效，登陆多因子认证，经过端口探测和前端漏洞挖掘没发现突破点，后来翻查了js也没能发现有用的东西，正在一筹莫展的时候，一个报错也引起了我的注意。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090941.png)根据回显可以看出这是典型Spring
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090941.png)根据回显可以看出这是典型Spring
 Swagger的接口报错信息，拼接下/favicon.ico，看到了熟悉的logo
 
   
@@ -171,13 +171,13 @@ Swagger的接口报错信息，拼接下/favicon.ico，看到了熟悉的logo
 ui.html，但该页面做了限制，无法访问到，使用/%20/swagger-ui.html进行访问，但也失败了，之后使用字典去遍历swagger-
 ui路径，但也只得到了这个页面，没办法，还是得回到jsonAPI进行利用。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090942.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090942.png)
 
 ### 未授权漏洞
 
 通过翻查文档，得到一个查询用户的api接口，点击parameters，即可得到该api接口的详细参数
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090943.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090943.png)
 
 有了参数就好搞了，直接构造参数发包，开始之前，把无痕模式打开，以证明可以未授权访问，通过回显可以看到，得到了大量的用户信息，包含了手机号，邮箱等等。
 
@@ -189,7 +189,7 @@ ui路径，但也只得到了这个页面，没办法，还是得回到jsonAPI�
 
 虽然得到了部分用户信息但却没包含密码，构不成什么威胁，之后再次翻找和用户有关的api，但也没多大效果。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090944.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090944.png)
 
 ![]()
 
@@ -200,24 +200,24 @@ API中也能获取这些用户名，无奈只能寻找其它的api做突破点
 
 进一步查找API发现了个密码重置API，由于这种api测试起来危害较大，为了自身安全，取得客户同意后，便进一步开始测试了。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090945.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090945.png)
 
 经过测试，发现可利用泄露的api接口信息，构造userId参数来重置任意后台用户密码，且该api也是可未授权访问的，这样一来，漏洞危害便大大增加了。
 
 利用api接口未授权重置userid1，userid2登录密码，此时我们还不知道userid1和userid2的用户名是什么，这时候就要用上/findxxxs.action
 API接口了，因为该接口回显的用户信息包含了userid，可以根据这个userid去寻找用户名
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090946.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090946.png)
 
 ![]()
 
 利用/findxxxs.action API接口寻找username
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090947.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090947.png)
 
 前面说到了该后台存在多因子认证的，这时候就算我们重置了用户密码，但是还是无法登陆后台的，想要登录后台，就必须把用户的手机号给重置掉，或者寻找注册API注册登陆。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090948.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090948.png)
 
 ### 任意用户信息修改
 
@@ -227,17 +227,17 @@ API接口了，因为该接口回显的用户信息包含了userid，可以根�
 
 构造参数发包，可以看到修改成功了，然后到登陆页输入重置后的账号密码登录，却发现重置后的手机号怎么都无法收到信息，后来利用API重置为另一个手机号，重新登录获取短信，却也是毫无反应，刚开始以为是重置后的手机号需要等待一会才能生效，后来等了大半个小时，再次重新获取短信，却也是毫无反应，到此，也不得不放弃重置手机号进后台这个突破点了。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090949.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090949.png)
 
 ### 用户身份信息泄露
 
 由于进不去后台，只能尽量在多挖掘漏洞证明其危害了，通过api漏洞挖掘，得到了一个未授权接口，能未授权获取到大量用户身份证号等敏感数据。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090950.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090950.png)
 
 再进一步挖掘，发现大量API可未授权访问。随后利用未授权获取了大量合同数据，最大化了漏洞危害，到此，本次测试也告一段落了。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090951.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090951.png)
 
 ## 其它场景
 
@@ -249,9 +249,9 @@ UI大多会存在数量庞大的API接口，除非所有的接口都存在认证
 当得到一个存在权限认证的Swagger UI接口时，可关注下Select a
 spec，因为有些时候会存在多个接口文档，有可能当前API存在权限校验，而另一个API文档则裸奔的情况。
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090952.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090952.png)
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090953.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090953.png)
 
 存在spring框架的站点要关注下druid，因为Springboot会集成Druid，多半开发会混合着使用，在挖掘Swagger
 UI的同是也不要忘记关注druid未授权的突破点。
@@ -263,7 +263,7 @@ UI的同是也不要忘记关注druid未授权的突破点。
 渗透需要细心，不能放错任何一个细节，或许一个小小的报错页面，就能给予我们突破的灵感，本文仅介绍了Swagger UI，类似的接口并不少，如web-
 api、springtoot-cli api等等，这类接口或多或少都存在问题，对此应该如何防御与挖掘呢？
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090926.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090926.png)
 
   
 
@@ -271,7 +271,7 @@ api、springtoot-cli api等等，这类接口或多或少都存在问题，对�
 
  **END**
 
-![](http://hk-proxy.gitwarp.com/https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090954.png)
+![](https://raw.githubusercontent.com/tuchuang9/tc1/refs/heads/main/public/20210822090954.png)
 
   
 
